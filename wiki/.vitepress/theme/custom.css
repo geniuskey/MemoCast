@@ -3,6 +3,18 @@
   --vp-c-brand-2: #3b82f6;
   --vp-c-brand-3: #60a5fa;
   --vp-layout-max-width: 1720px;
+  --mc-sidebar-min-width: 272px;
+  --vp-sidebar-width: var(--mc-sidebar-min-width);
+}
+
+@media (min-width: 960px) {
+  .VPSidebar {
+    min-width: var(--mc-sidebar-min-width);
+  }
+
+  .VPContent.has-sidebar {
+    padding-left: var(--mc-sidebar-min-width);
+  }
 }
 
 .VPDoc .container {

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-06T05:43:33.920Z",
+  "generatedAt": "2026-06-06T11:29:07.729Z",
   "summary": {
-    "rawTotal": 265,
+    "rawTotal": 326,
     "rawCited": 30,
-    "rawUncited": 235,
+    "rawUncited": 296,
     "missingRawReferences": 0,
     "wikiPages": 26,
     "wikiPagesWithoutRawReferences": 10
@@ -12,12 +12,14 @@
     "raw/README.md",
     "raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md",
     "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
+    "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md",
     "raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md",
     "raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md",
     "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
     "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md",
     "raw/articles/channel-sourceability-qoq-price-allocation-2026.md",
     "raw/articles/channel-teamgroup-gm-ram-pricing-crisis-2026.md",
+    "raw/articles/channel-used-refurbished-server-memory-secondary-2026.md",
     "raw/articles/consol-dram-price-fixing-scandal.md",
     "raw/articles/consol-elpida-bankruptcy-micron.md",
     "raw/articles/consol-intel-nand-skhynix-solidigm.md",
@@ -27,12 +29,15 @@
     "raw/articles/ddr4-ddr5-transition-2026.md",
     "raw/articles/domain-arvr-xr-headset-memory-content.md",
     "raw/articles/domain-automotive-l4-300gb-ram-micron.md",
+    "raw/articles/domain-autonomous-vehicle-data-generation-storage.md",
     "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md",
     "raw/articles/domain-gaming-handheld-lpddr-content.md",
+    "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md",
     "raw/articles/domain-humanoid-robotics-memory-content.md",
     "raw/articles/domain-industrial-automation-edge-ai-memory.md",
     "raw/articles/domain-medical-device-ai-imaging-memory.md",
     "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
+    "raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md",
     "raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md",
     "raw/articles/domain-space-aerospace-radhard-memory.md",
     "raw/articles/domain-surveillance-cctv-nand-demand.md",
@@ -40,12 +45,17 @@
     "raw/articles/edge-ai-iot-memory-demand-2026.md",
     "raw/articles/esg-memory-fab-energy-water-carbon-re100.md",
     "raw/articles/gddr-gaming-console-memory-2026.md",
+    "raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md",
     "raw/articles/history-dram-memory-cycles-2016-2026.md",
+    "raw/articles/history-memory-fab-disruptions-supply-shocks.md",
+    "raw/articles/history-memory-trade-disputes-antidumping-cartel.md",
     "raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md",
     "raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md",
     "raw/articles/micron-automotive-memory-per-vehicle.md",
+    "raw/articles/model-ai-inference-memory-bound-token-economics.md",
     "raw/articles/model-context-length-kv-cache-memory-demand.md",
     "raw/articles/model-deepseek-v3-671b-moe-technical-report.md",
+    "raw/articles/model-epoch-ai-compute-growth-trends.md",
     "raw/articles/model-introl-ai-memory-supercycle-hbm-2026.md",
     "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md",
     "raw/articles/oem-apple-dram-lta-expiry-2026-price-hike.md",
@@ -53,12 +63,15 @@
     "raw/articles/oem-automotive-memory-per-vehicle-bosch-continental-2025.md",
     "raw/articles/oem-dell-hpe-ai-server-backlog-memory-bom-2026.md",
     "raw/articles/oem-hyperscaler-custom-silicon-memory-buyers-2026.md",
+    "raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md",
     "raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md",
     "raw/articles/oem-pc-dell-hp-lenovo-price-hike-memory-2026.md",
     "raw/articles/oem-samsung-mx-smartphone-shipments-2025.md",
     "raw/articles/oem-server-odm-gb200-nvl72-hbm-shipments-2025.md",
     "raw/articles/oem-smartphone-dram-content-spec-downgrade-2026.md",
     "raw/articles/oem-xiaomi-oppo-vivo-transsion-shipments-2025.md",
+    "raw/articles/on-device-slm-smartphone-ram-2026.md",
+    "raw/articles/power-datacenter-vacancy-leasing-market-2026.md",
     "raw/articles/power-deloitte-ai-datacenter-123gw-2035.md",
     "raw/articles/power-gb200-nvl72-rack-120kw-liquid-cooling.md",
     "raw/articles/power-goldman-datacenter-power-demand-165pct-2030.md",
@@ -73,29 +86,42 @@
     "raw/articles/power-us-grid-interconnection-queue-bottleneck.md",
     "raw/articles/power-vs-memory-limited-datacenter-debate.md",
     "raw/articles/server-ddr5-rdimm-channels-capacity-2026.md",
+    "raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md",
     "raw/articles/trendforce-ai-20pct-dram-wafer-2026.md",
     "raw/articles/trendforce-ai-server-memory-contract-price-2q26.md",
     "raw/articles/trendforce-ai-server-shipments-28pct-2026.md",
     "raw/articles/trendforce-hbm-market-forecast-2026.md",
     "raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md",
+    "raw/datasets/ai-pc-penetration-forecast.md",
+    "raw/datasets/ai-server-shipments-forecast.md",
+    "raw/datasets/dram-contract-price-qoq-2025-2026.md",
     "raw/datasets/dram-nand-bit-demand-by-application.md",
+    "raw/datasets/dram-nand-bit-growth-cagr-longrun.md",
     "raw/datasets/dram-price-history.md",
     "raw/datasets/dram-revenue-cycle-history.md",
     "raw/datasets/dram-revenue-quarterly.md",
+    "raw/datasets/dram-wafer-capacity-allocation-2026.md",
+    "raw/datasets/hbm-bit-demand-growth-rate.md",
     "raw/datasets/hbm-market-size.md",
+    "raw/datasets/idc-global-datasphere-zettabytes.md",
+    "raw/datasets/korea-semiconductor-exports-monthly.md",
     "raw/datasets/memory-maker-capex.md",
     "raw/datasets/memory-makers-quarterly-financials-cycle.md",
     "raw/datasets/memory-market-revenue-split.md",
+    "raw/datasets/memory-market-tam-forecast-2025-2028.md",
     "raw/datasets/nand-flash-revenue-share.md",
     "raw/datasets/pc-server-shipments.md",
+    "raw/datasets/semiconductor-capex-to-revenue-ratio.md",
     "raw/datasets/smartphone-shipments.md",
     "raw/datasets/wsts-semiconductor-billings.md",
     "raw/earnings/hyperscaler-capex-2026-guidance.md",
     "raw/earnings/kioxia-fq4-2025-earnings.md",
+    "raw/earnings/kioxia-fy25-nand-outlook-ipo.md",
     "raw/earnings/macronix-1q26-earnings.md",
     "raw/earnings/micron-fq2-2026-earnings.md",
     "raw/earnings/nanya-technology-1q26-earnings.md",
     "raw/earnings/nvidia-fq1-2027-datacenter.md",
+    "raw/earnings/nvidia-hbm4-supplier-qualification-vera-rubin-2026.md",
     "raw/earnings/samsung-electronics-1q26-earnings.md",
     "raw/earnings/sandisk-fq3-2026-earnings.md",
     "raw/earnings/sk-hynix-1q26-earnings.md",
@@ -110,13 +136,19 @@
     "raw/lectures/conf-jedec-gddr7-jesd239-standard.md",
     "raw/lectures/conf-jedec-hbm4-jesd270-4-standard.md",
     "raw/lectures/conf-jedec-lpddr6-jesd209-6-standard.md",
+    "raw/lectures/conf-jedec-ufs5-mobile-storage-roadmap.md",
     "raw/lectures/conf-micron-hbm4-g9-nand-vera-rubin.md",
     "raw/lectures/conf-samsung-hbm4e-samples-3-6tbs.md",
     "raw/lectures/conf-skhynix-hbm4-12high-16high-samples.md",
+    "raw/lectures/conf-skhynix-hbm4e-hbm5-roadmap-2027-2031.md",
     "raw/lectures/conf-skhynix-vlsi-2025-dram-roadmap.md",
     "raw/lectures/cxl-memory-pooling-explained.md",
     "raw/lectures/dram-scaling-4f2-3d-dram-roadmap.md",
+    "raw/lectures/emerging-co-packaged-optics-cpo-memory-bandwidth.md",
+    "raw/lectures/emerging-hbf-high-bandwidth-flash-ai-inference.md",
     "raw/lectures/emerging-hbm4-cxl-pim-3d-dram-roadmap.md",
+    "raw/lectures/emerging-neuromorphic-in-memory-computing-reram.md",
+    "raw/lectures/emerging-quantum-cryogenic-memory-cryo-cmos.md",
     "raw/lectures/hbm-generations-roadmap-hbm1-to-hbm4.md",
     "raw/lectures/how-dram-works-1t1c-cell-primer.md",
     "raw/lectures/how-hbm-tsv-3d-stacking-works.md",
@@ -129,15 +161,21 @@
     "raw/lectures/ip-interface-roadmaps-gate-bandwidth-capacity-adoption.md",
     "raw/lectures/ip-jedec-hbm4-jesd270-4-standard.md",
     "raw/lectures/ip-jedec-lpddr6-jesd209-6-standard.md",
+    "raw/lectures/ip-jedec-standardization-governance.md",
     "raw/lectures/ip-marvell-bravera-ssd-controller-nand.md",
+    "raw/lectures/ip-memory-ras-ecc-reliability-datacenter.md",
+    "raw/lectures/ip-mrdimm-mcrdimm-socamm-module-ai-server.md",
     "raw/lectures/ip-nand-ssd-controllers-phison-silicon-motion.md",
     "raw/lectures/ip-on-die-ecc-link-ecc-ras-features.md",
     "raw/lectures/ip-rambus-hbm4-hbm4e-controller-ip.md",
+    "raw/lectures/ip-rowhammer-dram-security-mitigation-prac.md",
     "raw/lectures/ip-synopsys-memory-interface-ip-hbm4-ddr5-lpddr6.md",
     "raw/lectures/ip-vendor-landscape-cadence-rambus-phy-acquisition.md",
     "raw/lectures/jedec-ddr5-standard-explained.md",
     "raw/lectures/jedec-hbm4-standard-jesd270-4.md",
     "raw/lectures/memory-demand-forecasting-methodology-bottoms-up.md",
+    "raw/lectures/memory-demand-seasonality-quarterly-pattern.md",
+    "raw/lectures/memory-lta-prepayment-accounting-financial-model.md",
     "raw/lectures/memory-pricing-contract-spot-lta-mechanism.md",
     "raw/lectures/nand-cost-per-bit-3d-layers-qlc-economics.md",
     "raw/lectures/nomad-semi-memory-primer-industry-structure.md",
@@ -159,11 +197,15 @@
     "raw/papers/arima-lstm-order-demand-short-lead-time-2021.md",
     "raw/papers/bayesian-model-averaging-semiconductor-cycle-2018.md",
     "raw/papers/chip-architecture-supply-demand-uncertainty-2023.md",
+    "raw/papers/cobweb-model-dram-price-capacity-cycle.md",
     "raw/papers/collusion-along-learning-curve-dram-cartel-2021.md",
     "raw/papers/demand-forecasting-financial-estimation-semiconductor-supply-chain-2019.md",
     "raw/papers/demand-forecasting-lstm-neural-networks-2020.md",
+    "raw/papers/dram-oligopoly-cournot-capacity-competition.md",
+    "raw/papers/dram-spot-price-arima-elasticity-demand-2024.md",
     "raw/papers/dynamic-analysis-semiconductor-supply-chain-bullwhip-2018.md",
     "raw/papers/electricity-demand-grid-impacts-ai-data-centers-2024.md",
+    "raw/papers/forecast-combination-ensemble-m5-competition.md",
     "raw/papers/google-trends-web-traffic-electronics-demand-amazon-2025.md",
     "raw/papers/grey-markov-taiwan-ic-assembly-forecasting-2013.md",
     "raw/papers/hbm-bit-cost-domain-specific-ecc-ai-inference-2025.md",
@@ -173,16 +215,23 @@
     "raw/papers/investigating-semiconductor-industry-cycles-2013.md",
     "raw/papers/manufacturing-intelligence-semiconductor-demand-technology-diffusion-2010.md",
     "raw/papers/measuring-moores-law-price-cost-quality-indexes-2019.md",
+    "raw/papers/newsvendor-base-stock-inventory-uncertain-demand.md",
     "raw/papers/predicting-the-present-with-google-trends-2012.md",
+    "raw/papers/probabilistic-forecasting-conformal-quantile-regression.md",
     "raw/papers/race-to-efficiency-ai-scaling-laws-2025.md",
     "raw/papers/real-options-capacity-investment-semiconductor-2007.md",
     "raw/papers/semiconductor-cycles-bootstrap-prediction-intervals-2007.md",
     "raw/papers/semiconductor-industry-cycles-explanatory-factors-forecasting-2014.md",
+    "raw/papers/system-dynamics-abm-semiconductor-supply-chain-bullwhip.md",
+    "raw/papers/transformer-probabilistic-demand-forecasting-online-learning-2024.md",
     "raw/papers/variable-p-rolling-grey-taiwan-semiconductor-production-2005.md",
     "raw/reports/analyst-bank-memory-outlook-price-targets-2026.md",
     "raw/reports/capex-samsung-hbm-50pct-capacity-surge-2026.md",
+    "raw/reports/china-cloud-custom-ai-chip-memory-demand-2026.md",
     "raw/reports/china-cxmt-ymtc-capacity-export-controls-2026.md",
+    "raw/reports/china-huawei-ascend-hbm-demand-2026.md",
     "raw/reports/cxmt-2026-capacity-hbm3-bit-share.md",
+    "raw/reports/digitimes-taiwan-server-odm-memory-supply-2026.md",
     "raw/reports/equip-advantest-hbm-test-lead-times-2026.md",
     "raw/reports/equip-applied-materials-q1-2026-dram-china.md",
     "raw/reports/equip-asml-q1-2026-memory-euv-orders.md",
@@ -197,13 +246,17 @@
     "raw/reports/fab-skhynix-micron-capacity-roadmap-2026-2031.md",
     "raw/reports/gartner-2026-memory-revenue-memflation-forecast.md",
     "raw/reports/hbm-ai-memory-supercycle-2026-2027.md",
+    "raw/reports/hbm-take-or-pay-capacity-reservation-2026.md",
     "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
+    "raw/reports/korea-media-samsung-skhynix-2026-capex-hbm.md",
     "raw/reports/macro-ai-capex-bubble-downside-risk-2026.md",
+    "raw/reports/macro-ai-roi-monetization-gap-demand-risk-2026.md",
     "raw/reports/macro-cloud-spending-growth-2026.md",
     "raw/reports/macro-consumer-pc-smartphone-demand-2026.md",
     "raw/reports/macro-fed-rates-recession-risk-2026.md",
     "raw/reports/macro-gartner-ai-spending-2026-2_59trillion.md",
     "raw/reports/macro-gartner-it-spending-2026-6_31trillion.md",
+    "raw/reports/macro-gpu-depreciation-accounting-ai-demand-risk.md",
     "raw/reports/macro-hyperscaler-capex-2026-725billion.md",
     "raw/reports/macro-jpy-fx-kioxia-2026.md",
     "raw/reports/macro-krw-usd-fx-2026-won-weakness.md",
@@ -216,16 +269,21 @@
     "raw/reports/material-silicon-wafer-shinetsu-sumco-duopoly-2026.md",
     "raw/reports/material-specialty-gases-krypton-xenon-3dnand-etch.md",
     "raw/reports/memory-commodity-financialization-etf-futures.md",
+    "raw/reports/memory-gross-margin-cost-structure-hbm-2026.md",
     "raw/reports/memory-inventory-leading-indicators-2026.md",
+    "raw/reports/memory-supercycle-end-timing-2027-2029-scenarios.md",
     "raw/reports/micron-fq2-2026-earnings-dram-nand-hbm.md",
     "raw/reports/omdia-2026-memory-crunch-forecast.md",
+    "raw/reports/pkg-amkor-ase-osat-advanced-packaging-hbm-2026.md",
     "raw/reports/pkg-tsmc-cowos-capacity-130k-wpm-2026.md",
     "raw/reports/pkg-tsmc-cowos-capacity-bottleneck-2026-2027.md",
     "raw/reports/pkg-tsmc-cowos-fully-booked-osat-cowop-2025.md",
     "raw/reports/region-china-domestic-memory-demand-localization.md",
     "raw/reports/region-china-smartphone-memflation-demand-2026.md",
     "raw/reports/region-dram-market-revenue-share-by-region-2026.md",
+    "raw/reports/region-europe-automotive-memory-demand-2026.md",
     "raw/reports/region-europe-chips-act-automotive-demand.md",
+    "raw/reports/region-india-datacenter-ai-demand-2026-2030.md",
     "raw/reports/region-india-sea-atmp-assembly-smartphone-demand.md",
     "raw/reports/region-japan-kioxia-rapidus-materials-policy.md",
     "raw/reports/region-korea-samsung-skhynix-production-hub-policy.md",
@@ -233,7 +291,9 @@
     "raw/reports/region-taiwan-packaging-nanya-winbond-server-hub.md",
     "raw/reports/region-us-chips-act-micron-fabs-ai-demand.md",
     "raw/reports/region-us-hyperscaler-concentration-memory-demand.md",
+    "raw/reports/region-us-section232-semiconductor-tariffs-2026.md",
     "raw/reports/region-wsts-2026-regional-billings-split.md",
+    "raw/reports/roundhill-dram-memory-etf-investment-landscape.md",
     "raw/reports/sia-q1-2026-global-semiconductor-sales.md",
     "raw/reports/techinsights-memory-outlook-report-2026.md",
     "raw/reports/trendforce-2q26-memory-contract-price-forecast.md",
@@ -241,6 +301,7 @@
     "raw/reports/trendforce-4q25-nand-revenue-supplier-ranking.md",
     "raw/reports/trendforce-ddr5-profitability-surpass-hbm3e-2026.md",
     "raw/reports/trendforce-mobile-dram-lpddr5x-2026-smartphone.md",
+    "raw/reports/trendforce-spot-price-may-2026-ddr5-ddr4.md",
     "raw/reports/ymtc-2026-nand-xtacking-layer-count-capacity.md",
     "raw/reports/yole-2026-hbm-dram-memory-market.md",
     "raw/reports/yole-cxl-memory-market-2026-2028.md"
@@ -261,12 +322,14 @@
   "citationsByRawFile": {
     "raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md": [],
     "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md": [],
+    "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md": [],
     "raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md": [],
     "raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md": [],
     "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md": [],
     "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md": [],
     "raw/articles/channel-sourceability-qoq-price-allocation-2026.md": [],
     "raw/articles/channel-teamgroup-gm-ram-pricing-crisis-2026.md": [],
+    "raw/articles/channel-used-refurbished-server-memory-secondary-2026.md": [],
     "raw/articles/consol-dram-price-fixing-scandal.md": [],
     "raw/articles/consol-elpida-bankruptcy-micron.md": [],
     "raw/articles/consol-intel-nand-skhynix-solidigm.md": [],
@@ -279,12 +342,15 @@
     "raw/articles/ddr4-ddr5-transition-2026.md": [],
     "raw/articles/domain-arvr-xr-headset-memory-content.md": [],
     "raw/articles/domain-automotive-l4-300gb-ram-micron.md": [],
+    "raw/articles/domain-autonomous-vehicle-data-generation-storage.md": [],
     "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md": [],
     "raw/articles/domain-gaming-handheld-lpddr-content.md": [],
+    "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md": [],
     "raw/articles/domain-humanoid-robotics-memory-content.md": [],
     "raw/articles/domain-industrial-automation-edge-ai-memory.md": [],
     "raw/articles/domain-medical-device-ai-imaging-memory.md": [],
     "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md": [],
+    "raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md": [],
     "raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md": [],
     "raw/articles/domain-space-aerospace-radhard-memory.md": [],
     "raw/articles/domain-surveillance-cctv-nand-demand.md": [],
@@ -292,6 +358,7 @@
     "raw/articles/edge-ai-iot-memory-demand-2026.md": [],
     "raw/articles/esg-memory-fab-energy-water-carbon-re100.md": [],
     "raw/articles/gddr-gaming-console-memory-2026.md": [],
+    "raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md": [],
     "raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md": [
       "wiki/markets/smartphone-memory.md",
       "wiki/simulators/smartphone-memory-demand.md"
@@ -305,6 +372,8 @@
       "wiki/simulators/smartphone-memory-demand.md"
     ],
     "raw/articles/history-dram-memory-cycles-2016-2026.md": [],
+    "raw/articles/history-memory-fab-disruptions-supply-shocks.md": [],
+    "raw/articles/history-memory-trade-disputes-antidumping-cartel.md": [],
     "raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md": [],
     "raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md": [],
     "raw/articles/micron-automotive-memory-per-vehicle.md": [],
@@ -320,8 +389,10 @@
       "wiki/markets/pc-dram.md",
       "wiki/simulators/pc-dram-demand.md"
     ],
+    "raw/articles/model-ai-inference-memory-bound-token-economics.md": [],
     "raw/articles/model-context-length-kv-cache-memory-demand.md": [],
     "raw/articles/model-deepseek-v3-671b-moe-technical-report.md": [],
+    "raw/articles/model-epoch-ai-compute-growth-trends.md": [],
     "raw/articles/model-introl-ai-memory-supercycle-hbm-2026.md": [],
     "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md": [],
     "raw/articles/oem-apple-dram-lta-expiry-2026-price-hike.md": [],
@@ -329,6 +400,7 @@
     "raw/articles/oem-automotive-memory-per-vehicle-bosch-continental-2025.md": [],
     "raw/articles/oem-dell-hpe-ai-server-backlog-memory-bom-2026.md": [],
     "raw/articles/oem-hyperscaler-custom-silicon-memory-buyers-2026.md": [],
+    "raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md": [],
     "raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md": [],
     "raw/articles/oem-pc-ai-pc-mix-commercial-refresh-2026.md": [
       "wiki/markets/pc-dram.md"
@@ -342,6 +414,8 @@
       "wiki/markets/smartphone-memory.md",
       "wiki/simulators/smartphone-memory-demand.md"
     ],
+    "raw/articles/on-device-slm-smartphone-ram-2026.md": [],
+    "raw/articles/power-datacenter-vacancy-leasing-market-2026.md": [],
     "raw/articles/power-deloitte-ai-datacenter-123gw-2035.md": [],
     "raw/articles/power-gb200-nvl72-rack-120kw-liquid-cooling.md": [],
     "raw/articles/power-goldman-datacenter-power-demand-165pct-2030.md": [],
@@ -360,6 +434,7 @@
       "wiki/simulators/hbm-demand.md"
     ],
     "raw/articles/server-ddr5-rdimm-channels-capacity-2026.md": [],
+    "raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md": [],
     "raw/articles/storage-enterprise-ssd-qlc-nand-demand-2026.md": [
       "wiki/markets/nand.md",
       "wiki/simulators/nand-ssd-demand.md"
@@ -373,19 +448,27 @@
       "wiki/markets/smartphone-memory.md",
       "wiki/simulators/smartphone-memory-demand.md"
     ],
+    "raw/datasets/ai-pc-penetration-forecast.md": [],
+    "raw/datasets/ai-server-shipments-forecast.md": [],
     "raw/datasets/bit-demand-supply-growth.md": [
       "wiki/concepts/bit-demand.md",
       "wiki/concepts/demand-forecasting.md",
       "wiki/concepts/supply-demand-gap.md"
     ],
+    "raw/datasets/dram-contract-price-qoq-2025-2026.md": [],
     "raw/datasets/dram-nand-bit-demand-by-application.md": [],
+    "raw/datasets/dram-nand-bit-growth-cagr-longrun.md": [],
     "raw/datasets/dram-price-history.md": [],
     "raw/datasets/dram-revenue-cycle-history.md": [],
     "raw/datasets/dram-revenue-quarterly.md": [],
+    "raw/datasets/dram-wafer-capacity-allocation-2026.md": [],
     "raw/datasets/gpu-hbm-capacity.md": [
       "wiki/simulators/hbm-demand.md"
     ],
+    "raw/datasets/hbm-bit-demand-growth-rate.md": [],
     "raw/datasets/hbm-market-size.md": [],
+    "raw/datasets/idc-global-datasphere-zettabytes.md": [],
+    "raw/datasets/korea-semiconductor-exports-monthly.md": [],
     "raw/datasets/memory-content-per-device.md": [
       "wiki/concepts/bit-demand.md",
       "wiki/markets/pc-dram.md",
@@ -396,19 +479,23 @@
     "raw/datasets/memory-maker-capex.md": [],
     "raw/datasets/memory-makers-quarterly-financials-cycle.md": [],
     "raw/datasets/memory-market-revenue-split.md": [],
+    "raw/datasets/memory-market-tam-forecast-2025-2028.md": [],
     "raw/datasets/nand-cost-per-bit-trend.md": [
       "wiki/markets/nand.md"
     ],
     "raw/datasets/nand-flash-revenue-share.md": [],
     "raw/datasets/pc-server-shipments.md": [],
+    "raw/datasets/semiconductor-capex-to-revenue-ratio.md": [],
     "raw/datasets/smartphone-shipments.md": [],
     "raw/datasets/wsts-semiconductor-billings.md": [],
     "raw/earnings/hyperscaler-capex-2026-guidance.md": [],
     "raw/earnings/kioxia-fq4-2025-earnings.md": [],
+    "raw/earnings/kioxia-fy25-nand-outlook-ipo.md": [],
     "raw/earnings/macronix-1q26-earnings.md": [],
     "raw/earnings/micron-fq2-2026-earnings.md": [],
     "raw/earnings/nanya-technology-1q26-earnings.md": [],
     "raw/earnings/nvidia-fq1-2027-datacenter.md": [],
+    "raw/earnings/nvidia-hbm4-supplier-qualification-vera-rubin-2026.md": [],
     "raw/earnings/samsung-electronics-1q26-earnings.md": [],
     "raw/earnings/sandisk-fq3-2026-earnings.md": [],
     "raw/earnings/sk-hynix-1q26-earnings.md": [],
@@ -430,13 +517,19 @@
     "raw/lectures/conf-jedec-gddr7-jesd239-standard.md": [],
     "raw/lectures/conf-jedec-hbm4-jesd270-4-standard.md": [],
     "raw/lectures/conf-jedec-lpddr6-jesd209-6-standard.md": [],
+    "raw/lectures/conf-jedec-ufs5-mobile-storage-roadmap.md": [],
     "raw/lectures/conf-micron-hbm4-g9-nand-vera-rubin.md": [],
     "raw/lectures/conf-samsung-hbm4e-samples-3-6tbs.md": [],
     "raw/lectures/conf-skhynix-hbm4-12high-16high-samples.md": [],
+    "raw/lectures/conf-skhynix-hbm4e-hbm5-roadmap-2027-2031.md": [],
     "raw/lectures/conf-skhynix-vlsi-2025-dram-roadmap.md": [],
     "raw/lectures/cxl-memory-pooling-explained.md": [],
     "raw/lectures/dram-scaling-4f2-3d-dram-roadmap.md": [],
+    "raw/lectures/emerging-co-packaged-optics-cpo-memory-bandwidth.md": [],
+    "raw/lectures/emerging-hbf-high-bandwidth-flash-ai-inference.md": [],
     "raw/lectures/emerging-hbm4-cxl-pim-3d-dram-roadmap.md": [],
+    "raw/lectures/emerging-neuromorphic-in-memory-computing-reram.md": [],
+    "raw/lectures/emerging-quantum-cryogenic-memory-cryo-cmos.md": [],
     "raw/lectures/hbm-generations-roadmap-hbm1-to-hbm4.md": [],
     "raw/lectures/how-dram-works-1t1c-cell-primer.md": [],
     "raw/lectures/how-hbm-tsv-3d-stacking-works.md": [],
@@ -449,15 +542,21 @@
     "raw/lectures/ip-interface-roadmaps-gate-bandwidth-capacity-adoption.md": [],
     "raw/lectures/ip-jedec-hbm4-jesd270-4-standard.md": [],
     "raw/lectures/ip-jedec-lpddr6-jesd209-6-standard.md": [],
+    "raw/lectures/ip-jedec-standardization-governance.md": [],
     "raw/lectures/ip-marvell-bravera-ssd-controller-nand.md": [],
+    "raw/lectures/ip-memory-ras-ecc-reliability-datacenter.md": [],
+    "raw/lectures/ip-mrdimm-mcrdimm-socamm-module-ai-server.md": [],
     "raw/lectures/ip-nand-ssd-controllers-phison-silicon-motion.md": [],
     "raw/lectures/ip-on-die-ecc-link-ecc-ras-features.md": [],
     "raw/lectures/ip-rambus-hbm4-hbm4e-controller-ip.md": [],
+    "raw/lectures/ip-rowhammer-dram-security-mitigation-prac.md": [],
     "raw/lectures/ip-synopsys-memory-interface-ip-hbm4-ddr5-lpddr6.md": [],
     "raw/lectures/ip-vendor-landscape-cadence-rambus-phy-acquisition.md": [],
     "raw/lectures/jedec-ddr5-standard-explained.md": [],
     "raw/lectures/jedec-hbm4-standard-jesd270-4.md": [],
     "raw/lectures/memory-demand-forecasting-methodology-bottoms-up.md": [],
+    "raw/lectures/memory-demand-seasonality-quarterly-pattern.md": [],
+    "raw/lectures/memory-lta-prepayment-accounting-financial-model.md": [],
     "raw/lectures/memory-pricing-contract-spot-lta-mechanism.md": [],
     "raw/lectures/nand-cost-per-bit-3d-layers-qlc-economics.md": [],
     "raw/lectures/nomad-semi-memory-primer-industry-structure.md": [],
@@ -482,11 +581,15 @@
     ],
     "raw/papers/bayesian-model-averaging-semiconductor-cycle-2018.md": [],
     "raw/papers/chip-architecture-supply-demand-uncertainty-2023.md": [],
+    "raw/papers/cobweb-model-dram-price-capacity-cycle.md": [],
     "raw/papers/collusion-along-learning-curve-dram-cartel-2021.md": [],
     "raw/papers/demand-forecasting-financial-estimation-semiconductor-supply-chain-2019.md": [],
     "raw/papers/demand-forecasting-lstm-neural-networks-2020.md": [],
+    "raw/papers/dram-oligopoly-cournot-capacity-competition.md": [],
+    "raw/papers/dram-spot-price-arima-elasticity-demand-2024.md": [],
     "raw/papers/dynamic-analysis-semiconductor-supply-chain-bullwhip-2018.md": [],
     "raw/papers/electricity-demand-grid-impacts-ai-data-centers-2024.md": [],
+    "raw/papers/forecast-combination-ensemble-m5-competition.md": [],
     "raw/papers/google-trends-web-traffic-electronics-demand-amazon-2025.md": [],
     "raw/papers/grey-markov-taiwan-ic-assembly-forecasting-2013.md": [],
     "raw/papers/hbm-bit-cost-domain-specific-ecc-ai-inference-2025.md": [],
@@ -503,7 +606,9 @@
     "raw/papers/investigating-semiconductor-industry-cycles-2013.md": [],
     "raw/papers/manufacturing-intelligence-semiconductor-demand-technology-diffusion-2010.md": [],
     "raw/papers/measuring-moores-law-price-cost-quality-indexes-2019.md": [],
+    "raw/papers/newsvendor-base-stock-inventory-uncertain-demand.md": [],
     "raw/papers/predicting-the-present-with-google-trends-2012.md": [],
+    "raw/papers/probabilistic-forecasting-conformal-quantile-regression.md": [],
     "raw/papers/race-to-efficiency-ai-scaling-laws-2025.md": [],
     "raw/papers/real-options-capacity-investment-semiconductor-2007.md": [],
     "raw/papers/semiconductor-cycles-bootstrap-prediction-intervals-2007.md": [],
@@ -511,16 +616,21 @@
     "raw/papers/stochastic-programming-capacity-planning-wafer-fab-2009.md": [
       "wiki/methods/forecasting-evidence-map.md"
     ],
+    "raw/papers/system-dynamics-abm-semiconductor-supply-chain-bullwhip.md": [],
+    "raw/papers/transformer-probabilistic-demand-forecasting-online-learning-2024.md": [],
     "raw/papers/variable-p-rolling-grey-taiwan-semiconductor-production-2005.md": [],
     "raw/README.md": [],
     "raw/reports/analyst-bank-memory-outlook-price-targets-2026.md": [],
     "raw/reports/capex-samsung-hbm-50pct-capacity-surge-2026.md": [],
+    "raw/reports/china-cloud-custom-ai-chip-memory-demand-2026.md": [],
     "raw/reports/china-cxmt-ymtc-capacity-export-controls-2026.md": [],
+    "raw/reports/china-huawei-ascend-hbm-demand-2026.md": [],
     "raw/reports/counterpoint-global-smartphone-market-2024.md": [
       "wiki/markets/smartphone-memory.md",
       "wiki/simulators/smartphone-memory-demand.md"
     ],
     "raw/reports/cxmt-2026-capacity-hbm3-bit-share.md": [],
+    "raw/reports/digitimes-taiwan-server-odm-memory-supply-2026.md": [],
     "raw/reports/equip-advantest-hbm-test-lead-times-2026.md": [],
     "raw/reports/equip-applied-materials-q1-2026-dram-china.md": [],
     "raw/reports/equip-asml-q1-2026-memory-euv-orders.md": [],
@@ -535,6 +645,7 @@
     "raw/reports/fab-skhynix-micron-capacity-roadmap-2026-2031.md": [],
     "raw/reports/gartner-2026-memory-revenue-memflation-forecast.md": [],
     "raw/reports/hbm-ai-memory-supercycle-2026-2027.md": [],
+    "raw/reports/hbm-take-or-pay-capacity-reservation-2026.md": [],
     "raw/reports/idc-2026-memory-shortage-supply-growth.md": [
       "wiki/concepts/supply-demand-gap.md",
       "wiki/markets/dram.md",
@@ -542,7 +653,9 @@
       "wiki/simulators/pc-dram-demand.md"
     ],
     "raw/reports/korea-media-memory-supercycle-2026-outlook.md": [],
+    "raw/reports/korea-media-samsung-skhynix-2026-capex-hbm.md": [],
     "raw/reports/macro-ai-capex-bubble-downside-risk-2026.md": [],
+    "raw/reports/macro-ai-roi-monetization-gap-demand-risk-2026.md": [],
     "raw/reports/macro-cloud-spending-growth-2026.md": [],
     "raw/reports/macro-consumer-pc-smartphone-demand-2026.md": [],
     "raw/reports/macro-datacenter-power-constraint-2026.md": [
@@ -551,6 +664,7 @@
     "raw/reports/macro-fed-rates-recession-risk-2026.md": [],
     "raw/reports/macro-gartner-ai-spending-2026-2_59trillion.md": [],
     "raw/reports/macro-gartner-it-spending-2026-6_31trillion.md": [],
+    "raw/reports/macro-gpu-depreciation-accounting-ai-demand-risk.md": [],
     "raw/reports/macro-hyperscaler-capex-2026-725billion.md": [],
     "raw/reports/macro-jpy-fx-kioxia-2026.md": [],
     "raw/reports/macro-krw-usd-fx-2026-won-weakness.md": [],
@@ -563,13 +677,16 @@
     "raw/reports/material-silicon-wafer-shinetsu-sumco-duopoly-2026.md": [],
     "raw/reports/material-specialty-gases-krypton-xenon-3dnand-etch.md": [],
     "raw/reports/memory-commodity-financialization-etf-futures.md": [],
+    "raw/reports/memory-gross-margin-cost-structure-hbm-2026.md": [],
     "raw/reports/memory-inventory-leading-indicators-2026.md": [],
     "raw/reports/memory-makers-2026-capex-wafer-capacity.md": [
       "wiki/concepts/supply-demand-gap.md",
       "wiki/markets/dram.md"
     ],
+    "raw/reports/memory-supercycle-end-timing-2027-2029-scenarios.md": [],
     "raw/reports/micron-fq2-2026-earnings-dram-nand-hbm.md": [],
     "raw/reports/omdia-2026-memory-crunch-forecast.md": [],
+    "raw/reports/pkg-amkor-ase-osat-advanced-packaging-hbm-2026.md": [],
     "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md": [
       "wiki/markets/hbm.md",
       "wiki/simulators/hbm-demand.md"
@@ -580,7 +697,9 @@
     "raw/reports/region-china-domestic-memory-demand-localization.md": [],
     "raw/reports/region-china-smartphone-memflation-demand-2026.md": [],
     "raw/reports/region-dram-market-revenue-share-by-region-2026.md": [],
+    "raw/reports/region-europe-automotive-memory-demand-2026.md": [],
     "raw/reports/region-europe-chips-act-automotive-demand.md": [],
+    "raw/reports/region-india-datacenter-ai-demand-2026-2030.md": [],
     "raw/reports/region-india-sea-atmp-assembly-smartphone-demand.md": [],
     "raw/reports/region-japan-kioxia-rapidus-materials-policy.md": [],
     "raw/reports/region-korea-samsung-skhynix-production-hub-policy.md": [],
@@ -588,7 +707,9 @@
     "raw/reports/region-taiwan-packaging-nanya-winbond-server-hub.md": [],
     "raw/reports/region-us-chips-act-micron-fabs-ai-demand.md": [],
     "raw/reports/region-us-hyperscaler-concentration-memory-demand.md": [],
+    "raw/reports/region-us-section232-semiconductor-tariffs-2026.md": [],
     "raw/reports/region-wsts-2026-regional-billings-split.md": [],
+    "raw/reports/roundhill-dram-memory-etf-investment-landscape.md": [],
     "raw/reports/sia-q1-2026-global-semiconductor-sales.md": [],
     "raw/reports/techinsights-memory-outlook-report-2026.md": [],
     "raw/reports/trendforce-2026-memory-price-forecast.md": [
@@ -610,6 +731,7 @@
       "wiki/markets/nand.md",
       "wiki/simulators/nand-ssd-demand.md"
     ],
+    "raw/reports/trendforce-spot-price-may-2026-ddr5-ddr4.md": [],
     "raw/reports/wsts-spring-2026-semiconductor-memory-forecast.md": [
       "wiki/markets/dram.md"
     ],
@@ -641,6 +763,20 @@
       "tags": [
         "hbm",
         "dram",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
+      ]
+    },
+    "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md": {
+      "title": "Google TPU v7 Ironwood / AWS Trainium3 HBM 스펙 (2026)",
+      "source_url": "https://www.trendforce.com/news/2025/11/07/news-google-unveils-7th-gen-tpu-ironwood-with-9216-chip-superpod-taking-aim-at-nvidia/",
+      "type": "article",
+      "confidence": "high",
+      "tags": [
+        "hbm",
         "ai-server",
         "datacenter",
         "demand-forecasting",
@@ -720,6 +856,19 @@
         "dram",
         "nand",
         "pricing",
+        "supply-chain",
+        "demand-forecasting"
+      ]
+    },
+    "raw/articles/channel-used-refurbished-server-memory-secondary-2026.md": {
+      "title": "중고/리퍼 서버 메모리 secondary 시장 (2026)",
+      "source_url": "https://inteleca.com/it-industry-news/server-memory-market-affect-asset-recovery/",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "pricing",
+        "inventory",
         "supply-chain",
         "demand-forecasting"
       ]
@@ -849,6 +998,19 @@
         "demand-forecasting"
       ]
     },
+    "raw/articles/domain-autonomous-vehicle-data-generation-storage.md": {
+      "title": "자율주행 데이터 생성·저장 (TB/day) — NAND 수요",
+      "source_url": "https://www.tuxera.com/blog/autonomous-and-adas-test-cars-produce-over-11-tb-of-data-per-day/",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "nand",
+        "automotive",
+        "bit-demand",
+        "demand-forecasting",
+        "capacity"
+      ]
+    },
     "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md": {
       "title": "크립토/블록체인 GPU 마이닝 레거시 GDDR 수요 (niche)",
       "source_url": "https://plisio.net/blog/best-graphics-cards-gpu-for-mining",
@@ -869,6 +1031,20 @@
         "consumer-electronics",
         "demand-forecasting",
         "bit-demand"
+      ]
+    },
+    "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md": {
+      "title": "Exascale 슈퍼컴퓨터 HBM 용량 (El Capitan/Frontier/Aurora)",
+      "source_url": "https://en.wikipedia.org/wiki/El_Capitan_(supercomputer)",
+      "type": "article",
+      "confidence": "high",
+      "tags": [
+        "hbm",
+        "dram",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
       ]
     },
     "raw/articles/domain-humanoid-robotics-memory-content.md": {
@@ -920,6 +1096,19 @@
         "demand-forecasting",
         "capacity",
         "bit-demand"
+      ]
+    },
+    "raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md": {
+      "title": "스마트글래스/AR 웨어러블 메모리 (Meta Ray-Ban, 2026)",
+      "source_url": "https://www.meta.com/ai-glasses/meta-ray-ban-display/",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "consumer-electronics",
+        "bit-demand",
+        "demand-forecasting"
       ]
     },
     "raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md": {
@@ -1014,6 +1203,21 @@
         "bit-demand"
       ]
     },
+    "raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md": {
+      "title": "GDDR7 그래픽 메모리 수요·crowding out (2026)",
+      "source_url": "https://www.astutegroup.com/news/general/gpu-pricing-set-for-reset-as-ai-driven-memory-shortages-push-costs-sharply-higher/",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "hbm",
+        "consumer-electronics",
+        "pricing",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
+      ]
+    },
     "raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md": {
       "title": "Samsung Galaxy A16 5G - Full phone specifications",
       "source_url": "https://www.gsmarena.com/samsung_galaxy_a16_5g-13346.php",
@@ -1046,6 +1250,34 @@
         "scenario-analysis",
         "inventory",
         "revenue"
+      ]
+    },
+    "raw/articles/history-memory-fab-disruptions-supply-shocks.md": {
+      "title": "메모리 fab disruption·공급 충격 역사 (가격 영향)",
+      "source_url": "https://www.computerworld.com/article/1518321/dram-shortage-from-hynix-fire-to-hit-pcs-hardest.html",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "pricing",
+        "supply-chain",
+        "demand-forecasting",
+        "scenario-analysis"
+      ]
+    },
+    "raw/articles/history-memory-trade-disputes-antidumping-cartel.md": {
+      "title": "메모리 무역분쟁·반덤핑·카르텔 역사 (1986-2010)",
+      "source_url": "https://en.wikipedia.org/wiki/1986_U.S.%E2%80%93Japan_Semiconductor_Agreement",
+      "type": "article",
+      "confidence": "high",
+      "tags": [
+        "dram",
+        "pricing",
+        "supply-chain",
+        "demand-forecasting",
+        "scenario-analysis"
       ]
     },
     "raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md": {
@@ -1114,6 +1346,21 @@
         "bit-demand"
       ]
     },
+    "raw/articles/model-ai-inference-memory-bound-token-economics.md": {
+      "title": "AI inference 메모리 바운드·토큰 경제 (HBM 비중)",
+      "source_url": "https://www.spheron.network/blog/ai-memory-wall-inference-latency-guide-2026/",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand",
+        "pricing"
+      ]
+    },
     "raw/articles/model-context-length-kv-cache-memory-demand.md": {
       "title": "LLM 컨텍스트 길이·KV cache·trillion-param 메모리 수요",
       "source_url": "https://introl.com/blog/long-context-llm-infrastructure-million-token-windows-guide",
@@ -1140,6 +1387,21 @@
         "datacenter",
         "demand-forecasting",
         "bit-demand"
+      ]
+    },
+    "raw/articles/model-epoch-ai-compute-growth-trends.md": {
+      "title": "Epoch AI — AI compute 성장 추세 (메모리 수요 최상류 동인)",
+      "source_url": "https://epoch.ai/trends",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
       ]
     },
     "raw/articles/model-introl-ai-memory-supercycle-hbm-2026.md": {
@@ -1233,6 +1495,19 @@
         "server",
         "demand-forecasting",
         "bit-demand"
+      ]
+    },
+    "raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md": {
+      "title": "메모리 가격 → 클라우드 인스턴스 가격 전가 (2026)",
+      "source_url": "https://www.softwareseni.com/how-much-will-your-cloud-bill-increase-in-2026-analysing-the-infrastructure-cost-passthrough/",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "server",
+        "datacenter",
+        "pricing",
+        "demand-forecasting"
       ]
     },
     "raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md": {
@@ -1335,6 +1610,32 @@
         "smartphone",
         "demand-forecasting",
         "bit-demand"
+      ]
+    },
+    "raw/articles/on-device-slm-smartphone-ram-2026.md": {
+      "title": "On-device SLM 스마트폰 RAM 요구 (2026, Snapdragon/MediaTek)",
+      "source_url": "https://v-chandra.github.io/on-device-llms/",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "smartphone",
+        "bit-demand",
+        "demand-forecasting",
+        "capacity"
+      ]
+    },
+    "raw/articles/power-datacenter-vacancy-leasing-market-2026.md": {
+      "title": "데이터센터 공실/임대 시장 (2026) — capacity 흡수율",
+      "source_url": "https://www.jll.com/en-us/newsroom/data-center-availability-crisis-deepens-as-vacancy-hits-historic-low",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "datacenter",
+        "ai-server",
+        "demand-forecasting",
+        "capacity",
+        "hbm"
       ]
     },
     "raw/articles/power-deloitte-ai-datacenter-123gw-2035.md": {
@@ -1511,6 +1812,20 @@
         "bit-demand"
       ]
     },
+    "raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md": {
+      "title": "AI 학습데이터·합성데이터 → 스토리지(NAND) 수요 (2026)",
+      "source_url": "https://cloud.google.com/blog/products/compute/ai-infrastructure-at-next26",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "nand",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
+      ]
+    },
     "raw/articles/storage-enterprise-ssd-qlc-nand-demand-2026.md": {
       "title": "Enterprise SSD / QLC NAND demand 2026 — eSSD>consumer, HDD shortage→flash",
       "source_url": "https://www.tomshardware.com/pc-components/hdds/ai-triggers-hard-drive-shortage-amidst-dram-squeeze-enterprise-hard-drives-on-backorder-by-2-years-as-hyperscalers-switch-to-qlc-ssds",
@@ -1610,6 +1925,33 @@
         "bit-demand"
       ]
     },
+    "raw/datasets/ai-pc-penetration-forecast.md": {
+      "title": "AI PC 침투율 전망 (2023-2028)",
+      "source_url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-28-gartner-says-artificial-intelligence-pcs-will-represent-31-percent-of-worldwide-pc-market-by-the-end-of-2025",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "pc",
+        "dram",
+        "demand-forecasting",
+        "units",
+        "bit-demand"
+      ]
+    },
+    "raw/datasets/ai-server-shipments-forecast.md": {
+      "title": "AI 서버 출하 전망 (2023-2027, 구조 모델 입력)",
+      "source_url": "https://www.trendforce.com/presscenter/news/20260120-12887.html",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "ai-server",
+        "hbm",
+        "dram",
+        "demand-forecasting",
+        "units",
+        "bit-demand"
+      ]
+    },
     "raw/datasets/bit-demand-supply-growth.md": {
       "title": "DRAM/NAND 비트 수요·공급 성장률 (연도별)",
       "source_url": "https://www.statista.com/statistics/1367000/global-dram-supply-demand-bit-growth/",
@@ -1619,6 +1961,19 @@
         "dram",
         "nand",
         "bit-demand"
+      ]
+    },
+    "raw/datasets/dram-contract-price-qoq-2025-2026.md": {
+      "title": "DRAM/NAND contract price 분기별 QoQ 변동 (2025Q4-2026Q2)",
+      "source_url": "https://www.trendforce.com/presscenter/news/20260331-12995.html",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "pricing",
+        "demand-forecasting",
+        "server"
       ]
     },
     "raw/datasets/dram-nand-bit-demand-by-application.md": {
@@ -1634,6 +1989,20 @@
         "smartphone",
         "pc",
         "demand-forecasting"
+      ]
+    },
+    "raw/datasets/dram-nand-bit-growth-cagr-longrun.md": {
+      "title": "DRAM/NAND bit 성장률·CAGR (장기, bit vs revenue 구분)",
+      "source_url": "https://www.nextplatform.com/2025/12/19/hbm-supply-curve-gets-steeper-but-still-cant-meet-demand/",
+      "type": "dataset",
+      "confidence": "low",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "bit-demand",
+        "demand-forecasting",
+        "capacity"
       ]
     },
     "raw/datasets/dram-price-history.md": {
@@ -1669,6 +2038,20 @@
         "revenue"
       ]
     },
+    "raw/datasets/dram-wafer-capacity-allocation-2026.md": {
+      "title": "DRAM wafer capacity 배분·환산계수 (2026)",
+      "source_url": "https://www.trendforce.com/news/2025/12/26/news-ai-reportedly-to-consume-20-of-global-dram-wafer-capacity-in-2026-hbm-gddr7-lead-demand/",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "hbm",
+        "capacity",
+        "wafer",
+        "bit-demand",
+        "demand-forecasting"
+      ]
+    },
     "raw/datasets/gpu-hbm-capacity.md": {
       "title": "NVIDIA GPU 세대별 per-GPU HBM 용량",
       "source_url": "https://wccftech.com/nvidia-blackwell-gpu-architecture-official-208-billion-transistors-5x-ai-performance-192-gb-hbm3e-memory/",
@@ -1676,6 +2059,18 @@
       "confidence": "medium",
       "tags": [
         "hbm",
+        "capacity"
+      ]
+    },
+    "raw/datasets/hbm-bit-demand-growth-rate.md": {
+      "title": "HBM bit 수요 성장률 (2024-2026)",
+      "source_url": "https://www.nextplatform.com/2025/12/19/hbm-supply-curve-gets-steeper-but-still-cant-meet-demand/",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "bit-demand",
+        "demand-forecasting",
         "capacity"
       ]
     },
@@ -1687,6 +2082,33 @@
       "tags": [
         "hbm",
         "revenue"
+      ]
+    },
+    "raw/datasets/idc-global-datasphere-zettabytes.md": {
+      "title": "IDC Global DataSphere (제타바이트, 2018-2029)",
+      "source_url": "https://my.idc.com/getdoc.jsp?containerId=US53363625",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "nand",
+        "demand-forecasting",
+        "bit-demand",
+        "datacenter",
+        "capacity"
+      ]
+    },
+    "raw/datasets/korea-semiconductor-exports-monthly.md": {
+      "title": "한국 반도체 수출 월별 (실시간 메모리 수요 프록시)",
+      "source_url": "https://money.usnews.com/investing/news/articles/2026-05-31/south-korea-export-growth-hits-four-decade-high-as-chip-sales-hit-record-on-ai-boom",
+      "type": "dataset",
+      "confidence": "high",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "revenue",
+        "demand-forecasting",
+        "units"
       ]
     },
     "raw/datasets/memory-content-per-device.md": {
@@ -1739,6 +2161,20 @@
         "revenue"
       ]
     },
+    "raw/datasets/memory-market-tam-forecast-2025-2028.md": {
+      "title": "메모리 시장 장기 TAM 전망 (2025-2028/2030)",
+      "source_url": "https://www.trendforce.com/presscenter/news/20260122-12893.html",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "revenue",
+        "demand-forecasting",
+        "scenario-analysis"
+      ]
+    },
     "raw/datasets/nand-cost-per-bit-trend.md": {
       "title": "NAND 플래시 비트당 가격·3D 적층 추이",
       "source_url": "https://blocksandfiles.com/2024/01/12/nand-in-2023/",
@@ -1768,6 +2204,18 @@
         "pc",
         "server",
         "units"
+      ]
+    },
+    "raw/datasets/semiconductor-capex-to-revenue-ratio.md": {
+      "title": "반도체 capex-to-revenue 비율·투자 규율 (사이클 지표)",
+      "source_url": "https://247wallst.com/investing/2026/05/13/the-semiconductor-upcycle-is-being-driven-by-memory-pricing-not-unit-growth/",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "capex",
+        "demand-forecasting",
+        "scenario-analysis",
+        "supply-chain"
       ]
     },
     "raw/datasets/smartphone-shipments.md": {
@@ -1817,6 +2265,19 @@
         "revenue",
         "units",
         "demand-forecasting"
+      ]
+    },
+    "raw/earnings/kioxia-fy25-nand-outlook-ipo.md": {
+      "title": "Kioxia FY25 실적·NAND 수요 전망·IPO (일본 NAND)",
+      "source_url": "https://www.kioxia-holdings.com/en-jp/news/2025/20250605-2.html",
+      "type": "earnings",
+      "confidence": "medium",
+      "tags": [
+        "nand",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity",
+        "ai-server"
       ]
     },
     "raw/earnings/macronix-1q26-earnings.md": {
@@ -1870,6 +2331,19 @@
         "hbm",
         "demand-forecasting",
         "revenue"
+      ]
+    },
+    "raw/earnings/nvidia-hbm4-supplier-qualification-vera-rubin-2026.md": {
+      "title": "NVIDIA HBM4 3사 인증 (Vera Rubin, 2026-06)",
+      "source_url": "https://finance.yahoo.com/sectors/technology/articles/nvidia-certifies-samsung-sk-hynix-133001560.html",
+      "type": "earnings",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity",
+        "ai-server"
       ]
     },
     "raw/earnings/samsung-electronics-1q26-earnings.md": {
@@ -2067,6 +2541,19 @@
         "demand-forecasting"
       ]
     },
+    "raw/lectures/conf-jedec-ufs5-mobile-storage-roadmap.md": {
+      "title": "UFS 5.0 / 4.1 모바일 스토리지 로드맵",
+      "source_url": "https://www.jedec.org/news/pressreleases/jedec%C2%AE-announces-updates-universal-flash-storage-ufs-and-memory-interface-0",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "nand",
+        "smartphone",
+        "capacity",
+        "demand-forecasting",
+        "bit-demand"
+      ]
+    },
     "raw/lectures/conf-micron-hbm4-g9-nand-vera-rubin.md": {
       "title": "Micron in High-Volume Production of HBM4 for NVIDIA Vera Rubin, PCIe Gen6 SSD and SOCAMM2",
       "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-high-volume-production-hbm4-designed-nvidia-vera-rubin",
@@ -2110,6 +2597,20 @@
         "demand-forecasting"
       ]
     },
+    "raw/lectures/conf-skhynix-hbm4e-hbm5-roadmap-2027-2031.md": {
+      "title": "SK hynix HBM4E/HBM5 로드맵 (2027-2031)",
+      "source_url": "https://www.trendforce.com/news/2025/11/04/news-sk-hynix-unveils-2029-2031-roadmap-featuring-hbm5-gddr7-next-and-400-layer-nand/",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "nand",
+        "capacity",
+        "demand-forecasting",
+        "bit-demand"
+      ]
+    },
     "raw/lectures/conf-skhynix-vlsi-2025-dram-roadmap.md": {
       "title": "SK hynix Presents Future DRAM Technology Roadmap at IEEE VLSI 2025",
       "source_url": "https://news.skhynix.com/sk-hynix-presents-future-dram-technology-roadmap-at-ieee-vlsi-2025/",
@@ -2149,6 +2650,35 @@
         "methodology"
       ]
     },
+    "raw/lectures/emerging-co-packaged-optics-cpo-memory-bandwidth.md": {
+      "title": "Co-Packaged Optics (CPO) / 광 I/O 와 메모리 대역폭",
+      "source_url": "https://www.tomshardware.com/networking/nvidia-outlines-plans-for-using-light-for-communication-between-ai-gpus-by-2026-silicon-photonics-and-co-packaged-optics-may-become-mandatory-for-next-gen-ai-data-centers",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "capacity",
+        "bit-demand"
+      ]
+    },
+    "raw/lectures/emerging-hbf-high-bandwidth-flash-ai-inference.md": {
+      "title": "HBF (High Bandwidth Flash) — NAND 기반 HBM 대안 (AI inference)",
+      "source_url": "https://www.tomshardware.com/tech-industry/sandisk-and-sk-hynix-join-forces-to-standardize-high-bandwidth-flash-memory-a-nand-based-alternative-to-hbm-for-ai-gpus-move-could-enable-8-16x-higher-capacity-compared-to-dram",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "nand",
+        "hbm",
+        "memory",
+        "ai-server",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
+      ]
+    },
     "raw/lectures/emerging-hbm4-cxl-pim-3d-dram-roadmap.md": {
       "title": "HBM4 spec / CXL pooling / PIM / HBM5 roadmap",
       "source_url": "https://en.wikipedia.org/wiki/High_Bandwidth_Memory",
@@ -2160,6 +2690,31 @@
         "memory",
         "capacity",
         "demand-forecasting",
+        "bit-demand"
+      ]
+    },
+    "raw/lectures/emerging-neuromorphic-in-memory-computing-reram.md": {
+      "title": "뉴로모픽 / In-Memory Computing / ReRAM (장기 메모리 수요 재편)",
+      "source_url": "https://www.patsnap.com/resources/blog/articles/in-memory-analog-computing-landscape-2026/",
+      "type": "lecture",
+      "confidence": "low",
+      "tags": [
+        "memory",
+        "dram",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
+      ]
+    },
+    "raw/lectures/emerging-quantum-cryogenic-memory-cryo-cmos.md": {
+      "title": "양자컴퓨팅 / 극저온(Cryo-CMOS) 메모리 (장기 niche)",
+      "source_url": "https://www.patsnap.com/resources/blog/articles/cryo-cmos-technology-landscape-2026/",
+      "type": "lecture",
+      "confidence": "low",
+      "tags": [
+        "memory",
+        "demand-forecasting",
+        "capacity",
         "bit-demand"
       ]
     },
@@ -2313,6 +2868,19 @@
         "demand-forecasting"
       ]
     },
+    "raw/lectures/ip-jedec-standardization-governance.md": {
+      "title": "JEDEC 표준화 조직·거버넌스 (메모리 표준 생태계)",
+      "source_url": "https://www.jedec.org/standards-documents/about-jedec-standards",
+      "type": "lecture",
+      "confidence": "high",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "memory",
+        "demand-forecasting"
+      ]
+    },
     "raw/lectures/ip-marvell-bravera-ssd-controller-nand.md": {
       "title": "Marvell Bravera SC5 SSD Controllers (PCIe 5.0, 16 NAND Channels)",
       "source_url": "https://www.marvell.com/products/ssd-controllers/mv-ss1331-1333.html",
@@ -2323,6 +2891,34 @@
         "memory",
         "capacity",
         "demand-forecasting"
+      ]
+    },
+    "raw/lectures/ip-memory-ras-ecc-reliability-datacenter.md": {
+      "title": "메모리 RAS / ECC 신뢰성 (DDR5 on-die ECC, scrubbing)",
+      "source_url": "https://www.synopsys.com/articles/ecc-memory-error-correction.html",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "server",
+        "datacenter",
+        "capacity",
+        "demand-forecasting",
+        "bit-demand"
+      ]
+    },
+    "raw/lectures/ip-mrdimm-mcrdimm-socamm-module-ai-server.md": {
+      "title": "MRDIMM / MCRDIMM / SOCAMM 모듈 (AI 서버 고대역폭)",
+      "source_url": "https://www.trendforce.com/news/2026/05/06/news-jedec-nears-2nd-gen-mrdimm-as-cpus-demand-more-bandwidth-samsung-sk-hynix-reportedly-accelerate-push/",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "server",
+        "ai-server",
+        "capacity",
+        "demand-forecasting",
+        "bit-demand"
       ]
     },
     "raw/lectures/ip-nand-ssd-controllers-phison-silicon-motion.md": {
@@ -2360,6 +2956,19 @@
         "dram",
         "capacity",
         "demand-forecasting"
+      ]
+    },
+    "raw/lectures/ip-rowhammer-dram-security-mitigation-prac.md": {
+      "title": "Rowhammer DRAM 보안·PRAC 완화 (DDR5/LPDDR6)",
+      "source_url": "https://www.tomshardware.com/tech-industry/cyber-security/modern-memory-is-still-vulnerable-to-rowhammer-vulnerabilities-phoenix-root-privilege-escalation-attack-proves-that-rowhammer-still-smashes-ddr5-security-to-bits",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "memory",
+        "capacity",
+        "demand-forecasting",
+        "bit-demand"
       ]
     },
     "raw/lectures/ip-synopsys-memory-interface-ip-hbm4-ddr5-lpddr6.md": {
@@ -2427,6 +3036,34 @@
         "bit-demand",
         "pricing",
         "capacity"
+      ]
+    },
+    "raw/lectures/memory-demand-seasonality-quarterly-pattern.md": {
+      "title": "메모리 수요 계절성·분기 패턴 (forecasting 보정)",
+      "source_url": "https://www.trendforce.com/presscenter/news/20251117-12784.html",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "demand-forecasting",
+        "pricing",
+        "smartphone",
+        "pc"
+      ]
+    },
+    "raw/lectures/memory-lta-prepayment-accounting-financial-model.md": {
+      "title": "메모리 LTA 선지급·이연수익 회계 (재무 모델)",
+      "source_url": "https://www.wallstreetprep.com/knowledge/deferred-revenue/",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "pricing",
+        "demand-forecasting",
+        "revenue",
+        "supply-chain"
       ]
     },
     "raw/lectures/memory-pricing-contract-spot-lta-mechanism.md": {
@@ -2724,6 +3361,19 @@
         "demand-forecasting"
       ]
     },
+    "raw/papers/cobweb-model-dram-price-capacity-cycle.md": {
+      "title": "Cobweb model — DRAM 가격·capacity 사이클 (lagged supply)",
+      "source_url": "https://en.wikipedia.org/wiki/Cobweb_model",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "pricing",
+        "scenario-analysis",
+        "causal-model",
+        "supply-chain"
+      ]
+    },
     "raw/papers/collusion-along-learning-curve-dram-cartel-2021.md": {
       "title": "Collusion Along the Learning Curve: Theory and Evidence From the Semiconductor Industry",
       "source_url": "https://onlinelibrary.wiley.com/doi/10.1111/joie.12235",
@@ -2759,6 +3409,32 @@
         "probabilistic-forecasting"
       ]
     },
+    "raw/papers/dram-oligopoly-cournot-capacity-competition.md": {
+      "title": "DRAM 과점·capacity 경쟁 (Cournot/Stackelberg) 게임이론",
+      "source_url": "https://users.ox.ac.uk/~sedm1375/Teaching/Micro/week7.2.pdf",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "scenario-analysis",
+        "pricing",
+        "causal-model",
+        "capex"
+      ]
+    },
+    "raw/papers/dram-spot-price-arima-elasticity-demand-2024.md": {
+      "title": "ARIMA-driven DRAM spot price forecasting + 수요 탄력성 맥락 (2024)",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1029313224000733",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "time-series",
+        "pricing",
+        "regression",
+        "scenario-analysis"
+      ]
+    },
     "raw/papers/dynamic-analysis-semiconductor-supply-chain-bullwhip-2018.md": {
       "title": "Dynamic analysis and design of a semiconductor supply chain: a control engineering approach",
       "source_url": "https://orca.cardiff.ac.uk/106037/3/IJPR%20paper.pdf",
@@ -2780,6 +3456,19 @@
         "scenario-analysis",
         "supply-chain",
         "bit-demand"
+      ]
+    },
+    "raw/papers/forecast-combination-ensemble-m5-competition.md": {
+      "title": "Forecast combination / ensemble (M5 Accuracy competition findings)",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0169207021001874",
+      "type": "paper",
+      "confidence": "high",
+      "tags": [
+        "demand-forecasting",
+        "time-series",
+        "machine-learning",
+        "probabilistic-forecasting",
+        "scenario-analysis"
       ]
     },
     "raw/papers/google-trends-web-traffic-electronics-demand-amazon-2025.md": {
@@ -2910,6 +3599,19 @@
         "causal-model"
       ]
     },
+    "raw/papers/newsvendor-base-stock-inventory-uncertain-demand.md": {
+      "title": "Inventory management under highly uncertain demand (newsvendor/base-stock)",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S016763770600054X",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "supply-chain",
+        "scenario-analysis",
+        "probabilistic-forecasting",
+        "inventory"
+      ]
+    },
     "raw/papers/predicting-the-present-with-google-trends-2012.md": {
       "title": "Predicting the Present with Google Trends",
       "source_url": "https://people.ischool.berkeley.edu/~hal/Papers/2011/ptp.pdf",
@@ -2920,6 +3622,19 @@
         "time-series",
         "regression",
         "machine-learning"
+      ]
+    },
+    "raw/papers/probabilistic-forecasting-conformal-quantile-regression.md": {
+      "title": "확률예측: Conformalized Quantile Regression (CQR) + conformal prediction",
+      "source_url": "https://arxiv.org/pdf/2202.08756",
+      "type": "paper",
+      "confidence": "high",
+      "tags": [
+        "demand-forecasting",
+        "probabilistic-forecasting",
+        "machine-learning",
+        "scenario-analysis",
+        "time-series"
       ]
     },
     "raw/papers/race-to-efficiency-ai-scaling-laws-2025.md": {
@@ -2979,6 +3694,31 @@
         "causal-model"
       ]
     },
+    "raw/papers/system-dynamics-abm-semiconductor-supply-chain-bullwhip.md": {
+      "title": "System Dynamics / Agent-Based 반도체 공급망 bullwhip 시뮬레이션",
+      "source_url": "https://www.anylogic.com/resources/case-studies/bullwhip-effect-in-semiconductor-supply-chain/",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "supply-chain",
+        "scenario-analysis",
+        "causal-model"
+      ]
+    },
+    "raw/papers/transformer-probabilistic-demand-forecasting-online-learning-2024.md": {
+      "title": "Transformer-based probabilistic demand forecasting with adaptive online learning (2024)",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0378779624011416",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "time-series",
+        "machine-learning",
+        "probabilistic-forecasting",
+        "supply-chain"
+      ]
+    },
     "raw/papers/variable-p-rolling-grey-taiwan-semiconductor-production-2005.md": {
       "title": "A variable P value rolling Grey forecasting model for Taiwan semiconductor industry production",
       "source_url": "https://www.researchgate.net/publication/223041722_A_variable_P_value_rolling_Grey_forecasting_model_for_Taiwan_semiconductor_industry_production",
@@ -3024,6 +3764,20 @@
         "demand-forecasting"
       ]
     },
+    "raw/reports/china-cloud-custom-ai-chip-memory-demand-2026.md": {
+      "title": "중국 클라우드(Alibaba/ByteDance/Baidu) AI칩·메모리 수요 (2026)",
+      "source_url": "https://www.cnbc.com/2026/03/27/bytedance-alibaba-planning-to-order-huaweis-new-ai-chip-reuters.html",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "ai-server",
+        "demand-forecasting",
+        "bit-demand",
+        "supply-chain"
+      ]
+    },
     "raw/reports/china-cxmt-ymtc-capacity-export-controls-2026.md": {
       "title": "CXMT/YMTC capacity, DDR5/HBM3 진입, 수출통제 영향 (2026)",
       "source_url": "https://www.tomshardware.com/pc-components/dram/chinas-cxmt-and-ymtc-to-expand-memory-output",
@@ -3038,6 +3792,21 @@
         "demand-forecasting",
         "pricing",
         "capex"
+      ]
+    },
+    "raw/reports/china-huawei-ascend-hbm-demand-2026.md": {
+      "title": "Huawei Ascend HBM 수요·중국 HBM 자급 병목 (2026)",
+      "source_url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "ai-server",
+        "supply-chain",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
       ]
     },
     "raw/reports/counterpoint-global-smartphone-market-2024.md": {
@@ -3058,6 +3827,21 @@
         "supply-chain",
         "capex",
         "demand-forecasting"
+      ]
+    },
+    "raw/reports/digitimes-taiwan-server-odm-memory-supply-2026.md": {
+      "title": "DigiTimes — 대만 서버 ODM·메모리 수급 (2026, 1차 매체)",
+      "source_url": "https://www.digitimes.com/news/a20260429PD217/demand-ai-server-2027-2026-capacity.html",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "ai-server",
+        "server",
+        "supply-chain",
+        "demand-forecasting",
+        "pricing"
       ]
     },
     "raw/reports/equip-advantest-hbm-test-lead-times-2026.md": {
@@ -3261,6 +4045,20 @@
         "pricing"
       ]
     },
+    "raw/reports/hbm-take-or-pay-capacity-reservation-2026.md": {
+      "title": "HBM take-or-pay / capacity 예약 계약 (2026)",
+      "source_url": "https://www.sahmcapital.com/news/content/micron-sells-out-2026-hbm4-as-ai-demand-reshapes-memory-cycle-2026-03-12",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "pricing",
+        "demand-forecasting",
+        "capacity",
+        "supply-chain"
+      ]
+    },
     "raw/reports/idc-2026-memory-shortage-supply-growth.md": {
       "title": "IDC 2026 — DRAM/NAND Supply Growth Below Norms (16%/17%), DRAM Rev ~$419B",
       "source_url": "https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/",
@@ -3292,6 +4090,20 @@
         "ai-server"
       ]
     },
+    "raw/reports/korea-media-samsung-skhynix-2026-capex-hbm.md": {
+      "title": "삼성·SK 2026 capex·HBM 증설 (국내 매체)",
+      "source_url": "https://www.epnc.co.kr/news/articleView.html?idxno=401451",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "hbm",
+        "capex",
+        "capacity",
+        "demand-forecasting",
+        "supply-chain"
+      ]
+    },
     "raw/reports/macro-ai-capex-bubble-downside-risk-2026.md": {
       "title": "AI Capex Bubble Debate 2026 — Burry Puts, GPU Depreciation, Memory Downside",
       "source_url": "https://intellectia.ai/blog/semiconductor-bubble-warning-2026",
@@ -3301,6 +4113,19 @@
         "demand-forecasting",
         "capex",
         "ai-server"
+      ]
+    },
+    "raw/reports/macro-ai-roi-monetization-gap-demand-risk-2026.md": {
+      "title": "AI ROI/수익화 갭 — 메모리 수요 지속성 리스크 (2026)",
+      "source_url": "https://www.goldmansachs.com/insights/articles/tracking-trillions-the-assumptions-shaping-scale-of-the-ai-build-out",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "scenario-analysis",
+        "ai-server",
+        "datacenter",
+        "capex"
       ]
     },
     "raw/reports/macro-cloud-spending-growth-2026.md": {
@@ -3370,6 +4195,18 @@
         "capex",
         "datacenter",
         "ai-server"
+      ]
+    },
+    "raw/reports/macro-gpu-depreciation-accounting-ai-demand-risk.md": {
+      "title": "GPU 감가상각 논쟁 (Burry thesis) — AI 수요 지속성 리스크",
+      "source_url": "https://www.fool.com/investing/2025/11/29/michael-burry-ai-companies-chips-nvidia/",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "scenario-analysis",
+        "ai-server",
+        "capex"
       ]
     },
     "raw/reports/macro-hyperscaler-capex-2026-725billion.md": {
@@ -3529,6 +4366,20 @@
         "supply-chain"
       ]
     },
+    "raw/reports/memory-gross-margin-cost-structure-hbm-2026.md": {
+      "title": "메모리 원가구조·마진·HBM 가격 (2026)",
+      "source_url": "https://www.trendforce.com/news/2025/12/23/news-memory-price-surge-reportedly-to-push-samsung-sk-hynix-gross-margins-above-tsmc-in-4q25",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "pricing",
+        "revenue",
+        "demand-forecasting"
+      ]
+    },
     "raw/reports/memory-inventory-leading-indicators-2026.md": {
       "title": "메모리 인벤토리 수준·선행지표 (2026)",
       "source_url": "https://investwithbjorn.substack.com/p/the-memory-cycle-has-a-clock-heres",
@@ -3556,6 +4407,20 @@
         "demand-forecasting",
         "bit-demand",
         "hbm"
+      ]
+    },
+    "raw/reports/memory-supercycle-end-timing-2027-2029-scenarios.md": {
+      "title": "메모리 슈퍼사이클 종료 시점 시나리오 (2027-2029)",
+      "source_url": "https://www.blocksandfiles.com/ai-ml/2026/01/21/memory-semiconductor-supercycle-set-to-run-through-2028/4090501",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "pricing",
+        "demand-forecasting",
+        "scenario-analysis"
       ]
     },
     "raw/reports/micron-fq2-2026-earnings-dram-nand-hbm.md": {
@@ -3586,6 +4451,19 @@
         "bit-demand",
         "supply-chain",
         "datacenter"
+      ]
+    },
+    "raw/reports/pkg-amkor-ase-osat-advanced-packaging-hbm-2026.md": {
+      "title": "OSAT(Amkor/ASE) 첨단 패키징·HBM 통합 (2026)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/0001047127/000104712726000007/amkr123125erex-991.htm",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "capacity",
+        "supply-chain",
+        "capex",
+        "demand-forecasting"
       ]
     },
     "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md": {
@@ -3680,6 +4558,20 @@
         "supply-chain"
       ]
     },
+    "raw/reports/region-europe-automotive-memory-demand-2026.md": {
+      "title": "유럽/차량용 메모리 수요 (2026, Infineon/NXP/ESMC)",
+      "source_url": "https://www.eetimes.com/automakers-face-memory-shock-as-ai-uses-up-semiconductor-supply/",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "automotive",
+        "demand-forecasting",
+        "bit-demand",
+        "supply-chain"
+      ]
+    },
     "raw/reports/region-europe-chips-act-automotive-demand.md": {
       "title": "Europe — EU Chips Act 2.0, Automotive Demand, Infineon/STM 2026",
       "source_url": "https://cryptobriefing.com/eu-chips-act-reset-demand-production/",
@@ -3689,6 +4581,20 @@
         "demand-forecasting",
         "supply-chain",
         "revenue"
+      ]
+    },
+    "raw/reports/region-india-datacenter-ai-demand-2026-2030.md": {
+      "title": "인도 데이터센터·AI 수요 (2026-2030)",
+      "source_url": "https://www.cushmanwakefield.com/en/india/news/2026/06/india-data-centre-growth",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "datacenter",
+        "ai-server",
+        "demand-forecasting",
+        "dram",
+        "hbm",
+        "capex"
       ]
     },
     "raw/reports/region-india-sea-atmp-assembly-smartphone-demand.md": {
@@ -3780,6 +4686,19 @@
         "supply-chain"
       ]
     },
+    "raw/reports/region-us-section232-semiconductor-tariffs-2026.md": {
+      "title": "US Section 232 반도체 관세 (2026) — 메모리 영향",
+      "source_url": "https://www.whitecase.com/insight-alert/president-trump-orders-narrowly-targeted-25-section-232-tariff-certain-advanced",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "hbm",
+        "supply-chain",
+        "demand-forecasting",
+        "pricing"
+      ]
+    },
     "raw/reports/region-wsts-2026-regional-billings-split.md": {
       "title": "WSTS Spring 2026 Forecast — Global Semiconductor Market Surges Beyond $1.5T",
       "source_url": "https://www.wsts.org/76/Recent-News-Release",
@@ -3792,6 +4711,20 @@
         "nand",
         "hbm",
         "supply-chain"
+      ]
+    },
+    "raw/reports/roundhill-dram-memory-etf-investment-landscape.md": {
+      "title": "Roundhill Memory ETF(DRAM)·메모리 투자 지형 (2026)",
+      "source_url": "https://www.roundhillinvestments.com/etf/dram/",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "pricing",
+        "demand-forecasting",
+        "scenario-analysis"
       ]
     },
     "raw/reports/sia-q1-2026-global-semiconductor-sales.md": {
@@ -3936,6 +4869,18 @@
         "datacenter",
         "supply-chain",
         "capacity"
+      ]
+    },
+    "raw/reports/trendforce-spot-price-may-2026-ddr5-ddr4.md": {
+      "title": "DRAM spot price 추이 (2026-05, DDR5/DDR4)",
+      "source_url": "https://www.trendforce.com/news/2026/05/27/insights-memory-spot-price-update-ddr5-spot-price-gains-narrow-amid-sluggish-trading-ddr4-rebounds/",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "pricing",
+        "demand-forecasting",
+        "inventory"
       ]
     },
     "raw/reports/wsts-spring-2026-semiconductor-memory-forecast.md": {
