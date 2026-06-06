@@ -1,0 +1,12 @@
+company,period,revenue,revenue_unit,operating_profit,profit_unit,note,confidence
+micron,FY2023,15.54,usd_b,-,,"net loss -5.83B USD (downturn trough)",high
+micron,FY2024,25.11,usd_b,-,,"net income +0.778B USD (recovery)",high
+micron,FY2024Q4,7.75,usd_b,1.522,usd_b,"operating income",high
+sk_hynix,FY2022,44.62,krw_t,-,,"prior record revenue",high
+sk_hynix,FY2023,32.77,krw_t,-7.73,krw_t,"operating LOSS 7.73T KRW (downturn)",high
+sk_hynix,FY2024,66.19,krw_t,23.47,krw_t,"record; ~46.06B USD; most profitable Korean co",high
+sk_hynix,FY2024Q4,19.77,krw_t,8.08,krw_t,"+2236% YoY vs 0.346T Q4'23",high
+samsung,FY2023,258.9,krw_t,6.57,krw_t,"total company op profit 6.57T (memory loss year)",medium
+samsung,FY2024,300.9,krw_t,32.7,krw_t,"total company",high
+samsung,FY2025,-,krw_t,43.6,krw_t,"total company op profit improved",medium
+samsung,FY2024Q1,71.92,krw_t,6.61,krw_t,"op profit +933% YoY",high

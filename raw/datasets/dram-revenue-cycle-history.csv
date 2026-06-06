@@ -1,0 +1,13 @@
+year,dram_revenue_usd_b,yoy_pct,cycle_phase,confidence,source_note
+2016,41,,recovery,low,"industry-cited approx (TrendForce/Statista historical)"
+2017,72,76,supercycle,low,"Micron rev +64% 2016->2017; supercycle peak approach"
+2018,99,38,peak,low,"record year; industry-cited approx"
+2019,62,-37,crash,low,"oversupply/inventory; lowest cycle phase"
+2020,65,5,covid-recovery,low,"PC/datacenter demand; approx"
+2021,93,43,boom,low,"industry-cited approx"
+2022,80,-14,downturn-start,low,"H2 2022 collapse; approx"
+2023,48,-40,trough,low,"lowest DRAM revenue since 2016 (out-of-balance S/D)"
+2024,103.17,115,recovery,medium,"Fortune Business Insights / Statista; some sources ~92B (definition gap)"
+2025,121.83,18,ai-onset,medium,"market-research (Fortune BI); Q3-2025 first quarter >40B (+29% QoQ)"
+2026,128.36,5,ai-supercycle-lowcase,low,"market-research conservative (Fortune BI 2026)"
+2026,404.3,232,ai-supercycle-highcase,medium,"TrendForce 2026 DRAM revenue +144% YoY (ASP-driven)"

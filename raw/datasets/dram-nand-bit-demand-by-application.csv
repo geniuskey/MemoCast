@@ -1,0 +1,10 @@
+product,application,bit_share_pct_approx,trend,year,confidence,source_note
+dram,server_ai,40,rising-fast,2026,low,"server+AI 최대 성장; AI가 DRAM wafer ~20% 소비, server bit 비중 추세 상승"
+dram,mobile,30,constrained,2026,low,"모바일 DRAM 1Q26 매출 사상최고이나 capacity가 server로 이동, 구조적 공급제약"
+dram,pc,12,declining,2026,low,"PC DRAM 수요 하향, OEM/모듈 출하 축소"
+dram,graphics,10,rising,2026,low,"GDDR7 주도, AI가 graphics DRAM 견인"
+dram,consumer_other,8,weak,2026,low,"경기 불확실성으로 약세"
+nand,enterprise_ssd,30,rising-fast,2026,low,"데이터센터 eSSD가 NAND 최대 성장 driver, 2026 eSSD>consumer 매출 추월"
+nand,mobile,38,inventory-adj,2025,medium,"스마트폰 2025 NAND 점유 41.05%(Mordor); 2026 1Q 재고조정"
+nand,client_ssd,20,price-up,2026,low,"client SSD 가격 +40%+; PC/폰 용량 축소로 수요 억제"
+nand,consumer_other,12,weak,2026,low,"capacity가 server로 우선 배분"
