@@ -1,6 +1,21 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import {
+  BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip
+} from 'chart.js'
+import type { ChartData, ChartOptions } from 'chart.js'
+import { Bar, Line } from 'vue-chartjs'
 import chartData from '../public/dataset-charts.json'
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend)
 
 type PeriodDemandRow = {
   year: number
@@ -18,6 +33,7 @@ type PeriodDemandRow = {
 }
 
 type ChartMode = 'dram-demand' | 'hbm-content'
+type SegmentFilter = 'all' | string
 
 type DomainTaxonomyRow = {
   domain: string
@@ -34,18 +50,20 @@ type ChartPoint = PeriodDemandRow & {
   value: number
   label: string
   series: string
-  x: number
-  y: number
 }
 
 const periodDemandTimeline = chartData.periodDemandTimeline as PeriodDemandRow[]
 const domainTaxonomy = chartData.domainTaxonomy as DomainTaxonomyRow[]
 const mode = ref<ChartMode>('dram-demand')
-const activeSegment = ref<'all' | 'Smartphone DRAM' | 'Server DRAM'>('all')
+const activeSegment = ref<SegmentFilter>('all')
 const activePointKey = ref<string>('')
-const tooltipPoint = ref<ChartPoint>()
 
-const years = [...new Set(periodDemandTimeline.map((row) => row.year))].sort((a, b) => a - b)
+const demandSegments = computed(() => [...new Set(periodDemandTimeline.filter((row) => row.demandEb !== undefined).map((row) => row.segment))])
+const hbmSegments = computed(() => [...new Set(periodDemandTimeline.filter((row) => row.demandGbPerUnit !== undefined).map((row) => row.gpuModel ? `${row.gpuModel} ${row.hbmType ?? ''}`.trim() : row.segment))])
+const richSegmentLabels = computed(() => [
+  ...demandSegments.value,
+  ...domainTaxonomy.map((domain) => domainLabel(domain.domain))
+])
 
 const demandRows = computed(() => periodDemandTimeline
   .filter((row) => row.demandEb !== undefined)
@@ -60,12 +78,7 @@ const visibleRows = computed(() => mode.value === 'dram-demand' ? demandRows.val
 const chartTitle = computed(() => mode.value === 'dram-demand' ? 'DRAM period demand, EB' : 'AI GPU HBM content, GB/unit')
 const unitLabel = computed(() => mode.value === 'dram-demand' ? 'EB' : 'GB/unit')
 const valueLabel = computed(() => mode.value === 'dram-demand' ? '수요' : 'GPU당 HBM')
-const xMin = computed(() => visibleRows.value.length ? Math.min(...visibleRows.value.map((row) => row.year), Math.min(...years)) : Math.min(...years))
-const xMax = computed(() => visibleRows.value.length ? Math.max(...visibleRows.value.map((row) => row.year), Math.max(...years)) : Math.max(...years))
-const visibleMaxValue = computed(() => {
-  const max = visibleRows.value.length ? Math.max(...visibleRows.value.map(valueOf)) : 1
-  return max > 0 ? max * 1.12 : 1
-})
+
 const activeRow = computed(() => {
   const rows = visibleRows.value
   return rows.find((row) => pointKey(row) === activePointKey.value) ?? rows.at(-1)
@@ -80,24 +93,111 @@ const chartPoints = computed<ChartPoint[]>(() => visibleRows.value.map((row) => 
   ...row,
   value: valueOf(row),
   label: row.gpuModel ? `${row.gpuModel} ${row.hbmType ?? ''}`.trim() : row.segment,
-  series: seriesName(row),
-  x: xScale(row.year),
-  y: yScale(valueOf(row))
+  series: seriesName(row)
 })))
 
-const seriesLines = computed(() => {
+const lineChartData = computed<ChartData<'line'>>(() => {
+  const labels = [...new Set(chartPoints.value.map((point) => String(point.year)))].sort()
   const grouped = new Map<string, ChartPoint[]>()
-  for (const point of chartPoints.value) {
-    const items = grouped.get(point.series) ?? []
-    items.push(point)
-    grouped.set(point.series, items)
+  for (const point of chartPoints.value) grouped.set(point.series, [...(grouped.get(point.series) ?? []), point])
+
+  return {
+    labels,
+    datasets: [...grouped.entries()].map(([series, points], index) => ({
+      label: series,
+      data: labels.map((year) => points.find((point) => String(point.year) === year)?.value ?? null),
+      borderColor: seriesColor(series, index),
+      backgroundColor: seriesColor(series, index, 0.18),
+      pointBackgroundColor: seriesColor(series, index),
+      pointBorderColor: '#ffffff',
+      pointBorderWidth: 2,
+      pointRadius: 6,
+      pointHoverRadius: 9,
+      tension: 0.32,
+      spanGaps: false
+    }))
   }
-  return [...grouped.entries()].map(([series, points]) => ({
-    series,
-    points,
-    d: points.sort((a, b) => a.year - b.year).map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`).join(' ')
-  }))
 })
+
+const lineChartOptions = computed<ChartOptions<'line'>>(() => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  interaction: { mode: 'nearest', intersect: false },
+  onClick: (_event, elements, chart) => {
+    const element = elements[0]
+    if (!element) return
+    const dataset = chart.data.datasets[element.datasetIndex]
+    const year = Number(chart.data.labels?.[element.index])
+    const row = chartPoints.value.find((point) => point.series === dataset.label && point.year === year)
+    if (row) activePointKey.value = pointKey(row)
+  },
+  plugins: {
+    legend: {
+      position: 'bottom',
+      labels: { color: '#cbd5e1', boxWidth: 10, usePointStyle: true, font: { weight: 800 } }
+    },
+    tooltip: {
+      backgroundColor: 'rgba(15, 23, 42, 0.94)',
+      borderColor: 'rgba(255,255,255,0.18)',
+      borderWidth: 1,
+      callbacks: {
+        label: (context) => `${context.dataset.label}: ${Number(context.parsed.y).toFixed(mode.value === 'dram-demand' ? 4 : 0)} ${unitLabel.value}`,
+        afterLabel: (context) => {
+          const year = Number(context.label)
+          const row = chartPoints.value.find((point) => point.series === context.dataset.label && point.year === year)
+          return row ? formatFormula(row) : ''
+        }
+      }
+    }
+  },
+  scales: {
+    x: { grid: { color: 'rgba(148, 163, 184, 0.12)' }, ticks: { color: '#cbd5e1', font: { weight: 800 } } },
+    y: {
+      beginAtZero: true,
+      grid: { color: 'rgba(148, 163, 184, 0.16)' },
+      ticks: { color: '#cbd5e1', callback: (value) => `${value} ${unitLabel.value}` }
+    }
+  }
+}))
+
+const taxonomyGroups = computed(() => {
+  const groups = new Map<string, number>()
+  for (const domain of domainTaxonomy) groups.set(domain.group, (groups.get(domain.group) ?? 0) + 1)
+  return [...groups.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+})
+
+const memoryTypeCounts = computed(() => {
+  const memoryTypes = [...new Set(domainTaxonomy.flatMap((domain) => domain.memoryTypes))].sort()
+  return memoryTypes.map((memoryType) => ({
+    memoryType,
+    count: domainTaxonomy.filter((domain) => domain.memoryTypes.includes(memoryType)).length
+  })).sort((a, b) => b.count - a.count || a.memoryType.localeCompare(b.memoryType))
+})
+
+const taxonomyChartData = computed<ChartData<'bar'>>(() => ({
+  labels: memoryTypeCounts.value.map((item) => item.memoryType),
+  datasets: [{
+    label: 'Domains using memory type',
+    data: memoryTypeCounts.value.map((item) => item.count),
+    backgroundColor: memoryTypeCounts.value.map((item, index) => seriesColor(item.memoryType, index, 0.74)),
+    borderColor: memoryTypeCounts.value.map((item, index) => seriesColor(item.memoryType, index)),
+    borderWidth: 1,
+    borderRadius: 10
+  }]
+}))
+
+const taxonomyChartOptions: ChartOptions<'bar'> = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: { display: false },
+    tooltip: { backgroundColor: 'rgba(15, 23, 42, 0.94)' }
+  },
+  scales: {
+    x: { grid: { display: false }, ticks: { color: '#334155', font: { weight: 800 } } },
+    y: { beginAtZero: true, ticks: { precision: 0, color: '#64748b' }, grid: { color: 'rgba(148, 163, 184, 0.2)' } }
+  }
+}
 
 function valueOf(row: PeriodDemandRow) {
   return row.demandEb ?? row.demandGbPerUnit ?? 0
@@ -108,18 +208,27 @@ function pointKey(row: PeriodDemandRow) {
 }
 
 function seriesName(row: PeriodDemandRow) {
-  if (row.gpuModel) return 'HBM capacity roadmap'
+  if (row.gpuModel) return row.gpuModel
   return row.segment
 }
 
-function xScale(year: number) {
-  const min = xMin.value
-  const range = Math.max(1, xMax.value - min)
-  return Math.round(72 + ((year - min) / range) * 700)
-}
-
-function yScale(value: number) {
-  return Math.round(330 - (value / visibleMaxValue.value) * 260)
+function seriesColor(series: string, index = 0, alpha = 1) {
+  const palette: Record<string, [number, number, number]> = {
+    'Smartphone DRAM': [56, 189, 248],
+    'Server DRAM': [34, 197, 94],
+    B200: [244, 114, 182],
+    B300: [168, 85, 247],
+    'Vera Rubin': [251, 146, 60],
+    DRAM: [37, 99, 235],
+    NAND: [14, 165, 233],
+    HBM: [236, 72, 153],
+    LPDDR: [34, 197, 94],
+    GDDR: [245, 158, 11],
+    CXL: [124, 58, 237]
+  }
+  const fallback = [[37, 99, 235], [124, 58, 237], [14, 165, 233], [217, 119, 6], [5, 150, 105]][index % 5]
+  const [r, g, b] = palette[series] ?? fallback
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }
 
 function formatValue(row?: PeriodDemandRow) {
@@ -146,15 +255,18 @@ function domainLabel(domain: string) {
 <template>
   <section class="period-chart-shell">
     <div class="chart-hero">
-      <p class="chart-kicker">Reference-backed interactive chart</p>
+      <p class="chart-kicker">Chart.js powered interactive chart</p>
       <h1>기간별 메모리 수요 히스토리</h1>
       <p>
         raw CSV reference를 결합해 <strong>출하량 × device별 memory content</strong>로 DRAM 수요를 EB로 환산하고,
-        HBM은 GPU 세대별 GB/unit roadmap으로 따로 추적합니다. 포인트 선택으로 근거와 계산식을 바로 확인할 수 있습니다.
+        HBM은 GPU 세대별 GB/unit roadmap으로 따로 추적합니다. Chart.js tooltip/legend/point click으로 근거와 계산식을 확인합니다.
       </p>
       <div class="mode-tabs" role="tablist" aria-label="period demand chart mode">
         <button :class="{ active: mode === 'dram-demand' }" @click="mode = 'dram-demand'">DRAM 수요 EB</button>
         <button :class="{ active: mode === 'hbm-content' }" @click="mode = 'hbm-content'">HBM GB/unit</button>
+      </div>
+      <div class="segment-strip" aria-label="Visible demand segments">
+        <span v-for="segment in richSegmentLabels" :key="segment">{{ segment }}</span>
       </div>
     </div>
 
@@ -168,65 +280,22 @@ function domainLabel(domain: string) {
           <label v-if="mode === 'dram-demand'" class="segment-filter">
             Segment
             <select v-model="activeSegment">
-              <option value="all">Smartphone + Server</option>
-              <option value="Smartphone DRAM">Smartphone DRAM</option>
-              <option value="Server DRAM">Server DRAM</option>
+              <option value="all">All quantified DRAM segments</option>
+              <option v-for="segment in demandSegments" :key="segment" :value="segment">{{ segment }}</option>
             </select>
           </label>
         </div>
 
-        <svg class="history-chart" viewBox="0 0 860 380" role="img" :aria-label="chartTitle">
-          <defs>
-            <linearGradient id="dramLine" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0%" stop-color="#38bdf8" />
-              <stop offset="100%" stop-color="#2563eb" />
-            </linearGradient>
-            <linearGradient id="hbmLine" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0%" stop-color="#fb7185" />
-              <stop offset="100%" stop-color="#a855f7" />
-            </linearGradient>
-          </defs>
-          <g class="grid-lines">
-            <line v-for="tick in [0, 1, 2, 3, 4]" :key="tick" x1="64" x2="812" :y1="70 + tick * 65" :y2="70 + tick * 65" />
-          </g>
-          <g class="axis-labels">
-            <text x="64" y="358">{{ xMin }}</text>
-            <text x="392" y="358">{{ Math.round((xMin + xMax) / 2) }}</text>
-            <text x="790" y="358">{{ xMax }}</text>
-            <text x="18" y="80">{{ unitLabel }}</text>
-          </g>
-          <path
-            v-for="line in seriesLines"
-            :key="line.series"
-            :d="line.d"
-            :class="['series-line', line.series.includes('HBM') ? 'hbm' : line.series.includes('Server') ? 'server' : 'smartphone']"
-          />
-          <g v-for="point in chartPoints" :key="pointKey(point)" class="point-group">
-            <circle
-              :cx="point.x"
-              :cy="point.y"
-              :r="activeRow && pointKey(point) === pointKey(activeRow) ? 11 : 8"
-              :class="['chart-point', point.series.includes('HBM') ? 'hbm' : point.series.includes('Server') ? 'server' : 'smartphone']"
-              tabindex="0"
-              @mouseenter="activePointKey = pointKey(point); tooltipPoint = point"
-              @mouseleave="tooltipPoint = undefined"
-              @focus="activePointKey = pointKey(point); tooltipPoint = point"
-              @blur="tooltipPoint = undefined"
-              @click="activePointKey = pointKey(point)"
-            />
-            <g v-if="tooltipPoint && pointKey(point) === pointKey(tooltipPoint)" class="chart-tooltip">
-              <rect :x="point.x - 70" :y="point.y - 58" width="140" height="42" rx="12" />
-              <text :x="point.x" :y="point.y - 38" class="tooltip-title">{{ point.year }} · {{ point.label }}</text>
-              <text :x="point.x" :y="point.y - 22" class="tooltip-value">{{ formatValue(tooltipPoint) }}</text>
-            </g>
-            <text :x="point.x" :y="point.y - 18" class="point-label">{{ point.year }}</text>
-          </g>
-        </svg>
+        <div class="chartjs-frame">
+          <ClientOnly>
+            <Line :data="lineChartData" :options="lineChartOptions" />
+          </ClientOnly>
+        </div>
 
         <div class="legend-row">
-          <span><i class="swatch smartphone"></i>Smartphone DRAM</span>
-          <span><i class="swatch server"></i>Server DRAM</span>
-          <span><i class="swatch hbm"></i>HBM content</span>
+          <span v-for="segment in mode === 'dram-demand' ? demandSegments : hbmSegments" :key="segment">
+            <i class="swatch" :style="{ background: seriesColor(segment) }"></i>{{ segment }}
+          </span>
         </div>
       </div>
 
@@ -251,6 +320,25 @@ function domainLabel(domain: string) {
         </div>
       </aside>
     </div>
+
+    <section class="segment-panel">
+      <div>
+        <p class="chart-kicker">Segment diversity</p>
+        <h2>14개 end-market과 memory type 분포</h2>
+        <p>
+          정량 timeline은 아직 Smartphone / Server / HBM 중심이지만, taxonomy layer는 PC, AI accelerator, enterprise storage,
+          graphics, automotive, networking, edge AI, AR/VR, HPC 등 다음 모델링 후보를 함께 보여줍니다.
+        </p>
+      </div>
+      <div class="segment-chart-card">
+        <ClientOnly>
+          <Bar :data="taxonomyChartData" :options="taxonomyChartOptions" />
+        </ClientOnly>
+      </div>
+      <div class="group-chip-row">
+        <span v-for="[group, count] in taxonomyGroups" :key="group">{{ group }} · {{ count }}</span>
+      </div>
+    </section>
 
     <div class="history-panel">
       <div>
@@ -326,35 +414,19 @@ function domainLabel(domain: string) {
 .mode-tabs button, .story-card { cursor: pointer; border: 0; font: inherit; }
 .mode-tabs button { padding: 11px 16px; border-radius: 999px; color: #1e293b; background: rgba(255,255,255,.82); box-shadow: inset 0 0 0 1px rgba(15,23,42,.08); font-weight: 850; }
 .mode-tabs button.active { color: #fff; background: linear-gradient(135deg, #2563eb, #7c3aed); }
+.segment-strip, .group-chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.segment-strip span, .group-chip-row span { padding: 7px 10px; border-radius: 999px; color: #1d4ed8; background: rgba(219, 234, 254, .82); font-size: 11px; font-weight: 900; }
 .chart-workbench { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 20px; }
 .chart-card { border: 1px solid rgba(15,23,42,.1); border-radius: 26px; background: rgba(255,255,255,.92); box-shadow: 0 18px 60px rgba(15,23,42,.08); }
 .chart-card-main { padding: clamp(16px, 3vw, 26px); overflow: hidden; }
 .chart-toolbar { display: flex; justify-content: space-between; gap: 16px; align-items: start; }
-.chart-toolbar h2, .detail-card h2, .history-panel h2 { margin: 0; letter-spacing: -.03em; }
+.chart-toolbar h2, .detail-card h2, .history-panel h2, .segment-panel h2 { margin: 0; letter-spacing: -.03em; }
 .segment-filter { display: grid; gap: 6px; color: #64748b; font-size: 12px; font-weight: 800; text-transform: uppercase; }
-.segment-filter select { min-width: 190px; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 14px; background: #fff; color: #0f172a; font: inherit; text-transform: none; }
-.history-chart { display: block; width: 100%; min-height: 360px; border-radius: 22px; background: linear-gradient(180deg, #0f172a, #1e293b); }
-.grid-lines line { stroke: rgba(148,163,184,.2); stroke-width: 1; }
-.axis-labels text { fill: #94a3b8; font-size: 12px; font-weight: 800; }
-.series-line { fill: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 10px 18px rgba(0,0,0,.28)); }
-.series-line.smartphone { stroke: url(#dramLine); }
-.series-line.server { stroke: #22c55e; }
-.series-line.hbm { stroke: url(#hbmLine); }
-.chart-point { stroke: #fff; stroke-width: 3; transition: r .18s ease, filter .18s ease; }
-.chart-point:hover, .chart-point:focus { filter: drop-shadow(0 0 14px rgba(255,255,255,.7)); outline: none; }
-.chart-point.smartphone { fill: #38bdf8; }
-.chart-point.server { fill: #22c55e; }
-.chart-point.hbm { fill: #f472b6; }
-.point-label { fill: #cbd5e1; font-size: 11px; font-weight: 900; text-anchor: middle; }
-.chart-tooltip { pointer-events: none; filter: drop-shadow(0 14px 22px rgba(0,0,0,.32)); }
-.chart-tooltip rect { fill: rgba(15,23,42,.94); stroke: rgba(255,255,255,.2); }
-.chart-tooltip text { text-anchor: middle; }
-.tooltip-title { fill: #cbd5e1; font-size: 10px; font-weight: 800; }
-.tooltip-value { fill: #fff; font-size: 13px; font-weight: 950; }
+.segment-filter select { min-width: 230px; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 14px; background: #fff; color: #0f172a; font: inherit; text-transform: none; }
+.chartjs-frame { height: clamp(360px, 52vw, 520px); margin-top: 14px; padding: 16px; border-radius: 24px; background: linear-gradient(180deg, #0f172a, #1e293b); }
 .legend-row, .reference-band, .source-chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .legend-row { margin-top: 12px; color: #475569; font-size: 12px; font-weight: 800; }
 .swatch { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 999px; }
-.swatch.smartphone { background: #38bdf8; } .swatch.server { background: #22c55e; } .swatch.hbm { background: #f472b6; }
 .detail-card { display: grid; grid-template-columns: minmax(220px, .65fr) minmax(240px, 1fr) minmax(220px, .8fr); gap: 16px; align-items: start; padding: 22px; }
 .detail-card .chart-kicker, .detail-card h2 { grid-column: 1 / -1; }
 .metric-tile { margin: 18px 0; padding: 18px; border-radius: 22px; color: #fff; background: linear-gradient(135deg, #0f172a, #2563eb); }
@@ -363,7 +435,11 @@ function domainLabel(domain: string) {
 .formula { padding: 12px; border-radius: 16px; background: #f1f5f9; color: #334155; font-size: 13px; font-weight: 750; line-height: 1.6; }
 .notes strong { color: #0f172a; }
 .notes ul { padding-left: 18px; color: #475569; line-height: 1.65; }
-.source-chips a, .reference-band span { padding: 7px 10px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: 11px; font-weight: 900; text-decoration: none; }
+.source-chips a, .reference-band span { max-width: 100%; padding: 7px 10px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: 11px; font-weight: 900; text-decoration: none; overflow-wrap: anywhere; }
+.segment-panel { display: grid; grid-template-columns: minmax(260px, .46fr) minmax(320px, .54fr); gap: 20px; margin-top: 18px; padding: 24px; border: 1px solid rgba(15,23,42,.1); border-radius: 28px; background: linear-gradient(135deg, #ffffff, #f8fafc); box-shadow: 0 18px 60px rgba(15,23,42,.07); }
+.segment-panel p:not(.chart-kicker) { color: #64748b; line-height: 1.7; }
+.segment-chart-card { min-height: 300px; padding: 12px; border-radius: 22px; background: #fff; box-shadow: inset 0 0 0 1px rgba(15,23,42,.08); }
+.group-chip-row { grid-column: 1 / -1; margin-top: 0; }
 .history-panel { display: grid; grid-template-columns: .45fr 1fr; gap: 18px; margin-top: 18px; padding: 24px; border: 1px solid rgba(15,23,42,.1); border-radius: 26px; background: #fff; box-shadow: 0 18px 60px rgba(15,23,42,.07); }
 .history-panel p:not(.chart-kicker) { color: #64748b; line-height: 1.7; }
 .story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
@@ -390,5 +466,5 @@ function domainLabel(domain: string) {
 .taxonomy-sources { gap: 6px; }
 .taxonomy-sources a { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .reference-band { margin-top: 14px; }
-@media (max-width: 960px) { .detail-card, .history-panel { grid-template-columns: 1fr; } .chart-toolbar { flex-direction: column; } .story-grid { grid-template-columns: 1fr; } }
+@media (max-width: 960px) { .detail-card, .history-panel, .segment-panel { grid-template-columns: 1fr; } .chart-toolbar { flex-direction: column; } .story-grid { grid-template-columns: 1fr; } }
 </style>

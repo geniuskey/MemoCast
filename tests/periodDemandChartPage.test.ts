@@ -25,11 +25,18 @@ describe('period demand chart page', () => {
     expect(home).not.toContain('<DatasetChartsPanel />')
   })
 
-  it('scales low-EB DRAM values against the visible data instead of a hard 1 EB floor', () => {
+  it('uses Chart.js through vue-chartjs instead of a hand-rolled SVG chart', () => {
     const component = readRepoFile('wiki/components/PeriodDemandChart.vue')
+    const packageJson = readRepoFile('package.json')
 
-    expect(component).toContain('visibleMaxValue')
-    expect(component).not.toContain('Math.max(...visibleRows.value.map(valueOf), 1)')
+    expect(component).toContain("from 'chart.js'")
+    expect(component).toContain("from 'vue-chartjs'")
+    expect(component).toContain('ChartJS.register')
+    expect(component).toContain('<Line :data="lineChartData" :options="lineChartOptions" />')
+    expect(component).toContain('<Bar :data="taxonomyChartData" :options="taxonomyChartOptions" />')
+    expect(component).not.toContain('<svg class="history-chart"')
+    expect(packageJson).toContain('chart.js')
+    expect(packageJson).toContain('vue-chartjs')
   })
 
   it('prioritizes chart reading width over a cramped side-by-side chart column', () => {
@@ -48,13 +55,13 @@ describe('period demand chart page', () => {
     expect(component).not.toContain('type="range"')
   })
 
-  it('renders a hover tooltip with the selected point y value', () => {
+  it('renders chart-library tooltip callbacks with selected point values', () => {
     const component = readRepoFile('wiki/components/PeriodDemandChart.vue')
 
-    expect(component).toContain('tooltipPoint')
-    expect(component).toContain('chart-tooltip')
-    expect(component).toContain('{{ formatValue(tooltipPoint) }}')
-    expect(component).toContain('@mouseleave="tooltipPoint = undefined"')
+    expect(component).toContain('tooltip:')
+    expect(component).toContain('callbacks:')
+    expect(component).toContain('formatFormula(row)')
+    expect(component).toContain('onClick: (_event, elements, chart)')
   })
 
   it('surfaces the expanded demand domain taxonomy on the chart page', () => {
@@ -62,6 +69,9 @@ describe('period demand chart page', () => {
     const schema = readRepoFile('wiki/SCHEMA.md')
 
     expect(component).toContain('domainTaxonomy')
+    expect(component).toContain('Segment diversity')
+    expect(component).toContain('taxonomyChartData')
+    expect(component).toContain('richSegmentLabels')
     expect(component).toContain('Demand domain taxonomy')
     expect(component).toContain('taxonomy-grid')
     expect(component).toContain('forecast-driver')

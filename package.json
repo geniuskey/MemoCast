@@ -19,5 +19,9 @@
     "vitepress": "latest",
     "vitest": "latest",
     "vue": "latest"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "vue-chartjs": "^5.3.3"
   }
 }
