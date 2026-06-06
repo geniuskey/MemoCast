@@ -1,0 +1,69 @@
+[
+  {
+    "id": "dram-channel-panic-2026-reference",
+    "label": "DRAM channel panic 2026 reference",
+    "description": "Source-backed severe DRAM channel stress case: DDR5 spot +298% in three months, Q1/Q2 contract repricing, 2-6 week supplier inventory, and 40-45+ week enterprise lead times.",
+    "confidence": "medium",
+    "sourceRefs": [
+      "raw/datasets/ddr5-16gb-price-monthly-2025-2026.md",
+      "raw/datasets/dram-contract-price-qoq-2025-2026.md",
+      "raw/datasets/dram-supplier-inventory-weeks-history.md",
+      "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md",
+      "raw/articles/channel-sourceability-qoq-price-allocation-2026.md"
+    ],
+    "input": {
+      "spotPriceIncreasePct": 298,
+      "contractPriceQoqPct": 92.5,
+      "nandContractPriceQoqPct": 0,
+      "inventoryWeeks": 4,
+      "leadTimeWeeks": 45,
+      "allocationScore": 90,
+      "grayMarketScore": 65,
+      "passThroughLagMonths": 3
+    }
+  },
+  {
+    "id": "nand-contract-squeeze-2026-reference",
+    "label": "NAND contract squeeze 2026 reference",
+    "description": "Source-backed NAND stress case: Q2 NAND contract +70-75% QoQ and channel reports of +246% SSD/NAND pricing since early 2025, with HDD shortage pushing QLC SSD substitution.",
+    "confidence": "medium",
+    "sourceRefs": [
+      "raw/datasets/dram-contract-price-qoq-2025-2026.md",
+      "raw/articles/channel-sourceability-qoq-price-allocation-2026.md",
+      "raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md",
+      "raw/earnings/kioxia-fy25-nand-outlook-ipo.md",
+      "raw/earnings/sandisk-wd-fy2026-nand-datacenter-results.md"
+    ],
+    "input": {
+      "spotPriceIncreasePct": 246,
+      "contractPriceQoqPct": 0,
+      "nandContractPriceQoqPct": 72.5,
+      "inventoryWeeks": 6,
+      "leadTimeWeeks": 30,
+      "allocationScore": 70,
+      "grayMarketScore": 30,
+      "passThroughLagMonths": 4
+    }
+  },
+  {
+    "id": "normal-inventory-reference",
+    "label": "Normal inventory reference",
+    "description": "Comparator state using 2024-normal supplier inventory and muted price/allocation signals; included to keep the severity model calibrated against a non-shortage regime.",
+    "confidence": "medium",
+    "sourceRefs": [
+      "raw/datasets/dram-supplier-inventory-weeks-history.md",
+      "raw/lectures/memory-pricing-contract-spot-lta-mechanism.md",
+      "raw/lectures/memory-cycle-leading-indicators-book-to-bill-pmi.md"
+    ],
+    "input": {
+      "spotPriceIncreasePct": 10,
+      "contractPriceQoqPct": 5,
+      "nandContractPriceQoqPct": 0,
+      "inventoryWeeks": 10,
+      "leadTimeWeeks": 10,
+      "allocationScore": 10,
+      "grayMarketScore": 0,
+      "passThroughLagMonths": 6
+    }
+  }
+]

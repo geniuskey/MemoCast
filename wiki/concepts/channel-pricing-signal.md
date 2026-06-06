@@ -1,7 +1,7 @@
 ---
 title: Channel Pricing Signal
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-07
 type: concept
 tags: [pricing, channel, inventory, supply-demand, demand-forecasting]
 sources: [raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md, raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md, raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md, raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md, raw/articles/channel-sourceability-qoq-price-allocation-2026.md, raw/articles/channel-teamgroup-gm-ram-pricing-crisis-2026.md, raw/articles/channel-used-refurbished-server-memory-secondary-2026.md, raw/articles/consol-dram-price-fixing-scandal.md, raw/articles/consol-elpida-bankruptcy-micron.md, raw/articles/consol-intel-nand-skhynix-solidigm.md, raw/articles/consol-qimonda-bankruptcy.md, raw/articles/consol-toshiba-kioxia-bain.md, raw/articles/consol-wd-sandisk-nand.md, raw/articles/ddr4-ddr5-transition-2026.md, raw/articles/ddr4-eol-last-time-buy-legacy-2026.md, raw/articles/domain-networking-switch-router-ddr-memory-2026.md, raw/articles/edge-ai-iot-memory-demand-2026.md, raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md, raw/articles/history-dram-memory-cycles-2016-2026.md, raw/articles/history-memory-fab-disruptions-supply-shocks.md, raw/articles/history-memory-trade-disputes-antidumping-cartel.md, raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md, raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md, raw/articles/model-ai-inference-memory-bound-token-economics.md, raw/articles/oem-apple-dram-lta-expiry-2026-price-hike.md, raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md, raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md, raw/articles/oem-pc-dell-hp-lenovo-price-hike-memory-2026.md, raw/articles/oem-smartphone-dram-content-spec-downgrade-2026.md, raw/articles/power-socamm-lpddr5x-low-power-ai-server-memory.md, raw/articles/server-ddr5-rdimm-channels-capacity-2026.md, raw/articles/trendforce-ai-server-memory-contract-price-2q26.md, raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md, raw/datasets/ddr5-16gb-price-monthly-2025-2026.md, raw/datasets/dram-contract-price-qoq-2025-2026.md, raw/datasets/dram-price-history.md, raw/datasets/dram-revenue-cycle-history.md, raw/datasets/dram-supplier-inventory-weeks-history.md, raw/datasets/dram-wafer-capacity-allocation-2026.md, raw/datasets/steam-pc-gaming-ram-share-2026.md, raw/earnings/kioxia-fq4-2025-earnings.md, raw/earnings/macronix-1q26-earnings.md, raw/earnings/micron-fq2-2026-earnings.md, raw/earnings/nanya-technology-1q26-earnings.md, raw/earnings/samsung-electronics-1q26-earnings.md, raw/earnings/sandisk-fq3-2026-earnings.md, raw/earnings/sandisk-wd-fy2026-nand-datacenter-results.md, raw/earnings/sk-hynix-1q26-earnings.md, raw/earnings/taiwan-module-makers-adata-teamgroup-transcend-2026.md, raw/earnings/trendforce-1q26-memory-pricing.md, raw/earnings/winbond-1q26-earnings.md, raw/lectures/conf-iedm-2025-3d-dram-oxide-vct.md, raw/lectures/ip-cadence-memory-ip-hbm4-lpddr6-gddr7-ddr5.md, raw/lectures/ip-ddr5-mrdimm-rcd-db-montage-rambus-renesas.md, raw/lectures/ip-jedec-hbm4-jesd270-4-standard.md]
@@ -23,6 +23,37 @@ Channel 자료는 최종 수요와 공급 부족이 가격·allocation·lead tim
 - Contract/spot/retail 가격 급등, allocation, gray market, counterfeit는 shortage가 channel까지 내려온 후행-동행 signal이다.
 - DDR4 EOL/last-time-buy와 DDR5 전환은 legacy 수요와 AI server 우선 allocation 사이의 crowding-out을 보여준다.
 - 이 자료들은 EB 수요 산식보다 [[supply-demand-gap]]의 가격/재고 regime 판단 변수로 쓰는 것이 안전하다.
+
+## Shortage severity 지표 승격
+
+Channel raw는 제품별 EB 수요량을 직접 산출하기보다, **수요가 공급을 얼마나 초과해 가격·재고·리드타임·할당으로 전이됐는지**를 재는 regime 변수로 승격한다. 구현 파일은 `wiki/lib/shortageSeverity.ts`, source-backed preset은 `wiki/data/shortage-severity-presets.json`이다.
+
+### 모델 수식
+
+`Shortage severity score = 0.30 × price momentum + 0.25 × inventory tightness + 0.20 × lead-time stress + 0.15 × allocation stress + 0.10 × gray-market stress`
+
+| Component | 정규화 방식 | Raw anchor | Source URL |
+| --- | --- | --- | --- |
+| Price momentum | `spot +300% ≈ 100`, contract/NAND QoQ `+100% ≈ 100`; 관측 가능한 가격축 평균 | DDR5 16Gb spot **$6.84 → $27.20**(+298%), Q1 DRAM overall contract **+90~95%**, Q2 NAND contract **+70~75%** | [tomshardware.com](https://www.tomshardware.com/pc-components/ram/ram-price-index-2026-lowest-price-on-ddr5-and-ddr4-memory-of-all-capacities), [trendforce.com](https://www.trendforce.com/presscenter/news/20260331-12995.html) |
+| Inventory tightness | 정상 10~12주 대비 2~4주면 80~100점 | 2024 정상 **10~12주** → 2025Q3 **3.3주**, 2025-10 **2~4주**, 2026-01 Samsung 6주/SK 2~3주 | [softwareseni.com](https://www.softwareseni.com/when-will-dram-prices-normalise-analysing-the-timeline-for-memory-market-recovery/) |
+| Lead-time stress | 8주를 정상, 52주를 extreme shortage로 두고 선형 스케일 | 대형 DRAM 주문 **25주 → 45주+**, nearline HDD shortage는 QLC SSD substitution 압력으로 **52주+** 신호 | [blog.shi.com](https://blog.shi.com/strategic-insights/2026-memory-shortage/), [trendforce.com](https://www.trendforce.com/presscenter/news/20250915-12714.html) |
+| Allocation stress | supplier allocation, LTA, customer priority 신호를 0~100으로 점수화 | hyperscaler/AI server 우선 배분, conventional/legacy crowding-out, channel allocation 제한 | [sourceability.com](https://sourceability.com/post/tracking-memory-price-increases-across-the-last-several-quarters), [trendforce.com](https://www.trendforce.com/presscenter/news/20260331-12995.html) |
+| Gray-market stress | 위조/리마킹/중고 프리미엄/패닉바잉 강도 | G.Skill/V-Color DDR5 위조, refurbished server memory +30~50%, DDR5 kit +478% | [tomshardware.com](https://www.tomshardware.com/pc-components/dram/counterfeit-g-skill-and-v-color-ddr5-modules-hit-chinese-marketplaces-impacting-company-sales-cheap-contraband-memory-using-identical-pcbs-and-heat-spreaders-almost-impossible-to-spot), [inteleca.com](https://inteleca.com/it-industry-news/server-memory-market-affect-asset-recovery/) |
+
+### Source-backed scenario presets
+
+| Preset | Score | Regime | 핵심 입력 | Forecast use |
+| --- | ---: | --- | --- | --- |
+| `dram-channel-panic-2026-reference` | **85.60** | `severe-shortage` | spot +298%, contract +92.5%, inventory 4주, lead time 45주, allocation 90 | PC/server DRAM 모델에서 shipment downside, BOM pass-through, legacy crowding-out stress case로 사용 |
+| `nand-contract-squeeze-2026-reference` | **61.68** | `shortage` | NAND contract +72.5%, NAND/SSD channel +246%, inventory 6주, effective lead stress 30주 | enterprise SSD/QLC substitution과 NAND ASP sensitivity의 upside stress case로 사용 |
+| `normal-inventory-reference` | **8.66** | `normal` | spot +10%, contract +5%, inventory 10주, lead time 10주 | shortage 지표 calibration 및 정상화 turning-point 비교 기준 |
+
+### 예측 모델 연결 규칙
+
+1. `severityScore ≥ 75`: 수요량 자체보다 **realized demand haircut**과 가격 전가를 먼저 반영한다. PC/스마트폰은 spec downgrade·shipment downside, 서버는 LTA·allocation 우선순위가 핵심이다.
+2. `55 ≤ severityScore < 75`: 부족장이 channel에 내려온 상태다. spot/contract spread, 재고 주수, 3~6개월 가격 pass-through lag를 함께 추적한다.
+3. `35 ≤ severityScore < 55`: tight regime이다. 가격은 오르지만 실제 수요 훼손 여부는 segment별 탄력성으로 나눈다.
+4. `severityScore < 35`: 정상/완만한 tightness다. 수요 모델은 unit × content × mix 중심으로 돌리고, 가격은 보조 변수로 둔다.
 
 ## Source notes read in this pass
 
