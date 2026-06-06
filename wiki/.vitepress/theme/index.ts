@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress'
 import DomainComparisonPanel from '../../components/DomainComparisonPanel.vue'
 import HbmDemandSimulator from '../../components/HbmDemandSimulator.vue'
 import HomePage from '../../components/HomePage.vue'
+import KnowledgeGraph from '../../components/KnowledgeGraph.vue'
 import NandSsdDemandSimulator from '../../components/NandSsdDemandSimulator.vue'
 import PcDramDemandSimulator from '../../components/PcDramDemandSimulator.vue'
 import SmartphoneMemoryDemandSimulator from '../../components/SmartphoneMemoryDemandSimulator.vue'
@@ -14,6 +15,7 @@ export default {
     app.component('DomainComparisonPanel', DomainComparisonPanel)
     app.component('HbmDemandSimulator', HbmDemandSimulator)
     app.component('HomePage', HomePage)
+    app.component('KnowledgeGraph', KnowledgeGraph)
     app.component('NandSsdDemandSimulator', NandSsdDemandSimulator)
     app.component('PcDramDemandSimulator', PcDramDemandSimulator)
     app.component('SmartphoneMemoryDemandSimulator', SmartphoneMemoryDemandSimulator)

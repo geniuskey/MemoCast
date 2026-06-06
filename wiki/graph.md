@@ -12,6 +12,10 @@ confidence: medium
 
 MemoCast wiki는 raw evidence → concept/method → market → simulator → comparison 순서로 추적합니다.
 
+<KnowledgeGraph />
+
+## Text outline
+
 ```text
 raw evidence
   ├─ reports/articles/earnings → market context, supply/demand signals
