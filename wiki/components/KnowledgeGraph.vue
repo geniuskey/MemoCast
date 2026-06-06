@@ -187,15 +187,21 @@ onBeforeUnmount(() => {
     </div>
 
     <div ref="graphShellRef" :class="['graph-shell', isFullscreen ? 'is-fullscreen' : '']">
-      <div class="graph-toolbar" aria-label="Interactive map controls">
-        <div>
-          <strong>Interactive map</strong>
-          <span>노드 hover/click으로 연결 경로를 추적합니다.</span>
-        </div>
-        <button class="graph-fullscreen-toggle" type="button" @click="toggleFullscreen">
-          {{ isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기' }}
-        </button>
-      </div>
+      <button
+        class="graph-fullscreen-toggle"
+        type="button"
+        :aria-label="isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기'"
+        :title="isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기'"
+        @click="toggleFullscreen"
+      >
+        <svg v-if="!isFullscreen" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+        </svg>
+        <svg v-else viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" />
+        </svg>
+        <span class="sr-only">{{ isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기' }}</span>
+      </button>
 
       <div class="graph-stage" role="img" aria-label="MemoCast knowledge graph visualization">
         <svg viewBox="0 0 1280 700" preserveAspectRatio="xMidYMid meet">
@@ -336,55 +342,61 @@ onBeforeUnmount(() => {
 }
 
 .graph-shell {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
   align-items: stretch;
 }
 
-.graph-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 12px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.035);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-}
-
-.graph-toolbar strong {
-  display: block;
-  color: #f7f8f8;
-  font-size: 14px;
-  font-weight: 850;
-}
-
-.graph-toolbar span {
-  display: block;
-  margin-top: 2px;
-  color: #9aa3b2;
-  font-size: 12px;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .graph-fullscreen-toggle {
-  flex: none;
-  min-height: 38px;
-  padding: 0 14px;
-  border: 1px solid rgba(174, 182, 255, 0.34);
-  border-radius: 999px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(174, 182, 255, 0.42);
+  border-radius: 12px;
   color: #f7f8f8;
-  background: rgba(174, 182, 255, 0.1);
-  font-size: 13px;
-  font-weight: 850;
+  background: rgba(17, 18, 43, 0.72);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
   cursor: pointer;
   transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
+.graph-fullscreen-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.graph-fullscreen-toggle path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .graph-fullscreen-toggle:hover {
   transform: translateY(-1px);
-  border-color: rgba(174, 182, 255, 0.7);
+  border-color: rgba(174, 182, 255, 0.78);
   background: rgba(174, 182, 255, 0.18);
 }
 
@@ -394,7 +406,7 @@ onBeforeUnmount(() => {
   inset: 0;
   z-index: 9999;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.3fr);
   gap: 18px;
   width: 100vw;
@@ -408,11 +420,6 @@ onBeforeUnmount(() => {
     radial-gradient(circle at 86% 16%, rgba(37, 99, 235, 0.18), transparent 30%),
     linear-gradient(180deg, #11122b 0%, #08090a 100%);
   box-sizing: border-box;
-}
-
-.graph-shell.is-fullscreen .graph-toolbar,
-.graph-shell:fullscreen .graph-toolbar {
-  grid-column: 1 / -1;
 }
 
 .graph-shell.is-fullscreen .graph-stage,
@@ -614,22 +621,13 @@ onBeforeUnmount(() => {
   .graph-stage {
     min-height: 360px;
   }
-
-  .graph-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .graph-fullscreen-toggle {
-    width: 100%;
-  }
 }
 
 @media (max-width: 720px) {
   .graph-shell.is-fullscreen,
   .graph-shell:fullscreen {
     grid-template-columns: 1fr;
-    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-rows: minmax(0, 1fr) auto;
     overflow: auto;
   }
 }
