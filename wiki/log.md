@@ -101,3 +101,8 @@
 - Promoted [[ai-infrastructure-memory]] from source cluster summary into an HBM model-variable page with unit/content/attach/realization factors.
 - Added source-backed HBM simulator presets for GB200/B200 192GB and GB300/Rubin 288GB accelerator content anchors.
 - Updated [[hbm]] and [[hbm-demand]] to separate accelerator units, HBM GB/GPU, custom accelerator buckets, CoWoS/package, and power readiness constraints.
+
+## 2026-06-06 — Source URL visibility pass
+
+- Re-measured raw coverage: 374 markdown raw files are cited; 36 CSV datasets have markdown companions; only internal `raw/README.md` and `raw/INDEX.md` lack external URLs.
+- Added Source URL columns to the five raw integration cluster pages and [[raw-integration-ledger]], keeping raw path traceability while making the web source link directly clickable.

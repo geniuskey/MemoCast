@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T14:33:25.872Z",
+  "generatedAt": "2026-06-06T16:39:47.833Z",
   "nodes": [
     {
       "id": "charts",
@@ -1290,6 +1290,11 @@
     {
       "from": "log",
       "to": "hbm-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "log",
+      "to": "raw-integration-ledger",
       "kind": "wikilink"
     },
     {

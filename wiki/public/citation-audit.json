@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-06T14:33:27.989Z",
+  "generatedAt": "2026-06-06T16:39:49.323Z",
   "summary": {
     "rawTotal": 374,
     "rawCited": 374,
     "rawUncited": 0,
     "missingRawReferences": 0,
     "wikiPages": 32,
-    "wikiPagesWithoutRawReferences": 10
+    "wikiPagesWithoutRawReferences": 9
   },
   "uncitedRawFiles": [],
   "priorityUncitedRawFiles": [],
@@ -9671,7 +9671,6 @@
     "wiki/concepts/memory-demand.md",
     "wiki/concepts/scenario-analysis.md",
     "wiki/index.md",
-    "wiki/log.md",
     "wiki/methods/sensitivity-analysis.md",
     "wiki/methods/structural-demand-model.md",
     "wiki/simulators/index.md"
@@ -10473,6 +10472,7 @@
     "raw/INDEX.md": [
       "wiki/concepts/demand-forecasting.md",
       "wiki/graph.md",
+      "wiki/log.md",
       "wiki/methods/forecasting-evidence-map.md",
       "wiki/sources/citation-matrix.md",
       "wiki/sources/raw-integration-ledger.md",
@@ -10865,6 +10865,7 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/README.md": [
+      "wiki/log.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/reports/analyst-bank-memory-outlook-price-targets-2026.md": [

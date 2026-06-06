@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-06T14:33:29.081Z",
+  "generatedAt": "2026-06-06T16:39:50.290Z",
   "summary": {
     "rawTotal": 374,
     "rawCited": 374,
     "rawUncited": 0,
     "wikiPages": 32,
-    "wikiPagesWithoutRawReferences": 10,
+    "wikiPagesWithoutRawReferences": 9,
     "missingRawReferences": 0,
     "simulatorPresets": 19,
     "lowConfidenceRaw": 32,
@@ -414,8 +414,8 @@
       "wiki/concepts/memory-demand.md",
       "wiki/concepts/scenario-analysis.md",
       "wiki/index.md",
-      "wiki/log.md",
-      "wiki/methods/sensitivity-analysis.md"
+      "wiki/methods/sensitivity-analysis.md",
+      "wiki/methods/structural-demand-model.md"
     ],
     "missingRawReferences": []
   }
