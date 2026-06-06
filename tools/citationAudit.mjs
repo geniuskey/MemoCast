@@ -23,6 +23,7 @@ export function buildCitationAudit({ rawFiles, wikiFiles }) {
   const missingReferencePages = new Map()
   const pagesWithoutRawReferences = []
   const rawMetadata = {}
+  const wikiTargets = wikiFiles.map((page) => buildWikiTarget(page))
 
   for (const file of rawFiles) {
     const rawPath = normalizeRawPath(file.path)
@@ -59,6 +60,19 @@ export function buildCitationAudit({ rawFiles, wikiFiles }) {
     .sort((a, b) => a.reference.localeCompare(b.reference))
   pagesWithoutRawReferences.sort()
 
+  const suggestedWikiTargetsByRawFile = Object.fromEntries(
+    rawPaths.map((rawPath) => [rawPath, suggestWikiTargets(rawPath, rawMetadata[rawPath], wikiTargets)])
+  )
+  const priorityUncitedRawFiles = uncitedRawFiles
+    .map((rawPath) => ({
+      path: rawPath,
+      ...rawMetadata[rawPath],
+      priority: rawIntegrationPriority(rawPath, rawMetadata[rawPath]),
+      suggestedWikiTargets: suggestedWikiTargetsByRawFile[rawPath]
+    }))
+    .sort((a, b) => b.priority - a.priority || a.path.localeCompare(b.path))
+    .slice(0, 30)
+
   return {
     generatedAt: new Date().toISOString(),
     summary: {
@@ -70,6 +84,8 @@ export function buildCitationAudit({ rawFiles, wikiFiles }) {
       wikiPagesWithoutRawReferences: pagesWithoutRawReferences.length
     },
     uncitedRawFiles,
+    priorityUncitedRawFiles,
+    suggestedWikiTargetsByRawFile,
     missingRawReferences,
     pagesWithoutRawReferences,
     citationsByRawFile,
@@ -96,6 +112,85 @@ export function writeCitationAudit({ repoRoot, outputPath }) {
   fs.mkdirSync(path.dirname(outputPath), { recursive: true })
   fs.writeFileSync(outputPath, `${JSON.stringify(audit, null, 2)}\n`)
   return audit
+}
+
+function buildWikiTarget(page) {
+  const pagePath = normalizeSlashes(page.path)
+  const frontmatter = parseFrontmatter(page.content)
+  const title = typeof frontmatter.title === 'string' ? frontmatter.title : titleFromContent(page.content, titleFromPath(pagePath))
+  const tags = Array.isArray(frontmatter.tags) ? frontmatter.tags.filter((tag) => typeof tag === 'string') : []
+  const type = typeof frontmatter.type === 'string' ? frontmatter.type : pagePath.split('/')[1]
+  return {
+    path: pagePath,
+    title,
+    type,
+    tags,
+    tokens: tokenize([pagePath, title, type, ...tags].join(' '))
+  }
+}
+
+function suggestWikiTargets(rawPath, metadata, wikiTargets) {
+  const rawTokens = tokenize([rawPath, metadata.title, metadata.type, ...(metadata.tags ?? [])].join(' '))
+  return wikiTargets
+    .map((target) => {
+      const overlap = [...rawTokens].filter((token) => target.tokens.has(token)).length
+      const ruleScore = targetRuleScore(rawTokens, target.path)
+      const score = overlap + ruleScore
+      return { path: target.path, title: target.title, score, reason: suggestionReason(rawTokens, target, overlap, ruleScore) }
+    })
+    .filter((target) => target.score > 0 && !target.path.includes('/sources/'))
+    .sort((a, b) => b.score - a.score || a.path.localeCompare(b.path))
+    .slice(0, 4)
+}
+
+function rawIntegrationPriority(rawPath, metadata) {
+  const tokens = tokenize([rawPath, metadata.title, metadata.type, ...(metadata.tags ?? [])].join(' '))
+  let priority = 10
+  if (metadata.source_url) priority += 4
+  if (metadata.confidence === 'high') priority += 3
+  if (metadata.confidence === 'medium') priority += 2
+  if (metadata.confidence === 'low') priority += 1
+  if (rawPath.includes('/datasets/')) priority += 5
+  if (rawPath.includes('/reports/')) priority += 4
+  if (rawPath.includes('/earnings/')) priority += 3
+  if (rawPath.includes('/papers/')) priority += 3
+  if (rawPath.includes('/articles/')) priority += 2
+  for (const token of ['hbm', 'dram', 'nand', 'ssd', 'smartphone', 'mobile', 'pc', 'server', 'ai', 'capex', 'supply', 'forecast', 'demand', 'memory']) {
+    if (tokens.has(token)) priority += 1
+  }
+  return priority
+}
+
+function targetRuleScore(rawTokens, targetPath) {
+  let score = 0
+  const hasAny = (...tokens) => tokens.some((token) => rawTokens.has(token))
+  if (hasAny('hbm', 'gpu', 'cowos', 'accelerator') && targetPath.includes('hbm')) score += 6
+  if (hasAny('nand', 'ssd', 'qlc', 'flash') && (targetPath.includes('nand') || targetPath.includes('ssd'))) score += 6
+  if (hasAny('smartphone', 'mobile', 'phone', 'android', 'apple') && targetPath.includes('smartphone')) score += 6
+  if (hasAny('pc', 'notebook', 'copilot') && targetPath.includes('pc-dram')) score += 6
+  if (hasAny('dram', 'ddr', 'lpddr') && targetPath.includes('dram')) score += 5
+  if (hasAny('supply', 'capex', 'capacity', 'wafer', 'shortage') && targetPath.includes('supply-demand-gap')) score += 5
+  if (hasAny('forecast', 'demand', 'scenario') && (targetPath.includes('demand-forecasting') || targetPath.includes('forecasting-evidence-map'))) score += 4
+  if (hasAny('model', 'elasticity', 'diffusion', 'planning') && targetPath.includes('/methods/')) score += 4
+  if (hasAny('dataset', 'csv') && targetPath.includes('charts')) score += 4
+  return score
+}
+
+function suggestionReason(rawTokens, target, overlap, ruleScore) {
+  const matched = [...rawTokens].filter((token) => target.tokens.has(token)).slice(0, 4)
+  if (matched.length > 0) return `keyword: ${matched.join(', ')}`
+  if (ruleScore > 0) return 'domain rule match'
+  return 'general topic match'
+}
+
+function tokenize(value) {
+  const stopWords = new Set(['raw', 'wiki', 'md', 'the', 'and', 'for', 'with', 'from', '2024', '2025', '2026', '2027'])
+  return new Set(
+    String(value ?? '')
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((token) => token.length >= 2 && !stopWords.has(token))
+  )
 }
 
 function normalizeRawPath(value) {

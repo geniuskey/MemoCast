@@ -12,6 +12,8 @@ confidence: medium
 
 이 페이지는 `raw/` 자료를 wiki 페이지와 simulator 가정에 연결하는 citation 추적표입니다. 목표는 “숫자를 어디서 가져왔는가?”와 “그 숫자가 수요·공급·가격 중 무엇을 의미하는가?”를 분리하는 것입니다.
 
+<CitationWorkQueue />
+
 ## Market pages
 
 | Wiki page | Primary citations | Citation role |

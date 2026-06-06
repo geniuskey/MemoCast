@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
+import CitationWorkQueue from '../../components/CitationWorkQueue.vue'
 import DomainComparisonPanel from '../../components/DomainComparisonPanel.vue'
 import PeriodDemandChart from '../../components/PeriodDemandChart.vue'
 import HbmDemandSimulator from '../../components/HbmDemandSimulator.vue'
@@ -13,6 +14,7 @@ import './custom.css'
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
+    app.component('CitationWorkQueue', CitationWorkQueue)
     app.component('DomainComparisonPanel', DomainComparisonPanel)
     app.component('PeriodDemandChart', PeriodDemandChart)
     app.component('HbmDemandSimulator', HbmDemandSimulator)
