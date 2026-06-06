@@ -177,31 +177,32 @@ onBeforeUnmount(() => {
 
 <template>
   <section class="knowledge-graph-card">
-    <div class="graph-copy">
-      <p class="graph-kicker">Interactive map</p>
-      <h2>raw evidence에서 simulator까지 이어지는 MemoCast 지식 흐름</h2>
-      <p>
-        wiki 문서의 frontmatter와 Obsidian wikilink를 빌드 시점에 파싱해 자동 생성합니다. 노드를 클릭하면 해당 페이지로 이동하고, 마우스를 올리면 연결된 근거·개념·시장·시뮬레이터 경로가 강조됩니다.
-      </p>
-      <p class="graph-stats">{{ graphStats }}</p>
-    </div>
-
     <div ref="graphShellRef" :class="['graph-shell', isFullscreen ? 'is-fullscreen' : '']">
-      <button
-        class="graph-fullscreen-toggle"
-        type="button"
-        :aria-label="isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기'"
-        :title="isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기'"
-        @click="toggleFullscreen"
-      >
-        <svg v-if="!isFullscreen" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
-        </svg>
-        <svg v-else viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" />
-        </svg>
-        <span class="sr-only">{{ isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기' }}</span>
-      </button>
+      <div class="graph-copy">
+        <div class="graph-kicker-row">
+          <p class="graph-kicker">Interactive map</p>
+          <button
+            class="graph-fullscreen-toggle"
+            type="button"
+            :aria-label="isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기'"
+            :title="isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기'"
+            @click="toggleFullscreen"
+          >
+            <svg v-if="!isFullscreen" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+            </svg>
+            <svg v-else viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" />
+            </svg>
+            <span class="sr-only">{{ isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기' }}</span>
+          </button>
+        </div>
+        <h2>raw evidence에서 simulator까지 이어지는 MemoCast 지식 흐름</h2>
+        <p>
+          wiki 문서의 frontmatter와 Obsidian wikilink를 빌드 시점에 파싱해 자동 생성합니다. 노드를 클릭하면 해당 페이지로 이동하고, 마우스를 올리면 연결된 근거·개념·시장·시뮬레이터 경로가 강조됩니다.
+        </p>
+        <p class="graph-stats">{{ graphStats }}</p>
+      </div>
 
       <div class="graph-stage" role="img" aria-label="MemoCast knowledge graph visualization">
         <svg viewBox="0 0 1280 700" preserveAspectRatio="xMidYMid meet">
@@ -297,12 +298,21 @@ onBeforeUnmount(() => {
 }
 
 .graph-copy {
-  max-width: 860px;
-  margin-bottom: 22px;
+  max-width: none;
+}
+
+.graph-kicker-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.72);
 }
 
 .graph-kicker {
-  margin: 0 0 10px;
+  margin: 0;
   color: #aeb6ff;
   font-size: 12px;
   font-weight: 800;
@@ -311,6 +321,7 @@ onBeforeUnmount(() => {
 }
 
 .graph-copy h2 {
+  max-width: 860px;
   margin: 0;
   color: #f7f8f8;
   font-size: clamp(26px, 4vw, 42px);
@@ -362,10 +373,7 @@ onBeforeUnmount(() => {
 }
 
 .graph-fullscreen-toggle {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 5;
+  flex: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -406,7 +414,7 @@ onBeforeUnmount(() => {
   inset: 0;
   z-index: 9999;
   display: grid;
-  grid-template-rows: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.3fr);
   gap: 18px;
   width: 100vw;
@@ -420,6 +428,23 @@ onBeforeUnmount(() => {
     radial-gradient(circle at 86% 16%, rgba(37, 99, 235, 0.18), transparent 30%),
     linear-gradient(180deg, #11122b 0%, #08090a 100%);
   box-sizing: border-box;
+}
+
+.graph-shell.is-fullscreen .graph-copy,
+.graph-shell:fullscreen .graph-copy {
+  grid-column: 1 / -1;
+}
+
+.graph-shell.is-fullscreen .graph-copy h2,
+.graph-shell:fullscreen .graph-copy h2 {
+  max-width: none;
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.graph-shell.is-fullscreen .graph-copy p:not(.graph-kicker),
+.graph-shell:fullscreen .graph-copy p:not(.graph-kicker) {
+  max-width: 1100px;
+  margin-top: 10px;
 }
 
 .graph-shell.is-fullscreen .graph-stage,
@@ -627,7 +652,7 @@ onBeforeUnmount(() => {
   .graph-shell.is-fullscreen,
   .graph-shell:fullscreen {
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr) auto;
     overflow: auto;
   }
 }
