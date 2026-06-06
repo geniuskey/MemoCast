@@ -2,6 +2,31 @@
   --vp-c-brand-1: #2563eb;
   --vp-c-brand-2: #3b82f6;
   --vp-c-brand-3: #60a5fa;
+  --vp-layout-max-width: 1720px;
+}
+
+.VPDoc .container {
+  max-width: 1480px !important;
+}
+
+.VPDoc .content-container,
+.VPDoc .content {
+  max-width: 1180px !important;
+}
+
+.VPDoc:has(.period-chart-shell) .container,
+.VPDoc:has(.period-chart-shell) .content-container,
+.VPDoc:has(.period-chart-shell) .content,
+.VPDoc:has(.period-chart-shell) .main {
+  max-width: none !important;
+}
+
+.VPDoc:has(.period-chart-shell) .aside {
+  display: none;
+}
+
+.VPDoc:has(.period-chart-shell) .content-container {
+  max-width: 1480px !important;
 }
 
 .VPDoc h1 {

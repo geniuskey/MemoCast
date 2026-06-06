@@ -1,0 +1,8 @@
+metric,value_pct,period,note,confidence
+capex_to_revenue_5yr_avg,28.2,recent,"3rd time since 1980 above 28%",medium
+capex_to_revenue,25,2024,"declining from peak",medium
+capex_to_revenue,21,2025,"declining",medium
+capex_to_revenue,19,2026,"projected (disciplined capex)",medium
+capex_to_market_size_range_high,34,historical,"historical high",low
+capex_to_market_size_range_low,12,historical,"historical low",low
+memory_share_of_capex,45,2026,"memory = largest capex segment 2026",medium

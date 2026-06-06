@@ -1,0 +1,1178 @@
+{
+  "generatedAt": "2026-06-06T05:43:32.730Z",
+  "nodes": [
+    {
+      "id": "charts",
+      "label": "Charts",
+      "type": "source",
+      "href": "/charts",
+      "tags": [],
+      "sources": []
+    },
+    {
+      "id": "citation-matrix",
+      "label": "Citation Matrix",
+      "type": "source",
+      "href": "/sources/citation-matrix",
+      "tags": [
+        "raw",
+        "citation",
+        "evidence-map",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/INDEX.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "index",
+      "label": "Index",
+      "type": "source",
+      "href": "/",
+      "tags": [],
+      "sources": []
+    },
+    {
+      "id": "graph",
+      "label": "Knowledge Graph",
+      "type": "source",
+      "href": "/graph",
+      "tags": [
+        "knowledge-graph",
+        "navigation",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/INDEX.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "raw-source-map",
+      "label": "Raw Source Map",
+      "type": "source",
+      "href": "/sources/raw-source-map",
+      "tags": [
+        "raw",
+        "source-map",
+        "demand-forecasting",
+        "memory"
+      ],
+      "sources": [
+        "raw/INDEX.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "log",
+      "label": "Wiki Log",
+      "type": "source",
+      "href": "/log",
+      "tags": [],
+      "sources": []
+    },
+    {
+      "id": "SCHEMA",
+      "label": "Wiki Schema",
+      "type": "source",
+      "href": "/SCHEMA",
+      "tags": [],
+      "sources": []
+    },
+    {
+      "id": "bit-demand",
+      "label": "Bit Demand",
+      "type": "concept",
+      "href": "/concepts/bit-demand",
+      "tags": [
+        "bit-demand",
+        "memory",
+        "units"
+      ],
+      "sources": [
+        "raw/datasets/bit-demand-supply-growth.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "demand-forecasting",
+      "label": "Demand Forecasting",
+      "type": "concept",
+      "href": "/concepts/demand-forecasting",
+      "tags": [
+        "demand-forecasting",
+        "time-series",
+        "causal-model",
+        "scenario-analysis"
+      ],
+      "sources": [
+        "raw/INDEX.md",
+        "raw/papers/human-vs-machines-semiconductor-market-forecasting-2024.md",
+        "raw/datasets/bit-demand-supply-growth.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "memory-demand",
+      "label": "Memory Demand",
+      "type": "concept",
+      "href": "/concepts/memory-demand",
+      "tags": [
+        "memory",
+        "demand-forecasting",
+        "bit-demand",
+        "units"
+      ],
+      "sources": [],
+      "confidence": "medium"
+    },
+    {
+      "id": "scenario-analysis",
+      "label": "Scenario Analysis",
+      "type": "concept",
+      "href": "/concepts/scenario-analysis",
+      "tags": [
+        "scenario-analysis",
+        "demand-forecasting",
+        "methodology"
+      ],
+      "sources": [],
+      "confidence": "medium"
+    },
+    {
+      "id": "supply-demand-gap",
+      "label": "Supply-Demand Gap",
+      "type": "concept",
+      "href": "/concepts/supply-demand-gap",
+      "tags": [
+        "bit-demand",
+        "supply-chain",
+        "pricing",
+        "cycle",
+        "memory"
+      ],
+      "sources": [
+        "raw/reports/idc-2026-memory-shortage-supply-growth.md",
+        "raw/reports/trendforce-2026-memory-price-forecast.md",
+        "raw/datasets/bit-demand-supply-growth.md",
+        "raw/reports/memory-makers-2026-capex-wafer-capacity.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "forecasting-evidence-map",
+      "label": "Forecasting Evidence Map",
+      "type": "method",
+      "href": "/methods/forecasting-evidence-map",
+      "tags": [
+        "forecasting",
+        "methodology",
+        "evidence-map",
+        "memory-cycle"
+      ],
+      "sources": [
+        "raw/INDEX.md",
+        "raw/papers/human-vs-machines-semiconductor-market-forecasting-2024.md",
+        "raw/papers/information-distortion-supply-chain-bullwhip-effect-1997.md",
+        "raw/papers/bass-diffusion-successive-generations-high-tech-1987.md",
+        "raw/papers/stochastic-programming-capacity-planning-wafer-fab-2009.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "sensitivity-analysis",
+      "label": "Sensitivity Analysis",
+      "type": "method",
+      "href": "/methods/sensitivity-analysis",
+      "tags": [
+        "sensitivity-analysis",
+        "scenario-analysis",
+        "demand-forecasting"
+      ],
+      "sources": [],
+      "confidence": "medium"
+    },
+    {
+      "id": "structural-demand-model",
+      "label": "Structural Demand Model",
+      "type": "method",
+      "href": "/methods/structural-demand-model",
+      "tags": [
+        "demand-forecasting",
+        "causal-model",
+        "scenario-analysis",
+        "methodology"
+      ],
+      "sources": [],
+      "confidence": "medium"
+    },
+    {
+      "id": "dram",
+      "label": "DRAM",
+      "type": "market",
+      "href": "/markets/dram",
+      "tags": [
+        "dram",
+        "memory",
+        "demand-forecasting",
+        "supply-demand-gap"
+      ],
+      "sources": [
+        "raw/reports/trendforce-2026-memory-price-forecast.md",
+        "raw/reports/idc-2026-memory-shortage-supply-growth.md",
+        "raw/reports/wsts-spring-2026-semiconductor-memory-forecast.md",
+        "raw/reports/memory-makers-2026-capex-wafer-capacity.md",
+        "raw/articles/cxl-memory-expansion-datacenter-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "hbm",
+      "label": "HBM",
+      "type": "market",
+      "href": "/markets/hbm",
+      "tags": [
+        "hbm",
+        "ai-server",
+        "memory",
+        "demand-forecasting",
+        "advanced-packaging"
+      ],
+      "sources": [
+        "raw/articles/micron-high-bandwidth-memory-hbm.md",
+        "raw/articles/samsung-semiconductor-hbm.md",
+        "raw/reports/trendforce-hbm-bit-demand-supply-2026.md",
+        "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md",
+        "raw/reports/macro-datacenter-power-constraint-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nand",
+      "label": "NAND SSD",
+      "type": "market",
+      "href": "/markets/nand",
+      "tags": [
+        "nand",
+        "ssd",
+        "storage",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/reports/trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md",
+        "raw/articles/storage-enterprise-ssd-qlc-nand-demand-2026.md",
+        "raw/reports/trendforce-2026-memory-price-forecast.md",
+        "raw/datasets/nand-cost-per-bit-trend.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "pc-dram",
+      "label": "PC DRAM",
+      "type": "market",
+      "href": "/markets/pc-dram",
+      "tags": [
+        "pc",
+        "dram",
+        "ai-pc",
+        "memory",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md",
+        "raw/reports/idc-2026-memory-shortage-supply-growth.md",
+        "raw/articles/oem-pc-ai-pc-mix-commercial-refresh-2026.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "smartphone-memory",
+      "label": "Smartphone Memory",
+      "type": "market",
+      "href": "/markets/smartphone-memory",
+      "tags": [
+        "smartphone",
+        "dram",
+        "nand",
+        "memory",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/reports/counterpoint-global-smartphone-market-2024.md",
+        "raw/articles/micron-mobile-memory-storage-for-phones.md",
+        "raw/articles/gsmarena-samsung-galaxy-s25-specs.md",
+        "raw/articles/gsmarena-samsung-galaxy-a56-specs.md",
+        "raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md",
+        "raw/articles/on-device-ai-smartphone-dram-content-2026.md",
+        "raw/articles/trendforce-smartphone-storage-capacity-2026.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "hbm-demand",
+      "label": "AI Server HBM Demand Simulator",
+      "type": "simulator",
+      "href": "/simulators/hbm-demand",
+      "tags": [
+        "simulator",
+        "hbm",
+        "ai-server",
+        "accelerator",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/articles/micron-high-bandwidth-memory-hbm.md",
+        "raw/articles/samsung-semiconductor-hbm.md",
+        "raw/reports/trendforce-hbm-bit-demand-supply-2026.md",
+        "raw/datasets/gpu-hbm-capacity.md",
+        "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "nand-ssd-demand",
+      "label": "NAND SSD Demand Simulator",
+      "type": "simulator",
+      "href": "/simulators/nand-ssd-demand",
+      "tags": [
+        "nand",
+        "ssd",
+        "simulator",
+        "demand-forecasting",
+        "scenario-analysis"
+      ],
+      "sources": [
+        "raw/reports/trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md",
+        "raw/articles/storage-enterprise-ssd-qlc-nand-demand-2026.md",
+        "raw/reports/trendforce-2026-memory-price-forecast.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "pc-dram-demand",
+      "label": "PC DRAM Demand Simulator",
+      "type": "simulator",
+      "href": "/simulators/pc-dram-demand",
+      "tags": [
+        "simulator",
+        "pc",
+        "dram",
+        "ai-pc",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md",
+        "raw/reports/idc-2026-memory-shortage-supply-growth.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "simulators/index",
+      "label": "Simulators",
+      "type": "simulator",
+      "href": "/simulators/index",
+      "tags": [
+        "simulator",
+        "demand-forecasting",
+        "scenario-analysis"
+      ],
+      "sources": [],
+      "confidence": "medium"
+    },
+    {
+      "id": "smartphone-memory-demand",
+      "label": "Smartphone Memory Demand Simulator",
+      "type": "simulator",
+      "href": "/simulators/smartphone-memory-demand",
+      "tags": [
+        "simulator",
+        "smartphone",
+        "dram",
+        "nand",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/reports/counterpoint-global-smartphone-market-2024.md",
+        "raw/articles/micron-mobile-memory-storage-for-phones.md",
+        "raw/articles/gsmarena-samsung-galaxy-s25-specs.md",
+        "raw/articles/gsmarena-samsung-galaxy-a56-specs.md",
+        "raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md",
+        "raw/articles/on-device-ai-smartphone-dram-content-2026.md",
+        "raw/articles/trendforce-smartphone-storage-capacity-2026.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "domain-comparison",
+      "label": "Domain Comparison Panel",
+      "type": "comparison",
+      "href": "/comparisons/domain-comparison",
+      "tags": [
+        "comparison",
+        "simulator",
+        "demand-forecasting",
+        "scenario-analysis"
+      ],
+      "sources": [],
+      "confidence": "medium"
+    }
+  ],
+  "edges": [
+    {
+      "from": "bit-demand",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "bit-demand",
+      "to": "hbm",
+      "kind": "wikilink"
+    },
+    {
+      "from": "bit-demand",
+      "to": "memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "bit-demand",
+      "to": "nand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "bit-demand",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "bit-demand",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "bit-demand",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "hbm",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "hbm-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "nand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "nand-ssd-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "pc-dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "pc-dram-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "smartphone-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "smartphone-memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "demand-forecasting",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "demand-forecasting",
+      "to": "memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "demand-forecasting",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "demand-forecasting",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "demand-forecasting",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "demand-forecasting",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "demand-forecasting",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "domain-comparison",
+      "to": "hbm-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "domain-comparison",
+      "to": "nand-ssd-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "domain-comparison",
+      "to": "pc-dram-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "domain-comparison",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "domain-comparison",
+      "to": "simulators/index",
+      "kind": "wikilink"
+    },
+    {
+      "from": "domain-comparison",
+      "to": "smartphone-memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "hbm",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "nand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "pc-dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "pc-dram-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "smartphone-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "dram",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-evidence-map",
+      "to": "demand-forecasting",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-evidence-map",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-evidence-map",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-evidence-map",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-evidence-map",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "domain-comparison",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "hbm",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "hbm-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "nand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "nand-ssd-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "pc-dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "pc-dram-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "simulators/index",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "smartphone-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "smartphone-memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "graph",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
+      "to": "hbm-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm-demand",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm-demand",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm-demand",
+      "to": "hbm",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm-demand",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm-demand",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm-demand",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "log",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "log",
+      "to": "graph",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-demand",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-demand",
+      "to": "demand-forecasting",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-demand",
+      "to": "smartphone-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-demand",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand",
+      "to": "memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand",
+      "to": "nand-ssd-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand-ssd-demand",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand-ssd-demand",
+      "to": "nand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand-ssd-demand",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand-ssd-demand",
+      "to": "simulators/index",
+      "kind": "wikilink"
+    },
+    {
+      "from": "nand-ssd-demand",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "hbm",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "pc-dram-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "smartphone-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram-demand",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram-demand",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram-demand",
+      "to": "pc-dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram-demand",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram-demand",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "pc-dram-demand",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "demand-forecasting",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "scenario-analysis",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "scenario-analysis",
+      "to": "smartphone-memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "scenario-analysis",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "sensitivity-analysis",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "sensitivity-analysis",
+      "to": "smartphone-memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "sensitivity-analysis",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "simulators/index",
+      "to": "hbm-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "simulators/index",
+      "to": "nand-ssd-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "simulators/index",
+      "to": "pc-dram-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "simulators/index",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "simulators/index",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "simulators/index",
+      "to": "smartphone-memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "simulators/index",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory",
+      "to": "nand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory",
+      "to": "smartphone-memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory-demand",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory-demand",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory-demand",
+      "to": "nand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory-demand",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory-demand",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory-demand",
+      "to": "smartphone-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "smartphone-memory-demand",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "structural-demand-model",
+      "to": "demand-forecasting",
+      "kind": "wikilink"
+    },
+    {
+      "from": "structural-demand-model",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "structural-demand-model",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "supply-demand-gap",
+      "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "supply-demand-gap",
+      "to": "demand-forecasting",
+      "kind": "wikilink"
+    },
+    {
+      "from": "supply-demand-gap",
+      "to": "dram",
+      "kind": "wikilink"
+    },
+    {
+      "from": "supply-demand-gap",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "supply-demand-gap",
+      "to": "hbm",
+      "kind": "wikilink"
+    },
+    {
+      "from": "supply-demand-gap",
+      "to": "memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "supply-demand-gap",
+      "to": "nand",
+      "kind": "wikilink"
+    }
+  ]
+}

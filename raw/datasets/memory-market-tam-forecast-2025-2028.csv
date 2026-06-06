@@ -1,0 +1,9 @@
+year,segment,revenue_usd_b,yoy_pct,source,confidence
+2025,dram,165.7,73,TrendForce,medium
+2026,dram,404.3,144,TrendForce,medium
+2026,nand,147.3,112,TrendForce,medium
+2026,memory_total,551.6,,TrendForce,medium
+2027,memory_total,842.7,53,TrendForce,medium
+2025,hbm,35,,Micron-TAM,medium
+2028,hbm,100,,Micron-TAM,medium
+2030,datacenter_silicon_total,950,,Creative-Strategies-approx,low

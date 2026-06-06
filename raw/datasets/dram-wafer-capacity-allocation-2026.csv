@@ -1,0 +1,7 @@
+segment,metric,value_pct,note,confidence
+hbm,output_share,8,"HBM ~8% of total DRAM output (bit/wafer)",medium
+hbm,revenue_share,30,"HBM >30% of DRAM revenue 2026",medium
+ai_equivalent,wafer_consumption,20,"AI ~20% of global DRAM wafer (equivalent usage HBM+GDDR7)",medium
+hbm,wafer_multiple_vs_ddr5,3,"HBM3E ~3x DDR5 wafer per bit (same node); 1GB HBM ~4x standard DRAM",medium
+gddr7,wafer_multiple,1.7,"GDDR7 ~1.7x standard DRAM wafer",medium
+openai_microsoft_deal,wafer_share,37.5,"~35-40% of global DRAM wafer (HBM+LPDDR+ECC for servers)",low

@@ -1,0 +1,7 @@
+year,ai_pc_share_pct,ai_pc_units_m,source,note,confidence
+2023,5,,IDC,"AI PCs in use ~5%",low
+2025,31,77.8,Gartner,"31% of PC market; 77.8M units",medium
+2026,55,143,Gartner,"55% of market; 143M units",medium
+2027,60,,Canalys,"60% of PCs AI-capable",medium
+2028,70,200,Canalys,"70% share; 200M+ units",medium
+2028,94,,IDC,"94% of PCs in use AI-capable (installed base)",low

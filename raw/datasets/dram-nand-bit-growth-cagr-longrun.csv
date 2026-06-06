@@ -1,0 +1,9 @@
+product,period,bit_growth_pct,type,note,confidence
+dram,2025,21,annual,"low-20s% industry bit shipment",medium
+dram,2026,20,annual,"~20% YoY",medium
+nand,2025,18,annual,"high-teens%",medium
+nand,2026,20,annual,"~20% YoY",medium
+dram,2025-2030,3,cagr,"conventional DRAM ~3% CAGR (Yole/forecast)",low
+hbm,2025-2030,12,cagr,"HBM ~12% CAGR (bit) - or higher per other sources",low
+dram_market,2026-2034,7.2,cagr_revenue,"DRAM market revenue CAGR (Fortune BI, $ not bit)",low
+nand_market,2026-2035,8.51,cagr_revenue,"NAND market revenue CAGR (SNS, $ not bit)",low

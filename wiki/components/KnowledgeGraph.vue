@@ -1,23 +1,33 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { withBase } from 'vitepress'
+import graphData from '../public/graph-data.json'
 
 type NodeType = 'source' | 'concept' | 'method' | 'market' | 'simulator' | 'comparison'
 
-type GraphNode = {
+type RawGraphNode = {
   id: string
   label: string
   type: NodeType
+  href?: string
+  tags?: string[]
+  sources?: string[]
+  confidence?: string
+}
+
+type RawGraphEdge = {
+  from: string
+  to: string
+  kind?: string
+}
+
+type GraphNode = RawGraphNode & {
   x: number
   y: number
-  href?: string
   summary: string
 }
 
-type GraphEdge = {
-  from: string
-  to: string
-  label?: string
+type GraphEdge = RawGraphEdge & {
   strength?: 'primary' | 'secondary'
 }
 
@@ -30,74 +40,27 @@ const typeLabels: Record<NodeType, string> = {
   comparison: 'Comparison'
 }
 
-const nodes: GraphNode[] = [
-  { id: 'raw', label: 'Raw sources', type: 'source', x: 80, y: 270, href: '/sources/raw-source-map', summary: '196개 raw 자료를 cluster별로 묶고 source URL과 citation anchor를 추적합니다.' },
-  { id: 'citation', label: 'Citation matrix', type: 'source', x: 190, y: 135, href: '/sources/citation-matrix', summary: 'wiki page와 simulator preset이 어떤 raw source를 인용하는지 확인하는 evidence audit 표입니다.' },
+const typeLanes: Record<NodeType, number> = {
+  source: 90,
+  concept: 330,
+  method: 540,
+  market: 755,
+  simulator: 995,
+  comparison: 1210
+}
 
-  { id: 'forecast', label: 'Demand forecasting', type: 'concept', x: 330, y: 90, href: '/concepts/demand-forecasting', summary: '메모리 수요 예측 문제를 unit, bit, capacity, revenue 관점으로 정의합니다.' },
-  { id: 'memory', label: 'Memory demand', type: 'concept', x: 345, y: 215, href: '/concepts/memory-demand', summary: '수요를 측정하는 관점과 단위를 정리하는 핵심 개념 노드입니다.' },
-  { id: 'bit', label: 'Bit demand', type: 'concept', x: 345, y: 345, href: '/concepts/bit-demand', summary: '출하량과 평균 content를 bit 단위 수요로 변환하는 공통 언어입니다.' },
-  { id: 'gap', label: 'Supply-demand gap', type: 'concept', x: 330, y: 475, href: '/concepts/supply-demand-gap', summary: 'bit demand와 bit supply 성장률 차이가 가격/매출/shortage에 미치는 영향을 해석합니다.' },
+const typeOrder: NodeType[] = ['source', 'concept', 'method', 'market', 'simulator', 'comparison']
 
-  { id: 'structural', label: 'Structural model', type: 'method', x: 545, y: 170, href: '/methods/structural-demand-model', summary: '출하량 × 탑재량 × attach rate 방식의 구조적 수요 모델입니다.' },
-  { id: 'sensitivity', label: 'Sensitivity', type: 'method', x: 540, y: 330, href: '/methods/sensitivity-analysis', summary: '입력 가정 변화가 EB/PB/TB 결과에 미치는 영향을 비교합니다.' },
-  { id: 'evidence', label: 'Evidence map', type: 'method', x: 530, y: 485, href: '/methods/forecasting-evidence-map', summary: 'papers, datasets, lectures를 forecasting 방법론 계층에 매핑합니다.' },
+const rawNodes = graphData.nodes as RawGraphNode[]
+const edges = (graphData.edges as RawGraphEdge[]).map((edge) => ({ ...edge, strength: 'secondary' as const })) satisfies GraphEdge[]
+const incomingCounts = countEdges(edges, 'to')
+const outgoingCounts = countEdges(edges, 'from')
 
-  { id: 'dram', label: 'DRAM', type: 'market', x: 745, y: 110, href: '/markets/dram', summary: 'PC, 스마트폰, 서버, HBM 등에서 발생하는 DRAM bit demand와 공급 제약을 추적합니다.' },
-  { id: 'pc', label: 'PC DRAM', type: 'market', x: 760, y: 230, href: '/markets/pc-dram', summary: 'AI PC penetration과 16GB+ baseline이 PC DRAM content를 어떻게 끌어올리는지 봅니다.' },
-  { id: 'phone', label: 'Smartphone', type: 'market', x: 760, y: 355, href: '/markets/smartphone-memory', summary: 'entry/mainstream/premium segment별 DRAM·NAND 평균 탑재량을 추적합니다.' },
-  { id: 'hbm', label: 'HBM', type: 'market', x: 745, y: 485, href: '/markets/hbm', summary: 'AI accelerator shipment, HBM generation mix, CoWoS/power bottleneck을 연결합니다.' },
-  { id: 'nand', label: 'NAND', type: 'market', x: 735, y: 610, href: '/markets/nand', summary: 'client SSD, enterprise SSD, AI storage mix 변화가 NAND bit demand를 만드는 경로입니다.' },
-
-  { id: 'pcSim', label: 'PC DRAM sim', type: 'simulator', x: 980, y: 185, href: '/simulators/pc-dram-demand', summary: 'PC 출하량, AI PC penetration, PC별 DRAM content를 조정합니다.' },
-  { id: 'phoneSim', label: 'Phone sim', type: 'simulator', x: 1000, y: 320, href: '/simulators/smartphone-memory-demand', summary: '스마트폰 3개 segment의 평균 DRAM/NAND 탑재량으로 수요를 계산합니다.' },
-  { id: 'hbmSim', label: 'HBM sim', type: 'simulator', x: 985, y: 455, href: '/simulators/hbm-demand', summary: 'AI accelerator, attach rate, stack 수, stack capacity로 HBM 수요를 계산합니다.' },
-  { id: 'nandSim', label: 'NAND SSD sim', type: 'simulator', x: 985, y: 590, href: '/simulators/nand-ssd-demand', summary: 'Client/Enterprise/AI storage SSD mix와 평균 TB/SSD로 NAND 수요를 계산합니다.' },
-
-  { id: 'comparison', label: 'Domain comparison', type: 'comparison', x: 1210, y: 385, href: '/comparisons/domain-comparison', summary: 'Smartphone, PC, HBM, NAND SSD simulator preset을 EB 단위로 비교합니다.' }
-]
-
-const edges: GraphEdge[] = [
-  { from: 'raw', to: 'citation', label: 'audit', strength: 'secondary' },
-  { from: 'raw', to: 'forecast', label: 'evidence' },
-  { from: 'raw', to: 'evidence', label: 'papers / datasets' },
-  { from: 'citation', to: 'evidence', label: 'trace' },
-
-  { from: 'forecast', to: 'memory' },
-  { from: 'memory', to: 'bit' },
-  { from: 'bit', to: 'gap' },
-  { from: 'forecast', to: 'structural' },
-  { from: 'forecast', to: 'sensitivity' },
-  { from: 'gap', to: 'evidence', strength: 'secondary' },
-
-  { from: 'structural', to: 'dram' },
-  { from: 'structural', to: 'nand' },
-  { from: 'sensitivity', to: 'pcSim' },
-  { from: 'sensitivity', to: 'phoneSim' },
-  { from: 'sensitivity', to: 'hbmSim' },
-  { from: 'sensitivity', to: 'nandSim' },
-  { from: 'evidence', to: 'dram', strength: 'secondary' },
-  { from: 'evidence', to: 'hbm', strength: 'secondary' },
-
-  { from: 'dram', to: 'pc' },
-  { from: 'dram', to: 'phone' },
-  { from: 'dram', to: 'hbm' },
-  { from: 'nand', to: 'phone' },
-  { from: 'pc', to: 'pcSim' },
-  { from: 'phone', to: 'phoneSim' },
-  { from: 'hbm', to: 'hbmSim' },
-  { from: 'nand', to: 'nandSim' },
-
-  { from: 'pcSim', to: 'comparison' },
-  { from: 'phoneSim', to: 'comparison' },
-  { from: 'hbmSim', to: 'comparison' },
-  { from: 'nandSim', to: 'comparison' }
-]
-
-const selectedId = ref('comparison')
+const nodes: GraphNode[] = layoutNodes(rawNodes)
+const selectedId = ref(nodes.find((node) => node.id === 'domain-comparison')?.id ?? nodes[0]?.id ?? '')
 const hoveredId = ref<string | null>(null)
 
-const nodeById = computed(() => Object.fromEntries(nodes.map((node) => [node.id, node])))
+const nodeById = computed<Record<string, GraphNode>>(() => Object.fromEntries(nodes.map((node) => [node.id, node])))
 const selectedNode = computed(() => nodeById.value[selectedId.value] ?? nodes[0])
 const activeId = computed(() => hoveredId.value ?? selectedId.value)
 const activeNeighborIds = computed(() => {
@@ -109,6 +72,44 @@ const activeNeighborIds = computed(() => {
   }
   return related
 })
+const graphStats = computed(() => `${nodes.length} pages · ${edges.length} wikilinks · generated ${new Date(graphData.generatedAt).toLocaleDateString('ko-KR')}`)
+
+function countEdges(edgeList: RawGraphEdge[], key: 'from' | 'to') {
+  const counts = new Map<string, number>()
+  for (const edge of edgeList) counts.set(edge[key], (counts.get(edge[key]) ?? 0) + 1)
+  return counts
+}
+
+function layoutNodes(sourceNodes: RawGraphNode[]): GraphNode[] {
+  const grouped = new Map<NodeType, RawGraphNode[]>()
+  for (const type of typeOrder) grouped.set(type, [])
+  for (const node of sourceNodes) grouped.get(node.type)?.push(node)
+
+  return typeOrder.flatMap((type) => {
+    const laneNodes = grouped.get(type) ?? []
+    const gap = Math.min(116, 590 / Math.max(1, laneNodes.length))
+    const startY = 92 + Math.max(0, (590 - gap * (laneNodes.length - 1)) / 2)
+    return laneNodes.map((node, index) => ({
+      ...node,
+      x: typeLanes[type],
+      y: startY + index * gap,
+      summary: summarizeNode(node)
+    }))
+  })
+}
+
+function summarizeNode(node: RawGraphNode) {
+  const incoming = incomingCounts.get(node.id) ?? 0
+  const outgoing = outgoingCounts.get(node.id) ?? 0
+  const parts = [
+    `${typeLabels[node.type]} page입니다.`,
+    `연결: inbound ${incoming}, outbound ${outgoing}.`
+  ]
+  if (node.confidence) parts.push(`Confidence: ${node.confidence}.`)
+  if (node.sources?.length) parts.push(`Source refs: ${node.sources.length}개.`)
+  if (node.tags?.length) parts.push(`Tags: ${node.tags.slice(0, 4).join(', ')}${node.tags.length > 4 ? '…' : ''}.`)
+  return parts.join(' ')
+}
 
 function nodeHref(node: GraphNode) {
   return node.href ? withBase(node.href) : undefined
@@ -117,8 +118,15 @@ function nodeHref(node: GraphNode) {
 function edgePath(edge: GraphEdge) {
   const from = nodeById.value[edge.from]
   const to = nodeById.value[edge.to]
+  if (!from || !to) return ''
   const midX = (from.x + to.x) / 2
-  const bend = Math.max(42, Math.abs(to.x - from.x) * 0.28)
+  const sameLane = Math.abs(to.x - from.x) < 4
+  if (sameLane) {
+    const direction = to.y > from.y ? 1 : -1
+    const arc = 62
+    return `M ${from.x} ${from.y} C ${from.x + arc} ${from.y + 18 * direction}, ${to.x + arc} ${to.y - 18 * direction}, ${to.x} ${to.y}`
+  }
+  const bend = Math.max(42, Math.abs(to.x - from.x) * 0.26)
   const c1x = midX - bend * 0.35
   const c2x = midX + bend * 0.35
   return `M ${from.x} ${from.y} C ${c1x} ${from.y}, ${c2x} ${to.y}, ${to.x} ${to.y}`
@@ -128,8 +136,8 @@ function edgeLabelPosition(edge: GraphEdge) {
   const from = nodeById.value[edge.from]
   const to = nodeById.value[edge.to]
   return {
-    x: (from.x + to.x) / 2,
-    y: (from.y + to.y) / 2 - 8
+    x: ((from?.x ?? 0) + (to?.x ?? 0)) / 2,
+    y: ((from?.y ?? 0) + (to?.y ?? 0)) / 2 - 8
   }
 }
 
@@ -148,8 +156,9 @@ function isActiveEdge(edge: GraphEdge) {
       <p class="graph-kicker">Interactive map</p>
       <h2>raw evidence에서 simulator까지 이어지는 MemoCast 지식 흐름</h2>
       <p>
-        노드를 클릭하면 해당 페이지로 이동하고, 마우스를 올리면 연결된 근거·개념·시장·시뮬레이터 경로가 강조됩니다.
+        wiki 문서의 frontmatter와 Obsidian wikilink를 빌드 시점에 파싱해 자동 생성합니다. 노드를 클릭하면 해당 페이지로 이동하고, 마우스를 올리면 연결된 근거·개념·시장·시뮬레이터 경로가 강조됩니다.
       </p>
+      <p class="graph-stats">{{ graphStats }}</p>
     </div>
 
     <div class="graph-shell">
@@ -274,6 +283,21 @@ function isActiveEdge(edge: GraphEdge) {
   color: #c5ccdc;
   font-size: 15px;
   line-height: 1.65;
+}
+
+.graph-copy .graph-stats {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 0 11px;
+  border: 1px solid rgba(174, 182, 255, 0.24);
+  border-radius: 999px;
+  color: #aeb6ff;
+  background: rgba(174, 182, 255, 0.07);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .graph-shell {

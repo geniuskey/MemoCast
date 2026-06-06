@@ -18,6 +18,7 @@ export default defineConfig({
       { text: 'Markets', link: '/markets/dram' },
       { text: 'Methods', link: '/methods/structural-demand-model' },
       { text: 'Simulators', link: '/simulators/' },
+      { text: 'Charts', link: '/charts' },
       { text: 'Graph', link: '/graph' }
     ],
     sidebar: [
@@ -25,6 +26,7 @@ export default defineConfig({
         text: 'Overview',
         items: [
           { text: 'Index', link: '/' },
+          { text: 'Charts', link: '/charts' },
           { text: 'Schema', link: '/SCHEMA' },
           { text: 'Log', link: '/log' },
           { text: 'Knowledge Graph', link: '/graph' }

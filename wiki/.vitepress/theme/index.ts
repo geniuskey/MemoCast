@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import DomainComparisonPanel from '../../components/DomainComparisonPanel.vue'
+import PeriodDemandChart from '../../components/PeriodDemandChart.vue'
 import HbmDemandSimulator from '../../components/HbmDemandSimulator.vue'
 import HomePage from '../../components/HomePage.vue'
 import KnowledgeGraph from '../../components/KnowledgeGraph.vue'
@@ -13,6 +14,7 @@ export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('DomainComparisonPanel', DomainComparisonPanel)
+    app.component('PeriodDemandChart', PeriodDemandChart)
     app.component('HbmDemandSimulator', HbmDemandSimulator)
     app.component('HomePage', HomePage)
     app.component('KnowledgeGraph', KnowledgeGraph)

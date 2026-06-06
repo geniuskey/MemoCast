@@ -10,6 +10,7 @@
         </p>
         <div class="mc-actions">
           <a class="mc-button mc-button-primary" href="simulators/">시뮬레이터 열기</a>
+          <a class="mc-button" href="charts">인터랙티브 차트</a>
           <a class="mc-button" href="graph">지식 그래프 보기</a>
         </div>
         <div class="mc-stats" aria-label="MemoCast content statistics">

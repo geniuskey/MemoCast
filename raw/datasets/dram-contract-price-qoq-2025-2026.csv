@@ -1,0 +1,8 @@
+period,segment,qoq_change_pct,note,confidence
+2025Q4,server_dram_contract,20.5,"+18-23% QoQ (above expectations)",medium
+2026Q1,server_dram_contract,60,">60% QoQ forecast",medium
+2026Q1,conventional_dram_contract,57.5,"55-60% QoQ",medium
+2026Q1,dram_overall_contract,92.5,"~90-95% QoQ record (TrendForce)",medium
+2026Q2,dram_contract,60.5,"58-63% QoQ (TrendForce)",medium
+2026Q2,nand_contract,72.5,"70-75% QoQ (TrendForce)",medium
+2026Q2,mobile_lpddr5x,80.5,"78-83% QoQ (TrendForce)",medium

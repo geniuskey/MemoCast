@@ -1,73 +1,64 @@
 # Raw Source Index
 
-메모리(DRAM/NAND/HBM) 수요 예측을 위한 원천 자료 인덱스. 모든 파일은 웹 검색으로 수집했고 frontmatter에 `source_url`을 둔다. 수치는 wiki에서 교차검증 후 인용한다. (ingested: 2026-06-06)
+메모리(DRAM/NAND/HBM) 수요 예측을 위한 원천 자료 인덱스. 전부 웹 검색으로 수집했고 각 파일 frontmatter에 `source_url`을 둔다. 수치는 wiki에서 교차검증 후 인용한다. (ingested: 2026-06-06)
 
-## papers/ — 학술/방법론 (18)
+**현황: 347개 원천 파일** — papers 35 · articles 94 · reports 88 · earnings 13 · datasets 25쌍(50) · lectures 67.
 
-- `human-vs-machines-semiconductor-market-forecasting-2024.md` — WSTS 전문가 컨센서스 vs ML
-- `semiconductor-industry-cycles-explanatory-factors-forecasting-2014.md` — VECM + Markov-switching 사이클
-- `investigating-semiconductor-industry-cycles-2013.md` — 칩 사이클 통계 특성
-- `bayesian-model-averaging-semiconductor-cycle-2018.md` — BMA 70개 예측변수
-- `semiconductor-cycles-bootstrap-prediction-intervals-2007.md` — VAR + bootstrap 예측구간
-- `hybrid-lstm-arma-ic-tray-demand-forecasting-2022.md` — LSTM+ARMA 하이브리드
-- `arima-lstm-order-demand-short-lead-time-2021.md` — ARIMA vs LSTM 단기 수요
-- `demand-forecasting-financial-estimation-semiconductor-supply-chain-2019.md` — VAR 공급망 동학
-- `manufacturing-intelligence-semiconductor-demand-technology-diffusion-2010.md` — 다세대 diffusion
-- `bass-diffusion-successive-generations-high-tech-1987.md` — Norton-Bass 세대 대체 모델
-- `collusion-along-learning-curve-dram-cartel-2021.md` — DRAM 카르텔/학습곡선
-- `how-fast-are-semiconductor-prices-falling-2018.md` — hedonic 가격지수
-- `measuring-moores-law-price-cost-quality-indexes-2019.md` — cost-per-bit, density scaling
-- `dynamic-analysis-semiconductor-supply-chain-bullwhip-2018.md` — bullwhip 제어공학 분석
-- `information-distortion-supply-chain-bullwhip-effect-1997.md` — bullwhip 4대 원인(고전)
-- `demand-forecasting-lstm-neural-networks-2020.md` — uni/multivariate LSTM
-- `real-options-capacity-investment-semiconductor-2007.md` — fab capacity real options
-- `stochastic-programming-capacity-planning-wafer-fab-2009.md` — 시나리오 stochastic capacity
+---
 
-## articles/ — 수요 동인/시장 동향 (25)
+## papers/ — 학술/방법론 (27)
 
-- 수요 동인(AI/디바이스): `nvidia-gpu-hbm-capacity-roadmap-2026.md`, `aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md`, `trendforce-ai-20pct-dram-wafer-2026.md`, `trendforce-hbm-market-forecast-2026.md`, `trendforce-ai-server-shipments-28pct-2026.md`, `trendforce-ai-server-memory-contract-price-2q26.md`
-- 디바이스 콘텐츠: `on-device-ai-smartphone-dram-content-2026.md`, `trendforce-smartphone-storage-capacity-2026.md`, `microsoft-ai-pc-16gb-ram-baseline.md`, `server-ddr5-rdimm-channels-capacity-2026.md`, `ddr4-ddr5-transition-2026.md`, `micron-automotive-memory-per-vehicle.md`, `gddr-gaming-console-memory-2026.md`, `edge-ai-iot-memory-demand-2026.md`
-- 스토리지/NAND: `storage-enterprise-ssd-qlc-nand-demand-2026.md`, `trendforce-nearline-hdd-shortage-qlc-ssd-2026.md`
-- 아키텍처: `cxl-memory-expansion-datacenter-2026.md`
-- 과거 사이클: `history-dram-memory-cycles-2016-2026.md`
-- 국내 매체(레거시/crowding out): `korea-legacy-dram-ddr4-crowding-out-2026.md`
-- AI buildout: `aisilicon-datacenter-buildout-gigawatts-2026-2028.md`
-- 영향: `idc-memory-shortage-smartphone-pc-impact-2026.md`
-- 제품/스펙 1차자료: `micron-high-bandwidth-memory-hbm.md`, `micron-mobile-memory-storage-for-phones.md`, `samsung-semiconductor-hbm.md`, `gsmarena-samsung-galaxy-s25-specs.md`, `gsmarena-samsung-galaxy-a56-specs.md`, `gsmarena-samsung-galaxy-a16-5g-specs.md`
+수요예측 방법론. 사이클(VECM/Markov/BMA/VAR+bootstrap), ML(LSTM·ARIMA-LSTM), diffusion(Bass/Norton-Bass), bullwhip(Lee 1997, 제어공학 2018), cost-per-bit·Moore's law(Flamm·Byrne), real options·stochastic capacity, DRAM 카르텔/학습곡선, human-vs-ML 예측 비교. 2차 추가: 가격탄력성·재고이론·AI compute scaling laws·기술대체 S-curve·oligopoly 게임이론·grey/Markov·HBM 패키징 공급망·HBM thermal/warpage/TSV yield(`hbm-thermal-`).
 
-## reports/ — 산업/시장 리포트 (27)
+## articles/ — 수요 동인/시장 동향 (67)
 
-- 종합 전망: `trendforce-2026-memory-price-forecast.md`, `hbm-ai-memory-supercycle-2026-2027.md`, `wsts-spring-2026-semiconductor-memory-forecast.md`, `gartner-2026-memory-revenue-memflation-forecast.md`, `omdia-2026-memory-crunch-forecast.md`, `idc-2026-memory-shortage-supply-growth.md`, `sia-q1-2026-global-semiconductor-sales.md`, `yole-2026-hbm-dram-memory-market.md`, `techinsights-memory-outlook-report-2026.md`
-- 가격/수급: `trendforce-2q26-memory-contract-price-forecast.md`, `trendforce-ddr5-profitability-surpass-hbm3e-2026.md`, `trendforce-mobile-dram-lpddr5x-2026-smartphone.md`, `trendforce-hbm-bit-demand-supply-2026.md`, `trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md`, `analyst-bank-memory-outlook-price-targets-2026.md`, `memory-inventory-leading-indicators-2026.md`
-- 점유율/실적: `trendforce-4q25-dram-revenue-supplier-ranking.md`, `trendforce-4q25-nand-revenue-supplier-ranking.md`, `micron-fq2-2026-earnings-dram-nand-hbm.md`, `counterpoint-global-smartphone-market-2024.md`
-- 공급/Capacity: `memory-makers-2026-capex-wafer-capacity.md`, `capex-samsung-hbm-50pct-capacity-surge-2026.md`, `fab-samsung-pyeongtaek-p4-1c-dram-2026.md`, `fab-skhynix-micron-capacity-roadmap-2026-2031.md`, `yole-cxl-memory-market-2026-2028.md`
-- 중국/지정학: `china-cxmt-ymtc-capacity-export-controls-2026.md`, `cxmt-2026-capacity-hbm3-bit-share.md`, `ymtc-2026-nand-xtacking-layer-count-capacity.md`
-- 국내 매체: `korea-media-memory-supercycle-2026-outlook.md`
+- **AI 가속기/buildout** (`aisilicon-`, `nvidia-`, `trendforce-ai-`): GPU별 HBM, AI 서버 출하, 데이터센터 GW buildout
+- **모델/소프트웨어 driver** (`model-`): DeepSeek MoE, 컨텍스트/KV cache, AI 메모리 슈퍼사이클, Epoch AI compute 성장 추세(상류 동인)
+- **전력/냉각 제약** (`power-`, 13): GW 전망, 액침냉각, energy/bit, SOCAMM, 원전 PPA, perf/watt, power-vs-memory limited
+- **디바이스 콘텐츠**: 스마트폰(`on-device-ai-`, `trendforce-smartphone-`), AI PC(`microsoft-`), 서버(`server-ddr5-`), 차량(`micron-automotive-`), 콘솔(`gddr-`), 엣지(`edge-ai-`), DDR4→5(`ddr4-ddr5-`)
+- **OEM bottom-up** (`oem-`, 12): Apple/Samsung/중화권 스마트폰, Dell/HP/Lenovo PC, 서버 ODM, 모듈메이커, 자동차 Tier-1
+- **niche 수요처** (`domain-`, 11): 휴머노이드, AR/VR, L4 자율주행, 5G/6G, 우주, CCTV, 네트워킹 HBM, 핸드헬드, 크립토, 산업, 의료
+- **스토리지**(`storage-`, `trendforce-nearline-`), **아키텍처**(`cxl-`), **과거 사이클**(`history-`), **ESG**(`esg-`), **국내 매체**(`korea-legacy-`), **영향**(`idc-`)
+- **유통/그레이마켓** (`channel-`, 6): 패닉바잉·리테일 DDR5 가격·할당/lead time·위조/리마킹·재고 보충 신호
+- **산업 통합사** (`consol-`, 6): DRAM 가격담합, Qimonda/Elpida 파산, Intel NAND→SK(Solidigm), Toshiba→Kioxia, WD/SanDisk → 과점 형성
+- **sovereign AI**(`domain-sovereign-ai-`), **제품/스펙 1차자료**: `micron-*`, `samsung-semiconductor-hbm`, `gsmarena-*`
+
+## reports/ — 산업/시장 리포트 (57)
+
+- **종합 전망**: TrendForce, Gartner, IDC, Omdia, WSTS, SIA, Yole, TechInsights, Counterpoint, 국내(`korea-media-`)
+- **가격/수급**: `trendforce-2q26/ddr5/mobile/hbm-bit/qlc-`, `analyst-bank-`(IB 목표주가), `memory-inventory-`(선행지표)
+- **점유율/실적**: `trendforce-4q25-dram/nand-`, `micron-fq2-`, `counterpoint-`
+- **공급/Capacity**: `memory-makers-capex-`, `capex-samsung-`, `fab-samsung/skhynix-micron-`, `yole-cxl-`
+- **첨단 패키징** (`pkg-`, 4): TSMC CoWoS capacity·병목·NVIDIA 할당(HBM 출하 게이팅)
+- **중국/지정학** (`china-`, `cxmt-`, `ymtc-`): capacity, HBM3, 수출통제, Huawei Ascend HBM 수요/자급 병목(`china-huawei-ascend-`)
+- **매크로** (`macro-`, 12): IT지출(Gartner $6.31T), AI지출($2.59T), 클라우드 capex, semi-vs-GDP 디커플링, FX(KRW/JPY), 금리/경기, AI capex 거품 리스크, 소비 수요
+- **지역별** (`region-`, 12): US/China/Korea/Taiwan/Japan/Europe/India·SEA, WSTS·SIA 지역 billings
+- **장비/WFE** (`equip-`, 10): SEMI WFE 전망, ASML/AMAT/Lam/KLA, 테스트(Advantest/Teradyne), hybrid bonding(BESI/ASMPT), 중국 장비 국산화 — 미래 bit supply 선행지표
+- **소재 공급망** (`material-`, 6): 실리콘 wafer(신에쓰/SUMCO), photoresist, neon/특수가스, ABF 기판 — 공급 게이팅
+- **상품화/금융화**(`memory-commodity-`): DRAM 선물/ETF/헤지
 
 ## earnings/ — 실적/IR (11)
 
-- 메모리 3사: `sk-hynix-1q26-earnings.md`, `samsung-electronics-1q26-earnings.md`, `micron-fq2-2026-earnings.md`
-- NAND/대만: `kioxia-fq4-2025-earnings.md`, `sandisk-fq3-2026-earnings.md`, `nanya-technology-1q26-earnings.md`, `winbond-1q26-earnings.md`, `macronix-1q26-earnings.md`
-- 수요측: `nvidia-fq1-2027-datacenter.md`, `hyperscaler-capex-2026-guidance.md`
-- 가격 교차정리: `trendforce-1q26-memory-pricing.md`
+메모리 3사(삼성·SK·Micron), NAND/대만/일본(Kioxia·Sandisk·Nanya·Winbond·Macronix, `kioxia-fy25-nand-outlook-ipo`), 수요측(NVIDIA·hyperscaler capex), 가격 교차정리(`trendforce-1q26-`).
 
-## datasets/ — 정량 데이터 (CSV+md, 13쌍)
+## datasets/ — 정량 데이터 (CSV+md, 16쌍)
 
-- 가격: `dram-price-history`, `nand-cost-per-bit-trend`
-- 매출/점유율: `dram-revenue-quarterly`, `nand-flash-revenue-share`, `memory-market-revenue-split`, `wsts-semiconductor-billings`
-- bit/공급: `bit-demand-supply-growth`, `memory-maker-capex`
-- HBM/AI: `hbm-market-size`, `gpu-hbm-capacity`
-- 수요 동인: `smartphone-shipments`, `pc-server-shipments`, `memory-content-per-device`
+가격(`dram-price-history`, `nand-cost-per-bit-trend`), 매출/점유율(`dram-revenue-quarterly`, `nand-flash-revenue-share`, `memory-market-revenue-split`, `wsts-semiconductor-billings`), bit/capex(`bit-demand-supply-growth`, `memory-maker-capex`), HBM/AI(`hbm-market-size`, `gpu-hbm-capacity`, `hbm-bit-demand-growth-rate`, `ai-server-shipments-forecast`), 수요동인(`smartphone-shipments`, `pc-server-shipments`, `memory-content-per-device`), 사이클/시장(`dram-revenue-cycle-history`, `dram-nand-bit-demand-by-application`, `memory-makers-quarterly-financials-cycle`, `memory-market-tam-forecast-2025-2028`), 실시간 프록시(`korea-semiconductor-exports-monthly`).
 
-## lectures/ — 개념/교육 자료 (17)
+## lectures/ — 개념/교육 (55)
 
-- 디바이스 동작: `how-dram-works-1t1c-cell-primer.md`, `how-nand-flash-works-floating-gate-charge-trap.md`, `how-hbm-tsv-3d-stacking-works.md`
-- 표준/로드맵: `jedec-ddr5-standard-explained.md`, `jedec-hbm4-standard-jesd270-4.md`, `hbm-generations-roadmap-hbm1-to-hbm4.md`, `emerging-hbm4-cxl-pim-3d-dram-roadmap.md`, `dram-scaling-4f2-3d-dram-roadmap.md`, `cxl-memory-pooling-explained.md`
-- 경제/사이클: `why-memory-is-cyclical-capacity-cycle.md`, `semiconductor-learning-curve-yield-economics.md`, `nand-cost-per-bit-3d-layers-qlc-economics.md`, `memory-pricing-contract-spot-lta-mechanism.md`
-- 방법론/산업구조: `memory-demand-forecasting-methodology-bottoms-up.md`, `nomad-semi-memory-primer-industry-structure.md`, `semianalysis-memory-wall-dram-scaling.md`, `semianalysis-rise-and-roadmap-of-hbm.md`
+- **디바이스 동작/표준**: `how-dram/nand/hbm-`, `jedec-ddr5/hbm4-`, `hbm-generations-`
+- **차세대**: `emerging-`(HBM4/CXL/PIM/3D DRAM, **HBF 고대역폭 플래시**), `cxl-memory-pooling-`, `dram-scaling-4f2-`, UFS 5.0(`conf-jedec-ufs5-`)
+- **컨퍼런스 로드맵** (`conf-`, 13): ISSCC 2026, Hot Chips, IEDM, VLSI, FMS, IMW, JEDEC(DDR6/LPDDR6/GDDR7/HBM4), 3사 HBM4/HBM4E 샘플
+- **메모리 IP/컨트롤러** (`ip-`, 14): Rambus/Synopsys/Cadence PHY, HBM4 custom base die, CXL 컨트롤러, RCD/DB(MRDIMM), NAND 컨트롤러, on-die ECC
+- **공정 전환** (`process-`, 11): DRAM 1a~1d 노드·EUV·6F2→4F2·3D DRAM, 3D NAND 300~1000층·wafer bonding, scaling wall(bit supply 가정)
+- **경제/사이클/방법론**: `why-memory-is-cyclical-`, `semiconductor-learning-curve-`, `nand-cost-per-bit-`, `memory-pricing-`(contract/spot/LTA), `memory-demand-forecasting-methodology-`, `nomad-semi-`, `semianalysis-`(memory wall, HBM)
+
+---
 
 ## 수집 메모
 
-- 1차 수집(6개 클러스터 병렬) + 직접 보강(영문/국내 매체)으로 128개 원천 파일 확보.
-- 다음 수집 대상(미확장): 거시/IT지출 사이클, 한국어 1차 매체(전자신문/디일렉/비즈니스포스트), 컨퍼런스(Hot Chips/ISSCC/IEDM) 기술발표, 전력/냉각 제약과 메모리 수요 연계, OEM별(스마트폰/PC/서버) 수요 bottom-up 상세, 환율/매크로 변수.
-- 참고: 일부 수치는 secondary aggregator 기반(confidence: medium/low 표기) → wiki 인용 전 1차 출처 교차검증 필요.
+- 5개 웨이브(주제별 병렬 sub-agent) + 직접 보강(영문/국내/일본/대만 매체)으로 347개 원천 파일 확보.
+- 세션 한도 도달 시 메인 세션에서 WebSearch+Write로 직접 진행(검증된 fallback). 에이전트는 한도 메시지 전 작업을 대부분 완료함.
+- 다음 수집 후보(미확장): 일별/주별 spot price 시계열, 추가 학술 논문(전력-compute 결합 수요모델), 분기별 earnings 시계열 확장, 표준 세부(DDR6/HBM5 spec), 추가 국내/일본/대만 1차 매체, 메모리 재무모델(LTA prepayment 회계).
+- 품질 주의: 일부 수치는 secondary aggregator 기반(`confidence: medium/low` 표기) → wiki 인용 전 1차 출처 교차검증 필요. billings는 소비지가 아닌 청구지 기준(region 파일 caveat 참조).

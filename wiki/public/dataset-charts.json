@@ -1,0 +1,460 @@
+{
+  "generatedAt": "2026-06-06T05:43:33.300Z",
+  "summary": {
+    "datasetCount": 7,
+    "bitGrowthRows": 8,
+    "revenueCycleRows": 12,
+    "financialRows": 11,
+    "periodDemandRows": 11
+  },
+  "bitGrowth": [
+    {
+      "year": 2022,
+      "memoryType": "DRAM",
+      "metric": "bit_supply_growth",
+      "growthPercent": 18.6,
+      "notes": "TrendForce 2022 forecast"
+    },
+    {
+      "year": 2022,
+      "memoryType": "DRAM",
+      "metric": "bit_demand_growth",
+      "growthPercent": 17.1,
+      "notes": "TrendForce 2022 forecast"
+    },
+    {
+      "year": 2023,
+      "memoryType": "DRAM",
+      "metric": "bit_demand_growth",
+      "growthPercent": 8.3,
+      "notes": "slowed from 2022 (TechInsights/TrendForce)"
+    },
+    {
+      "year": 2023,
+      "memoryType": "DRAM",
+      "metric": "bit_supply_growth",
+      "growthPercent": 14,
+      "notes": "approx 2023 supply-side"
+    },
+    {
+      "year": 2022,
+      "memoryType": "NAND",
+      "metric": "bit_supply_growth",
+      "growthPercent": 31.8,
+      "notes": "TrendForce 2022 forecast"
+    },
+    {
+      "year": 2022,
+      "memoryType": "NAND",
+      "metric": "bit_demand_growth",
+      "growthPercent": 30.8,
+      "notes": "TrendForce 2022 forecast"
+    },
+    {
+      "year": 2024,
+      "memoryType": "DRAM",
+      "metric": "bit_demand_growth",
+      "growthPercent": 15,
+      "notes": "approx mid-teens AI-supported (estimate)"
+    },
+    {
+      "year": 2025,
+      "memoryType": "DRAM",
+      "metric": "bit_demand_growth",
+      "growthPercent": 20,
+      "notes": "approx AI-driven elevated (estimate)"
+    }
+  ],
+  "revenueCycle": [
+    {
+      "year": 2016,
+      "dramRevenueUsdB": 41,
+      "yoyPct": null,
+      "cyclePhase": "recovery",
+      "confidence": "low",
+      "sourceNote": "industry-cited approx (TrendForce/Statista historical)"
+    },
+    {
+      "year": 2017,
+      "dramRevenueUsdB": 72,
+      "yoyPct": 76,
+      "cyclePhase": "supercycle",
+      "confidence": "low",
+      "sourceNote": "Micron rev +64% 2016->2017; supercycle peak approach"
+    },
+    {
+      "year": 2018,
+      "dramRevenueUsdB": 99,
+      "yoyPct": 38,
+      "cyclePhase": "peak",
+      "confidence": "low",
+      "sourceNote": "record year; industry-cited approx"
+    },
+    {
+      "year": 2019,
+      "dramRevenueUsdB": 62,
+      "yoyPct": -37,
+      "cyclePhase": "crash",
+      "confidence": "low",
+      "sourceNote": "oversupply/inventory; lowest cycle phase"
+    },
+    {
+      "year": 2020,
+      "dramRevenueUsdB": 65,
+      "yoyPct": 5,
+      "cyclePhase": "covid-recovery",
+      "confidence": "low",
+      "sourceNote": "PC/datacenter demand; approx"
+    },
+    {
+      "year": 2021,
+      "dramRevenueUsdB": 93,
+      "yoyPct": 43,
+      "cyclePhase": "boom",
+      "confidence": "low",
+      "sourceNote": "industry-cited approx"
+    },
+    {
+      "year": 2022,
+      "dramRevenueUsdB": 80,
+      "yoyPct": -14,
+      "cyclePhase": "downturn-start",
+      "confidence": "low",
+      "sourceNote": "H2 2022 collapse; approx"
+    },
+    {
+      "year": 2023,
+      "dramRevenueUsdB": 48,
+      "yoyPct": -40,
+      "cyclePhase": "trough",
+      "confidence": "low",
+      "sourceNote": "lowest DRAM revenue since 2016 (out-of-balance S/D)"
+    },
+    {
+      "year": 2024,
+      "dramRevenueUsdB": 103.17,
+      "yoyPct": 115,
+      "cyclePhase": "recovery",
+      "confidence": "medium",
+      "sourceNote": "Fortune Business Insights / Statista; some sources ~92B (definition gap)"
+    },
+    {
+      "year": 2025,
+      "dramRevenueUsdB": 121.83,
+      "yoyPct": 18,
+      "cyclePhase": "ai-onset",
+      "confidence": "medium",
+      "sourceNote": "market-research (Fortune BI); Q3-2025 first quarter >40B (+29% QoQ)"
+    },
+    {
+      "year": 2026,
+      "dramRevenueUsdB": 128.36,
+      "yoyPct": 5,
+      "cyclePhase": "ai-supercycle-lowcase",
+      "confidence": "low",
+      "sourceNote": "market-research conservative (Fortune BI 2026)"
+    },
+    {
+      "year": 2026,
+      "dramRevenueUsdB": 404.3,
+      "yoyPct": 232,
+      "cyclePhase": "ai-supercycle-highcase",
+      "confidence": "medium",
+      "sourceNote": "TrendForce 2026 DRAM revenue +144% YoY (ASP-driven)"
+    }
+  ],
+  "financials": [
+    {
+      "company": "micron",
+      "period": "FY2023",
+      "revenue": 15.54,
+      "revenueUnit": "usd_b",
+      "operatingProfit": null,
+      "profitUnit": "",
+      "note": "net loss -5.83B USD (downturn trough)",
+      "confidence": "high"
+    },
+    {
+      "company": "micron",
+      "period": "FY2024",
+      "revenue": 25.11,
+      "revenueUnit": "usd_b",
+      "operatingProfit": null,
+      "profitUnit": "",
+      "note": "net income +0.778B USD (recovery)",
+      "confidence": "high"
+    },
+    {
+      "company": "micron",
+      "period": "FY2024Q4",
+      "revenue": 7.75,
+      "revenueUnit": "usd_b",
+      "operatingProfit": 1.522,
+      "profitUnit": "usd_b",
+      "note": "operating income",
+      "confidence": "high"
+    },
+    {
+      "company": "sk_hynix",
+      "period": "FY2022",
+      "revenue": 44.62,
+      "revenueUnit": "krw_t",
+      "operatingProfit": null,
+      "profitUnit": "",
+      "note": "prior record revenue",
+      "confidence": "high"
+    },
+    {
+      "company": "sk_hynix",
+      "period": "FY2023",
+      "revenue": 32.77,
+      "revenueUnit": "krw_t",
+      "operatingProfit": -7.73,
+      "profitUnit": "krw_t",
+      "note": "operating LOSS 7.73T KRW (downturn)",
+      "confidence": "high"
+    },
+    {
+      "company": "sk_hynix",
+      "period": "FY2024",
+      "revenue": 66.19,
+      "revenueUnit": "krw_t",
+      "operatingProfit": 23.47,
+      "profitUnit": "krw_t",
+      "note": "record; ~46.06B USD; most profitable Korean co",
+      "confidence": "high"
+    },
+    {
+      "company": "sk_hynix",
+      "period": "FY2024Q4",
+      "revenue": 19.77,
+      "revenueUnit": "krw_t",
+      "operatingProfit": 8.08,
+      "profitUnit": "krw_t",
+      "note": "+2236% YoY vs 0.346T Q4'23",
+      "confidence": "high"
+    },
+    {
+      "company": "samsung",
+      "period": "FY2023",
+      "revenue": 258.9,
+      "revenueUnit": "krw_t",
+      "operatingProfit": 6.57,
+      "profitUnit": "krw_t",
+      "note": "total company op profit 6.57T (memory loss year)",
+      "confidence": "medium"
+    },
+    {
+      "company": "samsung",
+      "period": "FY2024",
+      "revenue": 300.9,
+      "revenueUnit": "krw_t",
+      "operatingProfit": 32.7,
+      "profitUnit": "krw_t",
+      "note": "total company",
+      "confidence": "high"
+    },
+    {
+      "company": "samsung",
+      "period": "FY2025",
+      "revenue": null,
+      "revenueUnit": "krw_t",
+      "operatingProfit": 43.6,
+      "profitUnit": "krw_t",
+      "note": "total company op profit improved",
+      "confidence": "medium"
+    },
+    {
+      "company": "samsung",
+      "period": "FY2024Q1",
+      "revenue": 71.92,
+      "revenueUnit": "krw_t",
+      "operatingProfit": 6.61,
+      "profitUnit": "krw_t",
+      "note": "op profit +933% YoY",
+      "confidence": "high"
+    }
+  ],
+  "periodDemandTimeline": [
+    {
+      "year": 2020,
+      "segment": "AI GPU HBM content",
+      "memoryType": "HBM",
+      "demandGbPerUnit": 80,
+      "gpuModel": "A100",
+      "hbmType": "HBM2e",
+      "confidence": "high",
+      "sourceRefs": [
+        "raw/datasets/gpu-hbm-capacity.md"
+      ],
+      "referenceNotes": [
+        "80GB variant (40GB also existed)"
+      ]
+    },
+    {
+      "year": 2022,
+      "segment": "AI GPU HBM content",
+      "memoryType": "HBM",
+      "demandGbPerUnit": 80,
+      "gpuModel": "H100",
+      "hbmType": "HBM3",
+      "confidence": "high",
+      "sourceRefs": [
+        "raw/datasets/gpu-hbm-capacity.md"
+      ],
+      "referenceNotes": [
+        "SXM 80GB"
+      ]
+    },
+    {
+      "year": 2022,
+      "segment": "Server DRAM",
+      "memoryType": "DRAM",
+      "demandEb": 0.0057,
+      "shipmentsMillionUnits": 14.9,
+      "avgCapacityGb": 384,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/pc-server-shipments.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "referenceNotes": [
+        "TrendForce",
+        "approx (value +20.1% but units modest)",
+        "avg DRAM per server 384GB (TrendForce)"
+      ]
+    },
+    {
+      "year": 2022,
+      "segment": "Smartphone DRAM",
+      "memoryType": "DRAM",
+      "demandEb": 0.0084,
+      "shipmentsMillionUnits": 1205,
+      "avgCapacityGb": 7,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/smartphone-shipments.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "referenceNotes": [
+        "IDC downturn (approx)",
+        "avg DRAM/phone; growth 3.9% (TrendForce)"
+      ]
+    },
+    {
+      "year": 2023,
+      "segment": "Server DRAM",
+      "memoryType": "DRAM",
+      "demandEb": 0.0061,
+      "shipmentsMillionUnits": 12,
+      "avgCapacityGb": 512,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/pc-server-shipments.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "referenceNotes": [
+        "TrendForce/IDC",
+        "unit decline despite value growth",
+        "avg 512GB; content +12.1% YoY (TrendForce)"
+      ]
+    },
+    {
+      "year": 2023,
+      "segment": "Smartphone DRAM",
+      "memoryType": "DRAM",
+      "demandEb": 0.0093,
+      "shipmentsMillionUnits": 1160,
+      "avgCapacityGb": 8,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/smartphone-shipments.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "referenceNotes": [
+        "IDC trough",
+        "surpassed 8GB; growth 17.5% (TrendForce)"
+      ]
+    },
+    {
+      "year": 2024,
+      "segment": "AI GPU HBM content",
+      "memoryType": "HBM",
+      "demandGbPerUnit": 141,
+      "gpuModel": "H200",
+      "hbmType": "HBM3e",
+      "confidence": "high",
+      "sourceRefs": [
+        "raw/datasets/gpu-hbm-capacity.md"
+      ],
+      "referenceNotes": [
+        "141GB HBM3e"
+      ]
+    },
+    {
+      "year": 2024,
+      "segment": "AI GPU HBM content",
+      "memoryType": "HBM",
+      "demandGbPerUnit": 192,
+      "gpuModel": "B200",
+      "hbmType": "HBM3e",
+      "confidence": "high",
+      "sourceRefs": [
+        "raw/datasets/gpu-hbm-capacity.md"
+      ],
+      "referenceNotes": [
+        "per-GPU 192GB (180-192 across sources)"
+      ]
+    },
+    {
+      "year": 2024,
+      "segment": "Server DRAM",
+      "memoryType": "DRAM",
+      "demandEb": 0.0082,
+      "shipmentsMillionUnits": 13.654,
+      "avgCapacityGb": 600,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/pc-server-shipments.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "referenceNotes": [
+        "TrendForce",
+        "AI servers ~12.1% of units",
+        "content per box +17.3% YoY (TrendForce); ~600GB est"
+      ]
+    },
+    {
+      "year": 2024,
+      "segment": "Smartphone DRAM",
+      "memoryType": "DRAM",
+      "demandEb": 0.0112,
+      "shipmentsMillionUnits": 1240,
+      "avgCapacityGb": 9,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/smartphone-shipments.md",
+        "raw/datasets/memory-content-per-device.md"
+      ],
+      "referenceNotes": [
+        "IDC; 2024 growth confirmed",
+        "growth 14.1% (TrendForce); ~9GB avg (est)"
+      ]
+    },
+    {
+      "year": 2025,
+      "segment": "AI GPU HBM content",
+      "memoryType": "HBM",
+      "demandGbPerUnit": 288,
+      "gpuModel": "GB300",
+      "hbmType": "HBM3e",
+      "confidence": "high",
+      "sourceRefs": [
+        "raw/datasets/gpu-hbm-capacity.md"
+      ],
+      "referenceNotes": [
+        "Blackwell Ultra 288GB HBM3e"
+      ]
+    }
+  ]
+}
