@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T16:39:47.833Z",
+  "generatedAt": "2026-06-06T17:23:53.639Z",
   "nodes": [
     {
       "id": "charts",
@@ -722,7 +722,8 @@
       "tags": [
         "simulator",
         "demand-forecasting",
-        "scenario-analysis"
+        "scenario-analysis",
+        "decision-workbench"
       ],
       "sources": [],
       "confidence": "medium"
@@ -1609,32 +1610,12 @@
     },
     {
       "from": "simulators/index",
-      "to": "hbm-demand",
-      "kind": "wikilink"
-    },
-    {
-      "from": "simulators/index",
-      "to": "nand-ssd-demand",
-      "kind": "wikilink"
-    },
-    {
-      "from": "simulators/index",
-      "to": "pc-dram-demand",
-      "kind": "wikilink"
-    },
-    {
-      "from": "simulators/index",
       "to": "scenario-analysis",
       "kind": "wikilink"
     },
     {
       "from": "simulators/index",
       "to": "sensitivity-analysis",
-      "kind": "wikilink"
-    },
-    {
-      "from": "simulators/index",
-      "to": "smartphone-memory-demand",
       "kind": "wikilink"
     },
     {
