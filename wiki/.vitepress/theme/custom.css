@@ -96,8 +96,18 @@
 /* MemoCast home */
 .VPDoc:has(.mc-home) .container,
 .VPDoc:has(.mc-home) .content-container,
+.VPDoc:has(.mc-home) .content,
+.VPDoc:has(.mc-home) .main {
+  max-width: none !important;
+}
+
+.VPDoc:has(.mc-home) .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .VPDoc:has(.mc-home) .content {
-  max-width: none;
+  padding: 0;
 }
 
 .VPDoc:has(.mc-home) .aside {
@@ -118,8 +128,9 @@
   --mc-soft: #d0d6e0;
   --mc-accent: #7170ff;
   --mc-accent-strong: #5e6ad2;
-  margin: -24px -24px 0;
-  padding: clamp(24px, 5vw, 72px);
+  margin: -24px auto 0;
+  width: min(100%, 1184px);
+  padding: clamp(28px, 5vw, 72px);
   color: var(--mc-text);
   background:
     radial-gradient(circle at 18% 0%, rgba(113, 112, 255, 0.26), transparent 34%),
@@ -135,7 +146,7 @@
 
 .mc-hero {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
   gap: clamp(28px, 5vw, 46px);
   align-items: center;
   min-height: 560px;
@@ -395,7 +406,7 @@
 }
 
 .mc-card-grid-4 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .mc-card {
