@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'MemoCast',
   description: 'Memory Demand Forecasting Knowledge Base and Scenario Simulators',
+  base: process.env.GITHUB_ACTIONS ? '/MemoCast/' : '/',
   cleanUrls: true,
   ignoreDeadLinks: [/^\[\[/],
   themeConfig: {
