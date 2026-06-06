@@ -16,12 +16,14 @@ export function buildDatasetCharts(csvFiles) {
   const pcServerShipmentRows = parseCsv(csvFiles['pc-server-shipments.csv'] ?? '')
   const contentRows = parseCsv(csvFiles['memory-content-per-device.csv'] ?? '')
   const gpuHbmRows = parseCsv(csvFiles['gpu-hbm-capacity.csv'] ?? '')
+  const domainTaxonomyRows = parseCsv(csvFiles['memory-demand-domain-taxonomy.csv'] ?? '')
   const periodDemandTimeline = buildPeriodDemandTimeline({
     smartphoneShipmentRows,
     pcServerShipmentRows,
     contentRows,
     gpuHbmRows
   })
+  const domainTaxonomy = buildDomainTaxonomy(domainTaxonomyRows)
 
   return {
     generatedAt: new Date().toISOString(),
@@ -30,7 +32,8 @@ export function buildDatasetCharts(csvFiles) {
       bitGrowthRows: bitRows.length,
       revenueCycleRows: revenueRows.length,
       financialRows: financialRows.length,
-      periodDemandRows: periodDemandTimeline.length
+      periodDemandRows: periodDemandTimeline.length,
+      domainTaxonomyRows: domainTaxonomy.length
     },
     bitGrowth: bitRows.map((row) => ({
       year: toNumber(row.year),
@@ -57,7 +60,8 @@ export function buildDatasetCharts(csvFiles) {
       note: row.note,
       confidence: row.confidence
     })),
-    periodDemandTimeline
+    periodDemandTimeline,
+    domainTaxonomy
   }
 }
 
@@ -69,7 +73,8 @@ export function writeDatasetCharts({ rawDatasetDir, outputPath }) {
     'smartphone-shipments.csv',
     'pc-server-shipments.csv',
     'memory-content-per-device.csv',
-    'gpu-hbm-capacity.csv'
+    'gpu-hbm-capacity.csv',
+    'memory-demand-domain-taxonomy.csv'
   ]
   const csvFiles = Object.fromEntries(wanted.map((fileName) => [fileName, fs.readFileSync(path.join(rawDatasetDir, fileName), 'utf8')]))
   const charts = buildDatasetCharts(csvFiles)
@@ -146,6 +151,26 @@ function buildPeriodDemandTimeline({ smartphoneShipmentRows, pcServerShipmentRow
   return timeline.sort((a, b) => a.year - b.year || a.segment.localeCompare(b.segment))
 }
 
+function buildDomainTaxonomy(rows) {
+  return rows
+    .filter((row) => row.domain)
+    .map((row) => ({
+      domain: row.domain,
+      group: row.group,
+      memoryTypes: splitList(row.memory_types),
+      demandModel: row.demand_model,
+      primaryDrivers: splitList(row.primary_drivers),
+      sourceRefs: splitList(row.source_refs),
+      confidence: row.confidence,
+      notes: row.notes
+    }))
+}
+
+function splitList(value) {
+  if (!value) return []
+  return value.split(';').map((item) => item.trim()).filter(Boolean)
+}
+
 function parseCsvLine(line) {
   const cells = []
   let current = ''
@@ -193,5 +218,5 @@ if (isMainModule()) {
   const repoRoot = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
   const outputPath = process.argv[3] ? path.resolve(process.argv[3]) : path.join(repoRoot, 'wiki', 'public', 'dataset-charts.json')
   const charts = writeDatasetCharts({ rawDatasetDir: path.join(repoRoot, 'raw', 'datasets'), outputPath })
-  console.log(`Wrote ${outputPath} (${charts.summary.datasetCount} datasets, ${charts.summary.bitGrowthRows + charts.summary.revenueCycleRows + charts.summary.financialRows + charts.summary.periodDemandRows} rows)`)
+  console.log(`Wrote ${outputPath} (${charts.summary.datasetCount} datasets, ${charts.summary.bitGrowthRows + charts.summary.revenueCycleRows + charts.summary.financialRows + charts.summary.periodDemandRows + charts.summary.domainTaxonomyRows} rows)`)
 }

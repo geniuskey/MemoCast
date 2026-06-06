@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-06-06T11:29:06.835Z",
+  "generatedAt": "2026-06-06T11:42:22.454Z",
   "summary": {
-    "datasetCount": 7,
+    "datasetCount": 8,
     "bitGrowthRows": 8,
     "revenueCycleRows": 12,
     "financialRows": 11,
-    "periodDemandRows": 11
+    "periodDemandRows": 11,
+    "domainTaxonomyRows": 14
   },
   "bitGrowth": [
     {
@@ -455,6 +456,298 @@
       "referenceNotes": [
         "Blackwell Ultra 288GB HBM3e"
       ]
+    }
+  ],
+  "domainTaxonomy": [
+    {
+      "domain": "smartphone-mobile",
+      "group": "mobile",
+      "memoryTypes": [
+        "LPDDR",
+        "NAND"
+      ],
+      "demandModel": "unit-shipment-content",
+      "primaryDrivers": [
+        "shipments",
+        "DRAM GB/device",
+        "NAND GB/device",
+        "AI phone uplift"
+      ],
+      "sourceRefs": [
+        "raw/datasets/smartphone-shipments.md",
+        "raw/articles/on-device-slm-smartphone-ram-2026.md"
+      ],
+      "confidence": "medium",
+      "notes": "Core mobile volume market plus on-device AI content uplift."
+    },
+    {
+      "domain": "pc-client",
+      "group": "client",
+      "memoryTypes": [
+        "DRAM",
+        "NAND"
+      ],
+      "demandModel": "unit-shipment-content",
+      "primaryDrivers": [
+        "PC shipments",
+        "AI PC penetration",
+        "DRAM GB/PC",
+        "SSD attach"
+      ],
+      "sourceRefs": [
+        "raw/datasets/ai-pc-penetration-forecast.md",
+        "raw/datasets/pc-server-shipments.md"
+      ],
+      "confidence": "medium",
+      "notes": "Client PC and AI PC content model."
+    },
+    {
+      "domain": "server-cloud",
+      "group": "datacenter",
+      "memoryTypes": [
+        "DRAM",
+        "NAND",
+        "CXL"
+      ],
+      "demandModel": "unit-shipment-content",
+      "primaryDrivers": [
+        "server shipments",
+        "DIMM capacity",
+        "cloud capex",
+        "CXL attach"
+      ],
+      "sourceRefs": [
+        "raw/datasets/pc-server-shipments.md",
+        "raw/lectures/ip-mrdimm-mcrdimm-socamm-module-ai-server.md"
+      ],
+      "confidence": "medium",
+      "notes": "General server/cloud memory demand."
+    },
+    {
+      "domain": "ai-accelerator",
+      "group": "datacenter-ai",
+      "memoryTypes": [
+        "HBM",
+        "DRAM",
+        "NAND"
+      ],
+      "demandModel": "accelerator-shipment-content",
+      "primaryDrivers": [
+        "GPU/ASIC shipments",
+        "HBM GB/GPU",
+        "rack power",
+        "AI capex"
+      ],
+      "sourceRefs": [
+        "raw/datasets/gpu-hbm-capacity.md",
+        "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md"
+      ],
+      "confidence": "high",
+      "notes": "HBM-heavy AI accelerator demand."
+    },
+    {
+      "domain": "enterprise-storage",
+      "group": "datacenter-storage",
+      "memoryTypes": [
+        "NAND"
+      ],
+      "demandModel": "workload-storage-intensity",
+      "primaryDrivers": [
+        "AI training data",
+        "synthetic data",
+        "enterprise SSD attach",
+        "data lake growth"
+      ],
+      "sourceRefs": [
+        "raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md",
+        "raw/datasets/idc-global-datasphere-zettabytes.md"
+      ],
+      "confidence": "medium",
+      "notes": "NAND demand from data growth and enterprise SSDs."
+    },
+    {
+      "domain": "graphics-gaming",
+      "group": "consumer-graphics",
+      "memoryTypes": [
+        "GDDR",
+        "NAND",
+        "DRAM"
+      ],
+      "demandModel": "installed-base-content",
+      "primaryDrivers": [
+        "discrete GPU VRAM",
+        "console cycle",
+        "handheld attach",
+        "game storage"
+      ],
+      "sourceRefs": [
+        "raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md",
+        "raw/articles/domain-gaming-handheld-lpddr-content.md"
+      ],
+      "confidence": "medium",
+      "notes": "GDDR and gaming/storage demand."
+    },
+    {
+      "domain": "automotive",
+      "group": "vehicle-edge",
+      "memoryTypes": [
+        "DRAM",
+        "NAND"
+      ],
+      "demandModel": "unit-shipment-content",
+      "primaryDrivers": [
+        "ADAS autonomy level",
+        "infotainment",
+        "EV platform mix",
+        "regional auto production"
+      ],
+      "sourceRefs": [
+        "raw/articles/domain-autonomous-vehicle-data-generation-storage.md",
+        "raw/reports/region-europe-automotive-memory-demand-2026.md"
+      ],
+      "confidence": "medium",
+      "notes": "Automotive memory content and storage growth."
+    },
+    {
+      "domain": "networking",
+      "group": "datacenter-network",
+      "memoryTypes": [
+        "HBM",
+        "DRAM"
+      ],
+      "demandModel": "platform-cycle-content",
+      "primaryDrivers": [
+        "switch ASIC generation",
+        "bandwidth per port",
+        "SmartNIC/DPU attach"
+      ],
+      "sourceRefs": [
+        "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
+        "raw/lectures/emerging-co-packaged-optics-cpo-memory-bandwidth.md"
+      ],
+      "confidence": "medium",
+      "notes": "Networking bandwidth drives local memory demand."
+    },
+    {
+      "domain": "edge-ai-iot",
+      "group": "edge-industrial",
+      "memoryTypes": [
+        "LPDDR",
+        "NAND"
+      ],
+      "demandModel": "installed-base-content",
+      "primaryDrivers": [
+        "camera/robot/device install base",
+        "edge AI attach",
+        "local retention"
+      ],
+      "sourceRefs": [
+        "raw/articles/edge-ai-iot-memory-demand-2026.md",
+        "raw/articles/domain-industrial-automation-edge-ai-memory.md"
+      ],
+      "confidence": "medium",
+      "notes": "Fragmented but broad edge AI and industrial demand."
+    },
+    {
+      "domain": "wearables-arvr",
+      "group": "consumer-wearable",
+      "memoryTypes": [
+        "LPDDR",
+        "NAND"
+      ],
+      "demandModel": "unit-shipment-content",
+      "primaryDrivers": [
+        "smart glasses/XR shipments",
+        "display pipeline",
+        "local AI",
+        "storage"
+      ],
+      "sourceRefs": [
+        "raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md",
+        "raw/articles/domain-arvr-xr-headset-memory-content.md"
+      ],
+      "confidence": "low",
+      "notes": "Emerging wearable and XR demand."
+    },
+    {
+      "domain": "hpc-supercomputer",
+      "group": "hpc",
+      "memoryTypes": [
+        "HBM",
+        "DRAM",
+        "NAND"
+      ],
+      "demandModel": "project-pipeline-content",
+      "primaryDrivers": [
+        "supercomputer procurement",
+        "GPU node count",
+        "HBM/node",
+        "scratch storage"
+      ],
+      "sourceRefs": [
+        "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md"
+      ],
+      "confidence": "medium",
+      "notes": "HPC clusters are small unit volume but high memory content."
+    },
+    {
+      "domain": "surveillance-video",
+      "group": "edge-storage",
+      "memoryTypes": [
+        "NAND",
+        "DRAM"
+      ],
+      "demandModel": "installed-base-storage-intensity",
+      "primaryDrivers": [
+        "camera installs",
+        "retention days",
+        "video analytics",
+        "NVR capacity"
+      ],
+      "sourceRefs": [
+        "raw/articles/domain-surveillance-cctv-nand-demand.md"
+      ],
+      "confidence": "medium",
+      "notes": "Video retention creates NAND/storage demand."
+    },
+    {
+      "domain": "consumer-electronics",
+      "group": "consumer",
+      "memoryTypes": [
+        "DRAM",
+        "NAND"
+      ],
+      "demandModel": "unit-shipment-content",
+      "primaryDrivers": [
+        "TV/STB/appliance shipments",
+        "embedded storage",
+        "product cycle"
+      ],
+      "sourceRefs": [
+        "raw/articles/domain-gaming-handheld-lpddr-content.md"
+      ],
+      "confidence": "low",
+      "notes": "Long-tail consumer electronics demand."
+    },
+    {
+      "domain": "specialty-medical-aerospace",
+      "group": "specialty",
+      "memoryTypes": [
+        "DRAM",
+        "NAND"
+      ],
+      "demandModel": "project-pipeline-content",
+      "primaryDrivers": [
+        "medical imaging",
+        "rad-hard requirements",
+        "mission programs"
+      ],
+      "sourceRefs": [
+        "raw/articles/domain-medical-device-ai-imaging-memory.md",
+        "raw/articles/domain-space-aerospace-radhard-memory.md"
+      ],
+      "confidence": "low",
+      "notes": "Specialty demand is smaller but high reliability/value."
     }
   ]
 }

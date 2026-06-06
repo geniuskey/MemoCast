@@ -19,6 +19,17 @@ type PeriodDemandRow = {
 
 type ChartMode = 'dram-demand' | 'hbm-content'
 
+type DomainTaxonomyRow = {
+  domain: string
+  group: string
+  memoryTypes: string[]
+  demandModel: string
+  primaryDrivers: string[]
+  sourceRefs: string[]
+  confidence: string
+  notes: string
+}
+
 type ChartPoint = PeriodDemandRow & {
   value: number
   label: string
@@ -28,6 +39,7 @@ type ChartPoint = PeriodDemandRow & {
 }
 
 const periodDemandTimeline = chartData.periodDemandTimeline as PeriodDemandRow[]
+const domainTaxonomy = chartData.domainTaxonomy as DomainTaxonomyRow[]
 const mode = ref<ChartMode>('dram-demand')
 const activeSegment = ref<'all' | 'Smartphone DRAM' | 'Server DRAM'>('all')
 const activePointKey = ref<string>('')
@@ -123,7 +135,11 @@ function formatFormula(row?: PeriodDemandRow) {
 }
 
 function sourceLabel(source: string) {
-  return source.replace('raw/datasets/', '').replace('.md', '')
+  return source.replace('raw/datasets/', '').replace('raw/articles/', '').replace('raw/reports/', '').replace('raw/lectures/', '').replace('.md', '')
+}
+
+function domainLabel(domain: string) {
+  return domain.split('-').map((word) => word === 'ai' ? 'AI' : word.toUpperCase() === word ? word : word[0].toUpperCase() + word.slice(1)).join(' ')
 }
 </script>
 
@@ -256,6 +272,44 @@ function sourceLabel(source: string) {
       </div>
     </div>
 
+    <section class="taxonomy-panel">
+      <div class="taxonomy-heading">
+        <p class="chart-kicker">Demand domain taxonomy</p>
+        <h2>Smartphone / PC / Server를 넘는 수요 분류</h2>
+        <p>
+          MemoCast는 end-market별로 memory product와 forecast-driver가 다르다고 보고,
+          각 domain을 별도 demand equation 후보로 추적합니다.
+        </p>
+      </div>
+      <div class="taxonomy-grid">
+        <article v-for="domain in domainTaxonomy" :key="domain.domain" class="taxonomy-card">
+          <div class="taxonomy-card-head">
+            <span>{{ domain.group }}</span>
+            <strong>{{ domainLabel(domain.domain) }}</strong>
+          </div>
+          <p>{{ domain.notes }}</p>
+          <div class="memory-chip-row">
+            <i v-for="memoryType in domain.memoryTypes" :key="memoryType">{{ memoryType }}</i>
+          </div>
+          <dl class="forecast-driver">
+            <div>
+              <dt>Model</dt>
+              <dd>{{ domain.demandModel }}</dd>
+            </div>
+            <div>
+              <dt>Drivers</dt>
+              <dd>{{ domain.primaryDrivers.join(' · ') }}</dd>
+            </div>
+          </dl>
+          <div class="source-chips taxonomy-sources">
+            <a v-for="source in domain.sourceRefs" :key="source" href="/sources/raw-source-map">
+              {{ sourceLabel(source) }}
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <div class="reference-band">
       <span v-for="source in sources" :key="source">{{ sourceLabel(source) }}</span>
     </div>
@@ -317,6 +371,24 @@ function sourceLabel(source: string) {
 .story-card.active { color: #fff; background: linear-gradient(135deg, #1d4ed8, #7c3aed); }
 .story-card span, .story-card small { color: inherit; opacity: .72; }
 .story-card strong { font-size: 20px; }
+.taxonomy-panel { margin-top: 18px; padding: 24px; border: 1px solid rgba(15,23,42,.1); border-radius: 28px; background: linear-gradient(135deg, #ffffff, #f8fafc); box-shadow: 0 18px 60px rgba(15,23,42,.07); }
+.taxonomy-heading { display: grid; gap: 8px; max-width: 920px; margin-bottom: 18px; }
+.taxonomy-heading h2 { margin: 0; letter-spacing: -.035em; }
+.taxonomy-heading p:not(.chart-kicker) { margin: 0; color: #64748b; line-height: 1.7; }
+.taxonomy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.taxonomy-card { display: grid; gap: 12px; padding: 16px; border: 1px solid rgba(15,23,42,.08); border-radius: 20px; background: rgba(255,255,255,.9); }
+.taxonomy-card-head { display: grid; gap: 5px; }
+.taxonomy-card-head span { color: #2563eb; font-size: 11px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.taxonomy-card-head strong { color: #0f172a; font-size: 20px; letter-spacing: -.035em; }
+.taxonomy-card p { margin: 0; color: #475569; font-size: 13px; line-height: 1.55; }
+.memory-chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.memory-chip-row i { padding: 5px 8px; border-radius: 999px; color: #0f172a; background: #e0f2fe; font-size: 11px; font-style: normal; font-weight: 900; }
+.forecast-driver { display: grid; gap: 8px; margin: 0; }
+.forecast-driver div { display: grid; gap: 3px; }
+.forecast-driver dt { color: #94a3b8; font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.forecast-driver dd { margin: 0; color: #334155; font-size: 12px; font-weight: 750; line-height: 1.5; }
+.taxonomy-sources { gap: 6px; }
+.taxonomy-sources a { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .reference-band { margin-top: 14px; }
 @media (max-width: 960px) { .detail-card, .history-panel { grid-template-columns: 1fr; } .chart-toolbar { flex-direction: column; } .story-grid { grid-template-columns: 1fr; } }
 </style>

@@ -51,6 +51,11 @@ Raw 자료는 가능하면 다음 frontmatter를 사용합니다.
 source_url: https://example.com/source
 ingested: YYYY-MM-DD
 sha256: <body-sha256>
+domain: smartphone-mobile | pc-client | server-cloud | ai-accelerator | enterprise-storage | graphics-gaming | automotive | networking | edge-ai-iot | wearables-arvr | hpc-supercomputer | surveillance-video | consumer-electronics | specialty-medical-aerospace
+memory_types: [dram, nand, hbm]
+forecast_role: demand-driver | supply-constraint | pricing-signal | method | evidence
+forecast_driver: unit-shipment-content | accelerator-shipment-content | workload-storage-intensity | installed-base-content | project-pipeline-content
+confidence: low | medium | high
 ---
 ```
 
@@ -67,9 +72,24 @@ sha256: <body-sha256>
 - pc
 - server
 - ai-server
+- ai-accelerator
 - datacenter
+- enterprise-storage
+- graphics-gaming
 - automotive
+- networking
+- edge-ai
+- iot
+- industrial
+- wearables
+- ar-vr
+- hpc
+- surveillance-video
 - consumer-electronics
+- medical
+- aerospace
+- specialty
+- regional-demand
 
 ### Forecasting
 - demand-forecasting

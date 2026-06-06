@@ -56,4 +56,20 @@ describe('period demand chart page', () => {
     expect(component).toContain('{{ formatValue(tooltipPoint) }}')
     expect(component).toContain('@mouseleave="tooltipPoint = undefined"')
   })
+
+  it('surfaces the expanded demand domain taxonomy on the chart page', () => {
+    const component = readRepoFile('wiki/components/PeriodDemandChart.vue')
+    const schema = readRepoFile('wiki/SCHEMA.md')
+
+    expect(component).toContain('domainTaxonomy')
+    expect(component).toContain('Demand domain taxonomy')
+    expect(component).toContain('taxonomy-grid')
+    expect(component).toContain('forecast-driver')
+    expect(schema).toContain('- ai-accelerator')
+    expect(schema).toContain('- enterprise-storage')
+    expect(schema).toContain('- graphics-gaming')
+    expect(schema).toContain('- edge-ai')
+    expect(schema).toContain('- wearables')
+    expect(schema).toContain('- hpc')
+  })
 })

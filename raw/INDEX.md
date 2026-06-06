@@ -2,7 +2,7 @@
 
 메모리(DRAM/NAND/HBM) 수요 예측을 위한 원천 자료 인덱스. 전부 웹 검색으로 수집했고 각 파일 frontmatter에 `source_url`을 둔다. 수치는 wiki에서 교차검증 후 인용한다. (ingested: 2026-06-06)
 
-**현황: 347개 원천 파일** — papers 35 · articles 94 · reports 88 · earnings 13 · datasets 25쌍(50) · lectures 67.
+**현황: 349개 원천 파일** — papers 35 · articles 94 · reports 88 · earnings 13 · datasets 26쌍(52) · lectures 67.
 
 ---
 
@@ -41,9 +41,9 @@
 
 메모리 3사(삼성·SK·Micron), NAND/대만/일본(Kioxia·Sandisk·Nanya·Winbond·Macronix, `kioxia-fy25-nand-outlook-ipo`), 수요측(NVIDIA·hyperscaler capex), 가격 교차정리(`trendforce-1q26-`).
 
-## datasets/ — 정량 데이터 (CSV+md, 16쌍)
+## datasets/ — 정량 데이터 (CSV+md, 26쌍)
 
-가격(`dram-price-history`, `nand-cost-per-bit-trend`), 매출/점유율(`dram-revenue-quarterly`, `nand-flash-revenue-share`, `memory-market-revenue-split`, `wsts-semiconductor-billings`), bit/capex(`bit-demand-supply-growth`, `memory-maker-capex`), HBM/AI(`hbm-market-size`, `gpu-hbm-capacity`, `hbm-bit-demand-growth-rate`, `ai-server-shipments-forecast`), 수요동인(`smartphone-shipments`, `pc-server-shipments`, `memory-content-per-device`), 사이클/시장(`dram-revenue-cycle-history`, `dram-nand-bit-demand-by-application`, `memory-makers-quarterly-financials-cycle`, `memory-market-tam-forecast-2025-2028`), 실시간 프록시(`korea-semiconductor-exports-monthly`).
+가격(`dram-price-history`, `nand-cost-per-bit-trend`), 매출/점유율(`dram-revenue-quarterly`, `nand-flash-revenue-share`, `memory-market-revenue-split`, `wsts-semiconductor-billings`), bit/capex(`bit-demand-supply-growth`, `memory-maker-capex`), HBM/AI(`hbm-market-size`, `gpu-hbm-capacity`, `hbm-bit-demand-growth-rate`, `ai-server-shipments-forecast`), 수요동인(`smartphone-shipments`, `pc-server-shipments`, `memory-content-per-device`, `memory-demand-domain-taxonomy`), 사이클/시장(`dram-revenue-cycle-history`, `dram-nand-bit-demand-by-application`, `memory-makers-quarterly-financials-cycle`) 등.
 
 ## lectures/ — 개념/교육 (55)
 

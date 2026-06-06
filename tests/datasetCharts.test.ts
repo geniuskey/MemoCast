@@ -40,4 +40,17 @@ describe('dataset chart generation', () => {
     )
     expect(charts.periodDemandTimeline[0].sourceRefs.length).toBeGreaterThan(0)
   })
+
+  it('builds a broader end-market taxonomy beyond smartphone, pc, and server', () => {
+    const charts = buildDatasetCharts({
+      'memory-demand-domain-taxonomy.csv': 'domain,group,memory_types,demand_model,primary_drivers,source_refs,confidence,notes\nautomotive,vehicle/edge,"DRAM;NAND",unit-shipment-content,"ADAS autonomy content; EV platform mix",raw/articles/domain-autonomous-vehicle-data-generation-storage.md,medium,vehicle memory and storage demand\ngraphics-gaming,consumer/graphics,"GDDR;NAND;DRAM",installed-base-content,"GPU VRAM; console cycle",raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md,medium,GDDR crowding-out signal\nenterprise-storage,datacenter/storage,NAND,workload-storage-intensity,"AI training data; enterprise SSD attach",raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md,medium,NAND storage demand\n'
+    })
+
+    expect(charts.domainTaxonomy).toEqual(expect.arrayContaining([
+      expect.objectContaining({ domain: 'automotive', group: 'vehicle/edge', memoryTypes: ['DRAM', 'NAND'], demandModel: 'unit-shipment-content' }),
+      expect.objectContaining({ domain: 'graphics-gaming', memoryTypes: ['GDDR', 'NAND', 'DRAM'] }),
+      expect.objectContaining({ domain: 'enterprise-storage', memoryTypes: ['NAND'], demandModel: 'workload-storage-intensity' })
+    ]))
+    expect(charts.summary.domainTaxonomyRows).toBe(3)
+  })
 })

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-06T11:29:07.729Z",
+  "generatedAt": "2026-06-06T11:42:24.349Z",
   "summary": {
-    "rawTotal": 326,
+    "rawTotal": 327,
     "rawCited": 30,
-    "rawUncited": 296,
+    "rawUncited": 297,
     "missingRawReferences": 0,
     "wikiPages": 26,
     "wikiPagesWithoutRawReferences": 10
@@ -105,6 +105,7 @@
     "raw/datasets/hbm-market-size.md",
     "raw/datasets/idc-global-datasphere-zettabytes.md",
     "raw/datasets/korea-semiconductor-exports-monthly.md",
+    "raw/datasets/memory-demand-domain-taxonomy.md",
     "raw/datasets/memory-maker-capex.md",
     "raw/datasets/memory-makers-quarterly-financials-cycle.md",
     "raw/datasets/memory-market-revenue-split.md",
@@ -476,6 +477,7 @@
       "wiki/simulators/pc-dram-demand.md",
       "wiki/simulators/smartphone-memory-demand.md"
     ],
+    "raw/datasets/memory-demand-domain-taxonomy.md": [],
     "raw/datasets/memory-maker-capex.md": [],
     "raw/datasets/memory-makers-quarterly-financials-cycle.md": [],
     "raw/datasets/memory-market-revenue-split.md": [],
@@ -2122,6 +2124,18 @@
         "smartphone",
         "server",
         "pc"
+      ]
+    },
+    "raw/datasets/memory-demand-domain-taxonomy.md": {
+      "title": "Memory Demand Domain Taxonomy Dataset",
+      "source_url": "local-taxonomy",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "memory",
+        "demand-forecasting",
+        "taxonomy",
+        "domains"
       ]
     },
     "raw/datasets/memory-maker-capex.md": {
