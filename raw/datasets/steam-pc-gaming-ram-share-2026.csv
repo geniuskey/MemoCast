@@ -1,0 +1,7 @@
+period,ram_tier,share_pct,note,confidence
+2026-03,16gb,40.97,"overtook 32GB first time recently",high
+2026-03,32gb,36.62,"-20.31% collapse (RAM price driven)",high
+2026-04,16gb,40.86,"top spot",high
+2026-04,32gb,37.55,"second",high
+baseline,practical_standard,16,"16GB practical standard most games",medium
+baseline,recommended,32,"32GB realistic baseline mid-high build",medium

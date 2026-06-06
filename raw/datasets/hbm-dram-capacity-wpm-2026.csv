@@ -1,0 +1,9 @@
+company,metric,value,unit,period,note,confidence
+sk_hynix,m15x_hbm_capacity,40000,wpm,2H2026,"initial; ->80k wpm 2027 (one source 10k->55-60k)",medium
+sk_hynix,dram_wafer_input,600000,wpm,2H2026,"total DRAM wafer input target",medium
+sk_hynix,yongin_addition,360000,wpm,1H2030,"Yongin cluster addition",low
+samsung,hbm_capacity,250000,wpm,end_2026,"+47% from current 170k wpm",medium
+samsung,hbm_capacity_current,170000,wpm,2025,"baseline",medium
+hbm_share_sk_hynix,share,58,pct,2026Q1,"HBM market share",high
+hbm_share_samsung,share,21,pct,2026Q1,"HBM market share",high
+hbm_share_micron,share,21,pct,2026Q1,"HBM market share",high

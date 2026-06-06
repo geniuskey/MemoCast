@@ -1,0 +1,7 @@
+period,product,price_usd,price_type,note,confidence
+2025-09,ddr5_16gb_chip,6.84,chip,"16Gb DDR5 chip; module <$10",medium
+2025-12,ddr5_16gb_chip,27.20,chip,"+298% in 3 months",medium
+2024-early,ddr5_16gb_kit,57.5,retail_kit,"entry 16GB kit $50-65",low
+2025-12,ddr5_16gb_kit,210,retail_kit,"$180-240 by Dec 2025 (+260%+)",low
+2026-mid,ddr5_16gb_module,30,module,"~$30 each forecast mid-2026",low
+2026-01,ddr5_eu_trend,flattening,trend,"EU MoM growth flattening late Jan 2026",low

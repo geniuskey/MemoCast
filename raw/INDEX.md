@@ -2,15 +2,15 @@
 
 메모리(DRAM/NAND/HBM) 수요 예측을 위한 원천 자료 인덱스. 전부 웹 검색으로 수집했고 각 파일 frontmatter에 `source_url`을 둔다. 수치는 wiki에서 교차검증 후 인용한다. (ingested: 2026-06-06)
 
-**현황: 349개 원천 파일** — papers 35 · articles 94 · reports 88 · earnings 13 · datasets 26쌍(52) · lectures 67.
+**현황: 405개 원천 파일** — papers 40 · articles 105 · reports 102 · earnings 17 · datasets 35쌍(70) · lectures 71.
 
 ---
 
-## papers/ — 학술/방법론 (27)
+## papers/ — 학술/방법론 (37)
 
 수요예측 방법론. 사이클(VECM/Markov/BMA/VAR+bootstrap), ML(LSTM·ARIMA-LSTM), diffusion(Bass/Norton-Bass), bullwhip(Lee 1997, 제어공학 2018), cost-per-bit·Moore's law(Flamm·Byrne), real options·stochastic capacity, DRAM 카르텔/학습곡선, human-vs-ML 예측 비교. 2차 추가: 가격탄력성·재고이론·AI compute scaling laws·기술대체 S-curve·oligopoly 게임이론·grey/Markov·HBM 패키징 공급망·HBM thermal/warpage/TSV yield(`hbm-thermal-`).
 
-## articles/ — 수요 동인/시장 동향 (67)
+## articles/ — 수요 동인/시장 동향 (98)
 
 - **AI 가속기/buildout** (`aisilicon-`, `nvidia-`, `trendforce-ai-`): GPU별 HBM, AI 서버 출하, 데이터센터 GW buildout
 - **모델/소프트웨어 driver** (`model-`): DeepSeek MoE, 컨텍스트/KV cache, AI 메모리 슈퍼사이클, Epoch AI compute 성장 추세(상류 동인)
@@ -23,7 +23,7 @@
 - **산업 통합사** (`consol-`, 6): DRAM 가격담합, Qimonda/Elpida 파산, Intel NAND→SK(Solidigm), Toshiba→Kioxia, WD/SanDisk → 과점 형성
 - **sovereign AI**(`domain-sovereign-ai-`), **제품/스펙 1차자료**: `micron-*`, `samsung-semiconductor-hbm`, `gsmarena-*`
 
-## reports/ — 산업/시장 리포트 (57)
+## reports/ — 산업/시장 리포트 (92)
 
 - **종합 전망**: TrendForce, Gartner, IDC, Omdia, WSTS, SIA, Yole, TechInsights, Counterpoint, 국내(`korea-media-`)
 - **가격/수급**: `trendforce-2q26/ddr5/mobile/hbm-bit/qlc-`, `analyst-bank-`(IB 목표주가), `memory-inventory-`(선행지표)
@@ -37,15 +37,15 @@
 - **소재 공급망** (`material-`, 6): 실리콘 wafer(신에쓰/SUMCO), photoresist, neon/특수가스, ABF 기판 — 공급 게이팅
 - **상품화/금융화**(`memory-commodity-`): DRAM 선물/ETF/헤지
 
-## earnings/ — 실적/IR (11)
+## earnings/ — 실적/IR (16)
 
 메모리 3사(삼성·SK·Micron), NAND/대만/일본(Kioxia·Sandisk·Nanya·Winbond·Macronix, `kioxia-fy25-nand-outlook-ipo`), 수요측(NVIDIA·hyperscaler capex), 가격 교차정리(`trendforce-1q26-`).
 
-## datasets/ — 정량 데이터 (CSV+md, 26쌍)
+## datasets/ — 정량 데이터 (CSV+md, 28쌍)
 
 가격(`dram-price-history`, `nand-cost-per-bit-trend`), 매출/점유율(`dram-revenue-quarterly`, `nand-flash-revenue-share`, `memory-market-revenue-split`, `wsts-semiconductor-billings`), bit/capex(`bit-demand-supply-growth`, `memory-maker-capex`), HBM/AI(`hbm-market-size`, `gpu-hbm-capacity`, `hbm-bit-demand-growth-rate`, `ai-server-shipments-forecast`), 수요동인(`smartphone-shipments`, `pc-server-shipments`, `memory-content-per-device`, `memory-demand-domain-taxonomy`), 사이클/시장(`dram-revenue-cycle-history`, `dram-nand-bit-demand-by-application`, `memory-makers-quarterly-financials-cycle`) 등.
 
-## lectures/ — 개념/교육 (55)
+## lectures/ — 개념/교육 (68)
 
 - **디바이스 동작/표준**: `how-dram/nand/hbm-`, `jedec-ddr5/hbm4-`, `hbm-generations-`
 - **차세대**: `emerging-`(HBM4/CXL/PIM/3D DRAM, **HBF 고대역폭 플래시**), `cxl-memory-pooling-`, `dram-scaling-4f2-`, UFS 5.0(`conf-jedec-ufs5-`)
@@ -58,7 +58,7 @@
 
 ## 수집 메모
 
-- 5개 웨이브(주제별 병렬 sub-agent) + 직접 보강(영문/국내/일본/대만 매체)으로 347개 원천 파일 확보.
+- 5개 웨이브(주제별 병렬 sub-agent) + 직접 보강(영문/국내/일본/대만 매체)으로 367개 원천 파일 확보.
 - 세션 한도 도달 시 메인 세션에서 WebSearch+Write로 직접 진행(검증된 fallback). 에이전트는 한도 메시지 전 작업을 대부분 완료함.
 - 다음 수집 후보(미확장): 일별/주별 spot price 시계열, 추가 학술 논문(전력-compute 결합 수요모델), 분기별 earnings 시계열 확장, 표준 세부(DDR6/HBM5 spec), 추가 국내/일본/대만 1차 매체, 메모리 재무모델(LTA prepayment 회계).
 - 품질 주의: 일부 수치는 secondary aggregator 기반(`confidence: medium/low` 표기) → wiki 인용 전 1차 출처 교차검증 필요. billings는 소비지가 아닌 청구지 기준(region 파일 caveat 참조).

@@ -1,0 +1,5 @@
+system,gpu_per_rack,hbm_per_gpu_gb,hbm_per_rack_tb,total_ram_per_rack_tb,power_kw,note,confidence
+gb200_nvl72,72,192,13.4,,120,"NVL72 ~13.4TB RAM, ~120kW",medium
+gb300_nvl72,72,288,20.7,,,"B300 288GB HBM3e 12-high, 1400W TDP/GPU",medium
+rubin_nvl144,144,288,,,, "Vera Rubin HBM4 288GB/GPU, 13TB/s, NVL144 3.6 EF FP4",medium
+b300_gpu,1,288,0.288,,1.4,"single GPU: 288GB HBM3e, 8TB/s, 1400W",high

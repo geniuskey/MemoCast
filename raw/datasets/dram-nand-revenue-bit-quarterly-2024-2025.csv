@@ -1,0 +1,9 @@
+product,period,metric,value,unit,note,confidence
+dram,2024,revenue_growth,75,pct_yoy,"DRAM revenue +75% 2024",high
+nand,2024,revenue_growth,77,pct_yoy,"NAND revenue +77% 2024",high
+dram,2025,bit_output_growth,25,pct_yoy,"DRAM bit output +25% 2025",medium
+dram,2025Q3,revenue,41.4,usd_b,"global DRAM rev +30.9% QoQ",high
+dram,2025Q3,samsung_revenue,13.5,usd_b,"Samsung +30.4% QoQ",high
+nand,2025Q3,top5_revenue,17.1,usd_b,"top-5 NAND +16.5% QoQ",high
+nand,2025Q3,kioxia_revenue,2.84,usd_b,"Kioxia +33.1% QoQ (best)",high
+dram,2025Q4,bit_shipment,decline,trend,"bit shipment growth decreases substantially (inventory depleted)",medium

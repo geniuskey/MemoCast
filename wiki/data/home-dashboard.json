@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-06-06T12:10:54.744Z",
+  "generatedAt": "2026-06-06T13:45:50.693Z",
   "summary": {
-    "rawTotal": 327,
+    "rawTotal": 374,
     "rawCited": 30,
-    "rawUncited": 297,
+    "rawUncited": 344,
     "wikiPages": 26,
     "wikiPagesWithoutRawReferences": 10,
     "missingRawReferences": 0,
     "simulatorPresets": 17,
-    "lowConfidenceRaw": 30,
+    "lowConfidenceRaw": 32,
     "lowConfidencePresets": 6
   },
   "rawByType": {
-    "article": 88,
+    "article": 99,
     "articles": 6,
-    "dataset": 27,
-    "earnings": 13,
+    "dataset": 36,
+    "earnings": 17,
     "INDEX.md": 1,
-    "lecture": 67,
-    "paper": 35,
+    "lecture": 71,
+    "paper": 40,
     "README.md": 1,
-    "report": 88,
+    "report": 102,
     "reports": 1
   },
   "confidence": {
     "raw": {
-      "high": 69,
-      "low": 30,
-      "medium": 219,
+      "high": 76,
+      "low": 32,
+      "medium": 257,
       "unrated": 9
     },
     "simulatorPresets": {
@@ -152,6 +152,21 @@
     },
     {
       "kind": "raw",
+      "path": "raw/articles/domain-iot-smart-home-edge-ai-memory-2026.md",
+      "title": "IoT/스마트홈/엣지 AI 메모리 수요 (2026)",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "nand",
+        "consumer-electronics",
+        "bit-demand"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://iot-analytics.com/iot-semiconductor-predictions/"
+    },
+    {
+      "kind": "raw",
       "path": "raw/articles/domain-medical-device-ai-imaging-memory.md",
       "title": "의료기기/AI 진단·영상 메모리 수요 (헬스케어 최고 CAGR)",
       "type": "article",
@@ -224,29 +239,14 @@
       ],
       "citedByCount": 0,
       "sourceUrl": "https://www.tweaktown.com/news/110073/playstation-6-will-reportedly-feature-30gb-of-high-speed-gddr7-memory/index.html"
-    },
-    {
-      "kind": "raw",
-      "path": "raw/articles/oem-automotive-memory-per-vehicle-bosch-continental-2025.md",
-      "title": "DRAM for Vehicle Market + ADAS Memory Requirements by Autonomy Level",
-      "type": "article",
-      "date": "2026-06-06",
-      "tags": [
-        "dram",
-        "nand",
-        "automotive",
-        "bit-demand"
-      ],
-      "citedByCount": 0,
-      "sourceUrl": "https://dataintelo.com/report/global-dynamic-random-access-memory-dram-for-vehicle-market"
     }
   ],
   "enrichmentClusters": [
     {
       "tag": "dram",
-      "rawTotal": 208,
-      "uncitedRaw": 197,
-      "lowConfidenceRaw": 22,
+      "rawTotal": 242,
+      "uncitedRaw": 231,
+      "lowConfidenceRaw": 23,
       "recent": [
         {
           "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
@@ -267,12 +267,12 @@
           "confidence": "high"
         }
       ],
-      "enrichmentScore": 416
+      "enrichmentScore": 485
     },
     {
       "tag": "hbm",
-      "rawTotal": 131,
-      "uncitedRaw": 124,
+      "rawTotal": 149,
+      "uncitedRaw": 142,
       "lowConfidenceRaw": 8,
       "recent": [
         {
@@ -294,13 +294,13 @@
           "confidence": "medium"
         }
       ],
-      "enrichmentScore": 256
+      "enrichmentScore": 292
     },
     {
       "tag": "nand",
-      "rawTotal": 121,
-      "uncitedRaw": 112,
-      "lowConfidenceRaw": 14,
+      "rawTotal": 136,
+      "uncitedRaw": 127,
+      "lowConfidenceRaw": 16,
       "recent": [
         {
           "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
@@ -321,12 +321,12 @@
           "confidence": "low"
         }
       ],
-      "enrichmentScore": 238
+      "enrichmentScore": 270
     },
     {
       "tag": "pricing",
-      "rawTotal": 75,
-      "uncitedRaw": 71,
+      "rawTotal": 87,
+      "uncitedRaw": 83,
       "lowConfidenceRaw": 3,
       "recent": [
         {
@@ -342,18 +342,18 @@
           "confidence": "medium"
         },
         {
-          "path": "raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md",
-          "title": "레거시 D램(DDR4/DDR3) 가격 급등·crowding out (국내 매체, 2026)",
+          "path": "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
+          "title": "네트워킹(스위치/라우터) DDR 메모리 수요 (2026)",
           "date": "2026-06-06",
           "confidence": "medium"
         }
       ],
-      "enrichmentScore": 145
+      "enrichmentScore": 169
     },
     {
       "tag": "ai-server",
-      "rawTotal": 67,
-      "uncitedRaw": 61,
+      "rawTotal": 78,
+      "uncitedRaw": 72,
       "lowConfidenceRaw": 4,
       "recent": [
         {
@@ -375,12 +375,12 @@
           "confidence": "high"
         }
       ],
-      "enrichmentScore": 126
+      "enrichmentScore": 148
     },
     {
       "tag": "datacenter",
-      "rawTotal": 55,
-      "uncitedRaw": 49,
+      "rawTotal": 66,
+      "uncitedRaw": 60,
       "lowConfidenceRaw": 3,
       "recent": [
         {
@@ -396,25 +396,25 @@
           "confidence": "high"
         },
         {
-          "path": "raw/articles/power-datacenter-vacancy-leasing-market-2026.md",
-          "title": "데이터센터 공실/임대 시장 (2026) — capacity 흡수율",
+          "path": "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
+          "title": "네트워킹(스위치/라우터) DDR 메모리 수요 (2026)",
           "date": "2026-06-06",
           "confidence": "medium"
         }
       ],
-      "enrichmentScore": 101
+      "enrichmentScore": 123
     }
   ],
   "citationHealth": {
     "uncitedRawFiles": [
       "raw/README.md",
       "raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md",
+      "raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md",
       "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
+      "raw/articles/aisilicon-onprem-edge-inference-memory-2026.md",
       "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md",
       "raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md",
-      "raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md",
-      "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
-      "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md"
+      "raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md"
     ],
     "pagesWithoutRawReferences": [
       "wiki/SCHEMA.md",

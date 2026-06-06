@@ -1,0 +1,12 @@
+company,quarter,revenue,revenue_unit,operating_profit,profit_unit,note,confidence
+sk_hynix,2025Q1,17.6391,krw_t,7.4405,krw_t,"net 8.1082T",high
+sk_hynix,2025Q2,22.232,krw_t,9.2129,krw_t,"net 6.9962T",high
+sk_hynix,2025Q3,24.4489,krw_t,11.3834,krw_t,"net 12.5975T",high
+sk_hynix,2025Q4,32.8267,krw_t,19.1696,krw_t,"rev +34% QoQ, OP +68% QoQ, margin 58%",high
+sk_hynix,2025FY,97.1467,krw_t,47.2063,krw_t,"record; beats Samsung OP; net 42.9479T",high
+samsung_ds,2025Q2,,krw_t,0.4,krw_t,"DS division (HBM sluggish H1)",medium
+samsung_ds,2025Q3,,krw_t,7.0,krw_t,"DS division (HBM3E to Nvidia)",medium
+samsung_ds,2025Q4,,krw_t,16.4,krw_t,"DS record quarterly OP",medium
+samsung_corp,2025Q4,93.8,krw_t,20.1,krw_t,"whole company record",medium
+micron,FY2026Q2,23.68,usd_b,,,"record; DRAM/NAND/HBM all new highs",high
+micron,FY2026Q3_guide,33.5,usd_b,,,"guidance +/-0.8B, GM ~81%",high

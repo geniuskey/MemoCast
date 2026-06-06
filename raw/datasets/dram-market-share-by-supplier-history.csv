@@ -1,0 +1,12 @@
+period,supplier,share_pct,note,confidence
+2022,sk_hynix,27.7,"SK share 2022",medium
+2024-end,samsung,41.5,"Samsung peak before decline",medium
+2025-1H,samsung,32.7,"back to ~2014 levels",high
+2025Q1,sk_hynix,36,"SK No.1",high
+2025Q1,samsung,34,,high
+2025Q1,micron,25,,high
+2025FY,sk_hynix,36.3,"SK overtakes Samsung first time in 33 years",high
+2025FY,samsung,32.7,,high
+2025Q4,samsung,,"Samsung regains No.1",medium
+2025Q4,sk_hynix,32.1,"2nd place",high
+2025Q4,micron,22.4,"3rd place",high

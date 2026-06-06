@@ -1,0 +1,8 @@
+period,dram_inventory_weeks,phase,note,confidence
+2023-early,31,oversupply-peak,"post-COVID oversupply peak",medium
+2023Q4,,destocking-end,"consumer destocking concluded end Q4'23",medium
+2024,10,normal,"avg supplier inventory ~10 weeks",medium
+2024-10,12,normal,"~12 weeks October 2024",medium
+2025Q3,3.3,tightening,"end Q3'25; SK & Micron ~2 weeks each",high
+2025-10,2-4,shortage,"dropped from 12wk(Oct'24); -66% YoY",high
+2026-01,2-6,shortage,"Samsung ~6wk, SK 2-3wk DRAM (memory-inventory file)",medium
