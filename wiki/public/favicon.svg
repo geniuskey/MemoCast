@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MemoCast favicon">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7170ff"/>
+      <stop offset="0.45" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#08090a"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="18" y1="16" x2="46" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7f8f8" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#aeb6ff" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.44 0 0 0 0 0.44 0 0 0 0 1 0 0 0 0.55 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <path d="M13 45V19a6 6 0 0 1 6-6h26" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+  <path d="M51 19v26a6 6 0 0 1-6 6H19" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="2"/>
+
+  <g filter="url(#glow)">
+    <rect x="17" y="17" width="30" height="30" rx="7" fill="#0f1016" stroke="#d0d6e0" stroke-opacity="0.5" stroke-width="1.5"/>
+    <path d="M25 41V25h4.2l3.2 8.4 3.2-8.4H40v16h-4.2v-8.2l-2.8 7h-2.9l-2.8-7V41H25Z" fill="url(#chip)"/>
+  </g>
+
+  <g stroke="#aeb6ff" stroke-width="2" stroke-linecap="round" opacity="0.95">
+    <path d="M22 10v6M32 10v6M42 10v6"/>
+    <path d="M22 48v6M32 48v6M42 48v6"/>
+    <path d="M10 22h6M10 32h6M10 42h6"/>
+    <path d="M48 22h6M48 32h6M48 42h6"/>
+  </g>
+
+  <circle cx="50" cy="14" r="4" fill="#a78bfa" opacity="0.9"/>
+</svg>

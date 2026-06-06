@@ -1,9 +1,14 @@
 import { defineConfig } from 'vitepress'
 
+const base = process.env.GITHUB_ACTIONS ? '/MemoCast/' : '/'
+
 export default defineConfig({
   title: 'MemoCast',
   description: 'Memory Demand Forecasting Knowledge Base and Scenario Simulators',
-  base: process.env.GITHUB_ACTIONS ? '/MemoCast/' : '/',
+  base,
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }]
+  ],
   cleanUrls: true,
   ignoreDeadLinks: [/^\[\[/],
   themeConfig: {
