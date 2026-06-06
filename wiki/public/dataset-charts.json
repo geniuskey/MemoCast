@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-06T11:54:10.047Z",
+  "generatedAt": "2026-06-06T13:45:49.037Z",
   "summary": {
-    "datasetCount": 8,
+    "datasetCount": 10,
     "bitGrowthRows": 8,
     "revenueCycleRows": 12,
     "financialRows": 11,
-    "periodDemandRows": 11,
+    "periodDemandRows": 17,
     "domainTaxonomyRows": 14
   },
   "bitGrowth": [
@@ -344,6 +344,43 @@
     },
     {
       "year": 2023,
+      "segment": "AI Server DRAM proxy",
+      "memoryType": "DRAM",
+      "demandEb": 0.0012,
+      "shipmentsMillionUnits": 1.2,
+      "avgCapacityGb": 1024,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/ai-server-shipments-forecast.md",
+        "raw/datasets/server-dram-content-per-box-growth.md"
+      ],
+      "referenceNotes": [
+        "TrendForce; ~9% of total server shipments",
+        "1TB/node proxy from AI-optimized 512GB/1TB/multi-TB server DRAM range"
+      ]
+    },
+    {
+      "year": 2023,
+      "segment": "PC DRAM",
+      "memoryType": "DRAM",
+      "demandEb": 0.002,
+      "shipmentsMillionUnits": 241.8,
+      "avgCapacityGb": 8.4,
+      "confidence": "low",
+      "sourceRefs": [
+        "raw/datasets/pc-server-shipments.md",
+        "raw/datasets/ai-pc-penetration-forecast.md",
+        "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md"
+      ],
+      "referenceNotes": [
+        "Gartner",
+        "trough year",
+        "AI PCs in use ~5%",
+        "12.1M AI PCs at 16GB baseline; remaining PCs at 8GB baseline"
+      ]
+    },
+    {
+      "year": 2023,
       "segment": "Server DRAM",
       "memoryType": "DRAM",
       "demandEb": 0.0061,
@@ -409,6 +446,23 @@
     },
     {
       "year": 2024,
+      "segment": "AI Server DRAM proxy",
+      "memoryType": "DRAM",
+      "demandEb": 0.0017,
+      "shipmentsMillionUnits": 1.65,
+      "avgCapacityGb": 1024,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/ai-server-shipments-forecast.md",
+        "raw/datasets/server-dram-content-per-box-growth.md"
+      ],
+      "referenceNotes": [
+        "~12.1% of 13.654M total servers (approx units)",
+        "1TB/node proxy from AI-optimized 512GB/1TB/multi-TB server DRAM range"
+      ]
+    },
+    {
+      "year": 2024,
       "segment": "Server DRAM",
       "memoryType": "DRAM",
       "demandEb": 0.0082,
@@ -455,6 +509,60 @@
       ],
       "referenceNotes": [
         "Blackwell Ultra 288GB HBM3e"
+      ]
+    },
+    {
+      "year": 2025,
+      "segment": "AI Server DRAM proxy",
+      "memoryType": "DRAM",
+      "demandEb": 0.0021,
+      "shipmentsMillionUnits": 2.046,
+      "avgCapacityGb": 1024,
+      "confidence": "low",
+      "sourceRefs": [
+        "raw/datasets/ai-server-shipments-forecast.md",
+        "raw/datasets/server-dram-content-per-box-growth.md"
+      ],
+      "referenceNotes": [
+        "TrendForce ~24% YoY growth forecast",
+        "1TB/node proxy from AI-optimized 512GB/1TB/multi-TB server DRAM range"
+      ]
+    },
+    {
+      "year": 2025,
+      "segment": "PC DRAM",
+      "memoryType": "DRAM",
+      "demandEb": 0.0028,
+      "shipmentsMillionUnits": 270,
+      "avgCapacityGb": 10.31,
+      "confidence": "low",
+      "sourceRefs": [
+        "raw/datasets/pc-server-shipments.md",
+        "raw/datasets/ai-pc-penetration-forecast.md",
+        "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md"
+      ],
+      "referenceNotes": [
+        "Gartner",
+        "+9.1% full-year 2025",
+        "31% of PC market; 77.8M units",
+        "77.8M AI PCs at 16GB baseline; remaining PCs at 8GB baseline"
+      ]
+    },
+    {
+      "year": 2026,
+      "segment": "AI Server DRAM proxy",
+      "memoryType": "DRAM",
+      "demandEb": 0.0027,
+      "shipmentsMillionUnits": 2.6189,
+      "avgCapacityGb": 1024,
+      "confidence": "medium",
+      "sourceRefs": [
+        "raw/datasets/ai-server-shipments-forecast.md",
+        "raw/datasets/server-dram-content-per-box-growth.md"
+      ],
+      "referenceNotes": [
+        "TrendForce >28% YoY; AI share ~17% of servers",
+        "1TB/node proxy from AI-optimized 512GB/1TB/multi-TB server DRAM range"
       ]
     }
   ],

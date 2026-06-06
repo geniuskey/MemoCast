@@ -16,12 +16,16 @@ export function buildDatasetCharts(csvFiles) {
   const pcServerShipmentRows = parseCsv(csvFiles['pc-server-shipments.csv'] ?? '')
   const contentRows = parseCsv(csvFiles['memory-content-per-device.csv'] ?? '')
   const gpuHbmRows = parseCsv(csvFiles['gpu-hbm-capacity.csv'] ?? '')
+  const aiPcRows = parseCsv(csvFiles['ai-pc-penetration-forecast.csv'] ?? '')
+  const aiServerRows = parseCsv(csvFiles['ai-server-shipments-forecast.csv'] ?? '')
   const domainTaxonomyRows = parseCsv(csvFiles['memory-demand-domain-taxonomy.csv'] ?? '')
   const periodDemandTimeline = buildPeriodDemandTimeline({
     smartphoneShipmentRows,
     pcServerShipmentRows,
     contentRows,
-    gpuHbmRows
+    gpuHbmRows,
+    aiPcRows,
+    aiServerRows
   })
   const domainTaxonomy = buildDomainTaxonomy(domainTaxonomyRows)
 
@@ -74,6 +78,8 @@ export function writeDatasetCharts({ rawDatasetDir, outputPath }) {
     'pc-server-shipments.csv',
     'memory-content-per-device.csv',
     'gpu-hbm-capacity.csv',
+    'ai-pc-penetration-forecast.csv',
+    'ai-server-shipments-forecast.csv',
     'memory-demand-domain-taxonomy.csv'
   ]
   const csvFiles = Object.fromEntries(wanted.map((fileName) => [fileName, fs.readFileSync(path.join(rawDatasetDir, fileName), 'utf8')]))
@@ -83,7 +89,7 @@ export function writeDatasetCharts({ rawDatasetDir, outputPath }) {
   return charts
 }
 
-function buildPeriodDemandTimeline({ smartphoneShipmentRows, pcServerShipmentRows, contentRows, gpuHbmRows }) {
+function buildPeriodDemandTimeline({ smartphoneShipmentRows, pcServerShipmentRows, contentRows, gpuHbmRows, aiPcRows, aiServerRows }) {
   const timeline = []
   const smartphoneContentByYear = new Map(
     contentRows
@@ -131,6 +137,53 @@ function buildPeriodDemandTimeline({ smartphoneShipmentRows, pcServerShipmentRow
       confidence: 'medium',
       sourceRefs: ['raw/datasets/pc-server-shipments.md', 'raw/datasets/memory-content-per-device.md'],
       referenceNotes: [shipment.source, shipment.notes, content.notes].filter(Boolean)
+    })
+  }
+
+  const aiPcByYear = new Map(aiPcRows
+    .filter((row) => row.year && (row.ai_pc_units_m || row.ai_pc_share_pct))
+    .map((row) => [toNumber(row.year), row]))
+  for (const shipment of pcServerShipmentRows.filter((row) => row.category === 'PC')) {
+    const year = toNumber(shipment.year)
+    const aiPc = aiPcByYear.get(year)
+    if (!aiPc) continue
+    const shipmentsMillionUnits = toNumber(shipment.shipments_million_units)
+    const aiPcUnitsMillion = toOptionalNumber(aiPc.ai_pc_units_m) ?? round(shipmentsMillionUnits * toNumber(aiPc.ai_pc_share_pct) / 100, 4)
+    const mainstreamPcUnitsMillion = Math.max(0, shipmentsMillionUnits - aiPcUnitsMillion)
+    const mainstreamCapacityGb = 8
+    const aiPcCapacityGb = 16
+    const weightedAvgCapacityGb = round(((mainstreamPcUnitsMillion * mainstreamCapacityGb) + (aiPcUnitsMillion * aiPcCapacityGb)) / Math.max(shipmentsMillionUnits, 1), 2)
+    timeline.push({
+      year,
+      segment: 'PC DRAM',
+      memoryType: 'DRAM',
+      demandEb: round((mainstreamPcUnitsMillion * mainstreamCapacityGb + aiPcUnitsMillion * aiPcCapacityGb) / 1_000_000, 4),
+      shipmentsMillionUnits,
+      avgCapacityGb: weightedAvgCapacityGb,
+      confidence: 'low',
+      sourceRefs: ['raw/datasets/pc-server-shipments.md', 'raw/datasets/ai-pc-penetration-forecast.md', 'raw/articles/microsoft-ai-pc-16gb-ram-baseline.md'],
+      referenceNotes: [shipment.source, shipment.notes, aiPc.note, `${round(aiPcUnitsMillion, 1)}M AI PCs at 16GB baseline; remaining PCs at 8GB baseline`].filter(Boolean)
+    })
+  }
+
+  const aiServerCapacityGb = 1024
+  let lastAiServerUnitsMillion = 0
+  for (const row of aiServerRows.filter((item) => item.year).sort((a, b) => toNumber(a.year) - toNumber(b.year))) {
+    const directUnits = toOptionalNumber(row.ai_server_units_m)
+    const yoyPct = toOptionalNumber(row.yoy_pct)
+    const aiServerUnitsMillion = directUnits ?? (lastAiServerUnitsMillion && yoyPct !== null ? round(lastAiServerUnitsMillion * (1 + yoyPct / 100), 4) : null)
+    if (aiServerUnitsMillion === null) continue
+    lastAiServerUnitsMillion = aiServerUnitsMillion
+    timeline.push({
+      year: toNumber(row.year),
+      segment: 'AI Server DRAM proxy',
+      memoryType: 'DRAM',
+      demandEb: round(aiServerUnitsMillion * aiServerCapacityGb / 1_000_000, 4),
+      shipmentsMillionUnits: aiServerUnitsMillion,
+      avgCapacityGb: aiServerCapacityGb,
+      confidence: row.confidence || 'low',
+      sourceRefs: ['raw/datasets/ai-server-shipments-forecast.md', 'raw/datasets/server-dram-content-per-box-growth.md'],
+      referenceNotes: [row.note, '1TB/node proxy from AI-optimized 512GB/1TB/multi-TB server DRAM range'].filter(Boolean)
     })
   }
 

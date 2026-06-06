@@ -1,0 +1,6 @@
+year,metric,value,unit,note,confidence
+2024,server_dram_content_growth,17.3,pct_yoy,"content per box +17.3% (TrendForce, outpacing other apps)",medium
+traditional,enterprise_server_dram,128-256,gb,"virtualization/DB legacy config",medium
+ai_server,dram_per_node,512-2000+,gb,"AI-optimized: 512GB/1TB/multi-TB per node",medium
+2025-2030,ai_server_market_cagr,30,pct,"AI server units ~30% CAGR, content rising in parallel",low
+2026,ai_server_build_growth,72,pct_yoy,"AI server builds +65-80% YoY through 2026 (midpoint)",low

@@ -27,7 +27,9 @@ describe('dataset chart generation', () => {
       'memory-makers-quarterly-financials-cycle.csv': 'company,period,revenue,revenue_unit,operating_profit,profit_unit,note,confidence\n',
       'smartphone-shipments.csv': 'year,shipments_million_units,yoy_percent,source_note\n2024,1240,6.4,IDC confirmed\n',
       'memory-content-per-device.csv': 'year,device,memory_type,avg_capacity_gb,content_growth_yoy_percent,notes\n2024,smartphone,DRAM,9.0,14.1,TrendForce content\n2024,server,DRAM,600,17.3,TrendForce server content\n',
-      'pc-server-shipments.csv': 'year,category,shipments_million_units,yoy_percent,source,notes\n2024,server,13.654,2.05,TrendForce,AI servers\n',
+      'pc-server-shipments.csv': 'year,category,shipments_million_units,yoy_percent,source,notes\n2024,server,13.654,2.05,TrendForce,AI servers\n2025,PC,270,9.1,Gartner,PC refresh\n',
+      'ai-pc-penetration-forecast.csv': 'year,ai_pc_share_pct,ai_pc_units_m,source,note,confidence\n2025,31,77.8,Gartner,31% of PC market,medium\n',
+      'ai-server-shipments-forecast.csv': 'year,ai_server_units_m,yoy_pct,ai_share_of_servers_pct,note,confidence\n2024,1.65,,12.1,AI server units,medium\n',
       'gpu-hbm-capacity.csv': 'gpu_model,vendor,architecture,launch_year,hbm_type,hbm_capacity_gb,notes\nB200,NVIDIA,Blackwell,2024,HBM3e,192,per-GPU 192GB\n'
     })
 
@@ -35,6 +37,8 @@ describe('dataset chart generation', () => {
       expect.arrayContaining([
         expect.objectContaining({ year: 2024, segment: 'Smartphone DRAM', memoryType: 'DRAM', demandEb: 0.0112, confidence: 'medium' }),
         expect.objectContaining({ year: 2024, segment: 'Server DRAM', memoryType: 'DRAM', demandEb: 0.0082, confidence: 'medium' }),
+        expect.objectContaining({ year: 2025, segment: 'PC DRAM', memoryType: 'DRAM', demandEb: 0.0028, confidence: 'low' }),
+        expect.objectContaining({ year: 2024, segment: 'AI Server DRAM proxy', memoryType: 'DRAM', demandEb: 0.0017, confidence: 'medium' }),
         expect.objectContaining({ year: 2024, segment: 'AI GPU HBM content', memoryType: 'HBM', demandGbPerUnit: 192, confidence: 'high' })
       ])
     )
