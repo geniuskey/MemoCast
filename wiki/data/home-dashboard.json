@@ -1,0 +1,431 @@
+{
+  "generatedAt": "2026-06-06T12:10:54.744Z",
+  "summary": {
+    "rawTotal": 327,
+    "rawCited": 30,
+    "rawUncited": 297,
+    "wikiPages": 26,
+    "wikiPagesWithoutRawReferences": 10,
+    "missingRawReferences": 0,
+    "simulatorPresets": 17,
+    "lowConfidenceRaw": 30,
+    "lowConfidencePresets": 6
+  },
+  "rawByType": {
+    "article": 88,
+    "articles": 6,
+    "dataset": 27,
+    "earnings": 13,
+    "INDEX.md": 1,
+    "lecture": 67,
+    "paper": 35,
+    "README.md": 1,
+    "report": 88,
+    "reports": 1
+  },
+  "confidence": {
+    "raw": {
+      "high": 69,
+      "low": 30,
+      "medium": 219,
+      "unrated": 9
+    },
+    "simulatorPresets": {
+      "high": 1,
+      "low": 6,
+      "medium": 10
+    }
+  },
+  "recentUpdates": [
+    {
+      "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
+      "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
+      "type": "lecture",
+      "confidence": "low",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "memory"
+      ],
+      "sourceUrl": "https://www.proceedings.com/content/080/080626webtoc.pdf"
+    },
+    {
+      "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
+      "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
+      "type": "article",
+      "confidence": "high",
+      "date": "2026-06-06",
+      "tags": [
+        "hbm",
+        "dram",
+        "ai-server",
+        "datacenter"
+      ],
+      "sourceUrl": "https://www.trendforce.com/news/2025/12/18/news-micron-hikes-capex-to-20b-with-2026-hbm-supply-fully-booked-hbm4-ramps-2q26/"
+    },
+    {
+      "path": "raw/articles/trendforce-smartphone-storage-capacity-2026.md",
+      "title": "2026년 평균 스마트폰 저장 용량 +4.8% 성장, AI 업그레이드가 NAND 견인",
+      "type": "article",
+      "confidence": "high",
+      "date": "2026-06-06",
+      "tags": [
+        "nand",
+        "smartphone",
+        "demand-forecasting",
+        "bit-demand"
+      ],
+      "sourceUrl": "https://www.trendforce.com/presscenter/news/20260323-12983.html"
+    },
+    {
+      "path": "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
+      "title": "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building",
+      "type": "article",
+      "confidence": "high",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "pricing",
+        "demand-forecasting"
+      ],
+      "sourceUrl": "https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-now-costs-usd375-minimum-ai-shortage-continues-to-squeeze-pc-building"
+    },
+    {
+      "path": "raw/lectures/process-3d-dram-transition-timeline.md",
+      "title": "3D DRAM Transition — Samsung 16-Layer Plans, VCT as Stepping Stone (IMW 2024)",
+      "type": "lecture",
+      "confidence": "medium",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "memory",
+        "capacity",
+        "bit-demand"
+      ],
+      "sourceUrl": "https://www.tomshardware.com/pc-components/ram/samsung-reveals-16-layer-3d-dram-plans-with-vct-dram-as-a-stepping-stone-imw-2024-details-the-future-of-compact-higher-density-ram"
+    },
+    {
+      "path": "raw/articles/domain-surveillance-cctv-nand-demand.md",
+      "title": "감시/CCTV 영상저장 NAND 수요 (AI 비디오 분석·SSD)",
+      "type": "article",
+      "confidence": "low",
+      "date": "2026-06-06",
+      "tags": [
+        "nand",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
+      ],
+      "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/video-surveillance-storage-market-report"
+    }
+  ],
+  "lowConfidence": [
+    {
+      "kind": "raw",
+      "path": "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md",
+      "title": "크립토/블록체인 GPU 마이닝 레거시 GDDR 수요 (niche)",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "demand-forecasting",
+        "bit-demand"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://plisio.net/blog/best-graphics-cards-gpu-for-mining"
+    },
+    {
+      "kind": "raw",
+      "path": "raw/articles/domain-industrial-automation-edge-ai-memory.md",
+      "title": "산업 자동화/엣지 AI 메모리 수요 (팩토리 로봇·산업 IoT)",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "nand",
+        "demand-forecasting",
+        "bit-demand"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://iot-analytics.com/iot-mcu-market-7-billion-opportunity-by-2030-driven-by-industrial-edge-ai/"
+    },
+    {
+      "kind": "raw",
+      "path": "raw/articles/domain-medical-device-ai-imaging-memory.md",
+      "title": "의료기기/AI 진단·영상 메모리 수요 (헬스케어 최고 CAGR)",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "nand",
+        "demand-forecasting",
+        "bit-demand"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://www.fortunebusinessinsights.com/semiconductor-memory-market-114132"
+    },
+    {
+      "kind": "raw",
+      "path": "raw/articles/domain-space-aerospace-radhard-memory.md",
+      "title": "위성/우주/항공 rad-hard 메모리 시장 (SRAM/DRAM/Flash)",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "nand",
+        "demand-forecasting",
+        "capacity"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://www.marketsandmarkets.com/Market-Reports/radiation-hardened-electronics-market-44047967.html"
+    },
+    {
+      "kind": "raw",
+      "path": "raw/articles/domain-surveillance-cctv-nand-demand.md",
+      "title": "감시/CCTV 영상저장 NAND 수요 (AI 비디오 분석·SSD)",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "nand",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/video-surveillance-storage-market-report"
+    },
+    {
+      "kind": "raw",
+      "path": "raw/articles/domain-telecom-5g-6g-edge-memory-demand.md",
+      "title": "통신 인프라(5G/6G·엣지 서버·기지국) 메모리 수요",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://www.fortunebusinessinsights.com/industry-reports/5g-infrastructure-market-100869"
+    },
+    {
+      "kind": "raw",
+      "path": "raw/articles/gddr-gaming-console-memory-2026.md",
+      "title": "게이밍 GDDR 메모리 2026: PS5 16GB GDDR6, PS6 30GB GDDR7 루머, AI가 GDDR 잠식",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "consumer-electronics",
+        "gaming",
+        "demand-forecasting"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://www.tweaktown.com/news/110073/playstation-6-will-reportedly-feature-30gb-of-high-speed-gddr7-memory/index.html"
+    },
+    {
+      "kind": "raw",
+      "path": "raw/articles/oem-automotive-memory-per-vehicle-bosch-continental-2025.md",
+      "title": "DRAM for Vehicle Market + ADAS Memory Requirements by Autonomy Level",
+      "type": "article",
+      "date": "2026-06-06",
+      "tags": [
+        "dram",
+        "nand",
+        "automotive",
+        "bit-demand"
+      ],
+      "citedByCount": 0,
+      "sourceUrl": "https://dataintelo.com/report/global-dynamic-random-access-memory-dram-for-vehicle-market"
+    }
+  ],
+  "enrichmentClusters": [
+    {
+      "tag": "dram",
+      "rawTotal": 208,
+      "uncitedRaw": 197,
+      "lowConfidenceRaw": 22,
+      "recent": [
+        {
+          "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
+          "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
+          "date": "2026-06-06",
+          "confidence": "low"
+        },
+        {
+          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
+          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
+          "date": "2026-06-06",
+          "confidence": "high"
+        },
+        {
+          "path": "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
+          "title": "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building",
+          "date": "2026-06-06",
+          "confidence": "high"
+        }
+      ],
+      "enrichmentScore": 416
+    },
+    {
+      "tag": "hbm",
+      "rawTotal": 131,
+      "uncitedRaw": 124,
+      "lowConfidenceRaw": 8,
+      "recent": [
+        {
+          "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
+          "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
+          "date": "2026-06-06",
+          "confidence": "low"
+        },
+        {
+          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
+          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
+          "date": "2026-06-06",
+          "confidence": "high"
+        },
+        {
+          "path": "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
+          "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
+          "date": "2026-06-06",
+          "confidence": "medium"
+        }
+      ],
+      "enrichmentScore": 256
+    },
+    {
+      "tag": "nand",
+      "rawTotal": 121,
+      "uncitedRaw": 112,
+      "lowConfidenceRaw": 14,
+      "recent": [
+        {
+          "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
+          "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
+          "date": "2026-06-06",
+          "confidence": "low"
+        },
+        {
+          "path": "raw/articles/trendforce-smartphone-storage-capacity-2026.md",
+          "title": "2026년 평균 스마트폰 저장 용량 +4.8% 성장, AI 업그레이드가 NAND 견인",
+          "date": "2026-06-06",
+          "confidence": "high"
+        },
+        {
+          "path": "raw/articles/domain-surveillance-cctv-nand-demand.md",
+          "title": "감시/CCTV 영상저장 NAND 수요 (AI 비디오 분석·SSD)",
+          "date": "2026-06-06",
+          "confidence": "low"
+        }
+      ],
+      "enrichmentScore": 238
+    },
+    {
+      "tag": "pricing",
+      "rawTotal": 75,
+      "uncitedRaw": 71,
+      "lowConfidenceRaw": 3,
+      "recent": [
+        {
+          "path": "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
+          "title": "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building",
+          "date": "2026-06-06",
+          "confidence": "high"
+        },
+        {
+          "path": "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
+          "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
+          "date": "2026-06-06",
+          "confidence": "medium"
+        },
+        {
+          "path": "raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md",
+          "title": "레거시 D램(DDR4/DDR3) 가격 급등·crowding out (국내 매체, 2026)",
+          "date": "2026-06-06",
+          "confidence": "medium"
+        }
+      ],
+      "enrichmentScore": 145
+    },
+    {
+      "tag": "ai-server",
+      "rawTotal": 67,
+      "uncitedRaw": 61,
+      "lowConfidenceRaw": 4,
+      "recent": [
+        {
+          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
+          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
+          "date": "2026-06-06",
+          "confidence": "high"
+        },
+        {
+          "path": "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
+          "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
+          "date": "2026-06-06",
+          "confidence": "medium"
+        },
+        {
+          "path": "raw/articles/trendforce-ai-server-shipments-28pct-2026.md",
+          "title": "글로벌 AI 서버 출하 2026년 +28% YoY, ASIC 기반 비중 상승",
+          "date": "2026-06-06",
+          "confidence": "high"
+        }
+      ],
+      "enrichmentScore": 126
+    },
+    {
+      "tag": "datacenter",
+      "rawTotal": 55,
+      "uncitedRaw": 49,
+      "lowConfidenceRaw": 3,
+      "recent": [
+        {
+          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
+          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
+          "date": "2026-06-06",
+          "confidence": "high"
+        },
+        {
+          "path": "raw/articles/trendforce-ai-server-shipments-28pct-2026.md",
+          "title": "글로벌 AI 서버 출하 2026년 +28% YoY, ASIC 기반 비중 상승",
+          "date": "2026-06-06",
+          "confidence": "high"
+        },
+        {
+          "path": "raw/articles/power-datacenter-vacancy-leasing-market-2026.md",
+          "title": "데이터센터 공실/임대 시장 (2026) — capacity 흡수율",
+          "date": "2026-06-06",
+          "confidence": "medium"
+        }
+      ],
+      "enrichmentScore": 101
+    }
+  ],
+  "citationHealth": {
+    "uncitedRawFiles": [
+      "raw/README.md",
+      "raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md",
+      "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
+      "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md",
+      "raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md",
+      "raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md",
+      "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
+      "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md"
+    ],
+    "pagesWithoutRawReferences": [
+      "wiki/SCHEMA.md",
+      "wiki/charts.md",
+      "wiki/comparisons/domain-comparison.md",
+      "wiki/concepts/memory-demand.md",
+      "wiki/concepts/scenario-analysis.md",
+      "wiki/index.md",
+      "wiki/log.md",
+      "wiki/methods/sensitivity-analysis.md"
+    ],
+    "missingRawReferences": []
+  }
+}

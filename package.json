@@ -7,8 +7,9 @@
     "dev": "vitepress dev wiki --host 0.0.0.0",
     "generate:graph": "node tools/knowledgeGraph.mjs",
     "generate:charts": "node tools/datasetCharts.mjs .",
+    "generate:home": "node tools/homeDashboard.mjs .",
     "audit:citations": "node tools/citationAudit.mjs .",
-    "build": "npm run generate:graph && npm run generate:charts && npm run audit:citations && vitepress build wiki",
+    "build": "npm run generate:graph && npm run generate:charts && npm run audit:citations && npm run generate:home && vitepress build wiki",
     "preview": "vitepress preview wiki --host 0.0.0.0",
     "test": "vitest run",
     "test:watch": "vitest"
