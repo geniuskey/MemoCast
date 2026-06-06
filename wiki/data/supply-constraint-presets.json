@@ -1,0 +1,75 @@
+[
+  {
+    "id": "hbm4-packaging-test-gated-reference",
+    "label": "HBM4 packaging/test gated reference",
+    "description": "Source-backed HBM4 supply constraint case: high HBM wafer cannibalization, hybrid bonding/TCB surge, KGD/KGSD tester lead-time, and advanced packaging inspection bottlenecks all gate realized HBM bit output.",
+    "confidence": "medium",
+    "sourceRefs": [
+      "raw/datasets/dram-wafer-capacity-allocation-2026.md",
+      "raw/reports/equip-hybrid-bonding-besi-asmpt-hbm4-2026.md",
+      "raw/reports/equip-advantest-hbm-test-lead-times-2026.md",
+      "raw/reports/equip-teradyne-q1-2026-memory-test-hbm.md",
+      "raw/reports/equip-kla-q3-2026-memory-advanced-packaging.md"
+    ],
+    "input": {
+      "waferCapacityGrowthPct": 5,
+      "hbmWaferSharePct": 23,
+      "hbmWaferMultiple": 3.5,
+      "packagingOrderGrowthPct": 104.5,
+      "packagingRevenueGrowthPct": 100,
+      "testerLeadTimeMonths": 6,
+      "memoryTestGrowthPct": 110,
+      "processControlGrowthPct": 100,
+      "materialRiskScore": 25,
+      "exportControlRiskScore": 20
+    }
+  },
+  {
+    "id": "300mm-memory-capex-expansion-reference",
+    "label": "300mm memory capex expansion reference",
+    "description": "Comparator expansion case: SEMI 300mm fab spending and DRAM/NAND equipment capex are high, but wafer capacity growth remains single-digit and converts to bit supply with a 12-24 month lag.",
+    "confidence": "high",
+    "sourceRefs": [
+      "raw/reports/equip-semi-world-fab-forecast-300mm-2026-2029.md",
+      "raw/reports/equip-semi-equipment-forecast-156b-2027.md",
+      "raw/datasets/memory-maker-capex.md",
+      "raw/datasets/semiconductor-capex-to-revenue-ratio.md"
+    ],
+    "input": {
+      "waferCapacityGrowthPct": 5,
+      "hbmWaferSharePct": 19,
+      "hbmWaferMultiple": 3,
+      "packagingOrderGrowthPct": 30,
+      "packagingRevenueGrowthPct": 30,
+      "testerLeadTimeMonths": 3,
+      "memoryTestGrowthPct": 20,
+      "processControlGrowthPct": 20,
+      "materialRiskScore": 15,
+      "exportControlRiskScore": 10
+    }
+  },
+  {
+    "id": "regional-material-export-risk-reference",
+    "label": "Regional material/export risk reference",
+    "description": "Supply-chain risk case where material concentration, China localization/export controls, and advanced process-control exposure create a regional ceiling even when headline capex is rising.",
+    "confidence": "medium",
+    "sourceRefs": [
+      "raw/reports/material-japan-materials-equipment-dominance.md",
+      "raw/reports/equip-china-memory-equipment-localization-2026.md",
+      "raw/reports/equip-kla-q3-2026-memory-advanced-packaging.md",
+      "raw/articles/esg-memory-fab-energy-water-carbon-re100.md"
+    ],
+    "input": {
+      "waferCapacityGrowthPct": 4,
+      "hbmWaferSharePct": 10,
+      "hbmWaferMultiple": 3,
+      "packagingOrderGrowthPct": 20,
+      "packagingRevenueGrowthPct": 20,
+      "testerLeadTimeMonths": 4,
+      "memoryTestGrowthPct": 30,
+      "processControlGrowthPct": 25,
+      "materialRiskScore": 80,
+      "exportControlRiskScore": 75
+    }
+  }
+]
