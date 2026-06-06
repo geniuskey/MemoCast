@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T13:45:48.237Z",
+  "generatedAt": "2026-06-06T13:56:37.244Z",
   "nodes": [
     {
       "id": "charts",
@@ -49,6 +49,22 @@
       "confidence": "medium"
     },
     {
+      "id": "raw-integration-ledger",
+      "label": "Raw Integration Ledger",
+      "type": "source",
+      "href": "/sources/raw-integration-ledger",
+      "tags": [
+        "raw",
+        "citation",
+        "integration-ledger",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/INDEX.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "id": "raw-source-map",
       "label": "Raw Source Map",
       "type": "source",
@@ -81,6 +97,77 @@
       "sources": []
     },
     {
+      "id": "ai-infrastructure-memory",
+      "label": "AI Infrastructure Memory Demand",
+      "type": "concept",
+      "href": "/concepts/ai-infrastructure-memory",
+      "tags": [
+        "ai-infrastructure",
+        "hbm",
+        "gpu",
+        "power",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md",
+        "raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md",
+        "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
+        "raw/articles/aisilicon-onprem-edge-inference-memory-2026.md",
+        "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md",
+        "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md",
+        "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md",
+        "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md",
+        "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
+        "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
+        "raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md",
+        "raw/articles/esg-memory-fab-energy-water-carbon-re100.md",
+        "raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md",
+        "raw/articles/history-dram-memory-cycles-2016-2026.md",
+        "raw/articles/history-memory-fab-disruptions-supply-shocks.md",
+        "raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md",
+        "raw/articles/model-agentic-ai-memory-demand-2026.md",
+        "raw/articles/model-ai-coding-enterprise-software-inference-demand-2026.md",
+        "raw/articles/model-ai-inference-memory-bound-token-economics.md",
+        "raw/articles/model-context-length-kv-cache-memory-demand.md",
+        "raw/articles/model-deepseek-v3-671b-moe-technical-report.md",
+        "raw/articles/model-epoch-ai-compute-growth-trends.md",
+        "raw/articles/model-generative-video-multimodal-memory-demand.md",
+        "raw/articles/model-introl-ai-memory-supercycle-hbm-2026.md",
+        "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md",
+        "raw/articles/oem-dell-hpe-ai-server-backlog-memory-bom-2026.md",
+        "raw/articles/oem-hyperscaler-custom-silicon-memory-buyers-2026.md",
+        "raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md",
+        "raw/articles/oem-server-odm-gb200-nvl72-hbm-shipments-2025.md",
+        "raw/articles/power-ai-query-energy-inference-memory-2026.md",
+        "raw/articles/power-datacenter-vacancy-leasing-market-2026.md",
+        "raw/articles/power-deloitte-ai-datacenter-123gw-2035.md",
+        "raw/articles/power-gb200-nvl72-rack-120kw-liquid-cooling.md",
+        "raw/articles/power-goldman-datacenter-power-demand-165pct-2030.md",
+        "raw/articles/power-hbm3e-energy-per-bit-power-efficiency.md",
+        "raw/articles/power-hbm4-hbm5-per-stack-watts-roadmap.md",
+        "raw/articles/power-iea-datacenter-electricity-945twh-2030.md",
+        "raw/articles/power-liquid-cooling-adoption-hbm-thermal-limits.md",
+        "raw/articles/power-nuclear-smr-ppa-ai-datacenter-deals-2025.md",
+        "raw/articles/power-perf-per-watt-blackwell-vs-hopper.md",
+        "raw/articles/power-schmidt-congress-ai-power-29gw-2027.md",
+        "raw/articles/power-socamm-lpddr5x-low-power-ai-server-memory.md",
+        "raw/articles/power-us-grid-interconnection-queue-bottleneck.md",
+        "raw/articles/power-vs-memory-limited-datacenter-debate.md",
+        "raw/articles/server-ddr5-rdimm-channels-capacity-2026.md",
+        "raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md",
+        "raw/articles/trendforce-ai-20pct-dram-wafer-2026.md",
+        "raw/articles/trendforce-ai-server-memory-contract-price-2q26.md",
+        "raw/articles/trendforce-ai-server-shipments-28pct-2026.md",
+        "raw/articles/trendforce-hbm-market-forecast-2026.md",
+        "raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md",
+        "raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md",
+        "raw/datasets/ai-server-shipments-forecast.md",
+        "raw/datasets/dram-nand-bit-growth-cagr-longrun.md",
+        "raw/datasets/dram-wafer-capacity-allocation-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "id": "bit-demand",
       "label": "Bit Demand",
       "type": "concept",
@@ -93,6 +180,77 @@
       "sources": [
         "raw/datasets/bit-demand-supply-growth.md",
         "raw/datasets/memory-content-per-device.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "channel-pricing-signal",
+      "label": "Channel Pricing Signal",
+      "type": "concept",
+      "href": "/concepts/channel-pricing-signal",
+      "tags": [
+        "pricing",
+        "channel",
+        "inventory",
+        "supply-demand",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md",
+        "raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md",
+        "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
+        "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md",
+        "raw/articles/channel-sourceability-qoq-price-allocation-2026.md",
+        "raw/articles/channel-teamgroup-gm-ram-pricing-crisis-2026.md",
+        "raw/articles/channel-used-refurbished-server-memory-secondary-2026.md",
+        "raw/articles/consol-dram-price-fixing-scandal.md",
+        "raw/articles/consol-elpida-bankruptcy-micron.md",
+        "raw/articles/consol-intel-nand-skhynix-solidigm.md",
+        "raw/articles/consol-qimonda-bankruptcy.md",
+        "raw/articles/consol-toshiba-kioxia-bain.md",
+        "raw/articles/consol-wd-sandisk-nand.md",
+        "raw/articles/ddr4-ddr5-transition-2026.md",
+        "raw/articles/ddr4-eol-last-time-buy-legacy-2026.md",
+        "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
+        "raw/articles/edge-ai-iot-memory-demand-2026.md",
+        "raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md",
+        "raw/articles/history-dram-memory-cycles-2016-2026.md",
+        "raw/articles/history-memory-fab-disruptions-supply-shocks.md",
+        "raw/articles/history-memory-trade-disputes-antidumping-cartel.md",
+        "raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md",
+        "raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md",
+        "raw/articles/model-ai-inference-memory-bound-token-economics.md",
+        "raw/articles/oem-apple-dram-lta-expiry-2026-price-hike.md",
+        "raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md",
+        "raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md",
+        "raw/articles/oem-pc-dell-hp-lenovo-price-hike-memory-2026.md",
+        "raw/articles/oem-smartphone-dram-content-spec-downgrade-2026.md",
+        "raw/articles/power-socamm-lpddr5x-low-power-ai-server-memory.md",
+        "raw/articles/server-ddr5-rdimm-channels-capacity-2026.md",
+        "raw/articles/trendforce-ai-server-memory-contract-price-2q26.md",
+        "raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md",
+        "raw/datasets/ddr5-16gb-price-monthly-2025-2026.md",
+        "raw/datasets/dram-contract-price-qoq-2025-2026.md",
+        "raw/datasets/dram-price-history.md",
+        "raw/datasets/dram-revenue-cycle-history.md",
+        "raw/datasets/dram-supplier-inventory-weeks-history.md",
+        "raw/datasets/dram-wafer-capacity-allocation-2026.md",
+        "raw/datasets/steam-pc-gaming-ram-share-2026.md",
+        "raw/earnings/kioxia-fq4-2025-earnings.md",
+        "raw/earnings/macronix-1q26-earnings.md",
+        "raw/earnings/micron-fq2-2026-earnings.md",
+        "raw/earnings/nanya-technology-1q26-earnings.md",
+        "raw/earnings/samsung-electronics-1q26-earnings.md",
+        "raw/earnings/sandisk-fq3-2026-earnings.md",
+        "raw/earnings/sandisk-wd-fy2026-nand-datacenter-results.md",
+        "raw/earnings/sk-hynix-1q26-earnings.md",
+        "raw/earnings/taiwan-module-makers-adata-teamgroup-transcend-2026.md",
+        "raw/earnings/trendforce-1q26-memory-pricing.md",
+        "raw/earnings/winbond-1q26-earnings.md",
+        "raw/lectures/conf-iedm-2025-3d-dram-oxide-vct.md",
+        "raw/lectures/ip-cadence-memory-ip-hbm4-lpddr6-gddr7-ddr5.md",
+        "raw/lectures/ip-ddr5-mrdimm-rcd-db-montage-rambus-renesas.md",
+        "raw/lectures/ip-jedec-hbm4-jesd270-4-standard.md"
       ],
       "confidence": "medium"
     },
@@ -115,6 +273,120 @@
       "confidence": "medium"
     },
     {
+      "id": "forecasting-method-library",
+      "label": "Forecasting Method Library",
+      "type": "concept",
+      "href": "/concepts/forecasting-method-library",
+      "tags": [
+        "methods",
+        "forecasting",
+        "papers",
+        "lectures",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md",
+        "raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md",
+        "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
+        "raw/articles/aisilicon-onprem-edge-inference-memory-2026.md",
+        "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md",
+        "raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md",
+        "raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md",
+        "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
+        "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md",
+        "raw/articles/channel-sourceability-qoq-price-allocation-2026.md",
+        "raw/articles/channel-teamgroup-gm-ram-pricing-crisis-2026.md",
+        "raw/articles/channel-used-refurbished-server-memory-secondary-2026.md",
+        "raw/articles/consol-dram-price-fixing-scandal.md",
+        "raw/articles/consol-elpida-bankruptcy-micron.md",
+        "raw/articles/consol-intel-nand-skhynix-solidigm.md",
+        "raw/articles/consol-qimonda-bankruptcy.md",
+        "raw/articles/consol-toshiba-kioxia-bain.md",
+        "raw/articles/consol-wd-sandisk-nand.md",
+        "raw/articles/ddr4-ddr5-transition-2026.md",
+        "raw/articles/ddr4-eol-last-time-buy-legacy-2026.md",
+        "raw/articles/domain-arvr-xr-headset-memory-content.md",
+        "raw/articles/domain-automotive-l4-300gb-ram-micron.md",
+        "raw/articles/domain-autonomous-vehicle-data-generation-storage.md",
+        "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md",
+        "raw/articles/domain-gaming-handheld-lpddr-content.md",
+        "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md",
+        "raw/articles/domain-humanoid-robotics-memory-content.md",
+        "raw/articles/domain-industrial-automation-edge-ai-memory.md",
+        "raw/articles/domain-iot-smart-home-edge-ai-memory-2026.md",
+        "raw/articles/domain-medical-device-ai-imaging-memory.md",
+        "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
+        "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
+        "raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md",
+        "raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md",
+        "raw/articles/domain-space-aerospace-radhard-memory.md",
+        "raw/articles/domain-surveillance-cctv-nand-demand.md",
+        "raw/articles/domain-telecom-5g-6g-edge-memory-demand.md",
+        "raw/articles/edge-ai-iot-memory-demand-2026.md",
+        "raw/articles/esg-memory-fab-energy-water-carbon-re100.md",
+        "raw/articles/gddr-gaming-console-memory-2026.md",
+        "raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md",
+        "raw/articles/history-dram-memory-cycles-2016-2026.md",
+        "raw/articles/history-memory-fab-disruptions-supply-shocks.md",
+        "raw/articles/history-memory-trade-disputes-antidumping-cartel.md",
+        "raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md",
+        "raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md",
+        "raw/articles/micron-automotive-memory-per-vehicle.md",
+        "raw/articles/model-agentic-ai-memory-demand-2026.md",
+        "raw/articles/model-ai-coding-enterprise-software-inference-demand-2026.md",
+        "raw/articles/model-ai-inference-memory-bound-token-economics.md",
+        "raw/articles/model-context-length-kv-cache-memory-demand.md",
+        "raw/articles/model-deepseek-v3-671b-moe-technical-report.md",
+        "raw/articles/model-epoch-ai-compute-growth-trends.md",
+        "raw/articles/model-generative-video-multimodal-memory-demand.md",
+        "raw/articles/model-introl-ai-memory-supercycle-hbm-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "long-tail-domain-demand",
+      "label": "Long-tail Domain Memory Demand",
+      "type": "concept",
+      "href": "/concepts/long-tail-domain-demand",
+      "tags": [
+        "domain-demand",
+        "edge-ai",
+        "automotive",
+        "iot",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/articles/domain-arvr-xr-headset-memory-content.md",
+        "raw/articles/domain-automotive-l4-300gb-ram-micron.md",
+        "raw/articles/domain-autonomous-vehicle-data-generation-storage.md",
+        "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md",
+        "raw/articles/domain-gaming-handheld-lpddr-content.md",
+        "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md",
+        "raw/articles/domain-humanoid-robotics-memory-content.md",
+        "raw/articles/domain-industrial-automation-edge-ai-memory.md",
+        "raw/articles/domain-iot-smart-home-edge-ai-memory-2026.md",
+        "raw/articles/domain-medical-device-ai-imaging-memory.md",
+        "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
+        "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
+        "raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md",
+        "raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md",
+        "raw/articles/domain-space-aerospace-radhard-memory.md",
+        "raw/articles/domain-surveillance-cctv-nand-demand.md",
+        "raw/articles/domain-telecom-5g-6g-edge-memory-demand.md",
+        "raw/articles/edge-ai-iot-memory-demand-2026.md",
+        "raw/articles/gddr-gaming-console-memory-2026.md",
+        "raw/articles/micron-automotive-memory-per-vehicle.md",
+        "raw/articles/oem-automotive-memory-per-vehicle-bosch-continental-2025.md",
+        "raw/datasets/memory-demand-domain-taxonomy.md",
+        "raw/datasets/steam-pc-gaming-ram-share-2026.md",
+        "raw/papers/hbm-bit-cost-domain-specific-ecc-ai-inference-2025.md",
+        "raw/reports/military-aerospace-memory-demand-2026.md",
+        "raw/reports/region-europe-automotive-memory-demand-2026.md",
+        "raw/reports/region-europe-chips-act-automotive-demand.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "id": "memory-demand",
       "label": "Memory Demand",
       "type": "concept",
@@ -126,6 +398,77 @@
         "units"
       ],
       "sources": [],
+      "confidence": "medium"
+    },
+    {
+      "id": "memory-supply-chain-equipment",
+      "label": "Memory Supply Chain and Equipment Constraints",
+      "type": "concept",
+      "href": "/concepts/memory-supply-chain-equipment",
+      "tags": [
+        "supply-chain",
+        "equipment",
+        "capacity",
+        "capex",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md",
+        "raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md",
+        "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
+        "raw/articles/aisilicon-onprem-edge-inference-memory-2026.md",
+        "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md",
+        "raw/articles/ddr4-ddr5-transition-2026.md",
+        "raw/articles/domain-autonomous-vehicle-data-generation-storage.md",
+        "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md",
+        "raw/articles/domain-humanoid-robotics-memory-content.md",
+        "raw/articles/domain-industrial-automation-edge-ai-memory.md",
+        "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
+        "raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md",
+        "raw/articles/domain-space-aerospace-radhard-memory.md",
+        "raw/articles/domain-surveillance-cctv-nand-demand.md",
+        "raw/articles/domain-telecom-5g-6g-edge-memory-demand.md",
+        "raw/articles/esg-memory-fab-energy-water-carbon-re100.md",
+        "raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md",
+        "raw/articles/history-memory-fab-disruptions-supply-shocks.md",
+        "raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md",
+        "raw/articles/model-context-length-kv-cache-memory-demand.md",
+        "raw/articles/model-epoch-ai-compute-growth-trends.md",
+        "raw/articles/model-introl-ai-memory-supercycle-hbm-2026.md",
+        "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md",
+        "raw/articles/on-device-slm-smartphone-ram-2026.md",
+        "raw/articles/power-datacenter-vacancy-leasing-market-2026.md",
+        "raw/articles/power-deloitte-ai-datacenter-123gw-2035.md",
+        "raw/articles/power-gb200-nvl72-rack-120kw-liquid-cooling.md",
+        "raw/articles/power-goldman-datacenter-power-demand-165pct-2030.md",
+        "raw/articles/power-hbm3e-energy-per-bit-power-efficiency.md",
+        "raw/articles/power-hbm4-hbm5-per-stack-watts-roadmap.md",
+        "raw/articles/power-iea-datacenter-electricity-945twh-2030.md",
+        "raw/articles/power-liquid-cooling-adoption-hbm-thermal-limits.md",
+        "raw/articles/power-nuclear-smr-ppa-ai-datacenter-deals-2025.md",
+        "raw/articles/power-schmidt-congress-ai-power-29gw-2027.md",
+        "raw/articles/power-socamm-lpddr5x-low-power-ai-server-memory.md",
+        "raw/articles/power-us-grid-interconnection-queue-bottleneck.md",
+        "raw/articles/server-ddr5-rdimm-channels-capacity-2026.md",
+        "raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md",
+        "raw/articles/trendforce-ai-20pct-dram-wafer-2026.md",
+        "raw/articles/trendforce-ai-server-memory-contract-price-2q26.md",
+        "raw/articles/trendforce-hbm-market-forecast-2026.md",
+        "raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md",
+        "raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md",
+        "raw/datasets/dram-nand-bit-growth-cagr-longrun.md",
+        "raw/datasets/dram-wafer-capacity-allocation-2026.md",
+        "raw/datasets/hbm-bit-demand-growth-rate.md",
+        "raw/datasets/hbm-dram-capacity-wpm-2026.md",
+        "raw/datasets/idc-global-datasphere-zettabytes.md",
+        "raw/datasets/korea-semiconductor-exports-monthly.md",
+        "raw/datasets/memory-maker-capex.md",
+        "raw/datasets/semiconductor-capex-to-revenue-ratio.md",
+        "raw/datasets/server-dram-content-per-box-growth.md",
+        "raw/earnings/hbm4-three-supplier-competition-samsung-comeback-2026.md",
+        "raw/earnings/hyperscaler-capex-2026-guidance.md",
+        "raw/earnings/kioxia-fy25-nand-outlook-ipo.md"
+      ],
       "confidence": "medium"
     },
     {
@@ -425,6 +768,31 @@
   ],
   "edges": [
     {
+      "from": "ai-infrastructure-memory",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "ai-infrastructure-memory",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "ai-infrastructure-memory",
+      "to": "raw-integration-ledger",
+      "kind": "wikilink"
+    },
+    {
+      "from": "ai-infrastructure-memory",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "ai-infrastructure-memory",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
       "from": "bit-demand",
       "to": "dram",
       "kind": "wikilink"
@@ -460,6 +828,41 @@
       "kind": "wikilink"
     },
     {
+      "from": "channel-pricing-signal",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
+      "to": "raw-integration-ledger",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "ai-infrastructure-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "channel-pricing-signal",
+      "kind": "wikilink"
+    },
+    {
       "from": "citation-matrix",
       "to": "dram",
       "kind": "wikilink"
@@ -471,12 +874,27 @@
     },
     {
       "from": "citation-matrix",
+      "to": "forecasting-method-library",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
       "to": "hbm",
       "kind": "wikilink"
     },
     {
       "from": "citation-matrix",
       "to": "hbm-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "long-tail-domain-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "memory-supply-chain-equipment",
       "kind": "wikilink"
     },
     {
@@ -497,6 +915,11 @@
     {
       "from": "citation-matrix",
       "to": "pc-dram-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "raw-integration-ledger",
       "kind": "wikilink"
     },
     {
@@ -656,6 +1079,31 @@
     },
     {
       "from": "forecasting-evidence-map",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-method-library",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-method-library",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-method-library",
+      "to": "raw-integration-ledger",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-method-library",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "forecasting-method-library",
       "to": "supply-demand-gap",
       "kind": "wikilink"
     },
@@ -825,6 +1273,31 @@
       "kind": "wikilink"
     },
     {
+      "from": "long-tail-domain-demand",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "long-tail-domain-demand",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "long-tail-domain-demand",
+      "to": "raw-integration-ledger",
+      "kind": "wikilink"
+    },
+    {
+      "from": "long-tail-domain-demand",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "long-tail-domain-demand",
+      "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
       "from": "memory-demand",
       "to": "bit-demand",
       "kind": "wikilink"
@@ -842,6 +1315,31 @@
     {
       "from": "memory-demand",
       "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-supply-chain-equipment",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-supply-chain-equipment",
+      "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-supply-chain-equipment",
+      "to": "raw-integration-ledger",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-supply-chain-equipment",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-supply-chain-equipment",
+      "to": "supply-demand-gap",
       "kind": "wikilink"
     },
     {
@@ -975,8 +1473,43 @@
       "kind": "wikilink"
     },
     {
+      "from": "raw-integration-ledger",
+      "to": "ai-infrastructure-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-integration-ledger",
+      "to": "channel-pricing-signal",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-integration-ledger",
+      "to": "forecasting-method-library",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-integration-ledger",
+      "to": "long-tail-domain-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-integration-ledger",
+      "to": "memory-supply-chain-equipment",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "ai-infrastructure-memory",
+      "kind": "wikilink"
+    },
+    {
       "from": "raw-source-map",
       "to": "bit-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "channel-pricing-signal",
       "kind": "wikilink"
     },
     {
@@ -991,7 +1524,27 @@
     },
     {
       "from": "raw-source-map",
+      "to": "forecasting-method-library",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "long-tail-domain-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
       "to": "memory-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "memory-supply-chain-equipment",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "raw-integration-ledger",
       "kind": "wikilink"
     },
     {

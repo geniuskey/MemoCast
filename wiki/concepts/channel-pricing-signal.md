@@ -1,0 +1,116 @@
+---
+title: Channel Pricing Signal
+created: 2026-06-06
+updated: 2026-06-06
+type: concept
+tags: [pricing, channel, inventory, supply-demand, demand-forecasting]
+sources: [raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md, raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md, raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md, raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md, raw/articles/channel-sourceability-qoq-price-allocation-2026.md, raw/articles/channel-teamgroup-gm-ram-pricing-crisis-2026.md, raw/articles/channel-used-refurbished-server-memory-secondary-2026.md, raw/articles/consol-dram-price-fixing-scandal.md, raw/articles/consol-elpida-bankruptcy-micron.md, raw/articles/consol-intel-nand-skhynix-solidigm.md, raw/articles/consol-qimonda-bankruptcy.md, raw/articles/consol-toshiba-kioxia-bain.md, raw/articles/consol-wd-sandisk-nand.md, raw/articles/ddr4-ddr5-transition-2026.md, raw/articles/ddr4-eol-last-time-buy-legacy-2026.md, raw/articles/domain-networking-switch-router-ddr-memory-2026.md, raw/articles/edge-ai-iot-memory-demand-2026.md, raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md, raw/articles/history-dram-memory-cycles-2016-2026.md, raw/articles/history-memory-fab-disruptions-supply-shocks.md, raw/articles/history-memory-trade-disputes-antidumping-cartel.md, raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md, raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md, raw/articles/model-ai-inference-memory-bound-token-economics.md, raw/articles/oem-apple-dram-lta-expiry-2026-price-hike.md, raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md, raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md, raw/articles/oem-pc-dell-hp-lenovo-price-hike-memory-2026.md, raw/articles/oem-smartphone-dram-content-spec-downgrade-2026.md, raw/articles/power-socamm-lpddr5x-low-power-ai-server-memory.md, raw/articles/server-ddr5-rdimm-channels-capacity-2026.md, raw/articles/trendforce-ai-server-memory-contract-price-2q26.md, raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md, raw/datasets/ddr5-16gb-price-monthly-2025-2026.md, raw/datasets/dram-contract-price-qoq-2025-2026.md, raw/datasets/dram-price-history.md, raw/datasets/dram-revenue-cycle-history.md, raw/datasets/dram-supplier-inventory-weeks-history.md, raw/datasets/dram-wafer-capacity-allocation-2026.md, raw/datasets/steam-pc-gaming-ram-share-2026.md, raw/earnings/kioxia-fq4-2025-earnings.md, raw/earnings/macronix-1q26-earnings.md, raw/earnings/micron-fq2-2026-earnings.md, raw/earnings/nanya-technology-1q26-earnings.md, raw/earnings/samsung-electronics-1q26-earnings.md, raw/earnings/sandisk-fq3-2026-earnings.md, raw/earnings/sandisk-wd-fy2026-nand-datacenter-results.md, raw/earnings/sk-hynix-1q26-earnings.md, raw/earnings/taiwan-module-makers-adata-teamgroup-transcend-2026.md, raw/earnings/trendforce-1q26-memory-pricing.md, raw/earnings/winbond-1q26-earnings.md, raw/lectures/conf-iedm-2025-3d-dram-oxide-vct.md, raw/lectures/ip-cadence-memory-ip-hbm4-lpddr6-gddr7-ddr5.md, raw/lectures/ip-ddr5-mrdimm-rcd-db-montage-rambus-renesas.md, raw/lectures/ip-jedec-hbm4-jesd270-4-standard.md]
+confidence: medium
+---
+
+# Channel Pricing Signal
+
+Channel 자료는 최종 수요와 공급 부족이 가격·allocation·lead time으로 먼저 관측되는 층이다. 이 신호는 bit demand 자체보다 shortage severity와 price pass-through를 해석하는 데 유용하다.
+
+## 이번 패스에서 읽은 source coverage
+
+- Cluster raw files read: **109**
+- Ledger: [[raw-integration-ledger]]
+- Related: [[raw-source-map]], [[citation-matrix]], [[supply-demand-gap]], [[forecasting-evidence-map]]
+
+## 핵심 해석
+
+- Contract/spot/retail 가격 급등, allocation, gray market, counterfeit는 shortage가 channel까지 내려온 후행-동행 signal이다.
+- DDR4 EOL/last-time-buy와 DDR5 전환은 legacy 수요와 AI server 우선 allocation 사이의 crowding-out을 보여준다.
+- 이 자료들은 EB 수요 산식보다 [[supply-demand-gap]]의 가격/재고 regime 판단 변수로 쓰는 것이 안전하다.
+
+## Source notes read in this pass
+
+| Raw file | What it adds to the wiki model | Numeric anchors observed |
+| --- | --- | --- |
+| `raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md` | 위조 대상 브랜드: **G.Skill, V-Color**.; 유통 경로: 중국 온라인 마켓플레이스 — 특히 **gray-market 및 second-hand 채널**. | 100% |
+| `raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md` | Q1 2026 DRAM 계약가: **최대 98% 상승**.; 메모리 칩메이커 산업 매출: Q1 **+81% → $97B**. | 98%, 63%, 81%, $97B |
+| `raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md` | 32GB DDR5 최저가: **$374.97** (Silicon Power, 프로모코드 적용). 한동안 ~$320 → 최근 몇 주 $350 돌파.; 16GB 단품: 현재 **$240+**. | 32GB, 1년, 400%, 16GB |
+| `raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md` | 대형 DRAM 주문 리드타임: 2025년 12월 **25주 → 45주+**, 2026년 초 일부 **40주 초과**.; 1H26 가격 상승: 1월 기준 대비 **30~60% 추가 상승** 예상. Q4 2025부터 하이퍼스케일러 비축으로 가격 급등. | 40주, 2025년, 25주, 45주, 2026년 |
+| `raw/articles/channel-sourceability-qoq-price-allocation-2026.md` | Q4 2025: DDR5 16Gb 칩 spot **$6.84(9월) → $27.20(12월)**. NAND는 Kingston datacenter SSD 매니저 인용 "2025년 초 이후 **+246%**, 최근 60일에 ~70% 집중".; Q1 2026: 대부분 세그먼트 **QoQ 최대 80~90% 상승**; DDR4 legacy rally로 분기 **최대 +50%**. | 100%, 2025년, 246%, 70%, 90%, 50% |
+| `raw/articles/channel-teamgroup-gm-ram-pricing-crisis-2026.md` | DRAM·3D NAND 계약가: 12월 MoM **80~100% 상승**, 일부 카테고리는 단월 2배(doubled in a single month).; DDR5 16Gb 칩 현물가(spot): 9/20 평균 **$6.84** → 11/19 **$24.83** → 12/1 **$27.2** (세션 레인지 $19~$37). 9월 대비 약 **+297%**. | 100%, 297%, 2026년, 2028년 |
+| `raw/articles/channel-used-refurbished-server-memory-secondary-2026.md` | DDR5 kit 가격 12개월 +478%, 신규 서버 구성에 unit당 $10,000~27,000 프리미엄(ITAD DDR4 대안 대비).; 폐기(decommissioned) 14G/15G 플릿 DDR4 모듈이 2025-12 대비 **+30~50%**. | 12개월, 478%, 50%, 5년 |
+| `raw/articles/consol-dram-price-fixing-scandal.md` | 담합 기간: 1998-07-01 ~ 2002-06-15 (국제 가격담합 공모).; 미국 DOJ에 유죄 인정한 5개사: Hynix, Infineon, Micron Technology, Samsung, Elpida. | 6개월, 8개월 |
+| `raw/articles/consol-elpida-bankruptcy-micron.md` | 설립: 1999년 NEC + Hitachi의 DRAM 사업 합병으로 "NEC Hitachi Memory" 출범. 2000년 Elpida로 사명 변경. 2003년 Mitsubishi Electric DRAM 사업 인수.; 즉, 일본 주요 3사(NEC, Hitachi, Mitsubishi) DRAM이 Elpida 하나로 통합됨. | 2012년, 1999년, 2000년, 2003년, 2004년, 2011년 |
+| `raw/articles/consol-intel-nand-skhynix-solidigm.md` | 발표: 2020-10, Intel-SK hynix가 총 $9 billion 인수 합의. 대상: NAND SSD 사업, NAND 컴포넌트·웨이퍼 사업, 중국 다롄(Dalian) NAND 공장.; 1단계(2021-12): SK hynix가 SSD 사업 + 다롄 공장을 $6.61 billion(또는 보도에 따라 ~$7B)에 인수. Intel 엔터프라이즈 SSD 사업을 "Solidigm"으로 리브랜딩, 별도 자회사로 운영. | $9B, $7B, $8.85B |
+| `raw/articles/consol-qimonda-bankruptcy.md` | 분사: 2006-05-01 Infineon Technologies에서 분리. 설립 시점 세계 2위 DRAM 업체(Gartner Dataquest 기준).; 본사: 독일 뮌헨. NYSE 상장(2006-08). | 2009년, 77.5%, 35.6%, 1년 |
+| `raw/articles/consol-toshiba-kioxia-bain.md` | NAND/플래시 기원: 1980년 Toshiba의 Fujio Masuoka가 플래시 메모리 발명, 1984년 NOR 플래시 발표. Toshiba가 NAND 플래시의 발명사.; 매각 배경: 미국 원전 자회사 Westinghouse 파산(2016)으로 인한 대규모 손실 -> 재무 구멍 메우기 위해 메모리 사업 매각. | $18B, 1980년, 1984년, 01 T |
+| `raw/articles/consol-wd-sandisk-nand.md` | 인수: Western Digital이 SanDisk 전량을 약 $19 billion(주당 $86.10)에 인수, 2016년(WD 회계 3분기) 클로징.; 전략: HDD 거인 WD가 플래시(NAND)로 전환 -> 비휘발성 메모리 역량과 규모 확보. | $19B, 2025년, 2016년, 15년, 18개월 |
+| `raw/articles/ddr4-ddr5-transition-2026.md` | 2026년 신규 PC 빌드는 DDR5 기본 (모든 신규 Intel·AMD 데스크톱 플랫폼).; **DDR4 capacity 2026년 말 2024년의 약 20~25% 수준으로 축소**. | 2026년, 2024년, 25%, 2025년 |
+| `raw/articles/ddr4-eol-last-time-buy-legacy-2026.md` | 3사 DDR4 단종 진행이나 timeline 연기: Samsung DDR4 로드맵 **2026년 말까지 연장**, SK는 우시 fab로 DDR4 유지(고마진), Micron LTB 윈도우 1Q26 마감.; DDR4 일부 SKU가 2024 저점 대비 **+2,200%**. DDR4 spot이 contract보다 **172% 높음**(2026 초). | 2026년, 200%, 172%, 25%, 100% |
+| `raw/articles/domain-networking-switch-router-ddr-memory-2026.md` | AI 데이터센터용 **400G/800G 스위치** 등장 → 전통 DRAM 한계, DDR5 모듈 업그레이드 필수.; **라우터 메모리 비용 ~7배 상승**(DRAM 급등 전이). | 171%, 70% |
+| `raw/articles/edge-ai-iot-memory-demand-2026.md` | 1Q26 표준 DRAM contract 가격 **+55~60% QoQ** 전망 (서버·HBM으로 capacity 재배분).; **LPDDR4X·LPDDR5X 공급 부족** 지속. Raspberry Pi가 LPDDR4 원가 급등 이유로 2025년 12월 가격 인상. | 60%, 2025년, 2026년, 150 GB, 20% |
+| `raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md` | **16GB GDDR7 카드당 비용 2025 중반 $65~80 → 연말 $200+**. GDDR6도 2025 중후반 ~60% 상승.; NVIDIA·AMD 단계적 GPU 가격 인상(AMD 1월, NVIDIA 2월~). | 16GB, 60%, 40% |
+| `raw/articles/history-dram-memory-cycles-2016-2026.md` | **2016-2018 supercycle**: 스마트폰 저장용량 증가 + 클라우드 초기 buildout + 제조사들이 3D NAND로 capacity 전환하며 conventional DRAM 공급 일시 제약. Micron 매출 2016 $12.4B → 2017 $20.3B (+64%). 2017·2018 사상 최대 매출.; **2019 crash**: 수요 정체 + bit growth 지속 + 재고 증가 → 공격적 ASP 하락. 대표적 다운사이클. | $12.4B, $20.3B, 64%, 2022년, 2023년, 1년 |
+| `raw/articles/history-memory-fab-disruptions-supply-shocks.md` | **SK hynix 우시(Wuxi) 화재(2013)**: PC DRAM 장비 손상 + 정전·클린룸 오염 → 1주 만에 메모리 가격 27%+ 급등. Samsung·Micron 수혜.; **대만 지진(2024)**: Micron·Samsung·SK가 contract price 공시 중단, wafer fab 셧다운으로 추가 가격 인상 신호. | 1주, 27%, 4%, 3%, 90% |
+| `raw/articles/history-memory-trade-disputes-antidumping-cartel.md` | 1986-09-02 체결. 일본 시장개방 + 덤핑 중단. 반덤핑은 학습곡선 무시한 price floor로 구현.; 배경: 일본 글로벌 반도체 점유 1978 28%→1987 50%, 미국 55%→44%. DRAM은 미국 70%→20%, 일본 <30%→75%(1978-1986). | 28%, 50%, 55%, 44%, 70%, 20% |
+| `raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md` | 2026년 DRAM·NAND 공급 성장률: **DRAM +16% YoY, NAND +17% YoY** (역사적 평균 하회).; 스마트폰 시장(2026): | 2026년, 16%, 17%, 2.9%, 5.2%, 5% |
+| `raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md` | 2026-01 기준 글로벌 DDR4/DDR5 가격, 2025-09 이전 대비 **4배+ 급등**.; 단종 임박 **DDR3(L)·DDR2까지 수요·가격 상승**: DDR3(L) 8GB 1만원대(2024-25) → 1~2만원(2025말~2026초). 2026-04 DDR2-DDR3 +20~40%, DDR4 4GB +20%. | 8GB, 1만, 2만, 40%, 4GB, 20% |
+| `raw/articles/model-ai-inference-memory-bound-token-economics.md` | inference의 **decode 단계는 본질적으로 sequential**(autoregressive, 토큰 1개씩) → **memory-bandwidth bound**(compute bound 아님).; 2023→2025 HBM 비용 용량·대역폭 각 +35% 상승(같은 기간 DDR ~절반 하락). HBM3e 프리미엄 server DDR5 대비 4~5배 → 2026말 1~2배로 축소. | 35%, 55%, 130%, 70%, 5.3T, 192GB |
+| `raw/articles/oem-apple-dram-lta-expiry-2026-price-hike.md` | Apple LTA(장기공급계약) 만료 시점: 2026년 1월 → 이후 Samsung/SK hynix에 프리미엄 지불 가능성; 확보된 가격 락(price lock): H1 2026까지만 커버 → 하반기 추가 인상 노출 | 2026년, 12GB, 2025년, 230%, 3년 |
+| `raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md` | 메모리는 서버 BOM의 **30~40%**. 메모리 2~3배 시 서버 원가 상승 불가피.; 서버 가격 인상 2025-12~2026-01(Dell·Lenovo 확정). 클라우드는 조달-소매 가격 **3~6개월 lag**. | 40%, 6개월, 10%, 15%, 960GB |
+| `raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md` | Kingston: DRAM 모듈 세그먼트 22년 연속 1위, 점유율 약 66%; ADATA: 글로벌 2위, 2024 매출 +20% | 22년, 66%, 20%, 7%, 40%, 172% |
+| `raw/articles/oem-pc-dell-hp-lenovo-price-hike-memory-2026.md` | Dell: 2025년 12월 중순부터 PC 가격 "at least 15-20%" 인상; Lenovo: 2026년 초 인상 (견적 2026-01-01 만료) — 구체 % 미공개 | 20%, 2025년, 2026년, 01 만, 18% |
+| `raw/articles/oem-smartphone-dram-content-spec-downgrade-2026.md` | 저가 스마트폰 기본형: 2026년 4GB로 회귀 가능성 (콘텐츠 다운그레이드); 16GB LPDDR: 시장 약 28% (주로 플래그십); 프리미엄 모바일의 42%+가 16GB LPDDR5 | 2026년, 4GB, 16GB, 28%, 42% |
+| `raw/articles/power-socamm-lpddr5x-low-power-ai-server-memory.md` | LPDDR5X SOCAMM 동작 전압 ~1.05V, DDR5 RDIMM 대비 전력 30~35% 절감.; 일부 자료: SOCAMM이 표준 DDR5 RDIMM 대비 전력 1/3 수준 소비. | 35%, 55%, 128GB, 2027년, 30% |
+| `raw/articles/server-ddr5-rdimm-channels-capacity-2026.md` | **AMD EPYC 9005 (Turin)**: socket당 **DDR5 12채널**, 최대 **6TB/socket**, 속도 6000~6400 MT/s.; **Intel Xeon 6th Gen (Granite Rapids)**: socket당 **12채널**, DDR5-6400 RDIMM, MR-DIMM은 DDR5-8800 지원. | 6T, 256GB, 64GB, 1.5T |
+| `raw/articles/trendforce-ai-server-memory-contract-price-2q26.md` | 2Q26 contract 가격 전망 (QoQ):; 공급자들은 수익성이 높은 **server DRAM 우선 배분**, 주요 고객과 **장기계약(LTA)** 체결로 향후 capacity 확장 뒷받침. | 2026년, 63%, 75% |
+| `raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md` | nearline HDD lead time이 수 주 → **52주 초과**로 급증.; 하이퍼스케일러가 backorder 회피 위해 **QLC NAND SSD로 전환** (warm/cold storage 대체). | 52주, 30%, 10%, 2026년 |
+| `raw/datasets/ddr5-16gb-price-monthly-2025-2026.md` | `period`(월), `product`(chip/kit/module), `price_usd`, `price_type`, `note`, `confidence`; chip(16Gb), retail kit, module은 단위 상이 — 직접 비교 금지. | 16GB, 298%, 3개월, 260%, 50% |
+| `raw/datasets/dram-contract-price-qoq-2025-2026.md` | `period`(분기), `segment`(server/conventional/mobile/overall, dram/nand), `qoq_change_pct`(QoQ 변동률 %, 범위는 중앙값), `note`(원문 범위), `confidence`; 2025Q4 server DRAM contract +18~23% QoQ(예상 초과). | 23%, 60%, 95%, 63%, 75% |
+| `raw/datasets/dram-price-history.md` | year: 연도; product: 제품/밀도 (8Gb DDR4, 16Gb DDR5 등). 세대 전환으로 기준 밀도가 바뀜에 유의 | 2025년 |
+| `raw/datasets/dram-revenue-cycle-history.md` | `year`: 연도(2026은 low/high 두 행으로 분기); `dram_revenue_usd_b`: 연간 DRAM 매출(십억 달러) | 2016년, $103.17B, $121.83B, $92B, $128.36B, $404.3B |
+| `raw/datasets/dram-supplier-inventory-weeks-history.md` | `period`, `dram_inventory_weeks`(공급사 재고 주수), `phase`(oversupply/destocking/normal/tightening/shortage), `note`, `confidence`; 2023 초 ~31주(과잉 정점) → 2023Q4 destocking 종료 → 2024 ~10주(정상) → 2024-10 ~12주. | 31주, 10주, 12주, 3.3주, 2주, 4주 |
+| `raw/datasets/dram-wafer-capacity-allocation-2026.md` | `segment`, `metric`(output_share/revenue_share/wafer_multiple 등), `value_pct`(% 또는 배수), `note`, `confidence`; HBM: output ~8%(bit 기준)이나 revenue >30%(2026). AI equivalent wafer 소비 ~20%. | 8%, 30%, 20%, 3x, 1GB, 4x |
+| `raw/datasets/steam-pc-gaming-ram-share-2026.md` | `period`, `ram_tier`(16gb/32gb), `share_pct`, `note`, `confidence`; 2026-03: 16GB 40.97%(32GB 첫 추월), **32GB -20.31% 붕괴**(36.62%). 2026-04: 16GB 40.86%, 32GB 37.55%. | 32GB, 16GB, 40.97% |
+| `raw/earnings/kioxia-fq4-2025-earnings.md` | FQ4'25 매출: ¥1,002.9B (≈$6.4B), QoQ +459.2%; FQ4'25 영업이익: ¥596.8B (≈$3.9B), QoQ +454%, 사상 최고 | 002.9B, $6.4B, 459.2%, 596.8B, $3.9B, 454% |
+| `raw/earnings/macronix-1q26-earnings.md` | 매출: NT$10.5B (≈$1.5B 표기, 통화 환산 주의), QoQ +35%, YoY +71%; Gross margin: 40.8% (전년 동기 17% → 대폭 개선), 영업이익률 18.5% | 10.5B, $1.5B, 35%, 71%, 40.8%, 17% |
+| `raw/earnings/micron-fq2-2026-earnings.md` | 총매출: $23.86B (≈$23.9B), YoY +196%, QoQ +75%; DRAM 매출: $18.8B (총매출의 79%), YoY +207% | $23.86B, $23.9B, 196%, 75%, $18.8B, 79% |
+| `raw/earnings/nanya-technology-1q26-earnings.md` | 매출: NT$49.09B, QoQ +63.1%, YoY +582.9%; Gross margin: 67.9% | 49.09B, 63.1%, 582.9%, 67.9%, 26.058B, 53.1% |
+| `raw/earnings/samsung-electronics-1q26-earnings.md` | 전사 영업이익: 57.23조원 (≈$38.4B), YoY +756% (사상 최고, 2025 연간 영업이익 초과); DS(반도체) 부문 매출: 81.7조원, YoY +225% | 57.23조원, $38.4B, 756%, 81.7조원, 225%, 53.7조원 |
+| `raw/earnings/sandisk-fq3-2026-earnings.md` | 매출: $5.95B, QoQ +97%, YoY +251% (가이던스 상회); GAAP 순이익: $3,615M, 희석 EPS $23.03 (또 다른 보도 $23.41) | $5.95B, 97%, 251%, 78.4%, 55.7%, 27.3% |
+| `raw/earnings/sandisk-wd-fy2026-nand-datacenter-results.md` | **FQ2'26**(1/2 종료): 매출 $3.03B(+31% QoQ), datacenter +64% QoQ.; **FQ3'26**(4/3 종료): 매출 **$5.95B(+97% QoQ)**, 순익 $3.615B. **Datacenter +233% QoQ**, YoY +645%(ASP/GB +186% × EB +160%). | $3.03B, 31%, 64%, $5.95B, 97%, $3.615B |
+| `raw/earnings/sk-hynix-1q26-earnings.md` | 매출(Revenue): 52.5763조원 (분기 최초 50조원 돌파), QoQ +60%, YoY +198%; 영업이익(Operating profit): 37.6103조원 (≈$25.42B), QoQ +96%, YoY 5배+ | 52.5763조원, 50조원, 60%, 198%, 37.6103조원, $25.42B |
+| `raw/earnings/taiwan-module-makers-adata-teamgroup-transcend-2026.md` | **ADATA**: 2026-03 매출 첫 NT$10B 초과. 1Q26 매출 YoY 2배+, NT$26.11B.; **Transcend**: 2026-03 NT$5.68B, 1Q26 NT$13.63B(사상 최고). | 10B, 26.11B, 5.68B, 13.63B, 95%, 63% |
+| `raw/earnings/trendforce-1q26-memory-pricing.md` | Samsung 메모리 ASP: 2025 연평균 대비 +146%; 모바일 메모리 조달원가 YoY +107%; SK hynix DRAM ASP: QoQ mid-60% 상승, DRAM bit 출하 QoQ 대체로 flat | 146%, 107%, 60%, 70%, 10%, 2.55조원 |
+| `raw/earnings/winbond-1q26-earnings.md` | 매출: NT$38.25B (≈$5.6B 표기, 통화 환산 주의); Gross margin: 53.4%, QoQ +11%p | 38.25B, $5.6B, 53.4%, 11%, 10.12B, 47% |
+| `raw/lectures/conf-iedm-2025-3d-dram-oxide-vct.md` | IEDM 2025 (San Francisco, 12/10) Session 29: 차세대 고밀도·저전력 3D DRAM용 transistor 기술.; 두 핵심 발표: Kioxia(29-1, OCTRAM oxide-semiconductor 적층), Samsung(29-2, Cell-On-Peri 수직채널 a-IGO). | 100 nm, 10nm, 2T |
+| `raw/lectures/ip-cadence-memory-ip-hbm4-lpddr6-gddr7-ddr5.md` | Cadence는 2023년 Rambus의 SerDes·memory PHY IP 사업을 인수하여 PHY 역량을 강화 → 현재 hardened PHY + controller 통합 솔루션 제공.; 전 메모리 표준에 걸친 PHY+controller "complete memory system" 전략. AI infrastructure/data center 타깃. | 2023년, 20%, 50%, 5X |
+| `raw/lectures/ip-ddr5-mrdimm-rcd-db-montage-rambus-renesas.md` | RDIMM/MRDIMM 모듈에는 DRAM 외에 interface chip이 탑재됨: RCD(Registering Clock Driver, command/address/clock 버퍼링) + DB(Data Buffer, data line 버퍼링).; MRDIMM(Multiplexed Rank DIMM): 2개 rank를 interleave/multiplex해 실효 대역폭 2배. 전용 칩 MRCD(Multiplexed RCD) + MDB(Multiplexed Dat | - |
+| `raw/lectures/ip-jedec-hbm4-jesd270-4-standard.md` | HBM4 = JEDEC JESD270-4, 2025-04-17 공식 발표. 차세대 generative AI / HPC / advanced graphics / data center용 표준.; 가장 큰 구조 변화: 인터페이스 폭 2배(1024→2048-bit), stack당 독립 channel 16→32개(각 channel은 2 pseudo-channel 포함). | 2 T, 64GB, 512GB, 16 T |
+| `raw/lectures/ip-marvell-bravera-ssd-controller-nand.md` | Marvell Bravera는 data center 향 enterprise NAND SSD controller 제품군 (MV-SS1331/SS1333). merchant NAND controller 3강(Phison/Silicon Motion/Marvell) 중 하이엔드 클라우드 포지션.; 업계 최초 PCIe 5.0 + NVMe 1.4b 지원 SSD controller → PCIe 4.0 대비 성능 2배. | 14 GB, 40% |
+| `raw/lectures/ip-memory-ras-ecc-reliability-datacenter.md` | **DDR5 on-die ECC**: DRAM 내부에 ECC 전용 저장 추가(scaling 미세화로 셀 오류 증가 대응).; 시스템 ECC: DDR4 64b 데이터 + 8b ECC(72b). DDR5는 채널 구조 변화. | 3%, 12.5% |
+| `raw/lectures/ip-mrdimm-mcrdimm-socamm-module-ai-server.md` | **MRDIMM(Multiplexed Rank DIMM)**: on-DIMM multiplexer로 2개 DDR5 rank를 결합, 표준 DDR5 초과 속도. RDIMM 대비 effective 대역폭 +39%, bus 효율 +15%, latency 최대 -40%.; **MCRDIMM(Samsung)**: 2개 DDR5 컴포넌트 결합, 최대 8.8Gb/s, 슬롯 증설 없이 용량·대역폭 2배. | 39%, 15%, 40%, 45% |
+| `raw/lectures/ip-on-die-ecc-link-ecc-ras-features.md` | 미세화로 DRAM cell 단위 오류율 상승 → on-die ECC가 DDR5/LPDDR5/HBM부터 표준 기능으로 내장됨.; On-die ECC: DRAM chip 내부 단일 비트 오류 정정 (channel 오류는 보호 못함). End-to-end RAS를 위해 side-band ECC와 병행. | - |
+| `raw/lectures/ip-rowhammer-dram-security-mitigation-prac.md` | **Phoenix(CVE-2025-6202)**: ETH Zurich+Google, SK hynix DDR5(on-die ECC 포함)도 취약. **109초** 만에 root 권한 탈취.; 완화: tREFI(refresh 주기) 3배(약 1.3μs)로 줄이면 공격 어려우나 **SPEC CPU2017 성능 -8.4%**. | 8.4% |
+| `raw/lectures/ip-synopsys-memory-interface-ip-hbm4-ddr5-lpddr6.md` | Synopsys는 controller + PHY를 모두 보유한 종합 memory interface IP 공급사 (Rambus는 controller만, Cadence는 PHY 강세 — 3사 구도).; Controller와 PHY는 확장된 DFI(DDR PHY Interface)로 연동되어 complete memory interface solution 제공. | 4X, 86 GB, 2nm |
+| `raw/lectures/jedec-ddr5-standard-explained.md` | DDR5 SDRAM 표준 JESD79-5, 2020-07-14 공개. DDR4 대비 대역폭 2배·전력 효율 개선 목표.; DIMM당 2개의 독립 채널(dual sub-channel): 각 32-bit data(non-ECC), ECC 시 40-bit. 자체 command/address bus 보유. | 50% |
+| `raw/lectures/memory-cycle-leading-indicators-book-to-bill-pmi.md` | **de facto 선행지표**(글로벌 전자 사이클): DRAM producer price, ISM 제조업 PMI, 반도체 장비 book-to-bill, Nasdaq.; **book-to-bill**: >1 강한 수요, <1 다운턴 신호. 월간, 수주/매출. | 6개월 |
+| `raw/lectures/memory-demand-forecasting-methodology-bottoms-up.md` | Bottoms-up 모델: fab별 생산·증설 vs end-market별 상세 수요를 대조하여 revenue/pricing/margin 예측.; 공급측: fab-by-fab capacity, wafer 투입, node mix, layer/적층, yield ramp → bit supply growth 산출. | 1GB, 4x, 1.7x, 20%, $61.3B, 14% |
+| `raw/lectures/memory-demand-seasonality-quarterly-pattern.md` | 모바일: 상반기(특히 1Q~2Q) 비수기, 하반기(3Q~4Q) 신제품·홀리데이로 성수기 경향.; PC: 하반기 back-to-school·홀리데이 성수기, 1Q 비수기. | 60%, 50%, 75%, 2%, 2.4% |
+| `raw/lectures/memory-lta-prepayment-accounting-financial-model.md` | **deferred revenue(이연/선수수익)**: 고객이 선지급한 금액은 제품 인도 전까지 **부채(liability)**로 인식, 인도 시 매출 전환.; 장기계약 선수금은 **non-current liability**(다년), 단기분은 current liability. | 5년, 30% |
+| `raw/lectures/memory-power-per-bit-by-type-comparison.md` | **LPDDR**: DDR5 대비 **energy/bit 약 절반**. LPDDR5 core 1.05V/IO 0.5V(DDR5보다 낮음). LPDDR4X 대비 전력 20~30%↓(화면 on), standby 50%+↓.; **HBM3e**: ~7 pJ/bit급(DDRx ~25 pJ/bit 대비, 별도 power-hbm3e 파일). HBM4 ~40% 전력/bit 개선. | 30%, 50%, 40% |
+| `raw/lectures/memory-pricing-contract-spot-lta-mechanism.md` | **Spot market**: DRAM 벤더, OEM, SI, 채널 distributor, 모듈메이커, 브로커가 참여. 단기·즉시 거래. 시장 turning point의 선행지표.; **Contract price**: OEM과의 월/분기 협상가. 물량의 대부분. spot 대비 lag. | 1년, 2년, 2030년, 64GB, 100% |
+| `raw/lectures/nand-cost-per-bit-3d-layers-qlc-economics.md` | NAND cost-per-bit 하락 레버 2개: (1) 적층 layer 수 증가, (2) cell당 bit 수 증가(TLC→QLC→PLC).; 적층이 많을수록 단위 면적당 비트 증가 → 칩 크기 축소 → $/bit 하락. | 25%, 50% |
+| `raw/lectures/nomad-semi-memory-primer-industry-structure.md` | DRAM 시장 3사 과점: Samsung(한국), SK Hynix(한국), Micron(미국). 1980년대 거의 모든 반도체사가 메모리를 만들던 것과 대조.; 신규 경쟁자: CXMT(DRAM), YMTC(NAND)가 경쟁 제품 출하 시작. 기술은 선도사보다 뒤지나 빠르게 추격. | 1980년 |
+| `raw/lectures/semiconductor-learning-curve-yield-economics.md` | Learning curve(learning-by-doing): 누적 생산량 증가에 따라 단위 비용 하락. 메모리 가격 하락 추세의 근간.; Yield factor = 판매 가능 칩 / 웨이퍼 총 칩. 학습 진척의 척도. 신규 노드 ramp 초기 yield 낮음 → 시간이 지나며 가파르게 상승. | 72% |
+| `raw/lectures/why-memory-is-cyclical-capacity-cycle.md` | 메모리 cyclicality의 핵심 = demand 변화와 supply 대응 간 timing mismatch.; 자본집약적 산업: leading-edge DRAM/NAND fab은 수십억$ 투자 + 수년 건설 + yield learning + ramp 기간 필요. | 3년 |
+| `raw/papers/cobweb-model-dram-price-capacity-cycle.md` | 생산자가 과거 가격 기대로 공급 결정 → lag으로 인한 주기적 가격/물량 진동(거미줄 패턴) 설명.; Cobweb(Ezekiel 1938): 공급 lag + price expectation. 수렴/발산/순환은 공급·수요 탄력성 비율로 결정. | - |
+| `raw/papers/collusion-along-learning-curve-dram-cartel-2021.md` | DRAM처럼 learning-by-doing과 다세대 경쟁이 있는 시장에서 담합 효과가 세대별로 어떻게 다른가?; 학습률이 높은 신세대일수록 담합 이탈 유인이 커 담합 유지가 어렵다는 가설 검증. | - |
+| `raw/papers/dram-oligopoly-cournot-capacity-competition.md` | capacity를 가격경쟁 이전에 선투자해야 하는 시장(DRAM)의 균형 분석.; **Cournot**: capacity(수량)를 사전 commit, 이후 가격경쟁 → 자본집약·비가역 투자 산업에 적합. | - |
+| `raw/papers/dram-price-determinants-arimax-pmi-dsi.md` | DRAM 가격(spot/ASP)을 외생변수로 설명·예측하는 ARIMAX 구축.; 전문가 식별 고상관 변수: **SK_DSI, MI_DSI(공급사 재고일수), AM_PMI, EU_PMI(지역 PMI)**가 DRAM4G 가격과 고상관. | - |
+| `raw/papers/dram-spot-price-arima-elasticity-demand-2024.md` | DRAM spot price를 ARIMA + 반도체 관련 외생변수로 rolling 예측.; 메모리 경제의 핵심: **수요는 탄력적(가격↓→소비↑), 공급은 단기 비탄력** → 가격 진폭 증폭. | - |
+| `raw/papers/hbm-bit-cost-domain-specific-ecc-ai-inference-2025.md` | HBM은 on-chip ECC, TSV 적층, 낮은 수율로 인해 일반 DRAM 대비 bit당 원가가 매우 높음(통상 5~10배).; on-chip ECC를 제거하고 결함 처리를 메모리 컨트롤러로 위임하여 bit 원가를 낮추는 것이 목표. | 78%, 97% |
+| `raw/papers/how-fast-are-semiconductor-prices-falling-2018.md` | 공식 PPI는 2000년대 중반 이후 반도체 가격이 거의 하락하지 않는다고 보고 → MPU 성능 개선과 모순.; 진짜 품질조정 가격하락 속도를 측정. | 2000년 |
+| `raw/papers/measuring-moores-law-price-cost-quality-indexes-2019.md` | 반도체 미세화(Moore's law)가 실제 가격/원가/품질 지수에 미친 영향을 정량 측정.; 최근 가격하락 둔화가 기술둔화 때문인지, 측정/시장구조 때문인지 규명. | 18개월 |
+
+> 나머지 29개 cluster source는 [[raw-integration-ledger]]에서 파일 단위로 추적한다.
+
+## Integration rule
+
+이 페이지의 source note는 model input 후보이다. EB 산식이나 simulator preset으로 승격하려면 최소한 `unit/shipments`, `content per unit`, `mix/adoption`, `supply or realization constraint` 중 어느 축에 해당하는지 명시하고, 가능하면 2개 이상 raw cluster로 교차 확인한다.

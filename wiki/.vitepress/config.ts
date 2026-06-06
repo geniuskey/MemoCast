@@ -39,6 +39,11 @@ export default defineConfig({
           { text: 'Memory Demand', link: '/concepts/memory-demand' },
           { text: 'Bit Demand', link: '/concepts/bit-demand' },
           { text: 'Supply-Demand Gap', link: '/concepts/supply-demand-gap' },
+          { text: 'AI Infrastructure Memory', link: '/concepts/ai-infrastructure-memory' },
+          { text: 'Channel Pricing Signal', link: '/concepts/channel-pricing-signal' },
+          { text: 'Supply Chain & Equipment', link: '/concepts/memory-supply-chain-equipment' },
+          { text: 'Long-tail Domain Demand', link: '/concepts/long-tail-domain-demand' },
+          { text: 'Forecasting Method Library', link: '/concepts/forecasting-method-library' },
           { text: 'Scenario Analysis', link: '/concepts/scenario-analysis' }
         ]
       },
@@ -64,6 +69,7 @@ export default defineConfig({
         text: 'Sources',
         items: [
           { text: 'Raw Source Map', link: '/sources/raw-source-map' },
+          { text: 'Raw Integration Ledger', link: '/sources/raw-integration-ledger' },
           { text: 'Citation Matrix', link: '/sources/citation-matrix' }
         ]
       },

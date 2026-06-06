@@ -24,6 +24,17 @@ confidence: medium
 | [[pc-dram]] | [Tom's Hardware / TrendForce / Microsoft — Microsoft, AI PC(Copilot+) 최소 RAM 16GB·NPU 40 TOPS 기준 설정](https://www.tomshardware.com/software/windows/microsofts-baseline-ram-for-ai-pcs-set-at-16gb), [IDC — IDC 2026 — DRAM/NAND Supply Growth Below Norms (16%/17%), DRAM Rev ~$419B](https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/), [TrendForce — 디바이스별 평균 메모리 탑재량 (per-device content)](https://www.trendforce.com/presscenter/news/20240205-12021.html) | AI PC 16GB floor, shortage feedback, PC content trend |
 | [[smartphone-memory]] | [Android Authority / Memeburn / Samsung (집계) — On-device AI가 스마트폰 DRAM 견인: Gemini 12GB·Apple Intelligence 8GB, S25 전 모델 12GB](https://www.androidauthority.com/samsung-galaxy-s25-ai-features-cloud-on-device-3517555/), [TrendForce — 2026년 평균 스마트폰 저장 용량 +4.8% 성장, AI 업그레이드가 NAND 견인](https://www.trendforce.com/presscenter/news/20260323-12983.html), [counterpointresearch.com — Global Smartphone Revenues Resume Growth in 2024 After Two Years, ASP Hits Record High](https://www.counterpointresearch.com/insights/global-smartphone-market-2024/) | On-device AI DRAM content, mobile NAND content growth, shipment/ASP context |
 
+## Raw integration cluster pages
+
+| Cluster page | Newly read raw coverage | Citation role |
+| --- | ---: | --- |
+| [[ai-infrastructure-memory]] | 185 files | AI server/GPU/HBM/custom accelerator/power realization drivers |
+| [[channel-pricing-signal]] | 109 files | Contract/retail price, allocation, inventory, DDR transition shortage signals |
+| [[memory-supply-chain-equipment]] | 183 files | Fab/equipment/test/material/regional capacity constraints |
+| [[long-tail-domain-demand]] | 27 files | Automotive/networking/IoT/robotics/XR domain demand anchors |
+| [[forecasting-method-library]] | 331 files | Papers/lectures/model methods for structural forecasting |
+| [[raw-integration-ledger]] | 344 files | File-by-file unread-source ledger and target candidates |
+
 ## Simulator presets
 
 | Simulator | Source-backed preset candidates | Caveat |

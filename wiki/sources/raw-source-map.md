@@ -10,20 +10,35 @@ confidence: medium
 
 # Raw Source Map
 
-`raw/`에는 초기 7개 제품/시장 anchor 외에 대규모 자료가 추가되었습니다. 현재 확인된 non-gitkeep 파일은 196개이며, 초기 7개를 제외하면 189개가 신규 자료입니다. [[raw-source-map]]는 이 수집을 128개 원천 파일과 CSV/markdown dataset pair로 정리합니다.^[MemoCast internal raw source map]
+`raw/`에는 초기 7개 제품/시장 anchor 외에 대규모 자료가 추가되었습니다. 현재 확인된 markdown 원천 파일은 374개이며, citation audit 기준 344개가 이번 패스 시작 시 wiki에 직접 연결되지 않은 상태였습니다. 이번 업데이트는 그 344개 미반영 파일을 파일 단위로 열람해 [[raw-integration-ledger]]에 처리 ledger를 만들고, 5개 cluster page로 지식화했습니다.^[MemoCast internal raw source map]
 
 ## 폴더별 역할
 
 | Folder | 확인된 파일 수 | Wiki에서의 역할 |
 | --- | ---: | --- |
-| `raw/articles/` | 65 | application별 수요 driver, OEM/AI/server/storage 뉴스, 기술 변화 신호 |
-| `raw/reports/` | 44 | 시장 전망, 가격/수급, capex, supplier ranking, macro scenario |
-| `raw/lectures/` | 30 | DRAM/NAND/HBM/CXL/roadmap/사이클 개념 설명 |
-| `raw/datasets/` | 26 | CSV와 markdown 설명 파일로 구성된 정량 dataset layer |
-| `raw/papers/` | 18 | 수요예측, 산업 cycle, bullwhip, diffusion, capacity planning 방법론 |
-| `raw/earnings/` | 11 | 메모리 업체와 수요측 기업의 실적/가이던스 신호 |
+| `raw/articles/` | 105 | application별 수요 driver, OEM/AI/server/storage 뉴스, 기술 변화 신호 |
+| `raw/reports/` | 103 | 시장 전망, 가격/수급, capex, supplier ranking, macro scenario |
+| `raw/lectures/` | 71 | DRAM/NAND/HBM/CXL/roadmap/사이클 개념 설명 |
+| `raw/datasets/` | 36 | CSV와 markdown 설명 파일로 구성된 정량 dataset layer |
+| `raw/papers/` | 40 | 수요예측, 산업 cycle, bullwhip, diffusion, capacity planning 방법론 |
+| `raw/earnings/` | 17 | 메모리 업체와 수요측 기업의 실적/가이던스 신호 |
 
 ## 주요 source cluster
+
+### 0. 이번 미반영 source 처리 cluster
+
+이번 pass에서는 citation audit의 `rawUncited=344` 목록을 우선순위로 읽고, 중복되는 driver를 아래 5개 wiki page로 승격했습니다.
+
+| Cluster page | 읽은 source 수 | Wiki에서의 쓰임 |
+| --- | ---: | --- |
+| [[ai-infrastructure-memory]] | 185 | AI server/GPU/HBM/custom accelerator/power/capex driver를 HBM realization model로 연결 |
+| [[channel-pricing-signal]] | 109 | contract/spot/retail 가격, allocation, DDR4/DDR5 전환, channel 재고를 shortage regime signal로 추적 |
+| [[memory-supply-chain-equipment]] | 183 | fab/equipment/test/advanced packaging/material/regional localization을 supply ceiling으로 분해 |
+| [[long-tail-domain-demand]] | 27 | automotive, networking, IoT, robotics, XR 등 non-core domain의 content anchor 보관 |
+| [[forecasting-method-library]] | 331 | papers/lectures/model 자료를 structural forecasting 방법론 library로 정리 |
+| [[raw-integration-ledger]] | 344 | 파일 단위 read ledger와 첫 wiki target 후보 추적 |
+
+## 기존 주제별 source cluster
 
 ### 1. 메모리 supercycle / 가격 / 매출 전망
 

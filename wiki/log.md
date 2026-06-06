@@ -88,3 +88,10 @@
 - Added [[citation-matrix]] to trace raw sources to wiki pages and simulator assumptions.
 - Added [[graph]] to document the raw → concept/method → market → simulator → comparison navigation flow.
 - Added source-backed preset candidates to HBM, NAND SSD, PC DRAM, and Smartphone Memory simulators.
+
+## 2026-06-06 — Unread raw integration pass
+
+- Re-ran citation audit and found 374 raw markdown files, 30 cited, 344 uncited.
+- Read the 344 uncited raw files from the audit queue and created `wiki/sources/raw-integration-ledger.md` as the file-by-file processing ledger.
+- Added 5 cluster knowledge pages: `ai-infrastructure-memory`, `channel-pricing-signal`, `memory-supply-chain-equipment`, `long-tail-domain-demand`, and `forecasting-method-library`.
+- Updated `raw-source-map`, `citation-matrix`, and VitePress sidebar navigation to expose the new raw integration layer.

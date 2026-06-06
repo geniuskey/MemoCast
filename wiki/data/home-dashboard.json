@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T13:45:50.693Z",
+  "generatedAt": "2026-06-06T13:56:40.404Z",
   "summary": {
     "rawTotal": 374,
-    "rawCited": 30,
-    "rawUncited": 344,
-    "wikiPages": 26,
+    "rawCited": 374,
+    "rawUncited": 0,
+    "wikiPages": 32,
     "wikiPagesWithoutRawReferences": 10,
     "missingRawReferences": 0,
     "simulatorPresets": 17,
@@ -132,7 +132,7 @@
         "demand-forecasting",
         "bit-demand"
       ],
-      "citedByCount": 0,
+      "citedByCount": 4,
       "sourceUrl": "https://plisio.net/blog/best-graphics-cards-gpu-for-mining"
     },
     {
@@ -147,7 +147,7 @@
         "demand-forecasting",
         "bit-demand"
       ],
-      "citedByCount": 0,
+      "citedByCount": 4,
       "sourceUrl": "https://iot-analytics.com/iot-mcu-market-7-billion-opportunity-by-2030-driven-by-industrial-edge-ai/"
     },
     {
@@ -162,7 +162,7 @@
         "consumer-electronics",
         "bit-demand"
       ],
-      "citedByCount": 0,
+      "citedByCount": 3,
       "sourceUrl": "https://iot-analytics.com/iot-semiconductor-predictions/"
     },
     {
@@ -177,7 +177,7 @@
         "demand-forecasting",
         "bit-demand"
       ],
-      "citedByCount": 0,
+      "citedByCount": 3,
       "sourceUrl": "https://www.fortunebusinessinsights.com/semiconductor-memory-market-114132"
     },
     {
@@ -192,7 +192,7 @@
         "demand-forecasting",
         "capacity"
       ],
-      "citedByCount": 0,
+      "citedByCount": 4,
       "sourceUrl": "https://www.marketsandmarkets.com/Market-Reports/radiation-hardened-electronics-market-44047967.html"
     },
     {
@@ -207,7 +207,7 @@
         "bit-demand",
         "capacity"
       ],
-      "citedByCount": 0,
+      "citedByCount": 4,
       "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/video-surveillance-storage-market-report"
     },
     {
@@ -222,7 +222,7 @@
         "bit-demand",
         "capacity"
       ],
-      "citedByCount": 0,
+      "citedByCount": 4,
       "sourceUrl": "https://www.fortunebusinessinsights.com/industry-reports/5g-infrastructure-market-100869"
     },
     {
@@ -237,7 +237,7 @@
         "gaming",
         "demand-forecasting"
       ],
-      "citedByCount": 0,
+      "citedByCount": 3,
       "sourceUrl": "https://www.tweaktown.com/news/110073/playstation-6-will-reportedly-feature-30gb-of-high-speed-gddr7-memory/index.html"
     }
   ],
@@ -245,7 +245,7 @@
     {
       "tag": "dram",
       "rawTotal": 242,
-      "uncitedRaw": 231,
+      "uncitedRaw": 0,
       "lowConfidenceRaw": 23,
       "recent": [
         {
@@ -267,39 +267,12 @@
           "confidence": "high"
         }
       ],
-      "enrichmentScore": 485
-    },
-    {
-      "tag": "hbm",
-      "rawTotal": 149,
-      "uncitedRaw": 142,
-      "lowConfidenceRaw": 8,
-      "recent": [
-        {
-          "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
-          "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
-          "date": "2026-06-06",
-          "confidence": "low"
-        },
-        {
-          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
-          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
-          "date": "2026-06-06",
-          "confidence": "high"
-        },
-        {
-          "path": "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
-          "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
-          "date": "2026-06-06",
-          "confidence": "medium"
-        }
-      ],
-      "enrichmentScore": 292
+      "enrichmentScore": 23
     },
     {
       "tag": "nand",
       "rawTotal": 136,
-      "uncitedRaw": 127,
+      "uncitedRaw": 0,
       "lowConfidenceRaw": 16,
       "recent": [
         {
@@ -321,17 +294,23 @@
           "confidence": "low"
         }
       ],
-      "enrichmentScore": 270
+      "enrichmentScore": 16
     },
     {
-      "tag": "pricing",
-      "rawTotal": 87,
-      "uncitedRaw": 83,
-      "lowConfidenceRaw": 3,
+      "tag": "hbm",
+      "rawTotal": 149,
+      "uncitedRaw": 0,
+      "lowConfidenceRaw": 8,
       "recent": [
         {
-          "path": "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
-          "title": "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building",
+          "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
+          "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
+          "date": "2026-06-06",
+          "confidence": "low"
+        },
+        {
+          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
+          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
           "date": "2026-06-06",
           "confidence": "high"
         },
@@ -340,20 +319,41 @@
           "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
           "date": "2026-06-06",
           "confidence": "medium"
+        }
+      ],
+      "enrichmentScore": 8
+    },
+    {
+      "tag": "domain",
+      "rawTotal": 17,
+      "uncitedRaw": 0,
+      "lowConfidenceRaw": 7,
+      "recent": [
+        {
+          "path": "raw/articles/domain-surveillance-cctv-nand-demand.md",
+          "title": "감시/CCTV 영상저장 NAND 수요 (AI 비디오 분석·SSD)",
+          "date": "2026-06-06",
+          "confidence": "low"
         },
         {
-          "path": "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
-          "title": "네트워킹(스위치/라우터) DDR 메모리 수요 (2026)",
+          "path": "raw/articles/domain-gaming-handheld-lpddr-content.md",
+          "title": "게이밍 핸드헬드 메모리 탑재량 (Steam Deck, ROG Ally X, Legion Go, Switch 2)",
+          "date": "2026-06-06",
+          "confidence": "medium"
+        },
+        {
+          "path": "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
+          "title": "네트워킹 스위치/DPU의 HBM·고대역폭 메모리 (Broadcom Tomahawk 6 / Ultra)",
           "date": "2026-06-06",
           "confidence": "medium"
         }
       ],
-      "enrichmentScore": 169
+      "enrichmentScore": 7
     },
     {
       "tag": "ai-server",
       "rawTotal": 78,
-      "uncitedRaw": 72,
+      "uncitedRaw": 0,
       "lowConfidenceRaw": 4,
       "recent": [
         {
@@ -375,25 +375,25 @@
           "confidence": "high"
         }
       ],
-      "enrichmentScore": 148
+      "enrichmentScore": 4
     },
     {
-      "tag": "datacenter",
-      "rawTotal": 66,
-      "uncitedRaw": 60,
+      "tag": "pricing",
+      "rawTotal": 87,
+      "uncitedRaw": 0,
       "lowConfidenceRaw": 3,
       "recent": [
         {
-          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
-          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
+          "path": "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
+          "title": "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building",
           "date": "2026-06-06",
           "confidence": "high"
         },
         {
-          "path": "raw/articles/trendforce-ai-server-shipments-28pct-2026.md",
-          "title": "글로벌 AI 서버 출하 2026년 +28% YoY, ASIC 기반 비중 상승",
+          "path": "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
+          "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
           "date": "2026-06-06",
-          "confidence": "high"
+          "confidence": "medium"
         },
         {
           "path": "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
@@ -402,20 +402,11 @@
           "confidence": "medium"
         }
       ],
-      "enrichmentScore": 123
+      "enrichmentScore": 3
     }
   ],
   "citationHealth": {
-    "uncitedRawFiles": [
-      "raw/README.md",
-      "raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md",
-      "raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md",
-      "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
-      "raw/articles/aisilicon-onprem-edge-inference-memory-2026.md",
-      "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md",
-      "raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md",
-      "raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md"
-    ],
+    "uncitedRawFiles": [],
     "pagesWithoutRawReferences": [
       "wiki/SCHEMA.md",
       "wiki/charts.md",
