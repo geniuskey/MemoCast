@@ -1,0 +1,53 @@
+[
+  {
+    "id": "structural-var-leading-indicator-reference",
+    "label": "Structural VAR / ARIMAX leading indicator reference",
+    "description": "Use when macro, price, inventory, and downstream demand lead/lag structure is observable and the goal is driver attribution rather than simple extrapolation.",
+    "confidence": "medium",
+    "input": {
+      "historyMonths": 48,
+      "signalCount": 6,
+      "leadLagKnownScore": 80,
+      "causalInterpretabilityNeedScore": 90,
+      "nonlinearPatternScore": 30,
+      "smallSampleScore": 35,
+      "inventoryDistortionScore": 55,
+      "capacityConstraintScore": 45
+    },
+    "recommendedMethods": ["VAR/SVAR", "ARIMAX", "regression sensitivity"]
+  },
+  {
+    "id": "bullwhip-inventory-cycle-reference",
+    "label": "Bullwhip / inventory cycle reference",
+    "description": "Use when buyer orders, channel inventory, lead times, and supply-chain amplification dominate observed memory order volatility.",
+    "confidence": "medium",
+    "input": {
+      "historyMonths": 36,
+      "signalCount": 5,
+      "leadLagKnownScore": 65,
+      "causalInterpretabilityNeedScore": 85,
+      "nonlinearPatternScore": 40,
+      "smallSampleScore": 45,
+      "inventoryDistortionScore": 95,
+      "capacityConstraintScore": 70
+    },
+    "recommendedMethods": ["bullwhip transfer function", "system dynamics", "base-stock inventory"]
+  },
+  {
+    "id": "technology-diffusion-small-sample-reference",
+    "label": "Technology diffusion / small-sample reference",
+    "description": "Use for new memory technologies or domains where history is short and adoption is better represented as diffusion/mix transition than stationary time series.",
+    "confidence": "medium",
+    "input": {
+      "historyMonths": 12,
+      "signalCount": 3,
+      "leadLagKnownScore": 40,
+      "causalInterpretabilityNeedScore": 70,
+      "nonlinearPatternScore": 75,
+      "smallSampleScore": 90,
+      "inventoryDistortionScore": 35,
+      "capacityConstraintScore": 55
+    },
+    "recommendedMethods": ["Bass diffusion", "grey GM(1,1)", "scenario ensemble"]
+  }
+]

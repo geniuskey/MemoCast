@@ -1,0 +1,59 @@
+[
+  {
+    "id": "automotive-l4-memory-reference",
+    "label": "Automotive L4 memory reference",
+    "description": "Source-backed automotive content uplift case using Micron 278-300GB connected/L4 vehicle memory anchors and conservative adoption assumptions.",
+    "confidence": "medium",
+    "sourceRefs": [
+      "raw/articles/domain-automotive-l4-300gb-ram-micron.md",
+      "raw/articles/micron-automotive-memory-per-vehicle.md",
+      "raw/articles/oem-automotive-memory-per-vehicle-bosch-continental-2025.md",
+      "raw/reports/region-europe-automotive-memory-demand-2026.md"
+    ],
+    "input": {
+      "segments": [
+        { "id": "baseline-connected-car", "label": "Baseline connected car", "unitsMillion": 90, "attachRatePercent": 55, "dramGbPerUnit": 8, "nandGbPerUnit": 80 },
+        { "id": "l4-memory-rich-car", "label": "L4 memory-rich car", "unitsMillion": 90, "attachRatePercent": 5, "dramGbPerUnit": 300, "nandGbPerUnit": 278 }
+      ]
+    }
+  },
+  {
+    "id": "edge-robotics-surveillance-reference",
+    "label": "Edge robotics/surveillance reference",
+    "description": "Long-tail edge AI bundle using humanoid/robotics, surveillance camera storage, smart glasses, and industrial IoT anchors; intended as a sensitivity bucket rather than a market forecast.",
+    "confidence": "low",
+    "sourceRefs": [
+      "raw/articles/domain-humanoid-robotics-memory-content.md",
+      "raw/articles/domain-surveillance-cctv-nand-demand.md",
+      "raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md",
+      "raw/articles/domain-industrial-automation-edge-ai-memory.md",
+      "raw/articles/domain-iot-smart-home-edge-ai-memory-2026.md"
+    ],
+    "input": {
+      "segments": [
+        { "id": "humanoid-robotics", "label": "Humanoid / robotics", "unitsMillion": 10, "attachRatePercent": 20, "dramGbPerUnit": 64, "nandGbPerUnit": 256 },
+        { "id": "ai-surveillance-camera", "label": "AI surveillance camera", "unitsMillion": 200, "attachRatePercent": 35, "dramGbPerUnit": 2, "nandGbPerUnit": 128 },
+        { "id": "smart-glasses", "label": "Smart glasses / wearables", "unitsMillion": 50, "attachRatePercent": 40, "dramGbPerUnit": 2, "nandGbPerUnit": 32 },
+        { "id": "industrial-edge-iot", "label": "Industrial edge IoT", "unitsMillion": 300, "attachRatePercent": 15, "dramGbPerUnit": 1, "nandGbPerUnit": 8 }
+      ]
+    }
+  },
+  {
+    "id": "networking-hpc-hbm-reference",
+    "label": "Networking/HPC HBM reference",
+    "description": "Non-AI-server high-content bucket using HPC supercomputer PB-scale HBM and networking switch HBM/DDR anchors.",
+    "confidence": "medium",
+    "sourceRefs": [
+      "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md",
+      "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
+      "raw/articles/domain-networking-switch-router-ddr-memory-2026.md"
+    ],
+    "input": {
+      "segments": [
+        { "id": "hpc-supercomputer", "label": "HPC supercomputer HBM", "unitsMillion": 0.002, "attachRatePercent": 100, "dramGbPerUnit": 0, "nandGbPerUnit": 0, "hbmGbPerUnit": 5400000 },
+        { "id": "networking-switch-hbm", "label": "Networking switch HBM", "unitsMillion": 0.3, "attachRatePercent": 20, "dramGbPerUnit": 128, "nandGbPerUnit": 64, "hbmGbPerUnit": 512 },
+        { "id": "router-ddr", "label": "Router / switch DDR", "unitsMillion": 2, "attachRatePercent": 60, "dramGbPerUnit": 64, "nandGbPerUnit": 32, "hbmGbPerUnit": 0 }
+      ]
+    }
+  }
+]

@@ -1,7 +1,7 @@
 ---
 title: Forecasting Method Library
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-07
 type: concept
 tags: [methods, forecasting, papers, lectures, demand-forecasting]
 sources: [raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md, raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md, raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md, raw/articles/aisilicon-onprem-edge-inference-memory-2026.md, raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md, raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md, raw/articles/channel-register-dram-price-hikes-supplier-inventory-2026.md, raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md, raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md, raw/articles/channel-sourceability-qoq-price-allocation-2026.md, raw/articles/channel-teamgroup-gm-ram-pricing-crisis-2026.md, raw/articles/channel-used-refurbished-server-memory-secondary-2026.md, raw/articles/consol-dram-price-fixing-scandal.md, raw/articles/consol-elpida-bankruptcy-micron.md, raw/articles/consol-intel-nand-skhynix-solidigm.md, raw/articles/consol-qimonda-bankruptcy.md, raw/articles/consol-toshiba-kioxia-bain.md, raw/articles/consol-wd-sandisk-nand.md, raw/articles/ddr4-ddr5-transition-2026.md, raw/articles/ddr4-eol-last-time-buy-legacy-2026.md, raw/articles/domain-arvr-xr-headset-memory-content.md, raw/articles/domain-automotive-l4-300gb-ram-micron.md, raw/articles/domain-autonomous-vehicle-data-generation-storage.md, raw/articles/domain-crypto-gpu-mining-legacy-gddr.md, raw/articles/domain-gaming-handheld-lpddr-content.md, raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md, raw/articles/domain-humanoid-robotics-memory-content.md, raw/articles/domain-industrial-automation-edge-ai-memory.md, raw/articles/domain-iot-smart-home-edge-ai-memory-2026.md, raw/articles/domain-medical-device-ai-imaging-memory.md, raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md, raw/articles/domain-networking-switch-router-ddr-memory-2026.md, raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md, raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md, raw/articles/domain-space-aerospace-radhard-memory.md, raw/articles/domain-surveillance-cctv-nand-demand.md, raw/articles/domain-telecom-5g-6g-edge-memory-demand.md, raw/articles/edge-ai-iot-memory-demand-2026.md, raw/articles/esg-memory-fab-energy-water-carbon-re100.md, raw/articles/gddr-gaming-console-memory-2026.md, raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md, raw/articles/history-dram-memory-cycles-2016-2026.md, raw/articles/history-memory-fab-disruptions-supply-shocks.md, raw/articles/history-memory-trade-disputes-antidumping-cartel.md, raw/articles/idc-memory-shortage-smartphone-pc-impact-2026.md, raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md, raw/articles/micron-automotive-memory-per-vehicle.md, raw/articles/model-agentic-ai-memory-demand-2026.md, raw/articles/model-ai-coding-enterprise-software-inference-demand-2026.md, raw/articles/model-ai-inference-memory-bound-token-economics.md, raw/articles/model-context-length-kv-cache-memory-demand.md, raw/articles/model-deepseek-v3-671b-moe-technical-report.md, raw/articles/model-epoch-ai-compute-growth-trends.md, raw/articles/model-generative-video-multimodal-memory-demand.md, raw/articles/model-introl-ai-memory-supercycle-hbm-2026.md]
@@ -23,6 +23,36 @@ Papers/lectures 자료는 MemoCast의 방법론 층이다. 단일 수치 예측�
 - 수요예측은 단일 CAGR extrapolation이 아니라 shipments, content, mix, inventory, price elasticity, supply cap을 분리한 structural model로 유지한다.
 - VAR/SVAR/ARIMAX/grey model류는 macro·price·inventory 지표의 lead/lag 검증 후보이며, simulator 기본값을 직접 대체하지 않는다.
 - Bullwhip/cycle/capacity planning 논문은 구매자 재고축적과 supplier capex lag를 설명하는 방법론 근거다.
+
+## 정량 승격: Forecasting method selector
+
+방법론 raw는 예측값을 직접 대체하지 않고, 관측 가능한 신호 조건에 따라 어떤 모델 계층을 우선 적용할지 선택하는 scoring layer로 승격한다.
+
+```text
+history_adequacy = clamp(history_months / 48 × 100)
+signal_breadth = clamp(signal_count / 6 × 100)
+method_score = weighted_sum(history, breadth, lead_lag, interpretability, nonlinear, small_sample, inventory, capacity)
+primary_method = argmax(method_score)
+```
+
+구현 파일:
+
+- `wiki/lib/forecastingMethodSelector.ts`
+- `wiki/data/forecasting-method-presets.json`
+- `tests/forecastingMethodSelector.test.ts`
+
+| Preset | 우선 방법 | 모델 선택 조건 | Source URL anchors |
+| --- | --- | --- | --- |
+| `structural-var-leading-indicator-reference` | `structural-var-arimax` | 48개월 이상 이력, macro/price/inventory/downstream 수요 신호, lead/lag와 해석 가능성이 중요 | [sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S036083521930573X), [researchgate.net](https://www.researchgate.net/publication/336177316) |
+| `bullwhip-inventory-cycle-reference` | `bullwhip-inventory-system-dynamics` | 주문 증폭, channel inventory, lead time, base-stock 정책이 관측 수요를 왜곡 | [orca.cardiff.ac.uk](https://orca.cardiff.ac.uk/106037/3/IJPR%20paper.pdf), [kar.kent.ac.uk](https://kar.kent.ac.uk/64241/), [semanticscholar.org](https://www.semanticscholar.org/paper/3689015e48ce1460cdf56e0bfd402b314b4dccf4) |
+| `technology-diffusion-small-sample-reference` | `diffusion-grey-scenario` | HBM4/AI PC/edge AI처럼 이력이 짧고 mix/adoption 전환이 비선형 | [pubsonline.informs.org](https://pubsonline.informs.org/doi/10.1287/mnsc.33.9.1069), [sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0040162502001956), [sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S092552731000263X) |
+
+### 모델 사용 규칙
+
+- `primary_method`는 시뮬레이터의 수요량을 바로 바꾸지 않는다. 어떤 evidence layer를 우선 읽고 어떤 sensitivity를 붙일지 결정한다.
+- `structural-var-arimax`는 downstream shipment와 memory ASP/inventory 간 lead/lag 검증에 사용한다.
+- `bullwhip-inventory-system-dynamics`는 channel pricing signal 및 supply constraint 모델과 결합해 order ≠ end demand인 구간을 보정한다.
+- `diffusion-grey-scenario`는 short history 기술전환에 사용하며, confidence가 낮은 preset은 scenario ensemble로만 노출한다.
 
 ## Source notes read in this pass
 

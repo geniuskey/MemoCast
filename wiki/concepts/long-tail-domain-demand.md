@@ -1,7 +1,7 @@
 ---
 title: Long-tail Domain Memory Demand
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-07
 type: concept
 tags: [domain-demand, edge-ai, automotive, iot, demand-forecasting]
 sources: [raw/articles/domain-arvr-xr-headset-memory-content.md, raw/articles/domain-automotive-l4-300gb-ram-micron.md, raw/articles/domain-autonomous-vehicle-data-generation-storage.md, raw/articles/domain-crypto-gpu-mining-legacy-gddr.md, raw/articles/domain-gaming-handheld-lpddr-content.md, raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md, raw/articles/domain-humanoid-robotics-memory-content.md, raw/articles/domain-industrial-automation-edge-ai-memory.md, raw/articles/domain-iot-smart-home-edge-ai-memory-2026.md, raw/articles/domain-medical-device-ai-imaging-memory.md, raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md, raw/articles/domain-networking-switch-router-ddr-memory-2026.md, raw/articles/domain-smart-glasses-ar-wearable-memory-2026.md, raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md, raw/articles/domain-space-aerospace-radhard-memory.md, raw/articles/domain-surveillance-cctv-nand-demand.md, raw/articles/domain-telecom-5g-6g-edge-memory-demand.md, raw/articles/edge-ai-iot-memory-demand-2026.md, raw/articles/gddr-gaming-console-memory-2026.md, raw/articles/micron-automotive-memory-per-vehicle.md, raw/articles/oem-automotive-memory-per-vehicle-bosch-continental-2025.md, raw/datasets/memory-demand-domain-taxonomy.md, raw/datasets/steam-pc-gaming-ram-share-2026.md, raw/papers/hbm-bit-cost-domain-specific-ecc-ai-inference-2025.md, raw/reports/military-aerospace-memory-demand-2026.md, raw/reports/region-europe-automotive-memory-demand-2026.md, raw/reports/region-europe-chips-act-automotive-demand.md]
@@ -23,6 +23,35 @@ Long-tail application 자료는 smartphone/PC/server만으로 빠지는 수요�
 - Automotive, networking switch/router, robotics, XR, medical, surveillance, aerospace는 각각 unit 수요가 작아도 GB/device 또는 TB/device가 커질 수 있다.
 - 이 domain들은 현 단계에서 total EB chart에 바로 더하기보다 scenario library와 content anchor로 보관한다.
 - 특히 networking/HPC/automotive는 HBM 또는 high-capacity DRAM을 쓰는 비-AI-server bucket으로 별도 추적 가치가 있다.
+
+## 정량 승격: Long-tail domain scenario bucket
+
+Long-tail domain은 `unit × attach-rate × content-per-unit` 형태의 민감도 bucket으로 승격한다. Smartphone/PC/server 총량 모델에 즉시 합산하지 않고, 제품군별 content shock이 얼마나 EB 단위로 커질 수 있는지 별도 추적한다.
+
+```text
+effective_units_million = units_million × attach_rate_pct / 100
+DRAM_EB = effective_units_million × DRAM_GB_per_unit / 1000
+NAND_EB = effective_units_million × NAND_GB_per_unit / 1000
+HBM_EB = effective_units_million × HBM_GB_per_unit / 1000
+```
+
+구현 파일:
+
+- `wiki/lib/longTailDomainDemand.ts`
+- `wiki/data/long-tail-domain-presets.json`
+- `tests/longTailDomainDemand.test.ts`
+
+| Preset | 핵심 변수 | 계산 의도 | Source URL anchors |
+| --- | --- | --- | --- |
+| `automotive-l4-memory-reference` | connected car 8GB DRAM/80GB NAND, L4 car 300GB DRAM/278GB NAND, attach-rate 55%/5% | 일반 connected car와 L4 memory-rich 차량의 content gap을 EB 민감도로 분리 | [tomshardware.com](https://www.tomshardware.com/pc-components/dram/micron-predicts-that-cars-will-need-300gb-of-ram-memory-laden-vehicles-could-exacerbate-shortages-but-create-robust-long-term-growth-in-automotive-memory-demand), [micron.com](https://www.micron.com/about/blog/applications/automotive/new-research-shows-cars-need-more-memory-than-a-rocket), [dataintelo.com](https://dataintelo.com/report/global-dynamic-random-access-memory-dram-for-vehicle-market), [eetimes.com](https://www.eetimes.com/automakers-face-memory-shock-as-ai-uses-up-semiconductor-supply/) |
+| `edge-robotics-surveillance-reference` | robotics 64GB/256GB, AI CCTV 2GB/128GB, smart glasses 2GB/32GB, industrial IoT 1GB/8GB | unit은 크지만 attach-rate와 content가 다른 edge AI bucket을 하나의 sensitivity bundle로 관리 | [trendforce.com](https://www.trendforce.com/news/2025/06/27/news-tsmc-reportedly-eyes-10-year-boom-from-humanoids-backed-by-nvidia-jetson-and-teslas-ai-chips/), [grandviewresearch.com](https://www.grandviewresearch.com/industry-analysis/video-surveillance-storage-market-report), [meta.com](https://www.meta.com/ai-glasses/meta-ray-ban-display/), [iot-analytics.com](https://iot-analytics.com/iot-mcu-market-7-billion-opportunity-by-2030-driven-by-industrial-edge-ai/) |
+| `networking-hpc-hbm-reference` | HPC 5.4PB HBM, switch HBM 512GB, router DDR 64GB | AI server 외부의 HBM/DDR high-content 수요를 별도 bucket으로 보존 | [wikipedia.org](https://en.wikipedia.org/wiki/El_Capitan_(supercomputer)), [broadcom.com](https://www.broadcom.com/company/news/product-releases/63146), [innodisk.com](https://www.innodisk.com/en/blog/how-dram-memory-empowers-data-center-switches) |
+
+### 모델 사용 규칙
+
+- `long-tail` 결과는 본 forecast의 base EB에 자동 합산하지 않는다. 우선 **scenario upside/downside**로 표시한다.
+- Automotive와 networking/HPC는 high-content DRAM/HBM 때문에 supply constraint 및 HBM realization factor와 교차 확인한다.
+- Surveillance/IoT/robotics는 unit 추정 불확실성이 크므로 preset confidence를 낮게 두고 attach-rate를 바꿔 민감도 분석한다.
 
 ## Source notes read in this pass
 
