@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import graphData from '../public/graph-data.json'
 
@@ -59,6 +59,8 @@ const outgoingCounts = countEdges(edges, 'from')
 const nodes: GraphNode[] = layoutNodes(rawNodes)
 const selectedId = ref(nodes.find((node) => node.id === 'domain-comparison')?.id ?? nodes[0]?.id ?? '')
 const hoveredId = ref<string | null>(null)
+const graphShellRef = ref<HTMLElement | null>(null)
+const isFullscreen = ref(false)
 
 const nodeById = computed<Record<string, GraphNode>>(() => Object.fromEntries(nodes.map((node) => [node.id, node])))
 const selectedNode = computed(() => nodeById.value[selectedId.value] ?? nodes[0])
@@ -148,6 +150,29 @@ function isActiveNode(node: GraphNode) {
 function isActiveEdge(edge: GraphEdge) {
   return edge.from === activeId.value || edge.to === activeId.value
 }
+
+async function toggleFullscreen() {
+  const shell = graphShellRef.value
+  if (!shell) return
+
+  if (document.fullscreenElement === shell) {
+    await document.exitFullscreen()
+  } else {
+    await shell.requestFullscreen()
+  }
+}
+
+function syncFullscreenState() {
+  isFullscreen.value = document.fullscreenElement === graphShellRef.value
+}
+
+onMounted(() => {
+  document.addEventListener('fullscreenchange', syncFullscreenState)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('fullscreenchange', syncFullscreenState)
+})
 </script>
 
 <template>
@@ -161,7 +186,17 @@ function isActiveEdge(edge: GraphEdge) {
       <p class="graph-stats">{{ graphStats }}</p>
     </div>
 
-    <div class="graph-shell">
+    <div ref="graphShellRef" :class="['graph-shell', isFullscreen ? 'is-fullscreen' : '']">
+      <div class="graph-toolbar" aria-label="Interactive map controls">
+        <div>
+          <strong>Interactive map</strong>
+          <span>노드 hover/click으로 연결 경로를 추적합니다.</span>
+        </div>
+        <button class="graph-fullscreen-toggle" type="button" @click="toggleFullscreen">
+          {{ isFullscreen ? '전체 화면 닫기' : '전체 화면으로 보기' }}
+        </button>
+      </div>
+
       <div class="graph-stage" role="img" aria-label="MemoCast knowledge graph visualization">
         <svg viewBox="0 0 1280 700" preserveAspectRatio="xMidYMid meet">
           <defs>
@@ -305,6 +340,102 @@ function isActiveEdge(edge: GraphEdge) {
   grid-template-columns: 1fr;
   gap: 18px;
   align-items: stretch;
+}
+
+.graph-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.graph-toolbar strong {
+  display: block;
+  color: #f7f8f8;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.graph-toolbar span {
+  display: block;
+  margin-top: 2px;
+  color: #9aa3b2;
+  font-size: 12px;
+}
+
+.graph-fullscreen-toggle {
+  flex: none;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(174, 182, 255, 0.34);
+  border-radius: 999px;
+  color: #f7f8f8;
+  background: rgba(174, 182, 255, 0.1);
+  font-size: 13px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.graph-fullscreen-toggle:hover {
+  transform: translateY(-1px);
+  border-color: rgba(174, 182, 255, 0.7);
+  background: rgba(174, 182, 255, 0.18);
+}
+
+.graph-shell.is-fullscreen,
+.graph-shell:fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.3fr);
+  gap: 18px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: clamp(14px, 2vw, 24px);
+  overflow: hidden;
+  color: #f7f8f8;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(113, 112, 255, 0.24), transparent 34%),
+    radial-gradient(circle at 86% 16%, rgba(37, 99, 235, 0.18), transparent 30%),
+    linear-gradient(180deg, #11122b 0%, #08090a 100%);
+  box-sizing: border-box;
+}
+
+.graph-shell.is-fullscreen .graph-toolbar,
+.graph-shell:fullscreen .graph-toolbar {
+  grid-column: 1 / -1;
+}
+
+.graph-shell.is-fullscreen .graph-stage,
+.graph-shell:fullscreen .graph-stage,
+.graph-shell.is-fullscreen .graph-detail,
+.graph-shell:fullscreen .graph-detail {
+  min-height: 0;
+}
+
+.graph-shell.is-fullscreen .graph-stage,
+.graph-shell:fullscreen .graph-stage {
+  height: 100%;
+}
+
+.graph-shell.is-fullscreen .graph-stage svg,
+.graph-shell:fullscreen .graph-stage svg {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-shell.is-fullscreen .graph-detail,
+.graph-shell:fullscreen .graph-detail {
+  overflow: auto;
 }
 
 .graph-stage,
@@ -476,12 +607,30 @@ function isActiveEdge(edge: GraphEdge) {
 }
 
 @media (max-width: 960px) {
-  .graph-shell {
+  .graph-shell:not(.is-fullscreen) {
     grid-template-columns: 1fr;
   }
 
   .graph-stage {
     min-height: 360px;
+  }
+
+  .graph-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .graph-fullscreen-toggle {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .graph-shell.is-fullscreen,
+  .graph-shell:fullscreen {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    overflow: auto;
   }
 }
 </style>
