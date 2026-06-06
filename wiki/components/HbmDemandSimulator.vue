@@ -55,6 +55,10 @@ const contentSensitivityRows = computed(() => buildHbmContentSensitivityRows(inp
         <button v-for="preset in presets" :key="preset.id" type="button" @click="applyPreset(preset.input)">
           <strong>{{ preset.label }}</strong>
           <span>{{ preset.description }}</span>
+          <small class="preset-source-row">
+            <b class="confidence-badge">{{ preset.confidence }}</b>
+            <em>{{ preset.sourceRefs.length }} source refs</em>
+          </small>
         </button>
       </div>
     </div>
@@ -201,6 +205,30 @@ const contentSensitivityRows = computed(() => buildHbmContentSensitivityRows(inp
 }
 
 .preset-grid,
+.preset-source-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-top: 8px;
+  color: var(--vp-c-text-2);
+  font-size: 11px;
+}
+
+.confidence-badge {
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  font-size: 10px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.preset-source-row em {
+  font-style: normal;
+}
+
 .grid {
   display: grid;
   gap: 14px;

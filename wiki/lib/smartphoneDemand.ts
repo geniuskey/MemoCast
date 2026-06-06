@@ -1,3 +1,5 @@
+import simulatorPresetData from '../data/simulator-presets.json'
+
 export interface SmartphoneSegmentMix {
   entry: number
   mainstream: number
@@ -41,99 +43,14 @@ export interface ScenarioPreset {
   label: string
   description: string
   input: SmartphoneDemandInput
+  confidence: 'low' | 'medium' | 'high'
+  sourceRefs: string[]
   sources: string[]
 }
 
-const scenarioPresets: ScenarioPreset[] = [
-  {
-    id: 'entry-reference',
-    label: 'Entry reference',
-    description: 'Entry-heavy mix anchored to Galaxy A16 5G storage/RAM examples; not a market-weighted forecast.',
-    input: {
-      shipmentsMillion: 1200,
-      entrySharePercent: 70,
-      mainstreamSharePercent: 20,
-      premiumSharePercent: 10,
-      entryDramGb: 4,
-      mainstreamDramGb: 8,
-      premiumDramGb: 12,
-      entryNandGb: 128,
-      mainstreamNandGb: 256,
-      premiumNandGb: 256
-    },
-    sources: [
-      'raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md',
-      'raw/articles/gsmarena-samsung-galaxy-a56-specs.md',
-      'raw/articles/gsmarena-samsung-galaxy-s25-specs.md'
-    ]
-  },
-  {
-    id: 'mainstream-reference',
-    label: 'Mainstream reference',
-    description: 'Balanced mix anchored to Galaxy A56 and A16 5G examples; useful as a neutral starter scenario.',
-    input: {
-      shipmentsMillion: 1200,
-      entrySharePercent: 40,
-      mainstreamSharePercent: 35,
-      premiumSharePercent: 25,
-      entryDramGb: 4,
-      mainstreamDramGb: 8,
-      premiumDramGb: 12,
-      entryNandGb: 128,
-      mainstreamNandGb: 256,
-      premiumNandGb: 256
-    },
-    sources: [
-      'raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md',
-      'raw/articles/gsmarena-samsung-galaxy-a56-specs.md',
-      'raw/articles/gsmarena-samsung-galaxy-s25-specs.md'
-    ]
-  },
-  {
-    id: 'premium-reference',
-    label: 'Premium reference',
-    description: 'Premiumization mix anchored to Galaxy S25 and A56 examples; emphasizes higher DRAM/storage content.',
-    input: {
-      shipmentsMillion: 1200,
-      entrySharePercent: 20,
-      mainstreamSharePercent: 35,
-      premiumSharePercent: 45,
-      entryDramGb: 4,
-      mainstreamDramGb: 8,
-      premiumDramGb: 12,
-      entryNandGb: 128,
-      mainstreamNandGb: 256,
-      premiumNandGb: 512
-    },
-    sources: [
-      'raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md',
-      'raw/articles/gsmarena-samsung-galaxy-a56-specs.md',
-      'raw/articles/gsmarena-samsung-galaxy-s25-specs.md'
-    ]
-  },
-  {
-    id: 'on-device-ai-2026-reference',
-    label: 'On-device AI 2026 reference',
-    description: 'Source-backed smartphone AI content candidate using 12GB premium DRAM and higher NAND cache/storage anchors; not a market forecast.',
-    input: {
-      shipmentsMillion: 1200,
-      entrySharePercent: 15,
-      mainstreamSharePercent: 40,
-      premiumSharePercent: 45,
-      entryDramGb: 4,
-      mainstreamDramGb: 8,
-      premiumDramGb: 12,
-      entryNandGb: 128,
-      mainstreamNandGb: 256,
-      premiumNandGb: 512
-    },
-    sources: [
-      'raw/articles/on-device-ai-smartphone-dram-content-2026.md',
-      'raw/articles/trendforce-smartphone-storage-capacity-2026.md',
-      'raw/datasets/memory-content-per-device.md'
-    ]
-  }
-]
+type SourceBackedScenarioPreset = Omit<ScenarioPreset, 'sources'>
+
+const scenarioPresets = simulatorPresetData.smartphone as SourceBackedScenarioPreset[]
 
 const round = (value: number, digits = 2): number => {
   const factor = 10 ** digits
@@ -227,7 +144,8 @@ export function listScenarioPresets(): ScenarioPreset[] {
   return scenarioPresets.map((preset) => ({
     ...preset,
     input: { ...preset.input },
-    sources: [...preset.sources]
+    sourceRefs: [...preset.sourceRefs],
+    sources: [...preset.sourceRefs]
   }))
 }
 
@@ -241,7 +159,8 @@ export function getScenarioPreset(id: ScenarioPreset['id']): ScenarioPreset {
   return {
     ...preset,
     input: { ...preset.input },
-    sources: [...preset.sources]
+    sourceRefs: [...preset.sourceRefs],
+    sources: [...preset.sourceRefs]
   }
 }
 

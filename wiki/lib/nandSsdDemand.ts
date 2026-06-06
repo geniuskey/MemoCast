@@ -1,3 +1,5 @@
+import simulatorPresetData from '../data/simulator-presets.json'
+
 export type NandSsdSegmentId = 'client' | 'enterprise' | 'ai-storage'
 
 export interface NandSsdSegmentInput {
@@ -42,6 +44,8 @@ export interface NandSsdScenarioPreset {
   label: string
   description: string
   input: NandSsdDemandInput
+  confidence: 'low' | 'medium' | 'high'
+  sourceRefs: string[]
   sources: string[]
 }
 
@@ -59,60 +63,9 @@ const defaultSegments: NandSsdSegmentInput[] = [
   { id: 'ai-storage', label: 'AI/Data-center SSD', sharePercent: 2, averageCapacityTb: 16 }
 ]
 
-const nandSsdScenarioPresets: NandSsdScenarioPreset[] = [
-  {
-    id: 'client-heavy-ssd-reference',
-    label: 'Client-heavy SSD reference',
-    description: 'Illustrative client-dominated SSD NAND content scenario; not a market forecast.',
-    input: {
-      totalSsdShipmentsMillion: 300,
-      segments: [
-        { id: 'client', label: 'Client SSD', sharePercent: 88, averageCapacityTb: 1 },
-        { id: 'enterprise', label: 'Enterprise SSD', sharePercent: 11, averageCapacityTb: 8 },
-        { id: 'ai-storage', label: 'AI/Data-center SSD', sharePercent: 1, averageCapacityTb: 16 }
-      ]
-    },
-    sources: []
-  },
-  {
-    id: 'enterprise-transition-ssd-reference',
-    label: 'Enterprise transition SSD reference',
-    description: 'Illustrative case where enterprise SSD mix raises average NAND content; not a market forecast.',
-    input: {
-      totalSsdShipmentsMillion: 300,
-      segments: defaultSegments
-    },
-    sources: []
-  },
-  {
-    id: 'ai-storage-heavy-ssd-reference',
-    label: 'AI storage-heavy SSD reference',
-    description: 'Illustrative high-capacity data-center SSD content sensitivity case; not a market forecast.',
-    input: {
-      totalSsdShipmentsMillion: 300,
-      segments: [
-        { id: 'client', label: 'Client SSD', sharePercent: 72, averageCapacityTb: 1 },
-        { id: 'enterprise', label: 'Enterprise SSD', sharePercent: 22, averageCapacityTb: 8 },
-        { id: 'ai-storage', label: 'AI/Data-center SSD', sharePercent: 6, averageCapacityTb: 16 }
-      ]
-    },
-    sources: []
-  },
-  {
-    id: 'qlc-enterprise-breakout-reference',
-    label: 'QLC enterprise breakout reference',
-    description: 'Source-backed enterprise/AI storage mix candidate using QLC SSD and HDD-shortage evidence; total shipments remain illustrative, not a market forecast.',
-    input: {
-      totalSsdShipmentsMillion: 300,
-      segments: [
-        { id: 'client', label: 'Client SSD', sharePercent: 65, averageCapacityTb: 1 },
-        { id: 'enterprise', label: 'Enterprise SSD', sharePercent: 27, averageCapacityTb: 16 },
-        { id: 'ai-storage', label: 'AI/Data-center SSD', sharePercent: 8, averageCapacityTb: 122 }
-      ]
-    },
-    sources: ['raw/reports/trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md', 'raw/articles/storage-enterprise-ssd-qlc-nand-demand-2026.md']
-  }
-]
+type SourceBackedNandSsdScenarioPreset = Omit<NandSsdScenarioPreset, 'sources'>
+
+const nandSsdScenarioPresets = simulatorPresetData['nand-ssd'] as SourceBackedNandSsdScenarioPreset[]
 
 function cloneSegments(segments: NandSsdSegmentInput[]): NandSsdSegmentInput[] {
   return segments.map((segment) => ({ ...segment }))
@@ -218,7 +171,8 @@ export function listNandSsdScenarioPresets(): NandSsdScenarioPreset[] {
       ...preset.input,
       segments: cloneSegments(preset.input.segments)
     },
-    sources: [...preset.sources]
+    sourceRefs: [...preset.sourceRefs],
+    sources: [...preset.sourceRefs]
   }))
 }
 
@@ -235,7 +189,8 @@ export function getNandSsdScenarioPreset(id: NandSsdScenarioPreset['id']): NandS
       ...preset.input,
       segments: cloneSegments(preset.input.segments)
     },
-    sources: [...preset.sources]
+    sourceRefs: [...preset.sourceRefs],
+    sources: [...preset.sourceRefs]
   }
 }
 

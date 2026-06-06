@@ -1,3 +1,5 @@
+import simulatorPresetData from '../data/simulator-presets.json'
+
 export interface PcDramDemandInput {
   pcShipmentsMillion: number
   aiPcPenetrationPercent: number
@@ -36,71 +38,14 @@ export interface PcDramScenarioPreset {
   label: string
   description: string
   input: PcDramDemandInput
+  confidence: 'low' | 'medium' | 'high'
+  sourceRefs: string[]
   sources: string[]
 }
 
-const pcDramScenarioPresets: PcDramScenarioPreset[] = [
-  {
-    id: 'baseline-pc-reference',
-    label: 'Baseline PC reference',
-    description: 'Illustrative low-AI-penetration PC DRAM scenario; not a market forecast.',
-    input: {
-      pcShipmentsMillion: 250,
-      aiPcPenetrationPercent: 5,
-      nonAiDramGbPerPc: 8,
-      aiPcDramGbPerPc: 16
-    },
-    sources: []
-  },
-  {
-    id: 'ai-pc-transition-reference',
-    label: 'AI PC transition reference',
-    description: 'Illustrative transition case where AI PC share raises average DRAM content; not a market forecast.',
-    input: {
-      pcShipmentsMillion: 250,
-      aiPcPenetrationPercent: 20,
-      nonAiDramGbPerPc: 8,
-      aiPcDramGbPerPc: 16
-    },
-    sources: []
-  },
-  {
-    id: 'ai-heavy-pc-reference',
-    label: 'AI-heavy PC reference',
-    description: 'Illustrative high-AI-penetration case for DRAM content sensitivity; not a market forecast.',
-    input: {
-      pcShipmentsMillion: 250,
-      aiPcPenetrationPercent: 50,
-      nonAiDramGbPerPc: 8,
-      aiPcDramGbPerPc: 24
-    },
-    sources: []
-  },
-  {
-    id: 'copilot-plus-16gb-reference',
-    label: 'Copilot+ 16GB AI PC reference',
-    description: 'Source-backed AI PC content anchor using Microsoft Copilot+ 16GB minimum; shipments and penetration are scenario assumptions, not a market forecast.',
-    input: {
-      pcShipmentsMillion: 250,
-      aiPcPenetrationPercent: 30,
-      nonAiDramGbPerPc: 8,
-      aiPcDramGbPerPc: 16
-    },
-    sources: ['raw/articles/microsoft-ai-pc-16gb-ram-baseline.md', 'raw/datasets/memory-content-per-device.md']
-  },
-  {
-    id: 'idc-shortage-downside-reference',
-    label: 'IDC shortage downside reference',
-    description: 'Source-backed shortage-feedback scenario using lower PC shipments while preserving AI PC content uplift; not a market forecast.',
-    input: {
-      pcShipmentsMillion: 222,
-      aiPcPenetrationPercent: 30,
-      nonAiDramGbPerPc: 8,
-      aiPcDramGbPerPc: 16
-    },
-    sources: ['raw/reports/idc-2026-memory-shortage-supply-growth.md', 'raw/articles/microsoft-ai-pc-16gb-ram-baseline.md']
-  }
-]
+type SourceBackedPcDramScenarioPreset = Omit<PcDramScenarioPreset, 'sources'>
+
+const pcDramScenarioPresets = simulatorPresetData['pc-dram'] as SourceBackedPcDramScenarioPreset[]
 
 const round = (value: number, digits = 2): number => {
   const factor = 10 ** digits
@@ -177,7 +122,8 @@ export function listPcDramScenarioPresets(): PcDramScenarioPreset[] {
   return pcDramScenarioPresets.map((preset) => ({
     ...preset,
     input: { ...preset.input },
-    sources: [...preset.sources]
+    sourceRefs: [...preset.sourceRefs],
+    sources: [...preset.sourceRefs]
   }))
 }
 
@@ -191,7 +137,8 @@ export function getPcDramScenarioPreset(id: PcDramScenarioPreset['id']): PcDramS
   return {
     ...preset,
     input: { ...preset.input },
-    sources: [...preset.sources]
+    sourceRefs: [...preset.sourceRefs],
+    sources: [...preset.sourceRefs]
   }
 }
 

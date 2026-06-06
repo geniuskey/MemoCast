@@ -1,3 +1,5 @@
+import simulatorPresetData from '../data/simulator-presets.json'
+
 export interface HbmDemandInput {
   acceleratorsThousand: number
   attachRatePercent: number
@@ -30,59 +32,14 @@ export interface HbmScenarioPreset {
   label: string
   description: string
   input: HbmDemandInput
+  confidence: 'low' | 'medium' | 'high'
+  sourceRefs: string[]
   sources: string[]
 }
 
-const hbmScenarioPresets: HbmScenarioPreset[] = [
-  {
-    id: 'hbm3e-8hi-reference',
-    label: 'HBM3E 8Hi reference',
-    description: 'Illustrative 8-stack accelerator using 24GB-class HBM stacks; source-anchored example, not a market forecast.',
-    input: {
-      acceleratorsThousand: 1000,
-      attachRatePercent: 85,
-      hbmStacksPerAccelerator: 8,
-      hbmCapacityGbPerStack: 24
-    },
-    sources: ['raw/articles/samsung-semiconductor-hbm.md']
-  },
-  {
-    id: 'hbm3e-12hi-reference',
-    label: 'HBM3E 12Hi reference',
-    description: 'Higher-content transition case using 36GB-class stack capacity with the same accelerator stack count.',
-    input: {
-      acceleratorsThousand: 1000,
-      attachRatePercent: 90,
-      hbmStacksPerAccelerator: 8,
-      hbmCapacityGbPerStack: 36
-    },
-    sources: ['raw/articles/micron-high-bandwidth-memory-hbm.md', 'raw/articles/samsung-semiconductor-hbm.md']
-  },
-  {
-    id: 'hbm4-12hi-reference',
-    label: 'HBM4 12Hi reference',
-    description: 'HBM4-oriented reference anchored to Micron 36GB 12H product-level capacity context.',
-    input: {
-      acceleratorsThousand: 1000,
-      attachRatePercent: 95,
-      hbmStacksPerAccelerator: 8,
-      hbmCapacityGbPerStack: 36
-    },
-    sources: ['raw/articles/micron-high-bandwidth-memory-hbm.md']
-  },
-  {
-    id: 'trendforce-2026-hbm-growth-reference',
-    label: 'TrendForce 2026 HBM growth reference',
-    description: 'Source-backed 2026 scenario candidate using 12Hi-class content and high attach rate; accelerator units remain illustrative, not a market forecast.',
-    input: {
-      acceleratorsThousand: 1700,
-      attachRatePercent: 95,
-      hbmStacksPerAccelerator: 8,
-      hbmCapacityGbPerStack: 36
-    },
-    sources: ['raw/reports/trendforce-hbm-bit-demand-supply-2026.md', 'raw/datasets/gpu-hbm-capacity.md', 'raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md']
-  }
-]
+type SourceBackedHbmScenarioPreset = Omit<HbmScenarioPreset, 'sources'>
+
+const hbmScenarioPresets = simulatorPresetData.hbm as SourceBackedHbmScenarioPreset[]
 
 const round = (value: number, digits = 2): number => {
   const factor = 10 ** digits
@@ -150,7 +107,8 @@ export function listHbmScenarioPresets(): HbmScenarioPreset[] {
   return hbmScenarioPresets.map((preset) => ({
     ...preset,
     input: { ...preset.input },
-    sources: [...preset.sources]
+    sourceRefs: [...preset.sourceRefs],
+    sources: [...preset.sourceRefs]
   }))
 }
 
@@ -164,7 +122,8 @@ export function getHbmScenarioPreset(id: HbmScenarioPreset['id']): HbmScenarioPr
   return {
     ...preset,
     input: { ...preset.input },
-    sources: [...preset.sources]
+    sourceRefs: [...preset.sourceRefs],
+    sources: [...preset.sourceRefs]
   }
 }
 

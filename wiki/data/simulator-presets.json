@@ -1,0 +1,146 @@
+{
+  "smartphone": [
+    {
+      "id": "entry-reference",
+      "label": "Entry reference",
+      "description": "Entry-heavy mix anchored to Galaxy A16 5G storage/RAM examples; not a market-weighted forecast.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md", "raw/articles/gsmarena-samsung-galaxy-a56-specs.md", "raw/articles/gsmarena-samsung-galaxy-s25-specs.md"],
+      "input": { "shipmentsMillion": 1200, "entrySharePercent": 70, "mainstreamSharePercent": 20, "premiumSharePercent": 10, "entryDramGb": 4, "mainstreamDramGb": 8, "premiumDramGb": 12, "entryNandGb": 128, "mainstreamNandGb": 256, "premiumNandGb": 256 }
+    },
+    {
+      "id": "mainstream-reference",
+      "label": "Mainstream reference",
+      "description": "Balanced mix anchored to Galaxy A56 and A16 5G examples; useful as a neutral starter scenario.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md", "raw/articles/gsmarena-samsung-galaxy-a56-specs.md", "raw/articles/gsmarena-samsung-galaxy-s25-specs.md"],
+      "input": { "shipmentsMillion": 1200, "entrySharePercent": 40, "mainstreamSharePercent": 35, "premiumSharePercent": 25, "entryDramGb": 4, "mainstreamDramGb": 8, "premiumDramGb": 12, "entryNandGb": 128, "mainstreamNandGb": 256, "premiumNandGb": 256 }
+    },
+    {
+      "id": "premium-reference",
+      "label": "Premium reference",
+      "description": "Premiumization mix anchored to Galaxy S25 and A56 examples; emphasizes higher DRAM/storage content.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/articles/gsmarena-samsung-galaxy-a16-5g-specs.md", "raw/articles/gsmarena-samsung-galaxy-a56-specs.md", "raw/articles/gsmarena-samsung-galaxy-s25-specs.md"],
+      "input": { "shipmentsMillion": 1200, "entrySharePercent": 20, "mainstreamSharePercent": 35, "premiumSharePercent": 45, "entryDramGb": 4, "mainstreamDramGb": 8, "premiumDramGb": 12, "entryNandGb": 128, "mainstreamNandGb": 256, "premiumNandGb": 512 }
+    },
+    {
+      "id": "on-device-ai-2026-reference",
+      "label": "On-device AI 2026 reference",
+      "description": "Source-backed smartphone AI content candidate using 12GB premium DRAM and higher NAND cache/storage anchors; not a market forecast.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/articles/on-device-ai-smartphone-dram-content-2026.md", "raw/articles/trendforce-smartphone-storage-capacity-2026.md", "raw/datasets/memory-content-per-device.md"],
+      "input": { "shipmentsMillion": 1200, "entrySharePercent": 15, "mainstreamSharePercent": 40, "premiumSharePercent": 45, "entryDramGb": 4, "mainstreamDramGb": 8, "premiumDramGb": 12, "entryNandGb": 128, "mainstreamNandGb": 256, "premiumNandGb": 512 }
+    }
+  ],
+  "pc-dram": [
+    {
+      "id": "baseline-pc-reference",
+      "label": "Baseline PC reference",
+      "description": "Illustrative low-AI-penetration PC DRAM scenario; not a market forecast.",
+      "confidence": "low",
+      "sourceRefs": ["raw/datasets/pc-server-shipments.md", "raw/datasets/memory-content-per-device.md"],
+      "input": { "pcShipmentsMillion": 250, "aiPcPenetrationPercent": 5, "nonAiDramGbPerPc": 8, "aiPcDramGbPerPc": 16 }
+    },
+    {
+      "id": "ai-pc-transition-reference",
+      "label": "AI PC transition reference",
+      "description": "Illustrative transition case where AI PC share raises average DRAM content; not a market forecast.",
+      "confidence": "low",
+      "sourceRefs": ["raw/datasets/ai-pc-penetration-forecast.md", "raw/datasets/memory-content-per-device.md", "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md"],
+      "input": { "pcShipmentsMillion": 250, "aiPcPenetrationPercent": 20, "nonAiDramGbPerPc": 8, "aiPcDramGbPerPc": 16 }
+    },
+    {
+      "id": "ai-heavy-pc-reference",
+      "label": "AI-heavy PC reference",
+      "description": "Illustrative high-AI-penetration case for DRAM content sensitivity; not a market forecast.",
+      "confidence": "low",
+      "sourceRefs": ["raw/datasets/ai-pc-penetration-forecast.md", "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md"],
+      "input": { "pcShipmentsMillion": 250, "aiPcPenetrationPercent": 50, "nonAiDramGbPerPc": 8, "aiPcDramGbPerPc": 24 }
+    },
+    {
+      "id": "copilot-plus-16gb-reference",
+      "label": "Copilot+ 16GB AI PC reference",
+      "description": "Source-backed AI PC content anchor using Microsoft Copilot+ 16GB minimum; shipments and penetration are scenario assumptions, not a market forecast.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/articles/microsoft-ai-pc-16gb-ram-baseline.md", "raw/datasets/memory-content-per-device.md"],
+      "input": { "pcShipmentsMillion": 250, "aiPcPenetrationPercent": 30, "nonAiDramGbPerPc": 8, "aiPcDramGbPerPc": 16 }
+    },
+    {
+      "id": "idc-shortage-downside-reference",
+      "label": "IDC shortage downside reference",
+      "description": "Source-backed shortage-feedback scenario using lower PC shipments while preserving AI PC content uplift; not a market forecast.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/reports/idc-2026-memory-shortage-supply-growth.md", "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md"],
+      "input": { "pcShipmentsMillion": 222, "aiPcPenetrationPercent": 30, "nonAiDramGbPerPc": 8, "aiPcDramGbPerPc": 16 }
+    }
+  ],
+  "hbm": [
+    {
+      "id": "hbm3e-8hi-reference",
+      "label": "HBM3E 8Hi reference",
+      "description": "Illustrative 8-stack accelerator using 24GB-class HBM stacks; source-anchored example, not a market forecast.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/articles/samsung-semiconductor-hbm.md"],
+      "input": { "acceleratorsThousand": 1000, "attachRatePercent": 85, "hbmStacksPerAccelerator": 8, "hbmCapacityGbPerStack": 24 }
+    },
+    {
+      "id": "hbm3e-12hi-reference",
+      "label": "HBM3E 12Hi reference",
+      "description": "Higher-content transition case using 36GB-class stack capacity with the same accelerator stack count.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/articles/micron-high-bandwidth-memory-hbm.md", "raw/articles/samsung-semiconductor-hbm.md"],
+      "input": { "acceleratorsThousand": 1000, "attachRatePercent": 90, "hbmStacksPerAccelerator": 8, "hbmCapacityGbPerStack": 36 }
+    },
+    {
+      "id": "hbm4-12hi-reference",
+      "label": "HBM4 12Hi reference",
+      "description": "HBM4-oriented reference anchored to Micron 36GB 12H product-level capacity context.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/articles/micron-high-bandwidth-memory-hbm.md"],
+      "input": { "acceleratorsThousand": 1000, "attachRatePercent": 95, "hbmStacksPerAccelerator": 8, "hbmCapacityGbPerStack": 36 }
+    },
+    {
+      "id": "trendforce-2026-hbm-growth-reference",
+      "label": "TrendForce 2026 HBM growth reference",
+      "description": "Source-backed 2026 scenario candidate using 12Hi-class content and high attach rate; accelerator units remain illustrative, not a market forecast.",
+      "confidence": "high",
+      "sourceRefs": ["raw/reports/trendforce-hbm-bit-demand-supply-2026.md", "raw/datasets/gpu-hbm-capacity.md", "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md"],
+      "input": { "acceleratorsThousand": 1700, "attachRatePercent": 95, "hbmStacksPerAccelerator": 8, "hbmCapacityGbPerStack": 36 }
+    }
+  ],
+  "nand-ssd": [
+    {
+      "id": "client-heavy-ssd-reference",
+      "label": "Client-heavy SSD reference",
+      "description": "Illustrative client-dominated SSD NAND content scenario; not a market forecast.",
+      "confidence": "low",
+      "sourceRefs": ["raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md", "raw/datasets/nand-cost-per-bit-trend.md"],
+      "input": { "totalSsdShipmentsMillion": 300, "segments": [ { "id": "client", "label": "Client SSD", "sharePercent": 88, "averageCapacityTb": 1 }, { "id": "enterprise", "label": "Enterprise SSD", "sharePercent": 11, "averageCapacityTb": 8 }, { "id": "ai-storage", "label": "AI/Data-center SSD", "sharePercent": 1, "averageCapacityTb": 16 } ] }
+    },
+    {
+      "id": "enterprise-transition-ssd-reference",
+      "label": "Enterprise transition SSD reference",
+      "description": "Illustrative case where enterprise SSD mix raises average NAND content; not a market forecast.",
+      "confidence": "low",
+      "sourceRefs": ["raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md", "raw/datasets/nand-cost-per-bit-trend.md"],
+      "input": { "totalSsdShipmentsMillion": 300, "segments": [ { "id": "client", "label": "Client SSD", "sharePercent": 80, "averageCapacityTb": 1 }, { "id": "enterprise", "label": "Enterprise SSD", "sharePercent": 18, "averageCapacityTb": 8 }, { "id": "ai-storage", "label": "AI/Data-center SSD", "sharePercent": 2, "averageCapacityTb": 16 } ] }
+    },
+    {
+      "id": "ai-storage-heavy-ssd-reference",
+      "label": "AI storage-heavy SSD reference",
+      "description": "Illustrative high-capacity data-center SSD content sensitivity case; not a market forecast.",
+      "confidence": "low",
+      "sourceRefs": ["raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md", "raw/datasets/idc-global-datasphere-zettabytes.md"],
+      "input": { "totalSsdShipmentsMillion": 300, "segments": [ { "id": "client", "label": "Client SSD", "sharePercent": 72, "averageCapacityTb": 1 }, { "id": "enterprise", "label": "Enterprise SSD", "sharePercent": 22, "averageCapacityTb": 8 }, { "id": "ai-storage", "label": "AI/Data-center SSD", "sharePercent": 6, "averageCapacityTb": 16 } ] }
+    },
+    {
+      "id": "qlc-enterprise-breakout-reference",
+      "label": "QLC enterprise breakout reference",
+      "description": "Source-backed enterprise/AI storage mix candidate using QLC SSD and HDD-shortage evidence; total shipments remain illustrative, not a market forecast.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/reports/trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md", "raw/articles/storage-enterprise-ssd-qlc-nand-demand-2026.md"],
+      "input": { "totalSsdShipmentsMillion": 300, "segments": [ { "id": "client", "label": "Client SSD", "sharePercent": 65, "averageCapacityTb": 1 }, { "id": "enterprise", "label": "Enterprise SSD", "sharePercent": 27, "averageCapacityTb": 16 }, { "id": "ai-storage", "label": "AI/Data-center SSD", "sharePercent": 8, "averageCapacityTb": 122 } ] }
+    }
+  ]
+}
