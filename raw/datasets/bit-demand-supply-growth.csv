@@ -1,0 +1,9 @@
+year,memory_type,metric,growth_percent,notes
+2022,DRAM,bit_supply_growth,18.6,TrendForce 2022 forecast
+2022,DRAM,bit_demand_growth,17.1,TrendForce 2022 forecast
+2023,DRAM,bit_demand_growth,8.3,slowed from 2022 (TechInsights/TrendForce)
+2023,DRAM,bit_supply_growth,14.0,approx 2023 supply-side
+2022,NAND,bit_supply_growth,31.8,TrendForce 2022 forecast
+2022,NAND,bit_demand_growth,30.8,TrendForce 2022 forecast
+2024,DRAM,bit_demand_growth,15.0,approx mid-teens AI-supported (estimate)
+2025,DRAM,bit_demand_growth,20.0,approx AI-driven elevated (estimate)

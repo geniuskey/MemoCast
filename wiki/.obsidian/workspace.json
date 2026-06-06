@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "3de9f2a784a87620",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c9bed8bad34d90f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0633f776980afcaf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "simulators/hbm-demand.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "hbm-demand"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b8b7e6a738c4cf39",
+    "type": "split",
+    "children": [
+      {
+        "id": "27f37954a7f35a7f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5e8b203b17b5ee45",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "9724b0a1ae6fd592",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "9f05be5004ac173e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "96c59756730e93ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3b6c7f2b0e5ad7e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8625fa28cea7f8e1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "simulators/hbm-demand.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "hbm-demand 의 백링크"
+            }
+          },
+          {
+            "id": "2aca89015903d9ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "simulators/hbm-demand.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "hbm-demand 의 나가는 링크"
+            }
+          },
+          {
+            "id": "4f89bbe650d6bffd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "7ac6c414a687e28e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "33f19a672a9469ee",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "simulators/hbm-demand.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "hbm-demand 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "0633f776980afcaf",
+  "lastOpenFiles": [
+    "lib/useFullscreen.ts",
+    "graph.md",
+    "sources/citation-matrix.md",
+    "concepts/supply-demand-gap.md",
+    "methods/forecasting-evidence-map.md",
+    "sources/raw-source-map.md",
+    "sources",
+    "comparisons/domain-comparison.md",
+    "comparisons",
+    "components/DomainComparisonPanel.vue",
+    "lib/domainComparison.ts",
+    "simulators/nand-ssd-demand.md",
+    "components/NandSsdDemandSimulator.vue",
+    "lib/nandSsdDemand.ts",
+    "simulators/pc-dram-demand.md",
+    "markets/pc-dram.md",
+    "components/PcDramDemandSimulator.vue",
+    "lib/pcDramDemand.ts",
+    "markets/nand.md",
+    "markets/hbm.md",
+    "concepts/demand-forecasting.md",
+    "concepts/bit-demand.md",
+    "index.md",
+    "simulators/hbm-demand.md",
+    "components/HbmDemandSimulator.vue",
+    "lib/hbmDemand.ts",
+    "simulators/index.md",
+    "methods/structural-demand-model.md",
+    "methods/sensitivity-analysis.md",
+    "concepts/memory-demand.md",
+    "concepts/scenario-analysis.md",
+    "markets/dram.md",
+    "simulators/smartphone-memory-demand.md",
+    "markets/smartphone-memory.md"
+  ]
+}

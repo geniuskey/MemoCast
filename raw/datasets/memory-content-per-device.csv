@@ -1,0 +1,8 @@
+year,device,memory_type,avg_capacity_gb,content_growth_yoy_percent,notes
+2022,smartphone,DRAM,7.0,3.9,avg DRAM/phone; growth 3.9% (TrendForce)
+2023,smartphone,DRAM,8.0,17.5,surpassed 8GB; growth 17.5% (TrendForce)
+2024,smartphone,DRAM,9.0,14.1,growth 14.1% (TrendForce); ~9GB avg (est)
+2022,server,DRAM,384,,avg DRAM per server 384GB (TrendForce)
+2023,server,DRAM,512,12.1,avg 512GB; content +12.1% YoY (TrendForce)
+2024,server,DRAM,600,17.3,content per box +17.3% YoY (TrendForce); ~600GB est
+2024,notebook_pc,DRAM,,12.4,laptop DRAM content growth ~12.4% YoY 2024 (TrendForce)

@@ -1,0 +1,11 @@
+period,metric,value,unit,notes
+2023,industry_revenue_annual,51.7,billion_usd,2023 annual DRAM (approx; pre-recovery)
+2024,industry_revenue_annual,90.7,billion_usd,2024 DRAM revenue +75% YoY (TrendForce)
+2025,industry_revenue_annual,136.5,billion_usd,2025 DRAM revenue +51% YoY (TrendForce)
+2024Q2,industry_revenue_quarterly,22.9,billion_usd,Q2 2024 +24.8% QoQ (TrendForce)
+2025Q3,industry_revenue_quarterly,40.0,billion_usd,Q3 2025 first time >$40B, +29-30.9% QoQ (TrendForce)
+2024Q3,Samsung_share,41.1,percent,Samsung Q3 2024 DRAM share (TrendForce)
+2025Q3,Micron_share_change,3.7,percentage_points,Micron share +3.7pp in 3Q25 (TrendForce)
+2024,SK_hynix_share,36.3,percent,SK hynix overtook Samsung early-2024 (33yr first)
+2024,Samsung_share,32.7,percent,Samsung early-2024 vs SK hynix 36.3
+2022,SK_hynix_share,27.7,percent,SK hynix 2022 share baseline

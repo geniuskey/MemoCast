@@ -1,0 +1,11 @@
+year,category,shipments_million_units,yoy_percent,source,notes
+2020,PC,302,,Gartner,COVID surge begins (approx)
+2021,PC,341,12.9,Gartner,pandemic peak
+2022,PC,284,-16.7,Gartner,sharp correction
+2023,PC,241.8,-14.8,Gartner,trough year
+2024,PC,262.7,1.0,IDC,recovery (IDC figure)
+2025,PC,270,9.1,Gartner,+9.1% full-year 2025
+2021,server,13.6,,IDC/TrendForce,approx baseline
+2022,server,14.9,9.6,TrendForce,approx (value +20.1% but units modest)
+2023,server,12.0,-19.4,TrendForce/IDC,unit decline despite value growth
+2024,server,13.654,2.05,TrendForce,AI servers ~12.1% of units

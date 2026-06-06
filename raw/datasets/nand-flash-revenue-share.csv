@@ -1,0 +1,10 @@
+year,metric,supplier,value,unit,notes
+2021,industry_revenue,total,68.5,billion_usd,2021 prior peak; approximate
+2022,industry_revenue,total,60.0,billion_usd,oversupply began 2H22; approximate
+2023,industry_revenue,total,38.0,billion_usd,lowest since 2016; approximate
+2024,industry_revenue,total,68.0,billion_usd,record year surpassing 2021 (blocksandfiles/economy.ac)
+2024Q2,market_share,Samsung,36.9,percent,Q2 2024 share (blocksandfiles)
+2024Q2,market_share,SK_Group,22.1,percent,SK hynix + Solidigm Q2 2024
+2024Q2,market_share,Kioxia,13.8,percent,Q2 2024
+2024Q2,market_share,Micron,11.8,percent,Q2 2024
+2024Q2,market_share,Western_Digital,10.5,percent,Q2 2024

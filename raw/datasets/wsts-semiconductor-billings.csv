@@ -1,0 +1,10 @@
+year,segment,billings_billion_usd,yoy_percent,notes
+2020,total_semiconductor,412,,WSTS global billings
+2021,total_semiconductor,469,13.8,WSTS global billings
+2022,total_semiconductor,574,22.4,WSTS record year
+2023,total_semiconductor,527,-8.2,WSTS downturn
+2024,total_semiconductor,631,19.7,WSTS recovery
+2022,memory,129,,approx memory billings within 2022 total
+2023,memory,92.29,,memory billings 2023 (per WSTS/Statista derived)
+2024,memory,163.15,76.8,memory billings 2024 (+76.8% YoY)
+2025,memory,204.28,25.2,WSTS forecast 2025 memory

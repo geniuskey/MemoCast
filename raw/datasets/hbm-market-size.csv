@@ -1,0 +1,7 @@
+year,metric,value_billion_usd,notes
+2022,hbm_market_size,2.0,early HBM market; approximate (pre-AI boom)
+2023,hbm_market_size,4.0,approximate; ramp begins with H100
+2024,hbm_market_size,5.6,Fortune/GMI ~5.6B (range 2.3-5.6 across sources)
+2025,hbm_market_size,7.3,approximate mid-range across research houses (range 3-9)
+2026,hbm_market_size,9.2,approximate higher-end forecast (range 3.7-9.2)
+2035,hbm_market_size,69.75,Precedence Research 2035 forecast

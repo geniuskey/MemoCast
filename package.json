@@ -1,0 +1,19 @@
+{
+  "name": "memocast",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev wiki --host 0.0.0.0",
+    "build": "vitepress build wiki",
+    "preview": "vitepress preview wiki --host 0.0.0.0",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "latest",
+    "vitepress": "latest",
+    "vitest": "latest",
+    "vue": "latest"
+  }
+}

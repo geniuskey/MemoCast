@@ -1,0 +1,10 @@
+year,company,capex_value,currency,capex_usd_billion_est,notes
+2021,SK_hynix,12486.6,KRW_billion,10.5,SK hynix 2021 capex (finbox)
+2022,SK_hynix,19010.3,KRW_billion,15.0,SK hynix 2022 peak
+2023,SK_hynix,8325.1,KRW_billion,6.4,SK hynix 2023 cut after profit plunge
+2024,SK_hynix,15945.5,KRW_billion,11.7,SK hynix 2024 (~16T KRW)
+2022,Samsung,53100,KRW_billion,40.0,Samsung total capex FY2022
+2024,Samsung,56700,KRW_billion,42.0,Samsung total capex FY2024
+2025,Samsung,47400,KRW_billion,35.6,Samsung 2025 plan (-11% YoY); DS 40.9T
+2023,Micron,7.01,USD_billion,7.01,Micron FY2023 capex
+2025,Micron,14.0,USD_billion,14.0,Micron FY2025 projected (+73% YoY)

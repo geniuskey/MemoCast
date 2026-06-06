@@ -1,0 +1,94 @@
+:root {
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #3b82f6;
+  --vp-c-brand-3: #60a5fa;
+}
+
+.VPDoc h1 {
+  letter-spacing: -0.03em;
+}
+
+
+.simulator-header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  max-width: min(460px, 100%);
+}
+
+.simulator-fullscreen-toggle {
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 999px;
+  padding: 7px 14px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.simulator-fullscreen-toggle:hover {
+  color: var(--vp-c-bg);
+  background: var(--vp-c-brand-1);
+}
+
+.simulator-card.is-fullscreen,
+.comparison-card.is-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  padding: clamp(16px, 2vw, 28px);
+  overflow: auto;
+  background: var(--vp-c-bg-soft);
+  box-sizing: border-box;
+}
+
+.simulator-card.is-fullscreen .simulator-header,
+.comparison-card.is-fullscreen .comparison-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin: calc(clamp(16px, 2vw, 28px) * -1) calc(clamp(16px, 2vw, 28px) * -1) 18px;
+  padding: 16px clamp(16px, 2vw, 28px);
+  background: color-mix(in srgb, var(--vp-c-bg) 92%, transparent);
+  border-bottom: 1px solid var(--vp-c-divider);
+  backdrop-filter: blur(12px);
+}
+
+.simulator-card.is-fullscreen .preset-grid,
+.simulator-card.is-fullscreen .segment-grid,
+.simulator-card.is-fullscreen .result-grid,
+.comparison-card.is-fullscreen .rank-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.simulator-card.is-fullscreen .table-wrap,
+.comparison-card.is-fullscreen .table-wrap {
+  max-height: 42vh;
+  overflow: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg);
+}
+
+.simulator-card.is-fullscreen .table-wrap h3,
+.comparison-card.is-fullscreen .table-wrap h3 {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--vp-c-bg);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+@media (max-width: 720px) {
+  .simulator-header-actions {
+    align-items: flex-start;
+    margin-top: 12px;
+  }
+}

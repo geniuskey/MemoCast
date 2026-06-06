@@ -1,0 +1,6 @@
+gpu_model,vendor,architecture,launch_year,hbm_type,hbm_capacity_gb,notes
+A100,NVIDIA,Ampere,2020,HBM2e,80,80GB variant (40GB also existed)
+H100,NVIDIA,Hopper,2022,HBM3,80,SXM 80GB
+H200,NVIDIA,Hopper,2024,HBM3e,141,141GB HBM3e
+B200,NVIDIA,Blackwell,2024,HBM3e,192,per-GPU 192GB (180-192 across sources)
+GB300,NVIDIA,Blackwell_Ultra,2025,HBM3e,288,Blackwell Ultra 288GB HBM3e

@@ -1,0 +1,13 @@
+year,product,metric,value_usd,notes
+2017,DRAM_8Gb_DDR4,spot_price_peak,8.5,2017-2018 cycle peak; approx DRAMeXchange/TrendForce historical
+2018,DRAM_8Gb_DDR4,contract_price_avg,7.5,prior cycle high before 2019 crash
+2019,DRAM_8Gb_DDR4,contract_price_avg,3.0,oversupply downturn; approximate
+2020,DRAM_8Gb_DDR4,contract_price_avg,2.8,COVID-era softness; approximate
+2021,DRAM_8Gb_DDR4,contract_price_avg,4.1,2021 upcycle; approximate
+2022,DRAM_8Gb_DDR4,contract_price_avg,2.9,2H22 sharp decline began; approximate
+2023,DRAM_8Gb_DDR4,contract_price_avg,1.5,trough year; approximate low
+2024,DRAM_16Gb_DDR5,contract_price_est,4.0,~$4/GB equivalent early-2024; approximate
+2025,DRAM_16Gb_DDR5,spot_price_2025_09,6.84,16Gb DDR5 spot avg on 2025-09-20 (TrendForce/Jukan)
+2025,DRAM_16Gb_DDR5,spot_price_2025_11,24.83,16Gb DDR5 spot avg on 2025-11-19 AI-driven spike
+2025,DRAM_16Gb_DDR5,spot_price_2025_12,27.20,16Gb DDR5 spot avg Dec 2025; session highs near 37
+2025,DRAM_16Gb_DDR4,spot_price_2025_late,10.0,16Gb DDR4 ~$10 all-time high late-2025

@@ -1,0 +1,12 @@
+year,metric,value,unit,notes
+2018,nand_price,0.30,usd_per_gb,approx enterprise/client avg (cycle high); estimate
+2020,nand_price,0.12,usd_per_gb,approx avg; estimate
+2022,nand_price,0.08,usd_per_gb,pre-decline; estimate
+2023,nand_price,0.045,usd_per_gb,trough after >70% drop from mid-2022; estimate
+2024,nand_price,0.06,usd_per_gb,recovery; estimate
+2022,3d_nand_layers,176,layers,leading-edge 2022 (176L mainstream)
+2023,3d_nand_layers,238,layers,218-238L range 2023
+2024,3d_nand_layers,321,layers,SK hynix 321L; Samsung 286L (2024)
+2025,3d_nand_layers,332,layers,Kioxia 332L next-gen target
+2022,contract_price_decline,-70,percent_from_mid2022,contract prices fell >70% since mid-2022
+2025,asp_change_q4,7.5,percent_qoq,Q4 ASP +5-10% QoQ, first rise since 2022

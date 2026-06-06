@@ -1,0 +1,13 @@
+year,segment,revenue_billion_usd,notes
+2021,DRAM,93.5,2021 DRAM upcycle; approximate
+2021,NAND,68.5,2021 NAND prior peak; approximate
+2022,DRAM,79.0,2022 H2 decline; approximate
+2022,NAND,60.0,2022; approximate
+2023,DRAM,51.7,2023 trough; approximate (boards-based)
+2023,NAND,38.0,2023 lowest since 2016
+2023,HBM,4.0,2023 HBM (approx, ramp begins)
+2024,DRAM,90.7,2024 +75% YoY (TrendForce)
+2024,NAND,68.0,2024 record (Blocks & Files)
+2024,HBM,5.6,2024 HBM (range 2.3-5.6)
+2025,DRAM,136.5,2025 +51% YoY (TrendForce)
+2025,HBM,7.3,2025 HBM mid-range estimate
