@@ -28,7 +28,13 @@ export interface HbmContentSensitivityRow {
 }
 
 export interface HbmScenarioPreset {
-  id: 'hbm3e-8hi-reference' | 'hbm3e-12hi-reference' | 'hbm4-12hi-reference' | 'trendforce-2026-hbm-growth-reference'
+  id:
+    | 'hbm3e-8hi-reference'
+    | 'hbm3e-12hi-reference'
+    | 'hbm4-12hi-reference'
+    | 'trendforce-2026-hbm-growth-reference'
+    | 'gb200-nvl72-ramp-reference'
+    | 'gb300-rubin-288gb-reference'
   label: string
   description: string
   input: HbmDemandInput

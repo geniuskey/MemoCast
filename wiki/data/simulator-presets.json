@@ -107,6 +107,22 @@
       "confidence": "high",
       "sourceRefs": ["raw/reports/trendforce-hbm-bit-demand-supply-2026.md", "raw/datasets/gpu-hbm-capacity.md", "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md"],
       "input": { "acceleratorsThousand": 1700, "attachRatePercent": 95, "hbmStacksPerAccelerator": 8, "hbmCapacityGbPerStack": 36 }
+    },
+    {
+      "id": "gb200-nvl72-ramp-reference",
+      "label": "GB200/B200 192GB ramp reference",
+      "description": "Source-backed B200/GB200 content anchor: 192GB HBM3e per GPU, 72-GPU NVL72 rack, with accelerator units left as an illustrative scenario input.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md", "raw/datasets/gpu-hbm-capacity.md", "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md", "raw/articles/oem-server-odm-gb200-nvl72-hbm-shipments-2025.md"],
+      "input": { "acceleratorsThousand": 1000, "attachRatePercent": 95, "hbmStacksPerAccelerator": 8, "hbmCapacityGbPerStack": 24 }
+    },
+    {
+      "id": "gb300-rubin-288gb-reference",
+      "label": "GB300/Rubin 288GB high-content reference",
+      "description": "Source-backed high-content accelerator anchor: GB300/Rubin-class 288GB per GPU; realization still depends on CoWoS, HBM supply, and datacenter power.",
+      "confidence": "medium",
+      "sourceRefs": ["raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md", "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md", "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md", "raw/earnings/nvidia-hbm4-supplier-qualification-vera-rubin-2026.md"],
+      "input": { "acceleratorsThousand": 1000, "attachRatePercent": 95, "hbmStacksPerAccelerator": 8, "hbmCapacityGbPerStack": 36 }
     }
   ],
   "nand-ssd": [

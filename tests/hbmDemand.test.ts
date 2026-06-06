@@ -47,13 +47,20 @@ describe('HBM scenario presets', () => {
       'hbm3e-8hi-reference',
       'hbm3e-12hi-reference',
       'hbm4-12hi-reference',
-      'trendforce-2026-hbm-growth-reference'
+      'trendforce-2026-hbm-growth-reference',
+      'gb200-nvl72-ramp-reference',
+      'gb300-rubin-288gb-reference'
     ])
+
     expect(presets.every((preset) => preset.sources.length > 0)).toBe(true)
 
     const trendforce = getHbmScenarioPreset('trendforce-2026-hbm-growth-reference')
     expect(trendforce.input.acceleratorsThousand).toBe(1700)
     expect(trendforce.sources).toContain('raw/reports/trendforce-hbm-bit-demand-supply-2026.md')
+
+    const gb300 = getHbmScenarioPreset('gb300-rubin-288gb-reference')
+    expect(gb300.input.hbmStacksPerAccelerator * gb300.input.hbmCapacityGbPerStack).toBe(288)
+    expect(gb300.sources).toContain('raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md')
   })
 
   it('returns defensive copies of preset inputs and sources', () => {

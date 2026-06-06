@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T13:56:39.426Z",
+  "generatedAt": "2026-06-06T14:33:27.989Z",
   "summary": {
     "rawTotal": 374,
     "rawCited": 374,
@@ -9693,6 +9693,7 @@
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/forecasting-method-library.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/simulators/hbm-demand.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/aisilicon-onprem-edge-inference-memory-2026.md": [
@@ -9705,6 +9706,7 @@
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/forecasting-method-library.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/markets/hbm.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/channel-counterfeit-gskill-vcolor-ddr5-2026.md": [
@@ -10018,6 +10020,7 @@
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/forecasting-method-library.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/simulators/hbm-demand.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/oem-apple-dram-lta-expiry-2026-price-hike.md": [
@@ -10070,6 +10073,7 @@
     "raw/articles/oem-server-odm-gb200-nvl72-hbm-shipments-2025.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/forecasting-method-library.md",
+      "wiki/markets/hbm.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/oem-smartphone-dram-content-spec-downgrade-2026.md": [
@@ -10171,6 +10175,7 @@
     "raw/articles/power-us-grid-interconnection-queue-bottleneck.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/markets/hbm.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/power-vs-memory-limited-datacenter-debate.md": [
@@ -10235,6 +10240,8 @@
     "raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/markets/hbm.md",
+      "wiki/simulators/hbm-demand.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/ai-server-shipments-forecast.md": [
@@ -10290,11 +10297,14 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/gpu-hbm-capacity.md": [
+      "wiki/concepts/ai-infrastructure-memory.md",
+      "wiki/markets/hbm.md",
       "wiki/simulators/hbm-demand.md"
     ],
     "raw/datasets/hbm-bit-demand-growth-rate.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/markets/hbm.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/hbm-dram-capacity-wpm-2026.md": [
@@ -10417,6 +10427,7 @@
     "raw/earnings/nvidia-hbm4-supplier-qualification-vera-rubin-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/simulators/hbm-demand.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/earnings/samsung-electronics-1q26-earnings.md": [
@@ -10888,6 +10899,7 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/reports/equip-advantest-hbm-test-lead-times-2026.md": [
+      "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/reports/equip-applied-materials-q1-2026-dram-china.md": [
@@ -10903,6 +10915,7 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/reports/equip-kla-q3-2026-memory-advanced-packaging.md": [
+      "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/reports/equip-lam-research-wfe-140b-2026.md": [
@@ -11061,6 +11074,7 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md": [
+      "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/markets/hbm.md",
       "wiki/simulators/hbm-demand.md"
     ],

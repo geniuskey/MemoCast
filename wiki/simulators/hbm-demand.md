@@ -30,11 +30,14 @@ Attach 적용 accelerator = AI accelerator 출하량 × HBM attach rate
 
 현재 preset의 구조는 다음과 같습니다.
 
-| Preset | Stack count | GB/stack | Attach rate | 목적 |
-| --- | ---: | ---: | ---: | --- |
-| HBM3E 8Hi reference | 8 | 24GB | 85% | 24GB-class stack content anchor의 기본 민감도 확인 |
-| HBM3E 12Hi reference | 8 | 36GB | 90% | 고용량 stack 전환 시 accelerator당 HBM 상승 효과 확인 |
-| HBM4 12Hi reference | 8 | 36GB | 95% | Micron HBM4 36GB 12H capacity anchor 기반 전환 시나리오 |
+| Preset | Stack count | GB/stack | Attach rate | HBM GB/accelerator | 목적 |
+| --- | ---: | ---: | ---: | ---: | --- |
+| HBM3E 8Hi reference | 8 | 24GB | 85% | 192GB | 24GB-class stack content anchor의 기본 민감도 확인 |
+| HBM3E 12Hi reference | 8 | 36GB | 90% | 288GB | 고용량 stack 전환 시 accelerator당 HBM 상승 효과 확인 |
+| HBM4 12Hi reference | 8 | 36GB | 95% | 288GB | Micron HBM4 36GB 12H capacity anchor 기반 전환 시나리오 |
+| TrendForce 2026 HBM growth reference | 8 | 36GB | 95% | 288GB | HBM +70% YoY context와 high-content accelerator를 결합한 sanity-check scenario |
+| GB200/B200 192GB ramp reference | 8 | 24GB | 95% | 192GB | GB200 NVL72/B200 세대의 192GB GPU content anchor |
+| GB300/Rubin 288GB high-content reference | 8 | 36GB | 95% | 288GB | GB300/Rubin 세대의 288GB GPU content anchor |
 
 추가로 필요한 자료는 다음과 같습니다.
 
@@ -70,4 +73,6 @@ Attach 적용 accelerator = AI accelerator 출하량 × HBM attach rate
 | Preset | Sources | Interpretation |
 | --- | --- | --- |
 | TrendForce 2026 HBM growth reference | [TrendForce — TrendForce — 2026 HBM Demand +70% YoY; SK hynix 50% / Samsung 28% / Micron 22% Bit…](https://www.trendforce.com/presscenter/news/20251113-12780.html), [NVIDIA / wccftech / IntuitionLabs (종합) — NVIDIA GPU 세대별 per-GPU HBM 용량](https://wccftech.com/nvidia-blackwell-gpu-architecture-official-208-billion-transistors-5x-ai-performance-192-gb-hbm3e-memory/), [Astute Group (citing Morgan Stanley) — Advanced Packaging Demand Soars: Nvidia Secures 60% of CoWoS Capacity](https://www.astutegroup.com/news/industrial/advanced-packaging-demand-soars-nvidia-secures-60-of-cowos-capacity/) | Uses high attach and 12Hi-class content while leaving accelerator units illustrative; CoWoS remains a realization constraint. |
+| GB200/B200 192GB ramp reference | `raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md`, `raw/datasets/gpu-hbm-capacity.md`, `raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md` | Uses 192GB/GPU content and 72-GPU NVL72 rack evidence; good base content anchor before GB300/Rubin transition. |
+| GB300/Rubin 288GB high-content reference | `raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md`, `raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md`, `raw/earnings/nvidia-hbm4-supplier-qualification-vera-rubin-2026.md` | Uses 288GB/GPU content; compare against 192GB preset to isolate content uplift from unit growth. |
 

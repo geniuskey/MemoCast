@@ -24,6 +24,38 @@ AI infrastructure 자료는 HBM bit demand를 GPU 수량만으로 환산하면 �
 - Custom accelerator(TPU/Trainium/Ascend)도 HBM을 쓰기 때문에 NVIDIA GPU만 보면 AI memory demand를 과소평가할 수 있다.
 - On-prem/edge inference는 cloud training과 다른 수요층이다. 대용량 HBM/LPDDR 서버가 latency·data sovereignty·utilization 조건에서 독립 demand bucket을 만든다.
 
+## 예측 변수화: AI infrastructure → HBM demand
+
+AI infrastructure source를 HBM/DRAM 수요 모델에 넣을 때는 한 번에 `AI capex = HBM demand`로 환산하지 않고 아래 변수로 분리한다.
+
+```text
+Realized HBM demand EB
+= Σ(accelerator units × HBM GB/accelerator × attach rate × realization factor) / 1e9
+
+realization factor = min(power-ready factor, CoWoS/package factor, HBM supply factor, customer timing factor)
+```
+
+| Model variable | Raw anchor examples | Current anchor value | Confidence | Wiki/model use |
+| --- | --- | ---: | --- | --- |
+| Accelerator units | `raw/datasets/ai-server-shipments-forecast.md`, `raw/articles/trendforce-ai-server-shipments-28pct-2026.md` | 2023 AI server 1.2M, 2026 +28% YoY / ~17% server share | medium | simulator의 `acceleratorsThousand` 입력 후보. 서버 unit과 GPU unit은 다르므로 rack/GPU 변환 필요 |
+| HBM GB per GPU — B200/GB200 | `raw/datasets/gpu-hbm-capacity.md`, `raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md`, `raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md` | 192GB/GPU; GB200 NVL72 72 GPU ≈ 13.4TB HBM, ~120kW/rack | high | HBM simulator의 8 × 24GB stack preset |
+| HBM GB per GPU — GB300/Rubin | `raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md`, `raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md` | 288GB/GPU; GB300 NVL72 ≈ 20.7TB HBM/rack | medium | HBM simulator의 8 × 36GB stack high-content preset |
+| Custom accelerator HBM | `raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md`, `raw/articles/oem-hyperscaler-custom-silicon-memory-buyers-2026.md` | TPU Ironwood 192GB/chip; Trainium3 144GB-class anchor | medium | NVIDIA-only HBM 수요 과소평가 방지용 non-NVIDIA bucket |
+| Cluster scale | `raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md`, `raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md` | xAI 555k GPU / 목표 1M GPU; Stargate 450k GPU; sovereign AI 200MW~1GW+ clusters | low/medium | top-down GPU unit sanity check; announced cluster는 power/package factor 적용 전 상단값 |
+| Power readiness | `raw/articles/power-us-grid-interconnection-queue-bottleneck.md`, `raw/articles/power-deloitte-ai-datacenter-123gw-2035.md`, `raw/articles/power-gb200-nvl72-rack-120kw-liquid-cooling.md` | GB200 NVL72 ~120kW/rack; US DC power 75.8GW→108GW→134.4GW; AI DC 4GW→123GW by 2035 | medium | realization factor. GPU purchase order를 installed HBM demand로 전환할 때 discount |
+| Packaging / CoWoS | `raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md`, `raw/reports/equip-kla-q3-2026-memory-advanced-packaging.md`, `raw/reports/equip-advantest-hbm-test-lead-times-2026.md` | 2026 CoWoS wafer demand/allocation, advanced packaging/test surge | medium | HBM bit demand의 physical bottleneck; supply-demand gap page와 연결 |
+| HBM growth context | `raw/datasets/hbm-bit-demand-growth-rate.md`, `raw/articles/trendforce-hbm-market-forecast-2026.md` | 2024 +200%, 2025 +130%, 2026 +70% YoY | medium | simulator output이 시장 성장률과 크게 어긋나는지 sanity check |
+
+### 시나리오 sanity checks
+
+| Scenario | Calculation | Result | Interpretation |
+| --- | --- | ---: | --- |
+| 1M B200/GB200-class GPUs | 1,000k × 95% × 192GB | 182.4PB / 0.1824EB | 192GB 세대의 unit-volume sensitivity |
+| 1M GB300/Rubin-class GPUs | 1,000k × 95% × 288GB | 273.6PB / 0.2736EB | 288GB 세대로 content만 바뀌어도 +50% HBM demand |
+| 1.7M high-content accelerators | 1,700k × 95% × 288GB | 465.1PB / 0.4651EB | 기존 TrendForce growth reference preset의 high-content 해석 |
+| xAI 555k GPU cluster upper bound | 555k × 288GB | 159.8PB / 0.1598EB | 단일 초대형 cluster가 HBM demand에 미치는 order of magnitude |
+| Stargate 450k GPU campus upper bound | 450k × 288GB | 129.6PB / 0.1296EB | announced GPU count는 realization factor 적용 전 상단값 |
+
 ## Source notes read in this pass
 
 | Raw file | What it adds to the wiki model | Numeric anchors observed |

@@ -95,3 +95,9 @@
 - Read the 344 uncited raw files from the audit queue and created `wiki/sources/raw-integration-ledger.md` as the file-by-file processing ledger.
 - Added 5 cluster knowledge pages: `ai-infrastructure-memory`, `channel-pricing-signal`, `memory-supply-chain-equipment`, `long-tail-domain-demand`, and `forecasting-method-library`.
 - Updated `raw-source-map`, `citation-matrix`, and VitePress sidebar navigation to expose the new raw integration layer.
+
+## 2026-06-06 — AI infrastructure HBM variable extraction
+
+- Promoted [[ai-infrastructure-memory]] from source cluster summary into an HBM model-variable page with unit/content/attach/realization factors.
+- Added source-backed HBM simulator presets for GB200/B200 192GB and GB300/Rubin 288GB accelerator content anchors.
+- Updated [[hbm]] and [[hbm-demand]] to separate accelerator units, HBM GB/GPU, custom accelerator buckets, CoWoS/package, and power readiness constraints.

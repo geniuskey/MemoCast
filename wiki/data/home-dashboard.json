@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T13:56:40.404Z",
+  "generatedAt": "2026-06-06T14:33:29.081Z",
   "summary": {
     "rawTotal": 374,
     "rawCited": 374,
@@ -7,7 +7,7 @@
     "wikiPages": 32,
     "wikiPagesWithoutRawReferences": 10,
     "missingRawReferences": 0,
-    "simulatorPresets": 17,
+    "simulatorPresets": 19,
     "lowConfidenceRaw": 32,
     "lowConfidencePresets": 6
   },
@@ -33,7 +33,7 @@
     "simulatorPresets": {
       "high": 1,
       "low": 6,
-      "medium": 10
+      "medium": 12
     }
   },
   "recentUpdates": [
