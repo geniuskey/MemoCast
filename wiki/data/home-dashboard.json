@@ -1,9 +1,11 @@
 {
-  "generatedAt": "2026-06-07T01:18:44.723Z",
+  "generatedAt": "2026-06-07T01:28:37.149Z",
   "summary": {
     "rawTotal": 416,
     "rawCited": 416,
     "rawUncited": 0,
+    "rawDataFiles": 46,
+    "rawSourceFiles": 462,
     "wikiPages": 36,
     "wikiPagesWithoutRawReferences": 9,
     "missingRawReferences": 0,

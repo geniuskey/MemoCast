@@ -24,11 +24,12 @@ const TRACKED_CLUSTER_TAGS = [
   'datacenter'
 ]
 
-export function buildHomeDashboard({ rawFiles, wikiFiles, simulatorPresets, generatedAt = new Date().toISOString() }) {
+export function buildHomeDashboard({ rawFiles, wikiFiles, simulatorPresets, datasetFiles = [], generatedAt = new Date().toISOString() }) {
   const citationAudit = buildCitationAudit({ rawFiles, wikiFiles })
   const rawEntries = rawFiles.map((file) => toRawEntry(file, citationAudit.citationsByRawFile))
   const rawByPath = new Map(rawEntries.map((entry) => [entry.path, entry]))
   const presetEntries = flattenSimulatorPresets(simulatorPresets)
+  const rawDataFiles = datasetFiles.map((file) => normalizeSlashes(file.path)).filter((filePath) => filePath.endsWith('.csv'))
 
   return {
     generatedAt,
@@ -36,6 +37,8 @@ export function buildHomeDashboard({ rawFiles, wikiFiles, simulatorPresets, gene
       rawTotal: citationAudit.summary.rawTotal,
       rawCited: citationAudit.summary.rawCited,
       rawUncited: citationAudit.summary.rawUncited,
+      rawDataFiles: rawDataFiles.length,
+      rawSourceFiles: citationAudit.summary.rawTotal + rawDataFiles.length,
       wikiPages: citationAudit.summary.wikiPages,
       wikiPagesWithoutRawReferences: citationAudit.summary.wikiPagesWithoutRawReferences,
       missingRawReferences: citationAudit.summary.missingRawReferences,
@@ -76,14 +79,29 @@ export function writeHomeDashboard({ repoRoot, outputPath }) {
   const presetPath = path.join(wikiDir, 'data', 'simulator-presets.json')
   const simulatorPresets = JSON.parse(fs.readFileSync(presetPath, 'utf8'))
   const rawFiles = readMarkdownFiles(rawDir, { repoRoot })
+  const datasetFiles = readFilesByExtension(path.join(rawDir, 'datasets'), '.csv', { repoRoot })
   const wikiFiles = readMarkdownFiles(wikiDir, {
     repoRoot,
     include: (filePath) => !filePath.includes(`${path.sep}.vitepress${path.sep}`) && !filePath.includes(`${path.sep}components${path.sep}`) && !filePath.includes(`${path.sep}public${path.sep}`)
   })
-  const dashboard = buildHomeDashboard({ rawFiles, wikiFiles, simulatorPresets })
+  const dashboard = buildHomeDashboard({ rawFiles, wikiFiles, simulatorPresets, datasetFiles })
   fs.mkdirSync(path.dirname(outputPath), { recursive: true })
   fs.writeFileSync(outputPath, `${JSON.stringify(dashboard, null, 2)}\n`)
   return dashboard
+}
+
+function readFilesByExtension(dir, extension, { repoRoot }) {
+  if (!fs.existsSync(dir)) return []
+  return fs.readdirSync(dir, { withFileTypes: true, recursive: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith(extension))
+    .map((entry) => {
+      const filePath = path.join(entry.parentPath ?? entry.path ?? dir, entry.name)
+      return {
+        path: normalizeSlashes(path.relative(repoRoot, filePath)),
+        content: fs.readFileSync(filePath, 'utf8')
+      }
+    })
+    .sort((a, b) => a.path.localeCompare(b.path))
 }
 
 function toRawEntry(file, citationsByRawFile) {

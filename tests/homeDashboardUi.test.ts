@@ -15,7 +15,10 @@ describe('home dashboard UI', () => {
 
     expect(component).toContain("import dashboard from '../data/home-dashboard.json'")
     expect(component).toContain('수집·추적 상황판')
-    expect(component).toContain('raw → wiki 연결 상태')
+    expect(component).toContain('markdown raw → wiki 연결 상태')
+    expect(component).toContain('CSV dataset ledger')
+    expect(component).toContain('CSV datasets tracked')
+    expect(component).toContain("withBase('/sources/raw-dataset-csv-ledger')")
     expect(component).toContain('최근 업데이트')
     expect(component).toContain('낮은 confidence')
     expect(component).toContain('보강 필요 cluster')

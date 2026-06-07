@@ -38,12 +38,20 @@ const simulatorPresets = {
 
 describe('home dashboard data', () => {
   it('summarizes raw/wiki coverage, recent updates, confidence, and enrichment clusters', () => {
-    const dashboard = buildHomeDashboard({ rawFiles, wikiFiles, simulatorPresets, generatedAt: '2026-06-06T00:00:00.000Z' })
+    const dashboard = buildHomeDashboard({
+      rawFiles,
+      wikiFiles,
+      simulatorPresets,
+      datasetFiles: [{ path: 'raw/datasets/hbm.csv', content: 'year,value\n2026,1' }],
+      generatedAt: '2026-06-06T00:00:00.000Z'
+    })
 
     expect(dashboard.summary).toEqual({
       rawTotal: 3,
       rawCited: 1,
       rawUncited: 2,
+      rawDataFiles: 1,
+      rawSourceFiles: 4,
       wikiPages: 2,
       wikiPagesWithoutRawReferences: 1,
       missingRawReferences: 0,

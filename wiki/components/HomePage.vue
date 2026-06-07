@@ -3,6 +3,8 @@ import { withBase } from 'vitepress'
 import dashboard from '../data/home-dashboard.json'
 
 const summary = dashboard.summary
+const rawSourceFileTotal = summary.rawSourceFiles ?? summary.rawTotal
+const rawDataFiles = summary.rawDataFiles ?? 0
 const rawTypeRows = Object.entries(dashboard.rawByType)
   .sort(([, a], [, b]) => b - a)
   .slice(0, 5)
@@ -37,7 +39,9 @@ function confidenceLabel(value) {
         </div>
         <div class="mc-stats" aria-label="MemoCast content statistics">
           <div><strong>{{ summary.wikiPages }}</strong><span>wiki pages</span></div>
-          <div><strong>{{ summary.rawTotal }}</strong><span>raw sources</span></div>
+          <div><strong>{{ rawSourceFileTotal }}</strong><span>raw files</span></div>
+          <div><strong>{{ summary.rawTotal }}</strong><span>source notes</span></div>
+          <div><strong>{{ rawDataFiles }}</strong><span>CSV datasets</span></div>
           <div><strong>{{ summary.simulatorPresets }}</strong><span>source-backed presets</span></div>
         </div>
       </div>
@@ -83,7 +87,7 @@ function confidenceLabel(value) {
           <p class="mc-eyebrow">Work dashboard</p>
           <h2 id="dashboard-heading">수집·추적 상황판</h2>
           <p>
-            raw 수집량, wiki 연결 상태, 최근 업데이트, 낮은 confidence, 보강 필요 cluster를 한 화면에서 추적합니다.
+            raw 수집량, markdown source note의 wiki 연결 상태, CSV dataset ledger, 최근 업데이트와 보강 필요 cluster를 한 화면에서 추적합니다.
           </p>
         </div>
         <a class="mc-button" :href="withBase('/sources/citation-matrix')">Citation matrix</a>
@@ -94,7 +98,7 @@ function confidenceLabel(value) {
           <div class="mc-card-title-row">
             <div>
               <p class="mc-eyebrow">Coverage</p>
-              <h3>raw → wiki 연결 상태</h3>
+              <h3>markdown raw → wiki 연결 상태</h3>
             </div>
             <strong>{{ summary.rawCited }}/{{ summary.rawTotal }}</strong>
           </div>
@@ -102,7 +106,8 @@ function confidenceLabel(value) {
             <i :style="{ width: `${Math.round((summary.rawCited / Math.max(summary.rawTotal, 1)) * 100)}%` }"></i>
           </div>
           <div class="mc-mini-metrics">
-            <span><b>{{ summary.rawUncited }}</b> uncited raw</span>
+            <span><b>{{ summary.rawUncited }}</b> uncited source notes</span>
+            <span><b>{{ rawDataFiles }}</b> CSV datasets tracked</span>
             <span><b>{{ summary.wikiPagesWithoutRawReferences }}</b> pages without raw refs</span>
             <span><b>{{ summary.missingRawReferences }}</b> missing refs</span>
           </div>
@@ -163,12 +168,14 @@ function confidenceLabel(value) {
           <p class="mc-eyebrow">Next actions</p>
           <h3>바로 보강할 항목</h3>
           <ul class="mc-action-list">
-            <li>uncited raw를 market/concept page의 `sources`로 연결</li>
+            <li>신규 raw markdown은 market/concept page의 `sources`로 즉시 연결</li>
+            <li>신규 CSV는 paired markdown note와 Dataset CSV Ledger를 함께 갱신</li>
             <li>low confidence preset은 1차 자료 또는 dataset anchor 추가</li>
             <li>상위 cluster는 chart 또는 simulator 후보로 승격</li>
           </ul>
           <div class="mc-actions mc-actions-compact">
             <a class="mc-button" :href="withBase('/sources/raw-source-map')">Raw map</a>
+            <a class="mc-button" :href="withBase('/sources/raw-dataset-csv-ledger')">CSV ledger</a>
             <a class="mc-button" :href="withBase('/graph')">Graph</a>
           </div>
         </article>
@@ -194,8 +201,8 @@ function confidenceLabel(value) {
         </a>
         <a class="mc-card" :href="withBase('/sources/citation-matrix')">
           <span>03</span>
-          <h3>근거 추적</h3>
-          <p>각 wiki page와 simulator preset이 어떤 source를 인용하는지 확인합니다.</p>
+          <h3>근거·CSV 추적</h3>
+          <p>각 wiki page, simulator preset, paired CSV dataset이 어떤 raw source와 연결되는지 확인합니다.</p>
         </a>
         <a class="mc-card" :href="withBase('/comparisons/domain-comparison')">
           <span>04</span>
@@ -261,6 +268,11 @@ function confidenceLabel(value) {
       <div>
         <p class="mc-eyebrow">Source-backed updates</p>
         <h2>최근 raw expansion anchor</h2>
+        <p>416개 markdown source note와 46개 CSV dataset을 함께 추적합니다.</p>
+        <div class="mc-actions mc-actions-compact">
+          <a class="mc-button" :href="withBase('/sources/raw-dataset-csv-ledger')">Dataset CSV Ledger</a>
+          <a class="mc-button" :href="withBase('/sources/raw-source-map')">Raw Source Map</a>
+        </div>
       </div>
       <ul>
         <li><a href="https://www.trendforce.com/presscenter/news/20260122-12893.html">TrendForce — AI architecture evolution and memory revenue peak</a></li>
