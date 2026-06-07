@@ -71,6 +71,7 @@ export default defineConfig({
         items: [
           { text: 'Raw Source Map', link: '/sources/raw-source-map' },
           { text: 'Raw Integration Ledger', link: '/sources/raw-integration-ledger' },
+          { text: 'Dataset CSV Ledger', link: '/sources/raw-dataset-csv-ledger' },
           { text: 'Citation Matrix', link: '/sources/citation-matrix' }
         ]
       },

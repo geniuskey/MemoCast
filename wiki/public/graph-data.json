@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T01:09:04.131Z",
+  "generatedAt": "2026-06-07T01:18:41.783Z",
   "nodes": [
     {
       "id": "advanced-forecast-raw-intake-2026-06-07",
@@ -83,6 +83,68 @@
       ],
       "sources": [
         "raw/INDEX.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "raw-dataset-csv-ledger",
+      "label": "Raw Dataset CSV Ledger",
+      "type": "source",
+      "href": "/sources/raw-dataset-csv-ledger",
+      "tags": [
+        "raw",
+        "datasets",
+        "csv",
+        "citation",
+        "demand-forecasting"
+      ],
+      "sources": [
+        "raw/datasets/ai-accelerator-bom-hbm-cost-share.md",
+        "raw/datasets/ai-pc-penetration-forecast.md",
+        "raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md",
+        "raw/datasets/ai-server-shipments-forecast.md",
+        "raw/datasets/bit-demand-supply-growth.md",
+        "raw/datasets/ddr5-16gb-price-monthly-2025-2026.md",
+        "raw/datasets/ddr5-ddr4-adoption-share-by-year.md",
+        "raw/datasets/dram-contract-price-qoq-2025-2026.md",
+        "raw/datasets/dram-market-share-by-supplier-history.md",
+        "raw/datasets/dram-nand-bit-demand-by-application.md",
+        "raw/datasets/dram-nand-bit-growth-cagr-longrun.md",
+        "raw/datasets/dram-nand-revenue-bit-quarterly-2024-2025.md",
+        "raw/datasets/dram-price-history.md",
+        "raw/datasets/dram-revenue-cycle-history.md",
+        "raw/datasets/dram-revenue-quarterly.md",
+        "raw/datasets/dram-supplier-inventory-weeks-history.md",
+        "raw/datasets/dram-wafer-capacity-allocation-2026.md",
+        "raw/datasets/enterprise-ssd-exabytes-capacity.md",
+        "raw/datasets/gpu-hbm-capacity.md",
+        "raw/datasets/hbm-bit-demand-growth-rate.md",
+        "raw/datasets/hbm-dram-capacity-wpm-2026.md",
+        "raw/datasets/hbm-market-size.md",
+        "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md",
+        "raw/datasets/humanoid-robot-production-forecast.md",
+        "raw/datasets/idc-global-datasphere-zettabytes.md",
+        "raw/datasets/institutional-memory-forecast-comparison-2026.md",
+        "raw/datasets/korea-semiconductor-exports-monthly.md",
+        "raw/datasets/lpddr-gddr-supplier-share-2025.md",
+        "raw/datasets/memory-content-per-device.md",
+        "raw/datasets/memory-demand-domain-taxonomy.md",
+        "raw/datasets/memory-maker-capex.md",
+        "raw/datasets/memory-makers-2025-quarterly-timeseries.md",
+        "raw/datasets/memory-makers-quarterly-financials-cycle.md",
+        "raw/datasets/memory-market-revenue-split.md",
+        "raw/datasets/memory-market-tam-forecast-2025-2028.md",
+        "raw/datasets/nand-cost-per-bit-trend.md",
+        "raw/datasets/nand-flash-revenue-share.md",
+        "raw/datasets/nand-supplier-market-share-2025.md",
+        "raw/datasets/pc-server-shipments.md",
+        "raw/datasets/semiconductor-capex-to-revenue-ratio.md",
+        "raw/datasets/server-dram-content-per-box-growth.md",
+        "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md",
+        "raw/datasets/smartphone-memory-content-spec-2026.md",
+        "raw/datasets/smartphone-shipments.md",
+        "raw/datasets/steam-pc-gaming-ram-share-2026.md",
+        "raw/datasets/wsts-semiconductor-billings.md"
       ],
       "confidence": "medium"
     },
@@ -1095,6 +1157,11 @@
     },
     {
       "from": "citation-matrix",
+      "to": "raw-dataset-csv-ledger",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
       "to": "raw-integration-ledger",
       "kind": "wikilink"
     },
@@ -1674,6 +1741,26 @@
       "kind": "wikilink"
     },
     {
+      "from": "raw-dataset-csv-ledger",
+      "to": "advanced-forecast-raw-intake-2026-06-07",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-dataset-csv-ledger",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-dataset-csv-ledger",
+      "to": "raw-integration-ledger",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-dataset-csv-ledger",
+      "to": "raw-source-map",
+      "kind": "wikilink"
+    },
+    {
       "from": "raw-integration-ledger",
       "to": "ai-infrastructure-memory",
       "kind": "wikilink"
@@ -1696,6 +1783,11 @@
     {
       "from": "raw-integration-ledger",
       "to": "memory-supply-chain-equipment",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-integration-ledger",
+      "to": "raw-dataset-csv-ledger",
       "kind": "wikilink"
     },
     {
@@ -1741,6 +1833,11 @@
     {
       "from": "raw-source-map",
       "to": "memory-supply-chain-equipment",
+      "kind": "wikilink"
+    },
+    {
+      "from": "raw-source-map",
+      "to": "raw-dataset-csv-ledger",
       "kind": "wikilink"
     },
     {

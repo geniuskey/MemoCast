@@ -10,18 +10,18 @@ confidence: medium
 
 # Raw Source Map
 
-`raw/`에는 초기 7개 제품/시장 anchor 외에 대규모 자료가 추가되었습니다. 현재 확인된 markdown 원천 파일은 374개이며, citation audit 기준 344개가 이번 패스 시작 시 wiki에 직접 연결되지 않은 상태였습니다. 이번 업데이트는 그 344개 미반영 파일을 파일 단위로 열람해 [[raw-integration-ledger]]에 처리 ledger를 만들고, 5개 cluster page로 지식화했습니다.^[MemoCast internal raw source map]
+`raw/`에는 초기 7개 제품/시장 anchor 외에 대규모 자료가 계속 추가되고 있습니다. 현재 확인된 원천 파일은 **462개**입니다: markdown source note 416개와 paired CSV dataset 46개입니다. citation audit은 markdown note 기준으로 416/416 cited를 확인하며, CSV 파일 경로는 [[raw-dataset-csv-ledger]]에서 별도로 직접 추적합니다. 과거 pass에서는 344개 미반영 markdown 파일을 파일 단위로 열람해 [[raw-integration-ledger]]에 처리 ledger를 만들고, 5개 cluster page로 지식화했습니다.^[MemoCast internal raw source map]
 
 ## 폴더별 역할
 
 | Folder | 확인된 파일 수 | Wiki에서의 역할 |
 | --- | ---: | --- |
-| `raw/articles/` | 105 | application별 수요 driver, OEM/AI/server/storage 뉴스, 기술 변화 신호 |
-| `raw/reports/` | 103 | 시장 전망, 가격/수급, capex, supplier ranking, macro scenario |
-| `raw/lectures/` | 71 | DRAM/NAND/HBM/CXL/roadmap/사이클 개념 설명 |
-| `raw/datasets/` | 36 | CSV와 markdown 설명 파일로 구성된 정량 dataset layer |
-| `raw/papers/` | 40 | 수요예측, 산업 cycle, bullwhip, diffusion, capacity planning 방법론 |
-| `raw/earnings/` | 17 | 메모리 업체와 수요측 기업의 실적/가이던스 신호 |
+| `raw/articles/` | 113 | application별 수요 driver, OEM/AI/server/storage 뉴스, 기술 변화 신호 |
+| `raw/reports/` | 114 | 시장 전망, 가격/수급, capex, supplier ranking, macro scenario |
+| `raw/lectures/` | 74 | DRAM/NAND/HBM/CXL/roadmap/사이클 개념 설명 |
+| `raw/datasets/` | 46 markdown + 46 CSV | CSV와 markdown 설명 파일로 구성된 정량 dataset layer. CSV 경로는 [[raw-dataset-csv-ledger]]에서 추적 |
+| `raw/papers/` | 47 | 수요예측, 산업 cycle, bullwhip, diffusion, capacity planning 방법론 |
+| `raw/earnings/` | 20 | 메모리 업체와 수요측 기업의 실적/가이던스 신호 |
 
 ## 주요 source cluster
 

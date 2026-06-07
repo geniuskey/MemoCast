@@ -10,11 +10,11 @@ confidence: medium
 
 # Raw Integration Ledger
 
-이번 패스에서 citation audit 기준 미반영 raw 파일 **344개**를 파일 단위로 열람해 제목·frontmatter·본문 heading/bullet/수치 anchor를 확인했다. 이 문서는 ‘안 읽은 것부터’ 처리하기 위한 ledger이며, 상세 지식은 아래 cluster page와 기존 market/method page로 승격한다.
+이번 패스에서 citation audit 기준 미반영 raw 파일 **344개**를 파일 단위로 열람해 제목·frontmatter·본문 heading/bullet/수치 anchor를 확인했다. 이후 raw corpus는 markdown source note 416개와 paired CSV dataset 46개까지 확장되었으며, 현재 markdown source note는 citation audit 기준 416/416 cited 상태다. CSV 데이터 파일은 [[raw-dataset-csv-ledger]]에서 별도 경로 추적한다. 이 문서는 ‘안 읽은 것부터’ 처리하기 위한 ledger이며, 상세 지식은 아래 cluster page와 기존 market/method page로 승격한다.
 
-- Audit 기준: rawTotal 374, rawCited 30, rawUncited 344
+- Audit 기준: rawTotal 416, rawCited 416, rawUncited 0
 - 처리 원칙: raw 원문은 수정하지 않고 wiki에서 raw path를 citation으로 남긴다.
-- Web 우선 사용성을 위해 각 raw path 옆에 원문 `source_url` 링크를 함께 표기한다. 현재 raw markdown 374개 중 URL이 필요한 외부 source는 372개이며, `raw/README.md`/`raw/INDEX.md`는 내부 관리 문서라 URL이 없다.
+- Web 우선 사용성을 위해 각 raw path 옆에 원문 `source_url` 링크를 함께 표기한다. 내부 관리 문서나 paired CSV는 markdown source note 또는 CSV ledger에서 연결한다.
 
 ## Cluster pages created from this read pass
 

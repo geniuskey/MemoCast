@@ -34,6 +34,7 @@ confidence: medium
 | [[long-tail-domain-demand]] | 27 files | Automotive/networking/IoT/robotics/XR domain demand anchors |
 | [[forecasting-method-library]] | 331 files | Papers/lectures/model methods for structural forecasting |
 | [[raw-integration-ledger]] | 344 files | File-by-file unread-source ledger and target candidates |
+| [[raw-dataset-csv-ledger]] | 46 CSV files | Paired CSV dataset raw paths that complement markdown source-note citation audit |
 
 ## Simulator presets
 

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-07T01:09:05.602Z",
+  "generatedAt": "2026-06-07T01:18:43.819Z",
   "summary": {
     "rawTotal": 416,
     "rawCited": 416,
     "rawUncited": 0,
     "missingRawReferences": 0,
-    "wikiPages": 35,
+    "wikiPages": 36,
     "wikiPagesWithoutRawReferences": 9
   },
   "uncitedRawFiles": [],
@@ -11368,9 +11368,11 @@
       "wiki/simulators/smartphone-memory-demand.md"
     ],
     "raw/datasets/ai-accelerator-bom-hbm-cost-share.md": [
-      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/ai-pc-penetration-forecast.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md": [
@@ -11378,177 +11380,221 @@
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/markets/hbm.md",
       "wiki/simulators/hbm-demand.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/ai-server-shipments-forecast.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/bit-demand-supply-growth.md": [
       "wiki/concepts/bit-demand.md",
       "wiki/concepts/demand-forecasting.md",
-      "wiki/concepts/supply-demand-gap.md"
+      "wiki/concepts/supply-demand-gap.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/ddr5-16gb-price-monthly-2025-2026.md": [
       "wiki/concepts/channel-pricing-signal.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/ddr5-ddr4-adoption-share-by-year.md": [
-      "wiki/methods/advanced-demand-forecast-engine.md"
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/dram-contract-price-qoq-2025-2026.md": [
       "wiki/concepts/channel-pricing-signal.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-market-share-by-supplier-history.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-nand-bit-demand-by-application.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-nand-bit-growth-cagr-longrun.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-nand-revenue-bit-quarterly-2024-2025.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-price-history.md": [
       "wiki/concepts/channel-pricing-signal.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-revenue-cycle-history.md": [
       "wiki/concepts/channel-pricing-signal.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-revenue-quarterly.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-supplier-inventory-weeks-history.md": [
       "wiki/concepts/channel-pricing-signal.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/dram-wafer-capacity-allocation-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/enterprise-ssd-exabytes-capacity.md": [
-      "wiki/methods/advanced-demand-forecast-engine.md"
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/gpu-hbm-capacity.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/markets/hbm.md",
-      "wiki/simulators/hbm-demand.md"
+      "wiki/simulators/hbm-demand.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/hbm-bit-demand-growth-rate.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/markets/hbm.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/hbm-dram-capacity-wpm-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/hbm-market-size.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md": [
-      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/humanoid-robot-production-forecast.md": [
-      "wiki/concepts/long-tail-domain-demand.md"
+      "wiki/concepts/long-tail-domain-demand.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/idc-global-datasphere-zettabytes.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/methods/advanced-demand-forecast-engine.md",
       "wiki/simulators/advanced-demand-forecast.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/institutional-memory-forecast-comparison-2026.md": [
-      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/korea-semiconductor-exports-monthly.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/lpddr-gddr-supplier-share-2025.md": [
-      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/memory-content-per-device.md": [
       "wiki/concepts/bit-demand.md",
       "wiki/markets/pc-dram.md",
       "wiki/markets/smartphone-memory.md",
       "wiki/simulators/pc-dram-demand.md",
-      "wiki/simulators/smartphone-memory-demand.md"
+      "wiki/simulators/smartphone-memory-demand.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/memory-demand-domain-taxonomy.md": [
       "wiki/concepts/long-tail-domain-demand.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/memory-maker-capex.md": [
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/memory-makers-2025-quarterly-timeseries.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/memory-makers-quarterly-financials-cycle.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/memory-market-revenue-split.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/memory-market-tam-forecast-2025-2028.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/nand-cost-per-bit-trend.md": [
-      "wiki/markets/nand.md"
+      "wiki/markets/nand.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/nand-flash-revenue-share.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/nand-supplier-market-share-2025.md": [
-      "wiki/methods/advanced-demand-forecast-engine.md"
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/pc-server-shipments.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/semiconductor-capex-to-revenue-ratio.md": [
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/server-dram-content-per-box-growth.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md": [
-      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/smartphone-memory-content-spec-2026.md": [
-      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
+      "wiki/sources/raw-dataset-csv-ledger.md"
     ],
     "raw/datasets/smartphone-shipments.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/steam-pc-gaming-ram-share-2026.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/concepts/long-tail-domain-demand.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/wsts-semiconductor-billings.md": [
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/earnings/ase-amkor-q1-2026-packaging-test.md": [
@@ -11650,6 +11696,7 @@
       "wiki/log.md",
       "wiki/methods/forecasting-evidence-map.md",
       "wiki/sources/citation-matrix.md",
+      "wiki/sources/raw-dataset-csv-ledger.md",
       "wiki/sources/raw-integration-ledger.md",
       "wiki/sources/raw-source-map.md"
     ],
