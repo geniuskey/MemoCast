@@ -55,6 +55,30 @@ describe('advanced forecasting surface', () => {
     expect(component).not.toContain('.advanced-forecast-workbench.is-fullscreen .forecast-hero {\n  position: fixed')
   })
 
+  it('renders the multi-year forecast path with Chart.js index tooltips', () => {
+    const component = readRepoFile('wiki/components/AdvancedDemandForecastSimulator.vue')
+
+    expect(component).toContain("import { Line } from 'vue-chartjs'")
+    expect(component).toContain("from 'chart.js'")
+    expect(component).toContain('ChartJS.register')
+    expect(component).toContain('forecastChartData')
+    expect(component).toContain('forecastChartOptions')
+    expect(component).toContain('forecast-chart-canvas')
+    expect(component).toContain('mode: \'index\'')
+    expect(component).toContain('intersect: false')
+    expect(component).toContain('Unconstrained demand')
+    expect(component).toContain('Supply-realized demand')
+    expect(component).toContain('Unmet demand')
+    expect(component).toContain('Weighted ensemble demand')
+    expect(component).toContain('BOM stress demand')
+    expect(component).toContain('institutionWeightedEnsemble.value.forecast.rows.map')
+    expect(component).toContain('hbmBomStressChartRows.value.map')
+    expect(component).toContain('hbmBomStressPeakEffectiveDemandEb')
+    expect(component).toContain('forecast-control-impact-summary')
+    expect(component).toContain('Controls currently linked to chart')
+    expect(component).not.toContain('v-for="row in forecast.rows" :key="row.year" class="year-row"')
+  })
+
   it('promotes the simulator hub from simple calculators to an integrated forecast cockpit', () => {
     const index = readRepoFile('wiki/simulators/index.md')
 

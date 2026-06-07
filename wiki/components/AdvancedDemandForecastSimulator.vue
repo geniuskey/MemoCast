@@ -1,5 +1,18 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { Line } from 'vue-chartjs'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  Filler,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Tooltip,
+  type ChartData,
+  type ChartOptions
+} from 'chart.js'
 import { useFullscreenElement } from '../lib/useFullscreen'
 import {
   buildAdvancedDemandForecast,
@@ -18,6 +31,8 @@ import {
   listAdvancedForecastPresets,
   type AdvancedForecastPreset
 } from '../lib/advancedDemandForecast'
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler)
 
 const basePresets = listAdvancedForecastPresets()
 const csvDerivedPresets = buildCsvDerivedAdvancedForecastPresets()
@@ -71,6 +86,154 @@ const hbmBomStress = computed(() => calculateHbmBomStress(selectedPreset.value.i
   demandElasticity: demandElasticity.value,
   supplyReliefPassThrough: supplyReliefPassThrough.value
 }))
+const hbmBomStressChartRows = computed(() => {
+  const demandFactor = 1 + hbmBomStress.value.affordabilityDemandShockPercent / 100
+  const supplyFactor = 1 + hbmBomStress.value.supplyReliefShockPercent / 100
+  return forecast.value.rows.map((row) => ({
+    year: row.year,
+    effectiveDemandEb: Math.min(row.unconstrainedDemandEb * demandFactor, row.effectiveDemandEb * supplyFactor)
+  }))
+})
+const hbmBomStressPeakEffectiveDemandEb = computed(() => Math.max(0, ...hbmBomStressChartRows.value.map((row) => row.effectiveDemandEb)))
+
+const forecastChartData = computed<ChartData<'line'>>(() => ({
+  labels: forecast.value.rows.map((row) => String(row.year)),
+  datasets: [
+    {
+      label: 'Unconstrained demand',
+      data: forecast.value.rows.map((row) => row.unconstrainedDemandEb),
+      borderColor: '#818cf8',
+      backgroundColor: 'rgba(129, 140, 248, 0.12)',
+      pointBackgroundColor: '#818cf8',
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      borderWidth: 3,
+      tension: 0.35
+    },
+    {
+      label: 'Supply-realized demand',
+      data: forecast.value.rows.map((row) => row.effectiveDemandEb),
+      borderColor: '#22c55e',
+      backgroundColor: 'rgba(34, 197, 94, 0.12)',
+      pointBackgroundColor: '#22c55e',
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      borderWidth: 3,
+      tension: 0.35,
+      fill: true
+    },
+    {
+      label: 'Unmet demand',
+      data: forecast.value.rows.map((row) => row.unmetDemandEb),
+      borderColor: '#f97316',
+      backgroundColor: 'rgba(249, 115, 22, 0.12)',
+      pointBackgroundColor: '#f97316',
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      borderWidth: 3,
+      tension: 0.35
+    },
+    {
+      label: 'Envelope high',
+      data: forecastEnvelope.value.map((row) => row.highEffectiveDemandEb),
+      borderColor: '#0ea5e9',
+      backgroundColor: 'rgba(14, 165, 233, 0.08)',
+      pointBackgroundColor: '#0ea5e9',
+      pointRadius: 3,
+      pointHoverRadius: 5,
+      borderWidth: 2,
+      borderDash: [8, 6],
+      tension: 0.35
+    },
+    {
+      label: 'Envelope low',
+      data: forecastEnvelope.value.map((row) => row.lowEffectiveDemandEb),
+      borderColor: '#94a3b8',
+      backgroundColor: 'rgba(148, 163, 184, 0.08)',
+      pointBackgroundColor: '#94a3b8',
+      pointRadius: 3,
+      pointHoverRadius: 5,
+      borderWidth: 2,
+      borderDash: [8, 6],
+      tension: 0.35
+    },
+    {
+      label: 'Weighted ensemble demand',
+      data: institutionWeightedEnsemble.value.forecast.rows.map((row) => row.effectiveDemandEb),
+      borderColor: '#a855f7',
+      backgroundColor: 'rgba(168, 85, 247, 0.10)',
+      pointBackgroundColor: '#a855f7',
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      borderWidth: 3,
+      tension: 0.35
+    },
+    {
+      label: 'BOM stress demand',
+      data: hbmBomStressChartRows.value.map((row) => row.effectiveDemandEb),
+      borderColor: '#ef4444',
+      backgroundColor: 'rgba(239, 68, 68, 0.10)',
+      pointBackgroundColor: '#ef4444',
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      borderWidth: 3,
+      borderDash: [3, 5],
+      tension: 0.35
+    }
+  ]
+}))
+
+const forecastChartOptions = computed<ChartOptions<'line'>>(() => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  interaction: {
+    mode: 'index',
+    intersect: false
+  },
+  plugins: {
+    legend: {
+      position: 'top',
+      align: 'start',
+      labels: {
+        boxWidth: 11,
+        boxHeight: 11,
+        usePointStyle: true
+      }
+    },
+    tooltip: {
+      mode: 'index',
+      intersect: false,
+      callbacks: {
+        title: (items) => `Year ${items[0]?.label ?? ''}`,
+        label: (item) => `${item.dataset.label}: ${formatEb(Number(item.raw ?? 0))}`
+      }
+    }
+  },
+  scales: {
+    x: {
+      grid: {
+        color: 'rgba(148, 163, 184, 0.16)'
+      },
+      ticks: {
+        color: '#64748b',
+        font: {
+          weight: 'bold'
+        }
+      }
+    },
+    y: {
+      beginAtZero: true,
+      grid: {
+        color: 'rgba(148, 163, 184, 0.16)'
+      },
+      ticks: {
+        color: '#64748b',
+        callback: (value) => formatEb(Number(value))
+      }
+    }
+  }
+}))
+
 </script>
 
 <template>
@@ -345,27 +508,32 @@ const hbmBomStress = computed(() => calculateHbmBomStress(selectedPreset.value.i
           </section>
         </div>
 
-        <div class="forecast-chart">
-          <h3>Multi-year forecast path</h3>
-          <div v-for="row in forecast.rows" :key="row.year" class="year-row">
-            <span class="year-label">{{ row.year }}</span>
-            <div class="bar-pack">
-              <div class="bar-line">
-                <span>Unconstrained demand</span>
-                <div class="bar-track"><div class="bar unconstrained" :style="{ width: `${(row.unconstrainedDemandEb / maxUnconstrained) * 100}%` }"></div></div>
-                <strong>{{ formatEb(row.unconstrainedDemandEb) }}</strong>
-              </div>
-              <div class="bar-line">
-                <span>Supply-realized demand</span>
-                <div class="bar-track"><div class="bar effective" :style="{ width: `${(row.effectiveDemandEb / maxEffective) * 100}%` }"></div></div>
-                <strong>{{ formatEb(row.effectiveDemandEb) }}</strong>
-              </div>
-              <div class="bar-line unmet-line">
-                <span>Unmet demand</span>
-                <div class="bar-track"><div class="bar unmet" :style="{ width: `${(row.unmetDemandEb / maxUnmet) * 100}%` }"></div></div>
-                <strong>{{ formatEb(row.unmetDemandEb) }}</strong>
-              </div>
+        <div class="forecast-chart forecast-multi-series-chart">
+          <div class="forecast-chart-header">
+            <div>
+              <h3>Multi-year forecast path</h3>
+              <p>Chart.js line chart로 수요, 공급 실현, 미충족 수요, envelope 상·하단을 함께 plot합니다. 마우스를 x축 연도 위에 올리면 해당 연도의 모든 series 값이 tooltip에 표시됩니다.</p>
             </div>
+          </div>
+          <div class="forecast-chart-canvas" aria-label="Chart.js multi-year forecast chart with index tooltip for every series at the hovered year">
+            <Line :data="forecastChartData" :options="forecastChartOptions" />
+          </div>
+          <div class="forecast-control-impact-summary" aria-label="Controls currently linked to chart">
+            <article>
+              <span>Controls currently linked to chart</span>
+              <strong>Institution weights → purple line</strong>
+              <small>Weighted ensemble demand: {{ formatEb(institutionWeightedEnsemble.forecast.peakEffectiveDemandEb) }} peak effective demand</small>
+            </article>
+            <article>
+              <span>HBM/BOM controls → red dashed line</span>
+              <strong>{{ formatNumber(hbmBomStress.affordabilityDemandShockPercent, 1) }}% demand shock</strong>
+              <small>BOM stress demand: {{ formatEb(hbmBomStressPeakEffectiveDemandEb) }} peak effective demand</small>
+            </article>
+            <article>
+              <span>Downstream exact tables</span>
+              <strong>Base/envelope remain source-of-truth</strong>
+              <small>Use chart overlays to compare control-adjusted outcomes against the auditable base rows below.</small>
+            </article>
           </div>
         </div>
 
@@ -807,6 +975,7 @@ const hbmBomStress = computed(() => calculateHbmBomStress(selectedPreset.value.i
   .source-table-grid,
   .csv-derived-preset-strip,
   .interactive-polish-grid,
+  .forecast-control-impact-summary,
   .control-kpi-grid {
     grid-template-columns: 1fr;
   }
@@ -820,44 +989,56 @@ const hbmBomStress = computed(() => calculateHbmBomStress(selectedPreset.value.i
     text-align: left;
   }
 }
-.year-row {
+.forecast-multi-series-chart {
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr);
-  gap: 12px;
-  padding: 12px 0;
-  border-top: 1px solid var(--vp-c-divider);
+  gap: 14px;
 }
-.year-row:first-of-type {
-  border-top: 0;
+.forecast-chart-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
 }
-.year-label {
-  font-weight: 900;
-  color: var(--vp-c-brand-1);
+.forecast-chart-header p {
+  margin: 6px 0 0;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
 }
-.bar-pack {
+.forecast-chart-canvas {
+  position: relative;
+  min-height: 340px;
+  width: 100%;
+  border-radius: 14px;
+  padding: 12px;
+  background: linear-gradient(180deg, var(--vp-c-bg-soft), var(--vp-c-bg));
+  box-sizing: border-box;
+}
+.forecast-chart-canvas canvas {
+  max-width: 100%;
+}
+.forecast-control-impact-summary {
   display: grid;
-  gap: 7px;
-}
-.bar-line {
-  display: grid;
-  grid-template-columns: 170px minmax(100px, 1fr) 90px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  align-items: center;
-  font-size: 12px;
 }
-.bar-track {
-  height: 10px;
-  border-radius: 999px;
-  overflow: hidden;
+.forecast-control-impact-summary article {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  padding: 12px;
   background: var(--vp-c-bg-soft);
 }
-.bar {
-  height: 100%;
-  border-radius: 999px;
+.forecast-control-impact-summary span,
+.forecast-control-impact-summary small {
+  display: block;
+  color: var(--vp-c-text-2);
+  font-size: 11px;
 }
-.unconstrained { background: #818cf8; }
-.effective { background: #22c55e; }
-.unmet { background: #f97316; }
+.forecast-control-impact-summary strong {
+  display: block;
+  margin: 5px 0;
+  color: var(--vp-c-brand-1);
+  font-size: 15px;
+}
 .exact-table {
   overflow-x: auto;
 }
@@ -875,8 +1056,12 @@ const hbmBomStress = computed(() => calculateHbmBomStress(selectedPreset.value.i
   .cockpit-grid {
     grid-template-columns: 1fr;
   }
-  .bar-line {
+  .forecast-chart-header {
+    display: grid;
     grid-template-columns: 1fr;
+  }
+  .forecast-chart-legend {
+    justify-content: flex-start;
   }
 }
 </style>

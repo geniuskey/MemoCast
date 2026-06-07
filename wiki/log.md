@@ -170,3 +170,22 @@
 - Updated `wiki/components/AdvancedDemandForecastSimulator.vue` so the fullscreen cockpit hero/header stays in normal document flow instead of becoming a sticky overlay that can cover cockpit content.
 - Updated `tests/advancedForecastUi.test.ts` with a regression contract that rejects sticky/fixed fullscreen hero styling.
 - Verification: `npm test -- tests/advancedForecastUi.test.ts`, full `npm test`, and `npm run build` passed; citation audit remained 416/416 raw references cited with 0 missing references; browser route `http://localhost:5173/simulators/advanced-demand-forecast?verify=fullscreen-flow` showed the hero as `position: static`, followed by `Scenario layer` with a 20px gap and no horizontal overflow or console errors.
+
+## [2026-06-07] update | Advanced Forecast multi-series path chart
+- Replaced the `Multi-year forecast path` year-by-year bar rows in `wiki/components/AdvancedDemandForecastSimulator.vue` with one responsive SVG multi-series chart.
+- The chart plots unconstrained demand, supply-realized demand, unmet demand, envelope high, and envelope low together with shared axes, points, native SVG titles, and a compact legend.
+- Updated `tests/advancedForecastUi.test.ts` with a regression contract that requires the multi-series chart and rejects the old per-year bar-row template.
+- Verification: `npm test -- tests/advancedForecastUi.test.ts`, full `npm test`, and `npm run build` passed; citation audit remained 416/416 raw references cited with 0 missing references; browser route `http://localhost:5173/simulators/advanced-demand-forecast?verify=multi-series-chart-2` showed 5 polylines, 25 points, 5 legend items, 0 page/chart horizontal overflow, and no console errors.
+
+## [2026-06-07] update | Advanced Forecast Chart.js tooltip chart
+- Reworked `wiki/components/AdvancedDemandForecastSimulator.vue` so `Multi-year forecast path` uses the installed `vue-chartjs` / `chart.js` line chart instead of the custom SVG chart.
+- Configured Chart.js index hover interaction (`mode: 'index'`, `intersect: false`) so hovering a year on the x-axis displays every series value for that year in one tooltip: unconstrained demand, supply-realized demand, unmet demand, envelope high, and envelope low.
+- Updated `tests/advancedForecastUi.test.ts` to require Chart.js wiring, chart data/options, canvas host, and index tooltip settings.
+- Verification: `npm test -- tests/advancedForecastUi.test.ts`, full `npm test`, and `npm run build` passed; citation audit remained 416/416 raw references cited with 0 missing references; browser route `http://localhost:5173/simulators/advanced-demand-forecast?verify=chartjs-tooltip` showed the Chart.js canvas, multi-series tooltip on hover, 0 horizontal overflow, and no console errors.
+
+## [2026-06-07] update | Advanced Forecast controls linked to chart
+- Connected `Institution-weighted ensemble tuning` and `HBM/BOM stress controls` to the `Multi-year forecast path` Chart.js datasets instead of leaving them as isolated KPI cards.
+- Added `Weighted ensemble demand` as a purple chart line driven by institution-weight sliders and `BOM stress demand` as a red dashed line driven by HBM/BOM price, BOM share, and elasticity controls.
+- Added `forecast-control-impact-summary` cards below the chart so the current control-adjusted peak values are visible next to the auditable base/envelope rows.
+- Updated `tests/advancedForecastUi.test.ts` to require control-linked chart datasets and summary UI.
+- Verification: `npm test -- tests/advancedForecastUi.test.ts`, full `npm test`, and `npm run build` passed; citation audit remained 416/416 raw references cited with 0 missing references; browser route `http://localhost:5173/simulators/advanced-demand-forecast?verify=controls-linked-chart-2` showed slider updates changing the control summary, 0 chart/page horizontal overflow, Chart.js tooltip with the added control series, and no console errors.
