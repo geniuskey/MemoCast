@@ -1,6 +1,44 @@
 {
-  "generatedAt": "2026-06-06T17:23:53.639Z",
+  "generatedAt": "2026-06-07T01:09:04.131Z",
   "nodes": [
+    {
+      "id": "advanced-forecast-raw-intake-2026-06-07",
+      "label": "Advanced Forecast Raw Intake 2026-06-07",
+      "type": "source",
+      "href": "/sources/advanced-forecast-raw-intake-2026-06-07",
+      "tags": [
+        "raw-intake",
+        "advanced-forecasting",
+        "demand-forecasting",
+        "citation-audit"
+      ],
+      "sources": [
+        "raw/articles/model-vector-database-rag-memory-demand-2026.md",
+        "raw/articles/aisilicon-rubin-cpx-gddr7-inference-memory-2026.md",
+        "raw/articles/domain-cloud-gaming-streaming-memory-demand-2026.md",
+        "raw/articles/oem-memory-price-consumer-electronics-passthrough-cpi-2026.md",
+        "raw/datasets/ai-accelerator-bom-hbm-cost-share.md",
+        "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md",
+        "raw/datasets/institutional-memory-forecast-comparison-2026.md",
+        "raw/datasets/lpddr-gddr-supplier-share-2025.md",
+        "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md",
+        "raw/datasets/smartphone-memory-content-spec-2026.md",
+        "raw/earnings/ase-amkor-q1-2026-packaging-test.md",
+        "raw/earnings/nanya-winbond-1q26-specialty-dram.md",
+        "raw/earnings/rambus-memory-ip-royalty-2026.md",
+        "raw/lectures/memory-inventory-writedown-lcm-accounting.md",
+        "raw/lectures/semiconductor-cycle-structural-vs-cyclical-framework.md",
+        "raw/papers/bullwhip-effect-empirical-semiconductor-amplification.md",
+        "raw/papers/hierarchical-forecast-reconciliation-mint.md",
+        "raw/papers/monte-carlo-simulation-demand-forecasting-uncertainty.md",
+        "raw/papers/temporal-fusion-transformer-multihorizon-forecasting.md",
+        "raw/papers/time-series-foundation-models-zero-shot-forecasting.md",
+        "raw/reports/korea-taiwan-power-grid-fab-constraint-2026.md",
+        "raw/reports/trendforce-spot-price-june-2026-ddr4-ddr5.md",
+        "raw/reports/wsts-2027-semiconductor-memory-forecast.md"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "charts",
       "label": "Charts",
@@ -363,6 +401,7 @@
         "raw/articles/domain-gaming-handheld-lpddr-content.md",
         "raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md",
         "raw/articles/domain-humanoid-robotics-memory-content.md",
+        "raw/datasets/humanoid-robot-production-forecast.md",
         "raw/articles/domain-industrial-automation-edge-ai-memory.md",
         "raw/articles/domain-iot-smart-home-edge-ai-memory-2026.md",
         "raw/articles/domain-medical-device-ai-imaging-memory.md",
@@ -501,6 +540,45 @@
         "raw/reports/trendforce-2026-memory-price-forecast.md",
         "raw/datasets/bit-demand-supply-growth.md",
         "raw/reports/memory-makers-2026-capex-wafer-capacity.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "advanced-demand-forecast-engine",
+      "label": "Advanced Demand Forecast Engine",
+      "type": "method",
+      "href": "/methods/advanced-demand-forecast-engine",
+      "tags": [
+        "demand-forecasting",
+        "advanced-forecasting",
+        "structural-model",
+        "inventory-cycle",
+        "supply-realization"
+      ],
+      "sources": [
+        "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
+        "raw/articles/aisilicon-neocloud-gpu-rental-hbm-demand-2026.md",
+        "raw/articles/model-computer-use-browser-agents-memory-2026.md",
+        "raw/articles/model-test-time-compute-reasoning-memory-demand-2026.md",
+        "raw/datasets/ddr5-ddr4-adoption-share-by-year.md",
+        "raw/reports/cxmt-ddr5-lpddr5x-yield-progress-2026.md",
+        "raw/reports/china-15th-five-year-plan-memory-self-sufficiency.md",
+        "raw/reports/dram-demand-by-region-datacenter-share-2026.md",
+        "raw/lectures/memory-contract-price-negotiation-quarterly-process.md",
+        "raw/reports/esg-fab-carbon-pfc-scope123-quantitative.md",
+        "raw/reports/trendforce-2h26-hbm4-mainstream-outlook.md",
+        "raw/reports/idc-2026-memory-shortage-supply-growth.md",
+        "raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md",
+        "raw/articles/oem-memory-procurement-hedging-multisourcing-2026.md",
+        "raw/reports/hbm-longterm-tam-by-application-2030.md",
+        "raw/papers/nowcasting-google-trends-bayesian-structural-time-series.md",
+        "raw/papers/deep-rl-inventory-demand-forecast-model-selection.md",
+        "raw/reports/semiconductor-antitrust-regulation-environment-2026.md",
+        "raw/reports/semiconductor-talent-shortage-memory-rd-2026.md",
+        "raw/datasets/enterprise-ssd-exabytes-capacity.md",
+        "raw/datasets/nand-supplier-market-share-2025.md",
+        "raw/reports/trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md",
+        "raw/articles/on-device-ai-smartphone-dram-content-2026.md"
       ],
       "confidence": "medium"
     },
@@ -656,6 +734,28 @@
       "confidence": "medium"
     },
     {
+      "id": "advanced-demand-forecast",
+      "label": "Advanced Demand Forecast Simulator",
+      "type": "simulator",
+      "href": "/simulators/advanced-demand-forecast",
+      "tags": [
+        "simulator",
+        "advanced-forecasting",
+        "demand-forecasting",
+        "scenario-analysis",
+        "supply-realization"
+      ],
+      "sources": [
+        "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md",
+        "raw/reports/trendforce-hbm-bit-demand-supply-2026.md",
+        "raw/reports/hbm-longterm-tam-by-application-2030.md",
+        "raw/reports/idc-2026-memory-shortage-supply-growth.md",
+        "raw/articles/on-device-ai-smartphone-dram-content-2026.md",
+        "raw/reports/trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "id": "hbm-demand",
       "label": "AI Server HBM Demand Simulator",
       "type": "simulator",
@@ -768,6 +868,81 @@
     }
   ],
   "edges": [
+    {
+      "from": "advanced-demand-forecast",
+      "to": "ai-infrastructure-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast",
+      "to": "channel-pricing-signal",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast",
+      "to": "forecasting-method-library",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast",
+      "to": "memory-supply-chain-equipment",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast-engine",
+      "to": "forecasting-method-library",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast-engine",
+      "to": "scenario-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast-engine",
+      "to": "sensitivity-analysis",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast-engine",
+      "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-forecast-raw-intake-2026-06-07",
+      "to": "advanced-demand-forecast",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-forecast-raw-intake-2026-06-07",
+      "to": "advanced-demand-forecast-engine",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-forecast-raw-intake-2026-06-07",
+      "to": "citation-matrix",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-forecast-raw-intake-2026-06-07",
+      "to": "forecasting-method-library",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-forecast-raw-intake-2026-06-07",
+      "to": "raw-integration-ledger",
+      "kind": "wikilink"
+    },
     {
       "from": "ai-infrastructure-memory",
       "to": "citation-matrix",
@@ -1681,6 +1856,16 @@
     {
       "from": "smartphone-memory-demand",
       "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "structural-demand-model",
+      "to": "advanced-demand-forecast",
+      "kind": "wikilink"
+    },
+    {
+      "from": "structural-demand-model",
+      "to": "advanced-demand-forecast-engine",
       "kind": "wikilink"
     },
     {

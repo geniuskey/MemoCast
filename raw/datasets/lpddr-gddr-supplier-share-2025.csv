@@ -1,0 +1,11 @@
+product,supplier,share_pct,note,confidence
+lpddr,samsung,42,"LPDDR5X/6 leadership, 68% of smartphone memory shipments",medium
+lpddr,sk_hynix,26,,medium
+lpddr,top5,78,"Samsung+SK+Micron+Nanya+Winbond",medium
+lpddr_app,mobile,64,"application split: mobile 64%",medium
+lpddr_app,automotive,18,,medium
+lpddr_app,industrial,11,,medium
+gddr,samsung,42,"GDDR production 2025",medium
+gddr,sk_hynix,33,,medium
+gddr,micron,22,,medium
+gddr,top3,95,"Samsung+SK+Micron >95% of GDDR wafer output",medium

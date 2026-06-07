@@ -1,0 +1,7 @@
+period,supplier,share_pct,revenue_usd_b,qoq_growth_pct,note,confidence
+2025Q3,samsung,32.3,6.0,15.4,"NAND #1",high
+2025Q3,sk_group,19.3,3.53,5.7,"SK hynix + Solidigm",high
+2025Q3,kioxia,15.3,2.84,33.1,"surpassed Micron, highest QoQ",high
+2025Q3,sandisk,12.4,,,"former WD NAND",high
+2025Q3,micron,,,,"<Kioxia in Q3'25",medium
+concentration,top4,80,,,"Samsung+SK+Micron+Kioxia >80%",high

@@ -1,0 +1,6 @@
+accelerator,total_mfg_cost_usd,hbm_cost_usd,hbm_share_pct,hbm_gb,hbm_price_per_gb_usd,note,confidence
+h100,3320,,35-47,80,,"HBM 35-47% of mfg cost (range across chips)",medium
+b200,6400,3200,50,192,15,"HBM ~half; $14-17/GB centered $15",medium
+gb200,13500,4800,,,,"HBM $4,800 > entire H100 mfg cost",medium
+hbm_packaging_combined,,,60-70,,,"HBM + advanced packaging = 60-70% of BOM",medium
+cowos_packaging,1000-2000,,,,,"CoWoS-S/L per unit (multi-die B200/GB200)",medium

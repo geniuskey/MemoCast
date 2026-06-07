@@ -1,0 +1,8 @@
+year,metric,value,unit,note,confidence
+2024,enterprise_ssd_units,320,million_units,"68%+ datacenter",medium
+2025Q4,flash_capacity_added,14,exabytes,"AI server+hyperscaler in Q4'25 alone",medium
+2020,avg_drive_capacity,3.2,tb,"avg enterprise SSD",medium
+2025,avg_drive_capacity,8,tb,"avg enterprise SSD",medium
+ship,solidigm_qlc,122,tb,"122TB shipping, 244TB planned",medium
+2026,ssd_market,29.8,usd_b,"global SSD market 2026",low
+2031,na_datacenter_ssd,69.08,usd_b,"NA DC SSD, CAGR 27.61%",low

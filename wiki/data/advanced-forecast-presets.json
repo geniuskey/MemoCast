@@ -1,0 +1,82 @@
+[
+  {
+    "id": "hbm-ai-infrastructure-constraint-reference",
+    "label": "HBM AI infrastructure constraint reference",
+    "description": "High-dimensional HBM case: GPU unit growth, HBM content uplift, AI datacenter adoption, inventory ordering pressure, and supply realization cap are modeled separately.",
+    "input": {
+      "id": "hbm-ai-infrastructure-constraint-reference",
+      "label": "HBM AI infrastructure constraint reference",
+      "domain": "AI Server HBM",
+      "family": "HBM",
+      "baseYear": 2026,
+      "horizonYears": 5,
+      "baseDemandEb": 0.46,
+      "unitGrowthCagrPercent": 32,
+      "contentGrowthCagrPercent": 18,
+      "adoption": { "startPercent": 38, "saturationPercent": 88, "midpointYear": 2028, "steepness": 1.15, "contentUpliftPercentAtSaturation": 55 },
+      "cycle": { "channelInventoryWeeks": 4, "normalInventoryWeeks": 6, "inventorySensitivity": 0.025, "orderAmplificationScore": 72, "bullwhipSensitivity": 0.0025, "priceChangePercent": 35, "priceElasticity": -0.04 },
+      "supply": { "startingAvailableEb": 0.52, "supplyGrowthCagrPercent": 22, "yieldFactor": 0.9, "allocationFactor": 0.86 },
+      "evidence": { "sourceRefs": ["raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md", "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md", "raw/articles/aisilicon-neocloud-gpu-rental-hbm-demand-2026.md", "raw/reports/trendforce-hbm-bit-demand-supply-2026.md", "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md", "raw/articles/power-datacenter-vacancy-leasing-market-2026.md", "raw/reports/hbm-longterm-tam-by-application-2030.md"], "signalCoverageScore": 82, "confidence": "medium" }
+    }
+  },
+  {
+    "id": "pc-dram-shortage-elasticity-reference",
+    "label": "PC DRAM shortage elasticity reference",
+    "description": "PC DRAM case that separates real refresh demand from shortage-driven price, channel inventory, and bullwhip order distortion.",
+    "input": {
+      "id": "pc-dram-shortage-elasticity-reference",
+      "label": "PC DRAM shortage elasticity reference",
+      "domain": "PC DRAM",
+      "family": "DRAM",
+      "baseYear": 2026,
+      "horizonYears": 5,
+      "baseDemandEb": 0.0048,
+      "unitGrowthCagrPercent": 1.8,
+      "contentGrowthCagrPercent": 7.5,
+      "adoption": { "startPercent": 18, "saturationPercent": 68, "midpointYear": 2028, "steepness": 1.05, "contentUpliftPercentAtSaturation": 35 },
+      "cycle": { "channelInventoryWeeks": 10, "normalInventoryWeeks": 6, "inventorySensitivity": -0.035, "orderAmplificationScore": 35, "bullwhipSensitivity": -0.0015, "priceChangePercent": 75, "priceElasticity": -0.16 },
+      "supply": { "startingAvailableEb": 0.008, "supplyGrowthCagrPercent": 13, "yieldFactor": 0.96, "allocationFactor": 0.88 },
+      "evidence": { "sourceRefs": ["raw/reports/idc-2026-memory-shortage-supply-growth.md", "raw/articles/oem-pc-dell-hp-lenovo-price-hike-memory-2026.md", "raw/articles/oem-windows10-eol-pc-refresh-memory-demand-2026.md", "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md"], "signalCoverageScore": 74, "confidence": "medium" }
+    }
+  },
+  {
+    "id": "smartphone-on-device-ai-premiumization-reference",
+    "label": "Smartphone on-device AI premiumization reference",
+    "description": "Smartphone case: slow unit growth, premium mix/S-curve content uplift, and price/inventory drag are modeled as separate layers.",
+    "input": {
+      "id": "smartphone-on-device-ai-premiumization-reference",
+      "label": "Smartphone on-device AI premiumization reference",
+      "domain": "Smartphone Memory",
+      "family": "DRAM+NAND",
+      "baseYear": 2026,
+      "horizonYears": 5,
+      "baseDemandEb": 0.34,
+      "unitGrowthCagrPercent": 2.2,
+      "contentGrowthCagrPercent": 6.5,
+      "adoption": { "startPercent": 16, "saturationPercent": 62, "midpointYear": 2029, "steepness": 0.95, "contentUpliftPercentAtSaturation": 28 },
+      "cycle": { "channelInventoryWeeks": 8, "normalInventoryWeeks": 7, "inventorySensitivity": -0.018, "orderAmplificationScore": 18, "bullwhipSensitivity": -0.001, "priceChangePercent": 22, "priceElasticity": -0.08 },
+      "supply": { "startingAvailableEb": 0.46, "supplyGrowthCagrPercent": 14, "yieldFactor": 0.97, "allocationFactor": 0.93 },
+      "evidence": { "sourceRefs": ["raw/articles/on-device-ai-smartphone-dram-content-2026.md", "raw/articles/trendforce-smartphone-storage-capacity-2026.md", "raw/articles/oem-smartphone-dram-content-spec-downgrade-2026.md", "raw/articles/on-device-slm-smartphone-ram-2026.md"], "signalCoverageScore": 68, "confidence": "medium" }
+    }
+  },
+  {
+    "id": "nand-ai-storage-qlc-breakout-reference",
+    "label": "NAND AI storage QLC breakout reference",
+    "description": "NAND case: enterprise/AI storage mix and high-capacity QLC adoption are separated from client SSD units and supply realization.",
+    "input": {
+      "id": "nand-ai-storage-qlc-breakout-reference",
+      "label": "NAND AI storage QLC breakout reference",
+      "domain": "NAND SSD",
+      "family": "NAND",
+      "baseYear": 2026,
+      "horizonYears": 5,
+      "baseDemandEb": 2.1,
+      "unitGrowthCagrPercent": 6.5,
+      "contentGrowthCagrPercent": 13,
+      "adoption": { "startPercent": 12, "saturationPercent": 58, "midpointYear": 2028, "steepness": 1, "contentUpliftPercentAtSaturation": 70 },
+      "cycle": { "channelInventoryWeeks": 5, "normalInventoryWeeks": 7, "inventorySensitivity": 0.018, "orderAmplificationScore": 42, "bullwhipSensitivity": 0.0016, "priceChangePercent": 40, "priceElasticity": -0.07 },
+      "supply": { "startingAvailableEb": 2.5, "supplyGrowthCagrPercent": 18, "yieldFactor": 0.95, "allocationFactor": 0.9 },
+      "evidence": { "sourceRefs": ["raw/reports/trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md", "raw/articles/storage-enterprise-ssd-qlc-nand-demand-2026.md", "raw/datasets/idc-global-datasphere-zettabytes.md"], "signalCoverageScore": 72, "confidence": "medium" }
+    }
+  }
+]

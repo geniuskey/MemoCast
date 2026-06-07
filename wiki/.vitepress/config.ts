@@ -61,6 +61,7 @@ export default defineConfig({
         text: 'Methods',
         items: [
           { text: 'Structural Demand Model', link: '/methods/structural-demand-model' },
+          { text: 'Advanced Forecast Engine', link: '/methods/advanced-demand-forecast-engine' },
           { text: 'Sensitivity Analysis', link: '/methods/sensitivity-analysis' },
           { text: 'Forecasting Evidence Map', link: '/methods/forecasting-evidence-map' }
         ]
@@ -83,6 +84,7 @@ export default defineConfig({
         text: 'Simulators',
         items: [
           { text: 'Simulator Overview', link: '/simulators/' },
+          { text: 'Advanced Forecast', link: '/simulators/advanced-demand-forecast' },
           { text: 'AI Server HBM Demand', link: '/simulators/hbm-demand' },
           { text: 'NAND SSD Demand', link: '/simulators/nand-ssd-demand' },
           { text: 'PC DRAM Demand', link: '/simulators/pc-dram-demand' },

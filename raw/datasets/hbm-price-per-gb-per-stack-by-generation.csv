@@ -1,0 +1,8 @@
+generation,capacity_gb_per_stack,price_per_stack_usd,price_per_gb_usd,note,confidence
+hbm3,24,200,8-10,"$8-10/GB",medium
+hbm3e,36,300,8-10,"contract ~$13-17/GB early 2026; peaked $17-20 H1'25",medium
+hbm4,48,500,14,"~$14/GB initial; +20% premium vs HBM3E at launch",medium
+hbm_cost_share,,,,"HBM 30-40% of AI accelerator manufacturing cost (was <20% 2 gens ago)",medium
+hbm_share_2026,sk_hynix,50-55,pct,"market share",medium
+hbm_share_2026,samsung,35-40,pct,,medium
+hbm_share_2026,micron,5-10,pct,,medium

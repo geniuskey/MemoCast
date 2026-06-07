@@ -1,33 +1,33 @@
 {
-  "generatedAt": "2026-06-06T17:23:55.255Z",
+  "generatedAt": "2026-06-07T01:09:06.313Z",
   "summary": {
-    "rawTotal": 374,
-    "rawCited": 374,
+    "rawTotal": 416,
+    "rawCited": 416,
     "rawUncited": 0,
-    "wikiPages": 32,
+    "wikiPages": 35,
     "wikiPagesWithoutRawReferences": 9,
     "missingRawReferences": 0,
     "simulatorPresets": 19,
-    "lowConfidenceRaw": 32,
+    "lowConfidenceRaw": 37,
     "lowConfidencePresets": 6
   },
   "rawByType": {
-    "article": 99,
+    "article": 107,
     "articles": 6,
-    "dataset": 36,
-    "earnings": 17,
+    "dataset": 46,
+    "earnings": 20,
     "INDEX.md": 1,
-    "lecture": 71,
-    "paper": 40,
+    "lecture": 74,
+    "paper": 47,
     "README.md": 1,
-    "report": 102,
+    "report": 113,
     "reports": 1
   },
   "confidence": {
     "raw": {
-      "high": 76,
-      "low": 32,
-      "medium": 257,
+      "high": 85,
+      "low": 37,
+      "medium": 285,
       "unrated": 9
     },
     "simulatorPresets": {
@@ -38,90 +38,106 @@
   },
   "recentUpdates": [
     {
-      "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
-      "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
+      "path": "raw/datasets/institutional-memory-forecast-comparison-2026.md",
+      "title": "기관별 2026 메모리 전망 비교 (forecast band)",
+      "type": "dataset",
+      "confidence": "medium",
+      "date": "2026-06-07",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "demand-forecasting"
+      ],
+      "sourceUrl": "https://www.ampheo.com/blog/memory-chip-market-forecast-2026-dram-nand-hbm-and-nor-flash"
+    },
+    {
+      "path": "raw/articles/oem-memory-price-consumer-electronics-passthrough-cpi-2026.md",
+      "title": "메모리 가격→소비자 전자제품 가격 전가·CPI (2026)",
+      "type": "article",
+      "confidence": "medium",
+      "date": "2026-06-07",
+      "tags": [
+        "dram",
+        "nand",
+        "pc",
+        "smartphone"
+      ],
+      "sourceUrl": "https://www.gartner.com/en/newsroom/press-releases/2026-02-26-gartner-says-surging-memory-costs-will-reduce-global-pc-and-smartphone-shipments-in-2026"
+    },
+    {
+      "path": "raw/lectures/memory-contract-price-negotiation-quarterly-process.md",
+      "title": "메모리 분기 계약가 협상 프로세스 (CSP-공급사)",
       "type": "lecture",
-      "confidence": "low",
-      "date": "2026-06-06",
+      "confidence": "medium",
+      "date": "2026-06-07",
       "tags": [
         "dram",
         "nand",
-        "hbm",
-        "memory"
-      ],
-      "sourceUrl": "https://www.proceedings.com/content/080/080626webtoc.pdf"
-    },
-    {
-      "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
-      "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
-      "type": "article",
-      "confidence": "high",
-      "date": "2026-06-06",
-      "tags": [
-        "hbm",
-        "dram",
-        "ai-server",
-        "datacenter"
-      ],
-      "sourceUrl": "https://www.trendforce.com/news/2025/12/18/news-micron-hikes-capex-to-20b-with-2026-hbm-supply-fully-booked-hbm4-ramps-2q26/"
-    },
-    {
-      "path": "raw/articles/trendforce-smartphone-storage-capacity-2026.md",
-      "title": "2026년 평균 스마트폰 저장 용량 +4.8% 성장, AI 업그레이드가 NAND 견인",
-      "type": "article",
-      "confidence": "high",
-      "date": "2026-06-06",
-      "tags": [
-        "nand",
-        "smartphone",
-        "demand-forecasting",
-        "bit-demand"
-      ],
-      "sourceUrl": "https://www.trendforce.com/presscenter/news/20260323-12983.html"
-    },
-    {
-      "path": "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
-      "title": "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building",
-      "type": "article",
-      "confidence": "high",
-      "date": "2026-06-06",
-      "tags": [
-        "dram",
         "pricing",
         "demand-forecasting"
       ],
-      "sourceUrl": "https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-now-costs-usd375-minimum-ai-shortage-continues-to-squeeze-pc-building"
+      "sourceUrl": "https://www.trendforce.com/presscenter/news/20260331-12995.html"
     },
     {
-      "path": "raw/lectures/process-3d-dram-transition-timeline.md",
-      "title": "3D DRAM Transition — Samsung 16-Layer Plans, VCT as Stepping Stone (IMW 2024)",
+      "path": "raw/lectures/memory-inventory-writedown-lcm-accounting.md",
+      "title": "메모리 재고 감액(LCM/NRV) 회계 — 다운턴 메커니즘",
       "type": "lecture",
-      "confidence": "medium",
-      "date": "2026-06-06",
+      "confidence": "high",
+      "date": "2026-06-07",
       "tags": [
         "dram",
-        "memory",
-        "capacity",
-        "bit-demand"
+        "nand",
+        "hbm",
+        "pricing"
       ],
-      "sourceUrl": "https://www.tomshardware.com/pc-components/ram/samsung-reveals-16-layer-3d-dram-plans-with-vct-dram-as-a-stepping-stone-imw-2024-details-the-future-of-compact-higher-density-ram"
+      "sourceUrl": "https://siliconangle.com/2023/03/28/micron-posts-biggest-ever-loss-says-generative-ai-will-drive-new-demand-memory-chips/"
     },
     {
-      "path": "raw/articles/domain-surveillance-cctv-nand-demand.md",
-      "title": "감시/CCTV 영상저장 NAND 수요 (AI 비디오 분석·SSD)",
-      "type": "article",
-      "confidence": "low",
-      "date": "2026-06-06",
+      "path": "raw/reports/esg-fab-carbon-pfc-scope123-quantitative.md",
+      "title": "메모리 fab 탄소·PFC 배출 (Scope 1/2/3 정량)",
+      "type": "report",
+      "confidence": "medium",
+      "date": "2026-06-07",
       "tags": [
-        "nand",
+        "supply-chain",
+        "capacity",
         "demand-forecasting",
-        "bit-demand",
-        "capacity"
+        "dram"
       ],
-      "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/video-surveillance-storage-market-report"
+      "sourceUrl": "https://www.mdpi.com/2071-1050/16/1/218"
+    },
+    {
+      "path": "raw/datasets/lpddr-gddr-supplier-share-2025.md",
+      "title": "모바일 LPDDR / 그래픽 GDDR 공급사 점유 (2025)",
+      "type": "dataset",
+      "confidence": "medium",
+      "date": "2026-06-07",
+      "tags": [
+        "dram",
+        "hbm",
+        "smartphone",
+        "consumer-electronics"
+      ],
+      "sourceUrl": "https://www.industryresearch.biz/market-reports/lpddr-dram-market-113109"
     }
   ],
   "lowConfidence": [
+    {
+      "kind": "raw",
+      "path": "raw/articles/domain-cloud-gaming-streaming-memory-demand-2026.md",
+      "title": "클라우드 게이밍/게임 스트리밍 메모리 수요 (2026)",
+      "type": "article",
+      "date": "2026-06-07",
+      "tags": [
+        "dram",
+        "gddr",
+        "datacenter",
+        "consumer-electronics"
+      ],
+      "citedByCount": 1,
+      "sourceUrl": "https://studio.antier.com/blogs/cloud-gaming-2026-best-services-trends/"
+    },
     {
       "kind": "raw",
       "path": "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md",
@@ -224,111 +240,102 @@
       ],
       "citedByCount": 4,
       "sourceUrl": "https://www.fortunebusinessinsights.com/industry-reports/5g-infrastructure-market-100869"
-    },
-    {
-      "kind": "raw",
-      "path": "raw/articles/gddr-gaming-console-memory-2026.md",
-      "title": "게이밍 GDDR 메모리 2026: PS5 16GB GDDR6, PS6 30GB GDDR7 루머, AI가 GDDR 잠식",
-      "type": "article",
-      "date": "2026-06-06",
-      "tags": [
-        "dram",
-        "consumer-electronics",
-        "gaming",
-        "demand-forecasting"
-      ],
-      "citedByCount": 3,
-      "sourceUrl": "https://www.tweaktown.com/news/110073/playstation-6-will-reportedly-feature-30gb-of-high-speed-gddr7-memory/index.html"
     }
   ],
   "enrichmentClusters": [
     {
       "tag": "dram",
-      "rawTotal": 242,
+      "rawTotal": 268,
       "uncitedRaw": 0,
-      "lowConfidenceRaw": 23,
+      "lowConfidenceRaw": 27,
       "recent": [
         {
-          "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
-          "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
-          "date": "2026-06-06",
-          "confidence": "low"
+          "path": "raw/datasets/institutional-memory-forecast-comparison-2026.md",
+          "title": "기관별 2026 메모리 전망 비교 (forecast band)",
+          "date": "2026-06-07",
+          "confidence": "medium"
         },
         {
-          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
-          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
-          "date": "2026-06-06",
-          "confidence": "high"
+          "path": "raw/articles/oem-memory-price-consumer-electronics-passthrough-cpi-2026.md",
+          "title": "메모리 가격→소비자 전자제품 가격 전가·CPI (2026)",
+          "date": "2026-06-07",
+          "confidence": "medium"
         },
         {
-          "path": "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
-          "title": "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building",
-          "date": "2026-06-06",
-          "confidence": "high"
+          "path": "raw/lectures/memory-contract-price-negotiation-quarterly-process.md",
+          "title": "메모리 분기 계약가 협상 프로세스 (CSP-공급사)",
+          "date": "2026-06-07",
+          "confidence": "medium"
         }
       ],
-      "enrichmentScore": 23
+      "enrichmentScore": 27
     },
     {
       "tag": "nand",
-      "rawTotal": 136,
+      "rawTotal": 151,
       "uncitedRaw": 0,
-      "lowConfidenceRaw": 16,
+      "lowConfidenceRaw": 17,
       "recent": [
         {
-          "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
-          "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
-          "date": "2026-06-06",
-          "confidence": "low"
+          "path": "raw/datasets/institutional-memory-forecast-comparison-2026.md",
+          "title": "기관별 2026 메모리 전망 비교 (forecast band)",
+          "date": "2026-06-07",
+          "confidence": "medium"
         },
         {
-          "path": "raw/articles/trendforce-smartphone-storage-capacity-2026.md",
-          "title": "2026년 평균 스마트폰 저장 용량 +4.8% 성장, AI 업그레이드가 NAND 견인",
-          "date": "2026-06-06",
-          "confidence": "high"
+          "path": "raw/articles/oem-memory-price-consumer-electronics-passthrough-cpi-2026.md",
+          "title": "메모리 가격→소비자 전자제품 가격 전가·CPI (2026)",
+          "date": "2026-06-07",
+          "confidence": "medium"
         },
         {
-          "path": "raw/articles/domain-surveillance-cctv-nand-demand.md",
-          "title": "감시/CCTV 영상저장 NAND 수요 (AI 비디오 분석·SSD)",
-          "date": "2026-06-06",
-          "confidence": "low"
+          "path": "raw/lectures/memory-contract-price-negotiation-quarterly-process.md",
+          "title": "메모리 분기 계약가 협상 프로세스 (CSP-공급사)",
+          "date": "2026-06-07",
+          "confidence": "medium"
         }
       ],
-      "enrichmentScore": 16
+      "enrichmentScore": 17
     },
     {
       "tag": "hbm",
-      "rawTotal": 149,
+      "rawTotal": 164,
+      "uncitedRaw": 0,
+      "lowConfidenceRaw": 10,
+      "recent": [
+        {
+          "path": "raw/datasets/institutional-memory-forecast-comparison-2026.md",
+          "title": "기관별 2026 메모리 전망 비교 (forecast band)",
+          "date": "2026-06-07",
+          "confidence": "medium"
+        },
+        {
+          "path": "raw/lectures/memory-inventory-writedown-lcm-accounting.md",
+          "title": "메모리 재고 감액(LCM/NRV) 회계 — 다운턴 메커니즘",
+          "date": "2026-06-07",
+          "confidence": "high"
+        },
+        {
+          "path": "raw/datasets/lpddr-gddr-supplier-share-2025.md",
+          "title": "모바일 LPDDR / 그래픽 GDDR 공급사 점유 (2025)",
+          "date": "2026-06-07",
+          "confidence": "medium"
+        }
+      ],
+      "enrichmentScore": 10
+    },
+    {
+      "tag": "domain",
+      "rawTotal": 18,
       "uncitedRaw": 0,
       "lowConfidenceRaw": 8,
       "recent": [
         {
-          "path": "raw/lectures/conf-imw-2025-memory-workshop.md",
-          "title": "2025 IEEE International Memory Workshop (IMW) — Scope & Topics",
-          "date": "2026-06-06",
+          "path": "raw/articles/domain-cloud-gaming-streaming-memory-demand-2026.md",
+          "title": "클라우드 게이밍/게임 스트리밍 메모리 수요 (2026)",
+          "date": "2026-06-07",
           "confidence": "low"
         },
-        {
-          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
-          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
-          "date": "2026-06-06",
-          "confidence": "high"
-        },
-        {
-          "path": "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
-          "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
-          "date": "2026-06-06",
-          "confidence": "medium"
-        }
-      ],
-      "enrichmentScore": 8
-    },
-    {
-      "tag": "domain",
-      "rawTotal": 17,
-      "uncitedRaw": 0,
-      "lowConfidenceRaw": 7,
-      "recent": [
         {
           "path": "raw/articles/domain-surveillance-cctv-nand-demand.md",
           "title": "감시/CCTV 영상저장 NAND 수요 (AI 비디오 분석·SSD)",
@@ -340,69 +347,63 @@
           "title": "게이밍 핸드헬드 메모리 탑재량 (Steam Deck, ROG Ally X, Legion Go, Switch 2)",
           "date": "2026-06-06",
           "confidence": "medium"
-        },
-        {
-          "path": "raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md",
-          "title": "네트워킹 스위치/DPU의 HBM·고대역폭 메모리 (Broadcom Tomahawk 6 / Ultra)",
-          "date": "2026-06-06",
-          "confidence": "medium"
         }
       ],
-      "enrichmentScore": 7
+      "enrichmentScore": 8
+    },
+    {
+      "tag": "datacenter",
+      "rawTotal": 74,
+      "uncitedRaw": 0,
+      "lowConfidenceRaw": 6,
+      "recent": [
+        {
+          "path": "raw/articles/model-vector-database-rag-memory-demand-2026.md",
+          "title": "벡터DB/RAG 메모리 수요 (AI 인프라, 2026)",
+          "date": "2026-06-07",
+          "confidence": "medium"
+        },
+        {
+          "path": "raw/articles/domain-cloud-gaming-streaming-memory-demand-2026.md",
+          "title": "클라우드 게이밍/게임 스트리밍 메모리 수요 (2026)",
+          "date": "2026-06-07",
+          "confidence": "low"
+        },
+        {
+          "path": "raw/articles/model-computer-use-browser-agents-memory-2026.md",
+          "title": "Computer-use/브라우저 AI 에이전트 메모리 수요 (2026)",
+          "date": "2026-06-07",
+          "confidence": "low"
+        }
+      ],
+      "enrichmentScore": 6
     },
     {
       "tag": "ai-server",
-      "rawTotal": 78,
+      "rawTotal": 84,
       "uncitedRaw": 0,
-      "lowConfidenceRaw": 4,
+      "lowConfidenceRaw": 5,
       "recent": [
         {
-          "path": "raw/articles/trendforce-hbm-market-forecast-2026.md",
-          "title": "2026 HBM 시장: bit 수요 +70% YoY, 출하 30Gb 초과, HBM4 2Q26 ramp",
-          "date": "2026-06-06",
-          "confidence": "high"
-        },
-        {
-          "path": "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
-          "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
-          "date": "2026-06-06",
+          "path": "raw/articles/model-vector-database-rag-memory-demand-2026.md",
+          "title": "벡터DB/RAG 메모리 수요 (AI 인프라, 2026)",
+          "date": "2026-06-07",
           "confidence": "medium"
         },
         {
-          "path": "raw/articles/trendforce-ai-server-shipments-28pct-2026.md",
-          "title": "글로벌 AI 서버 출하 2026년 +28% YoY, ASIC 기반 비중 상승",
-          "date": "2026-06-06",
-          "confidence": "high"
+          "path": "raw/datasets/ai-accelerator-bom-hbm-cost-share.md",
+          "title": "AI 가속기 BOM·HBM 원가 비중 (2026)",
+          "date": "2026-06-07",
+          "confidence": "medium"
+        },
+        {
+          "path": "raw/articles/model-computer-use-browser-agents-memory-2026.md",
+          "title": "Computer-use/브라우저 AI 에이전트 메모리 수요 (2026)",
+          "date": "2026-06-07",
+          "confidence": "low"
         }
       ],
-      "enrichmentScore": 4
-    },
-    {
-      "tag": "pricing",
-      "rawTotal": 87,
-      "uncitedRaw": 0,
-      "lowConfidenceRaw": 3,
-      "recent": [
-        {
-          "path": "raw/articles/channel-retail-ddr5-32gb-375-minimum-2026.md",
-          "title": "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building",
-          "date": "2026-06-06",
-          "confidence": "high"
-        },
-        {
-          "path": "raw/reports/korea-media-memory-supercycle-2026-outlook.md",
-          "title": "국내 매체 메모리 슈퍼사이클 2026 전망 (디일렉/대신증권/SK뉴스룸/ZDNet)",
-          "date": "2026-06-06",
-          "confidence": "medium"
-        },
-        {
-          "path": "raw/articles/domain-networking-switch-router-ddr-memory-2026.md",
-          "title": "네트워킹(스위치/라우터) DDR 메모리 수요 (2026)",
-          "date": "2026-06-06",
-          "confidence": "medium"
-        }
-      ],
-      "enrichmentScore": 3
+      "enrichmentScore": 5
     }
   ],
   "citationHealth": {

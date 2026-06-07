@@ -1,0 +1,6 @@
+source,year,metric,value,unit,note,confidence
+omdia,2027,shipments,10000,units,"global humanoid shipments >10k",medium
+omdia,2030,shipments,38000,units,"83% CAGR 2024-2030",medium
+tesla_target,2027,optimus_capacity,500000,units_per_year,"Musk target; aspirational 10M/yr facility",low
+figure,2026,botq_capacity,12000,units_per_year,"BotQ target; 1 robot/hour",low
+humanoid_market,2035,market_size,38,usd_b,"humanoid robot market $38B by 2035",low

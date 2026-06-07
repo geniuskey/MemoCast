@@ -2,7 +2,7 @@
 
 메모리(DRAM/NAND/HBM) 수요 예측을 위한 원천 자료 인덱스. 전부 웹 검색으로 수집했고 각 파일 frontmatter에 `source_url`을 둔다. 수치는 wiki에서 교차검증 후 인용한다. (ingested: 2026-06-06)
 
-**현황: 405개 원천 파일** — papers 40 · articles 105 · reports 102 · earnings 17 · datasets 35쌍(70) · lectures 71.
+**현황: 460개 원천 파일** — papers 47 · articles 113 · reports 114 · earnings 20 · datasets 46쌍(92) · lectures 74.
 
 ---
 

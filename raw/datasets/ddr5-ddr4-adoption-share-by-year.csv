@@ -1,0 +1,8 @@
+year,standard,share_pct,segment,note,confidence
+2022,ddr5,8,dram_shipments,"DDR5 8% of DRAM shipments",medium
+2024,ddr5,35,dram_shipments,"DDR5 35%, DDR4 65%",medium
+2024,ddr4,65,dram_shipments,,medium
+2026,ddr4,5,dram_shipments,"Yole: DDR4 shrinks to 5%",low
+2026Q1,ddr5_server,65,fortune500_deployment,"65% of Fortune 500 initiated DDR5 server",low
+2023,ddr5_premium,52,price_premium_vs_ddr4,"DDR5 >50% premium 2023",medium
+2026,ddr5_premium,13,price_premium_vs_ddr4,"narrowed to 12-15% early 2026",medium

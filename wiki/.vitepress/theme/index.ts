@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress'
 import CitationWorkQueue from '../../components/CitationWorkQueue.vue'
 import DomainComparisonPanel from '../../components/DomainComparisonPanel.vue'
 import PeriodDemandChart from '../../components/PeriodDemandChart.vue'
+import AdvancedDemandForecastSimulator from '../../components/AdvancedDemandForecastSimulator.vue'
 import HbmDemandSimulator from '../../components/HbmDemandSimulator.vue'
 import HomePage from '../../components/HomePage.vue'
 import KnowledgeGraph from '../../components/KnowledgeGraph.vue'
@@ -17,6 +18,7 @@ export default {
     app.component('CitationWorkQueue', CitationWorkQueue)
     app.component('DomainComparisonPanel', DomainComparisonPanel)
     app.component('PeriodDemandChart', PeriodDemandChart)
+    app.component('AdvancedDemandForecastSimulator', AdvancedDemandForecastSimulator)
     app.component('HbmDemandSimulator', HbmDemandSimulator)
     app.component('HomePage', HomePage)
     app.component('KnowledgeGraph', KnowledgeGraph)

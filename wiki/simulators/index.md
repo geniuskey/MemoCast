@@ -13,6 +13,11 @@ confidence: medium
 MemoCast simulator는 자동으로 미래를 맞히는 예측기가 아닙니다. **Units × Mix × Content × Realization** 가정을 직접 움직이며 메모리 수요가 어떻게 달라지는지 확인하는 **Assumption Workbench**입니다.
 
 <div class="simulator-hub">
+  <a class="tool-card tool-card-primary" href="/simulators/advanced-demand-forecast">
+    <span class="tool-kicker">Integrated Forecast</span>
+    <strong>Advanced Forecast Cockpit</strong>
+    <em>End demand × adoption × cycle × supply realization</em>
+  </a>
   <a class="tool-card" href="/simulators/hbm-demand">
     <span class="tool-kicker">AI Server</span>
     <strong>HBM Demand Workbench</strong>

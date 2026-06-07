@@ -1,0 +1,9 @@
+institution,metric,value,unit,note,confidence
+wsts,memory_revenue_2026,294.82,usd_b,"+39.4% (memory category, conservative)",medium
+trendforce,memory_total_2026,551.6,usd_b,"global memory market",medium
+trendforce,dram_revenue_2026,404.3,usd_b,"+144% YoY",medium
+idc,dram_revenue_2026,418.6,usd_b,"+177% YoY (DRAM alone)",medium
+gartner,dram_price_2026,130,pct_yoy,"DRAM price +130%",medium
+gartner,memory_revenue_2026,633.3,usd_b,"memory ~3x (memflation)",medium
+omdia,dram_2026,2x,multiple,"DRAM ~2x, NAND ~4x vs 2025",medium
+omdia,semi_growth_2026,62.7,pct,"semiconductor total +62.7%",medium

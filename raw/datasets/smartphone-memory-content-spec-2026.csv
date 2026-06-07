@@ -1,0 +1,7 @@
+tier,metric,value,unit,year,note,confidence
+low_end,dram_base,4,gb,2026,"low-end may revert to 4GB (shortage)",medium
+mid_high,dram,near_minimum,trend,2026,"hover near minimum standards, slowing upgrades",medium
+all,memory_bom_share,10-15,pct,2025,"memory 10-15% of phone BOM",high
+all,unit_cost_increase,8-10,pct,2025,"from memory price rise",high
+all,dram_supply_growth,16,pct_yoy,2026,"below historical 20-30% (IDC)",medium
+all,shipment_impact,-12.9,pct,2026,"memory shortage cuts shipments to 1.12B units",medium

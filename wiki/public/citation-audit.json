@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-06T17:23:54.732Z",
+  "generatedAt": "2026-06-07T01:09:05.602Z",
   "summary": {
-    "rawTotal": 374,
-    "rawCited": 374,
+    "rawTotal": 416,
+    "rawCited": 416,
     "rawUncited": 0,
     "missingRawReferences": 0,
-    "wikiPages": 32,
+    "wikiPages": 35,
     "wikiPagesWithoutRawReferences": 9
   },
   "uncitedRawFiles": [],
@@ -63,6 +63,32 @@
         "reason": "keyword: demand, forecasting"
       }
     ],
+    "raw/articles/aisilicon-neocloud-gpu-rental-hbm-demand-2026.md": [
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 11,
+        "reason": "keyword: hbm, demand, ai, server"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 11,
+        "reason": "keyword: hbm, demand, ai, server"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 8,
+        "reason": "keyword: demand, bit, pricing"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
+      }
+    ],
     "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md": [
       {
         "path": "wiki/markets/hbm.md",
@@ -107,6 +133,32 @@
         "title": "PC DRAM",
         "score": 10,
         "reason": "keyword: memory, ai, dram, demand"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: memory, dram, demand, forecasting"
+      }
+    ],
+    "raw/articles/aisilicon-rubin-cpx-gddr7-inference-memory-2026.md": [
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 12,
+        "reason": "keyword: memory, hbm, ai, server"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 11,
+        "reason": "keyword: hbm, ai, server, demand"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 10,
+        "reason": "keyword: memory, dram, ai, demand"
       },
       {
         "path": "wiki/markets/dram.md",
@@ -627,6 +679,32 @@
         "title": "Supply-Demand Gap",
         "score": 7,
         "reason": "keyword: bit, demand"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
+      }
+    ],
+    "raw/articles/domain-cloud-gaming-streaming-memory-demand-2026.md": [
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: memory, demand, dram, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 9,
+        "reason": "keyword: memory, demand, dram, forecasting"
+      },
+      {
+        "path": "wiki/simulators/pc-dram-demand.md",
+        "title": "PC DRAM Demand Simulator",
+        "score": 8,
+        "reason": "keyword: demand, dram, forecasting"
       },
       {
         "path": "wiki/concepts/demand-forecasting.md",
@@ -1457,6 +1535,32 @@
         "reason": "keyword: memory, forecasting"
       }
     ],
+    "raw/articles/model-computer-use-browser-agents-memory-2026.md": [
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 12,
+        "reason": "keyword: memory, ai, hbm, server"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 11,
+        "reason": "keyword: ai, hbm, server, demand"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 10,
+        "reason": "keyword: memory, ai, dram, demand"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 10,
+        "reason": "keyword: memory, forecasting"
+      }
+    ],
     "raw/articles/model-context-length-kv-cache-memory-demand.md": [
       {
         "path": "wiki/markets/hbm.md",
@@ -1585,6 +1689,58 @@
         "title": "Forecasting Evidence Map",
         "score": 10,
         "reason": "keyword: memory, forecasting"
+      }
+    ],
+    "raw/articles/model-test-time-compute-reasoning-memory-demand-2026.md": [
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 12,
+        "reason": "keyword: memory, demand, hbm, ai"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 11,
+        "reason": "keyword: demand, hbm, ai, server"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 10,
+        "reason": "keyword: memory, demand, dram, ai"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 10,
+        "reason": "keyword: memory, forecasting"
+      }
+    ],
+    "raw/articles/model-vector-database-rag-memory-demand-2026.md": [
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 10,
+        "reason": "keyword: memory, demand, ai, dram"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 10,
+        "reason": "keyword: memory, forecasting"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: memory, demand, dram, forecasting"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: demand, nand, forecasting"
       }
     ],
     "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md": [
@@ -1767,6 +1923,58 @@
         "title": "Demand Forecasting",
         "score": 6,
         "reason": "keyword: demand, forecasting"
+      }
+    ],
+    "raw/articles/oem-memory-price-consumer-electronics-passthrough-cpi-2026.md": [
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 16,
+        "reason": "keyword: memory, dram, pc, demand"
+      },
+      {
+        "path": "wiki/simulators/pc-dram-demand.md",
+        "title": "PC DRAM Demand Simulator",
+        "score": 15,
+        "reason": "keyword: dram, pc, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/smartphone-memory.md",
+        "title": "Smartphone Memory",
+        "score": 12,
+        "reason": "keyword: memory, dram, nand, smartphone"
+      },
+      {
+        "path": "wiki/simulators/smartphone-memory-demand.md",
+        "title": "Smartphone Memory Demand Simulator",
+        "score": 12,
+        "reason": "keyword: memory, dram, nand, smartphone"
+      }
+    ],
+    "raw/articles/oem-memory-procurement-hedging-multisourcing-2026.md": [
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 10,
+        "reason": "keyword: memory, supply, chain, demand"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 10,
+        "reason": "keyword: memory, dram, supply, demand"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 9,
+        "reason": "keyword: memory, dram, demand, forecasting"
       }
     ],
     "raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md": [
@@ -2705,6 +2913,32 @@
         "reason": "keyword: nand, demand, forecasting"
       }
     ],
+    "raw/datasets/ai-accelerator-bom-hbm-cost-share.md": [
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 12,
+        "reason": "keyword: ai, accelerator, hbm, server"
+      },
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 11,
+        "reason": "keyword: ai, hbm, server, demand"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 5,
+        "reason": "keyword: forecasting"
+      }
+    ],
     "raw/datasets/ai-pc-penetration-forecast.md": [
       {
         "path": "wiki/markets/pc-dram.md",
@@ -2833,6 +3067,32 @@
         "title": "PC DRAM Demand Simulator",
         "score": 8,
         "reason": "keyword: dram, demand, forecasting"
+      }
+    ],
+    "raw/datasets/ddr5-ddr4-adoption-share-by-year.md": [
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/pc-dram-demand.md",
+        "title": "PC DRAM Demand Simulator",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
       }
     ],
     "raw/datasets/dram-contract-price-qoq-2025-2026.md": [
@@ -3095,6 +3355,32 @@
         "reason": "keyword: dram, demand, forecasting"
       }
     ],
+    "raw/datasets/enterprise-ssd-exabytes-capacity.md": [
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 10,
+        "reason": "keyword: ssd, nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 10,
+        "reason": "keyword: ssd, nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 7,
+        "reason": "keyword: bit, demand"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
+      }
+    ],
     "raw/datasets/gpu-hbm-capacity.md": [
       {
         "path": "wiki/markets/hbm.md",
@@ -3199,6 +3485,58 @@
         "reason": "keyword: hbm"
       }
     ],
+    "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md": [
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 5,
+        "reason": "keyword: forecasting"
+      }
+    ],
+    "raw/datasets/humanoid-robot-production-forecast.md": [
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      }
+    ],
     "raw/datasets/idc-global-datasphere-zettabytes.md": [
       {
         "path": "wiki/markets/nand.md",
@@ -3225,6 +3563,32 @@
         "reason": "keyword: demand, forecasting"
       }
     ],
+    "raw/datasets/institutional-memory-forecast-comparison-2026.md": [
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 11,
+        "reason": "keyword: nand, demand, forecasting, scenario"
+      },
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 10,
+        "reason": "keyword: memory, hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: memory, dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      }
+    ],
     "raw/datasets/korea-semiconductor-exports-monthly.md": [
       {
         "path": "wiki/markets/hbm.md",
@@ -3249,6 +3613,32 @@
         "title": "NAND SSD Demand Simulator",
         "score": 9,
         "reason": "keyword: nand, demand, forecasting"
+      }
+    ],
+    "raw/datasets/lpddr-gddr-supplier-share-2025.md": [
+      {
+        "path": "wiki/markets/smartphone-memory.md",
+        "title": "Smartphone Memory",
+        "score": 10,
+        "reason": "keyword: dram, smartphone, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/smartphone-memory-demand.md",
+        "title": "Smartphone Memory Demand Simulator",
+        "score": 10,
+        "reason": "keyword: dram, smartphone, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
       }
     ],
     "raw/datasets/memory-content-per-device.md": [
@@ -3485,6 +3875,32 @@
         "reason": "keyword: nand"
       }
     ],
+    "raw/datasets/nand-supplier-market-share-2025.md": [
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 10,
+        "reason": "keyword: nand, market, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 8,
+        "reason": "keyword: demand, supply, chain"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
+      }
+    ],
     "raw/datasets/pc-server-shipments.md": [
       {
         "path": "wiki/markets/pc-dram.md",
@@ -3563,6 +3979,58 @@
         "reason": "keyword: bit, demand"
       }
     ],
+    "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md": [
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      }
+    ],
+    "raw/datasets/smartphone-memory-content-spec-2026.md": [
+      {
+        "path": "wiki/markets/smartphone-memory.md",
+        "title": "Smartphone Memory",
+        "score": 12,
+        "reason": "keyword: smartphone, memory, dram, nand"
+      },
+      {
+        "path": "wiki/simulators/smartphone-memory-demand.md",
+        "title": "Smartphone Memory Demand Simulator",
+        "score": 12,
+        "reason": "keyword: smartphone, memory, dram, nand"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: memory, dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      }
+    ],
     "raw/datasets/smartphone-shipments.md": [
       {
         "path": "wiki/markets/smartphone-memory.md",
@@ -3639,6 +4107,32 @@
         "title": "PC DRAM",
         "score": 6,
         "reason": "keyword: dram"
+      }
+    ],
+    "raw/earnings/ase-amkor-q1-2026-packaging-test.md": [
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 10,
+        "reason": "keyword: packaging, hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 8,
+        "reason": "keyword: supply, chain, demand"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
       }
     ],
     "raw/earnings/hbm4-three-supplier-competition-samsung-comeback-2026.md": [
@@ -3823,6 +4317,32 @@
         "reason": "keyword: demand, forecasting"
       }
     ],
+    "raw/earnings/nanya-winbond-1q26-specialty-dram.md": [
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 8,
+        "reason": "keyword: pricing, demand, bit"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/pc-dram-demand.md",
+        "title": "PC DRAM Demand Simulator",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      }
+    ],
     "raw/earnings/nvidia-fq1-2027-datacenter.md": [
       {
         "path": "wiki/markets/hbm.md",
@@ -3873,6 +4393,32 @@
         "title": "Demand Forecasting",
         "score": 6,
         "reason": "keyword: demand, forecasting"
+      }
+    ],
+    "raw/earnings/rambus-memory-ip-royalty-2026.md": [
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 10,
+        "reason": "keyword: memory, dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 10,
+        "reason": "keyword: memory, hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 9,
+        "reason": "keyword: memory, demand, supply, chain"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 9,
+        "reason": "keyword: memory, dram, demand, forecasting"
       }
     ],
     "raw/earnings/samsung-electronics-1q26-earnings.md": [
@@ -5345,6 +5891,32 @@
         "reason": "keyword: dram, memory, demand"
       }
     ],
+    "raw/lectures/memory-contract-price-negotiation-quarterly-process.md": [
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 10,
+        "reason": "keyword: memory, pricing, demand, supply"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 10,
+        "reason": "keyword: memory, dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 9,
+        "reason": "keyword: memory, dram, demand, forecasting"
+      }
+    ],
     "raw/lectures/memory-cycle-leading-indicators-book-to-bill-pmi.md": [
       {
         "path": "wiki/concepts/demand-forecasting.md",
@@ -5421,6 +5993,32 @@
         "title": "Smartphone Memory Demand Simulator",
         "score": 12,
         "reason": "keyword: memory, demand, forecasting, dram"
+      }
+    ],
+    "raw/lectures/memory-inventory-writedown-lcm-accounting.md": [
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 11,
+        "reason": "keyword: nand, demand, forecasting, scenario"
+      },
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 10,
+        "reason": "keyword: memory, hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: memory, dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
       }
     ],
     "raw/lectures/memory-lta-prepayment-accounting-financial-model.md": [
@@ -5891,6 +6489,32 @@
         "reason": "keyword: hbm, demand, forecasting"
       }
     ],
+    "raw/lectures/semiconductor-cycle-structural-vs-cyclical-framework.md": [
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 9,
+        "reason": "keyword: cycle, demand, memory, pricing"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 8,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 7,
+        "reason": "keyword: cycle, forecasting, memory"
+      },
+      {
+        "path": "wiki/methods/structural-demand-model.md",
+        "title": "Structural Demand Model",
+        "score": 5,
+        "reason": "keyword: structural, demand, forecasting, scenario"
+      }
+    ],
     "raw/lectures/semiconductor-learning-curve-yield-economics.md": [
       {
         "path": "wiki/markets/dram.md",
@@ -6009,16 +6633,42 @@
         "reason": "keyword: cycle, forecasting"
       },
       {
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 8,
+        "reason": "keyword: model, cycle, demand, forecasting"
+      },
+      {
         "path": "wiki/methods/structural-demand-model.md",
         "title": "Structural Demand Model",
         "score": 8,
         "reason": "keyword: model, demand, forecasting, causal"
+      }
+    ],
+    "raw/papers/bullwhip-effect-empirical-semiconductor-amplification.md": [
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 8,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
       },
       {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
-        "score": 6,
-        "reason": "keyword: demand, forecasting"
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 8,
+        "reason": "keyword: demand, supply, chain"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 5,
+        "reason": "keyword: forecasting"
+      },
+      {
+        "path": "wiki/simulators/advanced-demand-forecast.md",
+        "title": "Advanced Demand Forecast Simulator",
+        "score": 5,
+        "reason": "keyword: demand, forecasting, supply, scenario"
       }
     ],
     "raw/papers/chip-architecture-supply-demand-uncertainty-2023.md": [
@@ -6041,10 +6691,10 @@
         "reason": "keyword: forecasting"
       },
       {
-        "path": "wiki/comparisons/domain-comparison.md",
-        "title": "Domain Comparison Panel",
-        "score": 4,
-        "reason": "keyword: demand, scenario, analysis, forecasting"
+        "path": "wiki/simulators/advanced-demand-forecast.md",
+        "title": "Advanced Demand Forecast Simulator",
+        "score": 5,
+        "reason": "keyword: supply, demand, scenario, analysis"
       }
     ],
     "raw/papers/cobweb-model-dram-price-capacity-cycle.md": [
@@ -6099,6 +6749,32 @@
         "reason": "keyword: dram"
       }
     ],
+    "raw/papers/deep-rl-inventory-demand-forecast-model-selection.md": [
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 11,
+        "reason": "keyword: demand, model, forecasting, time"
+      },
+      {
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 10,
+        "reason": "keyword: inventory, demand, forecast, model"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 9,
+        "reason": "keyword: forecasting"
+      },
+      {
+        "path": "wiki/methods/structural-demand-model.md",
+        "title": "Structural Demand Model",
+        "score": 9,
+        "reason": "keyword: demand, model, forecasting, scenario"
+      }
+    ],
     "raw/papers/demand-forecasting-financial-estimation-semiconductor-supply-chain-2019.md": [
       {
         "path": "wiki/concepts/demand-forecasting.md",
@@ -6119,10 +6795,10 @@
         "reason": "keyword: demand, supply, chain"
       },
       {
-        "path": "wiki/methods/structural-demand-model.md",
-        "title": "Structural Demand Model",
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
         "score": 8,
-        "reason": "keyword: demand, forecasting, causal, model"
+        "reason": "keyword: demand, forecasting, supply, model"
       }
     ],
     "raw/papers/demand-forecasting-lstm-neural-networks-2020.md": [
@@ -6243,16 +6919,16 @@
         "reason": "keyword: analysis, causal, model"
       },
       {
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 6,
+        "reason": "keyword: supply, model"
+      },
+      {
         "path": "wiki/concepts/demand-forecasting.md",
         "title": "Demand Forecasting",
         "score": 5,
         "reason": "keyword: analysis, causal, model, time"
-      },
-      {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
-        "score": 5,
-        "reason": "keyword: analysis"
       }
     ],
     "raw/papers/electricity-demand-grid-impacts-ai-data-centers-2024.md": [
@@ -6275,9 +6951,9 @@
         "reason": "keyword: forecasting"
       },
       {
-        "path": "wiki/comparisons/domain-comparison.md",
-        "title": "Domain Comparison Panel",
-        "score": 4,
+        "path": "wiki/simulators/advanced-demand-forecast.md",
+        "title": "Advanced Demand Forecast Simulator",
+        "score": 5,
         "reason": "keyword: demand, forecasting, scenario, analysis"
       }
     ],
@@ -6295,14 +6971,14 @@
         "reason": "keyword: forecasting"
       },
       {
-        "path": "wiki/comparisons/domain-comparison.md",
-        "title": "Domain Comparison Panel",
-        "score": 4,
-        "reason": "keyword: demand, forecasting, scenario, analysis"
+        "path": "wiki/simulators/advanced-demand-forecast.md",
+        "title": "Advanced Demand Forecast Simulator",
+        "score": 5,
+        "reason": "keyword: forecast, demand, forecasting, scenario"
       },
       {
-        "path": "wiki/concepts/scenario-analysis.md",
-        "title": "Scenario Analysis",
+        "path": "wiki/comparisons/domain-comparison.md",
+        "title": "Domain Comparison Panel",
         "score": 4,
         "reason": "keyword: demand, forecasting, scenario, analysis"
       }
@@ -6347,16 +7023,16 @@
         "reason": "keyword: forecasting"
       },
       {
-        "path": "wiki/methods/structural-demand-model.md",
-        "title": "Structural Demand Model",
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
         "score": 7,
         "reason": "keyword: forecasting, model, demand"
       },
       {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
-        "score": 6,
-        "reason": "keyword: forecasting, demand"
+        "path": "wiki/methods/structural-demand-model.md",
+        "title": "Structural Demand Model",
+        "score": 7,
+        "reason": "keyword: forecasting, model, demand"
       }
     ],
     "raw/papers/grey-model-gm11-semiconductor-ic-forecasting.md": [
@@ -6437,6 +7113,32 @@
         "reason": "keyword: demand, forecasting"
       }
     ],
+    "raw/papers/hierarchical-forecast-reconciliation-mint.md": [
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 11,
+        "reason": "keyword: demand, forecasting, time, series"
+      },
+      {
+        "path": "wiki/methods/structural-demand-model.md",
+        "title": "Structural Demand Model",
+        "score": 10,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
+      },
+      {
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 9,
+        "reason": "keyword: forecast, demand, forecasting, structural"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 9,
+        "reason": "keyword: forecasting"
+      }
+    ],
     "raw/papers/how-fast-are-semiconductor-prices-falling-2018.md": [
       {
         "path": "wiki/concepts/demand-forecasting.md",
@@ -6509,10 +7211,10 @@
         "reason": "keyword: demand, supply, chain"
       },
       {
-        "path": "wiki/methods/structural-demand-model.md",
-        "title": "Structural Demand Model",
-        "score": 7,
-        "reason": "keyword: demand, forecasting, model"
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 8,
+        "reason": "keyword: demand, forecasting, model, supply"
       }
     ],
     "raw/papers/information-distortion-supply-chain-bullwhip-effect-1997.md": [
@@ -6523,6 +7225,12 @@
         "reason": "keyword: supply, chain"
       },
       {
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 6,
+        "reason": "keyword: supply, model"
+      },
+      {
         "path": "wiki/methods/structural-demand-model.md",
         "title": "Structural Demand Model",
         "score": 6,
@@ -6531,12 +7239,6 @@
       {
         "path": "wiki/methods/forecasting-evidence-map.md",
         "title": "Forecasting Evidence Map",
-        "score": 4,
-        "reason": "domain rule match"
-      },
-      {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
         "score": 4,
         "reason": "domain rule match"
       }
@@ -6561,10 +7263,10 @@
         "reason": "keyword: demand, forecasting, causal, model"
       },
       {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
-        "score": 6,
-        "reason": "keyword: demand, forecasting"
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 7,
+        "reason": "keyword: demand, forecasting, model"
       }
     ],
     "raw/papers/manufacturing-intelligence-semiconductor-demand-technology-diffusion-2010.md": [
@@ -6587,10 +7289,10 @@
         "reason": "keyword: demand, forecasting, causal, model"
       },
       {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
-        "score": 8,
-        "reason": "keyword: demand, forecasting, scenario, analysis"
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 9,
+        "reason": "keyword: demand, forecast, cycle, forecasting"
       }
     ],
     "raw/papers/measuring-moores-law-price-cost-quality-indexes-2019.md": [
@@ -6613,10 +7315,36 @@
         "reason": "keyword: demand, causal, model"
       },
       {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 6,
+        "reason": "keyword: demand, model"
+      }
+    ],
+    "raw/papers/monte-carlo-simulation-demand-forecasting-uncertainty.md": [
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 8,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 8,
+        "reason": "keyword: demand, supply, chain"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
         "score": 5,
-        "reason": "keyword: demand"
+        "reason": "keyword: forecasting"
+      },
+      {
+        "path": "wiki/simulators/advanced-demand-forecast.md",
+        "title": "Advanced Demand Forecast Simulator",
+        "score": 5,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
       }
     ],
     "raw/papers/newsvendor-base-stock-inventory-uncertain-demand.md": [
@@ -6637,6 +7365,32 @@
         "title": "Forecasting Evidence Map",
         "score": 5,
         "reason": "keyword: forecasting"
+      },
+      {
+        "path": "wiki/simulators/advanced-demand-forecast.md",
+        "title": "Advanced Demand Forecast Simulator",
+        "score": 5,
+        "reason": "keyword: demand, forecasting, supply, scenario"
+      }
+    ],
+    "raw/papers/nowcasting-google-trends-bayesian-structural-time-series.md": [
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 10,
+        "reason": "keyword: time, series, demand, forecasting"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 5,
+        "reason": "keyword: forecasting"
+      },
+      {
+        "path": "wiki/methods/structural-demand-model.md",
+        "title": "Structural Demand Model",
+        "score": 5,
+        "reason": "keyword: structural, demand, forecasting, scenario"
       },
       {
         "path": "wiki/comparisons/domain-comparison.md",
@@ -6821,10 +7575,10 @@
         "reason": "keyword: forecasting, demand, causal, model"
       },
       {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
-        "score": 6,
-        "reason": "keyword: forecasting, demand"
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
+        "score": 7,
+        "reason": "keyword: forecasting, demand, model"
       }
     ],
     "raw/papers/stochastic-programming-capacity-planning-wafer-fab-2009.md": [
@@ -6873,10 +7627,10 @@
         "reason": "keyword: forecasting"
       },
       {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
         "score": 8,
-        "reason": "keyword: demand, forecasting, scenario, analysis"
+        "reason": "keyword: structural, demand, forecasting, model"
       }
     ],
     "raw/papers/system-dynamics-abm-semiconductor-supply-chain-bullwhip.md": [
@@ -6903,6 +7657,58 @@
         "title": "Supply-Demand Gap",
         "score": 8,
         "reason": "keyword: supply, chain, demand"
+      }
+    ],
+    "raw/papers/temporal-fusion-transformer-multihorizon-forecasting.md": [
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 10,
+        "reason": "keyword: forecasting, demand, time, series"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 5,
+        "reason": "keyword: forecasting"
+      },
+      {
+        "path": "wiki/comparisons/domain-comparison.md",
+        "title": "Domain Comparison Panel",
+        "score": 4,
+        "reason": "keyword: forecasting, demand, scenario, analysis"
+      },
+      {
+        "path": "wiki/concepts/scenario-analysis.md",
+        "title": "Scenario Analysis",
+        "score": 4,
+        "reason": "keyword: forecasting, demand, scenario, analysis"
+      }
+    ],
+    "raw/papers/time-series-foundation-models-zero-shot-forecasting.md": [
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 10,
+        "reason": "keyword: time, series, forecasting, demand"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 5,
+        "reason": "keyword: forecasting"
+      },
+      {
+        "path": "wiki/comparisons/domain-comparison.md",
+        "title": "Domain Comparison Panel",
+        "score": 4,
+        "reason": "keyword: forecasting, demand, scenario, analysis"
+      },
+      {
+        "path": "wiki/concepts/scenario-analysis.md",
+        "title": "Scenario Analysis",
+        "score": 4,
+        "reason": "keyword: forecasting, demand, scenario, analysis"
       }
     ],
     "raw/papers/transformer-probabilistic-demand-forecasting-online-learning-2024.md": [
@@ -6945,16 +7751,16 @@
         "reason": "keyword: forecasting"
       },
       {
-        "path": "wiki/methods/structural-demand-model.md",
-        "title": "Structural Demand Model",
+        "path": "wiki/methods/advanced-demand-forecast-engine.md",
+        "title": "Advanced Demand Forecast Engine",
         "score": 7,
         "reason": "keyword: forecasting, model, demand"
       },
       {
-        "path": "wiki/methods/sensitivity-analysis.md",
-        "title": "Sensitivity Analysis",
-        "score": 6,
-        "reason": "keyword: forecasting, demand"
+        "path": "wiki/methods/structural-demand-model.md",
+        "title": "Structural Demand Model",
+        "score": 7,
+        "reason": "keyword: forecasting, model, demand"
       }
     ],
     "raw/papers/wsts-forecast-accuracy-track-record.md": [
@@ -6971,14 +7777,14 @@
         "reason": "keyword: forecasting"
       },
       {
-        "path": "wiki/comparisons/domain-comparison.md",
-        "title": "Domain Comparison Panel",
-        "score": 4,
-        "reason": "keyword: demand, forecasting, scenario, analysis"
+        "path": "wiki/simulators/advanced-demand-forecast.md",
+        "title": "Advanced Demand Forecast Simulator",
+        "score": 5,
+        "reason": "keyword: forecast, demand, forecasting, scenario"
       },
       {
-        "path": "wiki/concepts/scenario-analysis.md",
-        "title": "Scenario Analysis",
+        "path": "wiki/comparisons/domain-comparison.md",
+        "title": "Domain Comparison Panel",
         "score": 4,
         "reason": "keyword: demand, forecasting, scenario, analysis"
       }
@@ -7034,6 +7840,32 @@
         "title": "Supply-Demand Gap",
         "score": 8,
         "reason": "keyword: supply, chain, demand"
+      }
+    ],
+    "raw/reports/china-15th-five-year-plan-memory-self-sufficiency.md": [
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 11,
+        "reason": "keyword: nand, demand, forecasting, scenario"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 10,
+        "reason": "keyword: memory, dram, supply, demand"
+      },
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 10,
+        "reason": "keyword: memory, hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 9,
+        "reason": "keyword: memory, supply, chain, demand"
       }
     ],
     "raw/reports/china-cloud-custom-ai-chip-memory-demand-2026.md": [
@@ -7218,6 +8050,32 @@
         "reason": "keyword: hbm, demand, forecasting"
       }
     ],
+    "raw/reports/cxmt-ddr5-lpddr5x-yield-progress-2026.md": [
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 10,
+        "reason": "keyword: supply, chain, demand, pricing"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: dram, supply, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/pc-dram-demand.md",
+        "title": "PC DRAM Demand Simulator",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      }
+    ],
     "raw/reports/digitimes-taiwan-server-odm-memory-supply-2026.md": [
       {
         "path": "wiki/concepts/supply-demand-gap.md",
@@ -7242,6 +8100,32 @@
         "title": "NAND SSD",
         "score": 9,
         "reason": "keyword: nand, demand, forecasting"
+      }
+    ],
+    "raw/reports/dram-demand-by-region-datacenter-share-2026.md": [
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 9,
+        "reason": "keyword: demand, bit, supply, chain"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: dram, demand, forecasting, supply"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/pc-dram-demand.md",
+        "title": "PC DRAM Demand Simulator",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
       }
     ],
     "raw/reports/equip-advantest-hbm-test-lead-times-2026.md": [
@@ -7504,6 +8388,32 @@
         "reason": "keyword: nand, demand, forecasting"
       }
     ],
+    "raw/reports/esg-fab-carbon-pfc-scope123-quantitative.md": [
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: supply, demand, forecasting, dram"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: demand, forecasting, nand"
+      },
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 9,
+        "reason": "keyword: demand, forecasting, nand"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 8,
+        "reason": "keyword: supply, chain, demand"
+      }
+    ],
     "raw/reports/fab-samsung-pyeongtaek-p4-1c-dram-2026.md": [
       {
         "path": "wiki/markets/dram.md",
@@ -7620,6 +8530,32 @@
         "title": "AI Server HBM Demand Simulator",
         "score": 11,
         "reason": "keyword: hbm, demand, forecasting, ai"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 8,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 5,
+        "reason": "keyword: forecasting"
+      }
+    ],
+    "raw/reports/hbm-longterm-tam-by-application-2030.md": [
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
       },
       {
         "path": "wiki/concepts/demand-forecasting.md",
@@ -7762,6 +8698,32 @@
         "title": "NAND SSD Demand Simulator",
         "score": 9,
         "reason": "keyword: nand, demand, forecasting"
+      }
+    ],
+    "raw/reports/korea-taiwan-power-grid-fab-constraint-2026.md": [
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: dram, supply, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 8,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
+      },
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 8,
+        "reason": "keyword: supply, chain, demand"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
       }
     ],
     "raw/reports/macro-ai-capex-bubble-downside-risk-2026.md": [
@@ -9272,6 +10234,58 @@
         "reason": "keyword: supply, chain, demand"
       }
     ],
+    "raw/reports/semiconductor-antitrust-regulation-environment-2026.md": [
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 9,
+        "reason": "keyword: supply, chain, demand, pricing"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: dram, supply, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 8,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      }
+    ],
+    "raw/reports/semiconductor-talent-shortage-memory-rd-2026.md": [
+      {
+        "path": "wiki/concepts/supply-demand-gap.md",
+        "title": "Supply-Demand Gap",
+        "score": 9,
+        "reason": "keyword: memory, supply, chain, demand"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 8,
+        "reason": "keyword: demand, forecasting, scenario, analysis"
+      },
+      {
+        "path": "wiki/concepts/memory-supply-chain-equipment.md",
+        "title": "Memory Supply Chain and Equipment Constraints",
+        "score": 6,
+        "reason": "keyword: memory, supply, chain, capacity"
+      },
+      {
+        "path": "wiki/methods/forecasting-evidence-map.md",
+        "title": "Forecasting Evidence Map",
+        "score": 6,
+        "reason": "keyword: memory, forecasting"
+      }
+    ],
     "raw/reports/sia-q1-2026-global-semiconductor-sales.md": [
       {
         "path": "wiki/markets/dram.md",
@@ -9348,6 +10362,32 @@
         "title": "DRAM",
         "score": 10,
         "reason": "keyword: memory, market, dram, demand"
+      }
+    ],
+    "raw/reports/trendforce-2h26-hbm4-mainstream-outlook.md": [
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/hbm-demand.md",
+        "title": "AI Server HBM Demand Simulator",
+        "score": 9,
+        "reason": "keyword: hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
       }
     ],
     "raw/reports/trendforce-2q26-memory-contract-price-forecast.md": [
@@ -9532,6 +10572,32 @@
         "reason": "keyword: demand, forecasting"
       }
     ],
+    "raw/reports/trendforce-spot-price-june-2026-ddr4-ddr5.md": [
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/pc-dram.md",
+        "title": "PC DRAM",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/simulators/pc-dram-demand.md",
+        "title": "PC DRAM Demand Simulator",
+        "score": 8,
+        "reason": "keyword: dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/concepts/demand-forecasting.md",
+        "title": "Demand Forecasting",
+        "score": 6,
+        "reason": "keyword: demand, forecasting"
+      }
+    ],
     "raw/reports/trendforce-spot-price-may-2026-ddr5-ddr4.md": [
       {
         "path": "wiki/markets/dram.md",
@@ -9556,6 +10622,32 @@
         "title": "Demand Forecasting",
         "score": 6,
         "reason": "keyword: demand, forecasting"
+      }
+    ],
+    "raw/reports/wsts-2027-semiconductor-memory-forecast.md": [
+      {
+        "path": "wiki/simulators/nand-ssd-demand.md",
+        "title": "NAND SSD Demand Simulator",
+        "score": 11,
+        "reason": "keyword: nand, demand, forecasting, scenario"
+      },
+      {
+        "path": "wiki/markets/hbm.md",
+        "title": "HBM",
+        "score": 10,
+        "reason": "keyword: memory, hbm, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/dram.md",
+        "title": "DRAM",
+        "score": 9,
+        "reason": "keyword: memory, dram, demand, forecasting"
+      },
+      {
+        "path": "wiki/markets/nand.md",
+        "title": "NAND SSD",
+        "score": 9,
+        "reason": "keyword: nand, demand, forecasting"
       }
     ],
     "raw/reports/wsts-spring-2026-semiconductor-memory-forecast.md": [
@@ -9688,10 +10780,15 @@
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/articles/aisilicon-neocloud-gpu-rental-hbm-demand-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
     "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/forecasting-method-library.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/hbm-demand.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -9700,6 +10797,9 @@
       "wiki/concepts/forecasting-method-library.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/articles/aisilicon-rubin-cpx-gddr7-inference-memory-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
@@ -9727,6 +10827,7 @@
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/concepts/forecasting-method-library.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/channel-sourceability-qoq-price-allocation-2026.md": [
@@ -9803,6 +10904,9 @@
       "wiki/concepts/long-tail-domain-demand.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/articles/domain-cloud-gaming-streaming-memory-demand-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
@@ -9969,6 +11073,7 @@
     ],
     "raw/articles/microsoft-ai-pc-16gb-ram-baseline.md": [
       "wiki/markets/pc-dram.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/pc-dram-demand.md"
     ],
     "raw/articles/model-agentic-ai-memory-demand-2026.md": [
@@ -9986,6 +11091,9 @@
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/concepts/forecasting-method-library.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/articles/model-computer-use-browser-agents-memory-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
     ],
     "raw/articles/model-context-length-kv-cache-memory-demand.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
@@ -10015,10 +11123,17 @@
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/articles/model-test-time-compute-reasoning-memory-demand-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
+    "raw/articles/model-vector-database-rag-memory-demand-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
     "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/forecasting-method-library.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/hbm-demand.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -10052,6 +11167,12 @@
       "wiki/concepts/forecasting-method-library.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/articles/oem-memory-price-consumer-electronics-passthrough-cpi-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
+    "raw/articles/oem-memory-procurement-hedging-multisourcing-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
     "raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/concepts/forecasting-method-library.md",
@@ -10063,6 +11184,8 @@
     "raw/articles/oem-pc-dell-hp-lenovo-price-hike-memory-2026.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/concepts/forecasting-method-library.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/oem-samsung-mx-smartphone-shipments-2025.md": [
@@ -10078,10 +11201,14 @@
     "raw/articles/oem-smartphone-dram-content-spec-downgrade-2026.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/concepts/forecasting-method-library.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/oem-windows10-eol-pc-refresh-memory-demand-2026.md": [
       "wiki/concepts/forecasting-method-library.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/oem-xiaomi-oppo-vivo-transsion-shipments-2025.md": [
@@ -10090,11 +11217,14 @@
     ],
     "raw/articles/on-device-ai-smartphone-dram-content-2026.md": [
       "wiki/markets/smartphone-memory.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/smartphone-memory-demand.md"
     ],
     "raw/articles/on-device-slm-smartphone-ram-2026.md": [
       "wiki/concepts/forecasting-method-library.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/articles/power-ai-query-energy-inference-memory-2026.md": [
@@ -10201,6 +11331,8 @@
     ],
     "raw/articles/storage-enterprise-ssd-qlc-nand-demand-2026.md": [
       "wiki/markets/nand.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/nand-ssd-demand.md"
     ],
     "raw/articles/trendforce-ai-20pct-dram-wafer-2026.md": [
@@ -10231,7 +11363,12 @@
     ],
     "raw/articles/trendforce-smartphone-storage-capacity-2026.md": [
       "wiki/markets/smartphone-memory.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/smartphone-memory-demand.md"
+    ],
+    "raw/datasets/ai-accelerator-bom-hbm-cost-share.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/datasets/ai-pc-penetration-forecast.md": [
       "wiki/sources/raw-integration-ledger.md"
@@ -10255,6 +11392,9 @@
     "raw/datasets/ddr5-16gb-price-monthly-2025-2026.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/datasets/ddr5-ddr4-adoption-share-by-year.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
     ],
     "raw/datasets/dram-contract-price-qoq-2025-2026.md": [
       "wiki/concepts/channel-pricing-signal.md",
@@ -10295,6 +11435,9 @@
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/datasets/enterprise-ssd-exabytes-capacity.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
     "raw/datasets/gpu-hbm-capacity.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/markets/hbm.md",
@@ -10315,15 +11458,29 @@
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
+    "raw/datasets/humanoid-robot-production-forecast.md": [
+      "wiki/concepts/long-tail-domain-demand.md"
+    ],
     "raw/datasets/idc-global-datasphere-zettabytes.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/datasets/institutional-memory-forecast-comparison-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/datasets/korea-semiconductor-exports-monthly.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/datasets/lpddr-gddr-supplier-share-2025.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/datasets/memory-content-per-device.md": [
       "wiki/concepts/bit-demand.md",
@@ -10362,6 +11519,9 @@
     "raw/datasets/nand-flash-revenue-share.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/datasets/nand-supplier-market-share-2025.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
     "raw/datasets/pc-server-shipments.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -10374,6 +11534,12 @@
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
+    "raw/datasets/smartphone-memory-content-spec-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
     "raw/datasets/smartphone-shipments.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -10384,6 +11550,9 @@
     ],
     "raw/datasets/wsts-semiconductor-billings.md": [
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/earnings/ase-amkor-q1-2026-packaging-test.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/earnings/hbm4-three-supplier-competition-samsung-comeback-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
@@ -10419,6 +11588,9 @@
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/earnings/nanya-winbond-1q26-specialty-dram.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
     "raw/earnings/nvidia-fq1-2027-datacenter.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/sources/raw-integration-ledger.md"
@@ -10428,6 +11600,9 @@
       "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/simulators/hbm-demand.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/earnings/rambus-memory-ip-royalty-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/earnings/samsung-electronics-1q26-earnings.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
@@ -10655,6 +11830,9 @@
     "raw/lectures/jedec-hbm4-standard-jesd270-4.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/lectures/memory-contract-price-negotiation-quarterly-process.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
     "raw/lectures/memory-cycle-leading-indicators-book-to-bill-pmi.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/sources/raw-integration-ledger.md"
@@ -10666,6 +11844,9 @@
     "raw/lectures/memory-demand-seasonality-quarterly-pattern.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/lectures/memory-inventory-writedown-lcm-accounting.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/lectures/memory-lta-prepayment-accounting-financial-model.md": [
       "wiki/concepts/channel-pricing-signal.md",
@@ -10726,6 +11907,9 @@
     "raw/lectures/semianalysis-rise-and-roadmap-of-hbm.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/lectures/semiconductor-cycle-structural-vs-cyclical-framework.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
     "raw/lectures/semiconductor-learning-curve-yield-economics.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/sources/raw-integration-ledger.md"
@@ -10743,6 +11927,9 @@
     "raw/papers/bayesian-model-averaging-semiconductor-cycle-2018.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/papers/bullwhip-effect-empirical-semiconductor-amplification.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
     "raw/papers/chip-architecture-supply-demand-uncertainty-2023.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -10753,6 +11940,9 @@
     "raw/papers/collusion-along-learning-curve-dram-cartel-2021.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/papers/deep-rl-inventory-demand-forecast-model-selection.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
     ],
     "raw/papers/demand-forecasting-financial-estimation-semiconductor-supply-chain-2019.md": [
       "wiki/sources/raw-integration-ledger.md"
@@ -10798,6 +11988,9 @@
     "raw/papers/hbm-thermal-warpage-tsv-reliability-3d-stack.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/papers/hierarchical-forecast-reconciliation-mint.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
     "raw/papers/how-fast-are-semiconductor-prices-falling-2018.md": [
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/sources/raw-integration-ledger.md"
@@ -10822,8 +12015,14 @@
       "wiki/concepts/channel-pricing-signal.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/papers/monte-carlo-simulation-demand-forecasting-uncertainty.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
     "raw/papers/newsvendor-base-stock-inventory-uncertain-demand.md": [
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/papers/nowcasting-google-trends-bayesian-structural-time-series.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
     ],
     "raw/papers/predicting-the-present-with-google-trends-2012.md": [
       "wiki/sources/raw-integration-ledger.md"
@@ -10855,6 +12054,12 @@
     "raw/papers/system-dynamics-abm-semiconductor-supply-chain-bullwhip.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/papers/temporal-fusion-transformer-multihorizon-forecasting.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
+    "raw/papers/time-series-foundation-models-zero-shot-forecasting.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
+    ],
     "raw/papers/transformer-probabilistic-demand-forecasting-online-learning-2024.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -10873,6 +12078,9 @@
     ],
     "raw/reports/capex-samsung-hbm-50pct-capacity-surge-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/reports/china-15th-five-year-plan-memory-self-sufficiency.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
     ],
     "raw/reports/china-cloud-custom-ai-chip-memory-demand-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
@@ -10896,8 +12104,14 @@
     "raw/reports/cxmt-2026-capacity-hbm3-bit-share.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/reports/cxmt-ddr5-lpddr5x-yield-progress-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
     "raw/reports/digitimes-taiwan-server-odm-memory-supply-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/reports/dram-demand-by-region-datacenter-share-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
     ],
     "raw/reports/equip-advantest-hbm-test-lead-times-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
@@ -10931,6 +12145,9 @@
     "raw/reports/equip-teradyne-q1-2026-memory-test-hbm.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/reports/esg-fab-carbon-pfc-scope123-quantitative.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
     "raw/reports/fab-samsung-pyeongtaek-p4-1c-dram-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -10946,6 +12163,10 @@
     "raw/reports/hbm-customer-concentration-nvidia-dependency-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/reports/hbm-longterm-tam-by-application-2030.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md"
+    ],
     "raw/reports/hbm-take-or-pay-capacity-reservation-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -10953,6 +12174,8 @@
       "wiki/concepts/supply-demand-gap.md",
       "wiki/markets/dram.md",
       "wiki/markets/pc-dram.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/pc-dram-demand.md"
     ],
     "raw/reports/korea-media-memory-supercycle-2026-outlook.md": [
@@ -10963,6 +12186,9 @@
     ],
     "raw/reports/korea-semiconductor-gdp-macro-impact-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/reports/korea-taiwan-power-grid-fab-constraint-2026.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/reports/macro-ai-capex-bubble-downside-risk-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
@@ -11077,6 +12303,8 @@
     "raw/reports/pkg-cowos-allocation-nvidia-amd-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/markets/hbm.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/hbm-demand.md"
     ],
     "raw/reports/pkg-tsmc-cowos-capacity-130k-wpm-2026.md": [
@@ -11144,6 +12372,12 @@
     "raw/reports/samsung-foundry-hbm4-base-die-turnkey-2026.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
+    "raw/reports/semiconductor-antitrust-regulation-environment-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
+    "raw/reports/semiconductor-talent-shortage-memory-rd-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
+    ],
     "raw/reports/sia-q1-2026-global-semiconductor-sales.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
@@ -11155,6 +12389,9 @@
       "wiki/markets/dram.md",
       "wiki/markets/nand.md",
       "wiki/simulators/nand-ssd-demand.md"
+    ],
+    "raw/reports/trendforce-2h26-hbm4-mainstream-outlook.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md"
     ],
     "raw/reports/trendforce-2q26-memory-contract-price-forecast.md": [
       "wiki/sources/raw-integration-ledger.md"
@@ -11170,6 +12407,8 @@
     ],
     "raw/reports/trendforce-hbm-bit-demand-supply-2026.md": [
       "wiki/markets/hbm.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/hbm-demand.md"
     ],
     "raw/reports/trendforce-mobile-dram-lpddr5x-2026-smartphone.md": [
@@ -11177,10 +12416,18 @@
     ],
     "raw/reports/trendforce-qlc-enterprise-ssd-nearline-hdd-2026.md": [
       "wiki/markets/nand.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/nand-ssd-demand.md"
+    ],
+    "raw/reports/trendforce-spot-price-june-2026-ddr4-ddr5.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/reports/trendforce-spot-price-may-2026-ddr5-ddr4.md": [
       "wiki/sources/raw-integration-ledger.md"
+    ],
+    "raw/reports/wsts-2027-semiconductor-memory-forecast.md": [
+      "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/reports/wsts-spring-2026-semiconductor-memory-forecast.md": [
       "wiki/markets/dram.md"
@@ -11225,6 +12472,21 @@
         "capacity"
       ]
     },
+    "raw/articles/aisilicon-neocloud-gpu-rental-hbm-demand-2026.md": {
+      "title": "Neocloud(GPU-as-a-Service) HBM 수요 (CoreWeave, 2026)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/0001769628/000176962826000220/coreweave1q26earningspress.htm",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand",
+        "capacity",
+        "pricing"
+      ]
+    },
     "raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md": {
       "title": "NVIDIA Blackwell/Rubin & AMD MI350/MI400 HBM capacity & 2026 shipment mix",
       "source_url": "https://www.trendforce.com/presscenter/news/20260408-13003.html",
@@ -11253,6 +12515,20 @@
         "demand-forecasting",
         "bit-demand",
         "capacity"
+      ]
+    },
+    "raw/articles/aisilicon-rubin-cpx-gddr7-inference-memory-2026.md": {
+      "title": "NVIDIA Rubin CPX (GDDR7 추론칩)·SRAM 대체 (2026)",
+      "source_url": "https://videocardz.com/newz/nvidia-rubin-cpx-gpu-to-feature-128gb-gddr7-memory-launches-end-of-2026",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand"
       ]
     },
     "raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md": {
@@ -11507,6 +12783,20 @@
         "bit-demand",
         "demand-forecasting",
         "capacity"
+      ]
+    },
+    "raw/articles/domain-cloud-gaming-streaming-memory-demand-2026.md": {
+      "title": "클라우드 게이밍/게임 스트리밍 메모리 수요 (2026)",
+      "source_url": "https://studio.antier.com/blogs/cloud-gaming-2026-best-services-trends/",
+      "type": "article",
+      "confidence": "low",
+      "tags": [
+        "dram",
+        "gddr",
+        "datacenter",
+        "consumer-electronics",
+        "demand-forecasting",
+        "bit-demand"
       ]
     },
     "raw/articles/domain-crypto-gpu-mining-legacy-gddr.md": {
@@ -11913,6 +13203,20 @@
         "pricing"
       ]
     },
+    "raw/articles/model-computer-use-browser-agents-memory-2026.md": {
+      "title": "Computer-use/브라우저 AI 에이전트 메모리 수요 (2026)",
+      "source_url": "https://nohacks.co/blog/agentic-browser-landscape-2026",
+      "type": "article",
+      "confidence": "low",
+      "tags": [
+        "hbm",
+        "dram",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand"
+      ]
+    },
     "raw/articles/model-context-length-kv-cache-memory-demand.md": {
       "title": "LLM 컨텍스트 길이·KV cache·trillion-param 메모리 수요",
       "source_url": "https://introl.com/blog/long-context-llm-infrastructure-million-token-windows-guide",
@@ -11983,6 +13287,34 @@
         "demand-forecasting",
         "bit-demand",
         "capacity"
+      ]
+    },
+    "raw/articles/model-test-time-compute-reasoning-memory-demand-2026.md": {
+      "title": "Test-time compute(추론 스케일링) 메모리 수요 (2026)",
+      "source_url": "https://introl.com/blog/inference-time-scaling-research-reasoning-models-december-2025",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand"
+      ]
+    },
+    "raw/articles/model-vector-database-rag-memory-demand-2026.md": {
+      "title": "벡터DB/RAG 메모리 수요 (AI 인프라, 2026)",
+      "source_url": "https://redis.io/blog/rag-at-scale/",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "ai-server",
+        "datacenter",
+        "demand-forecasting",
+        "bit-demand"
       ]
     },
     "raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md": {
@@ -12074,6 +13406,35 @@
         "datacenter",
         "pricing",
         "demand-forecasting"
+      ]
+    },
+    "raw/articles/oem-memory-price-consumer-electronics-passthrough-cpi-2026.md": {
+      "title": "메모리 가격→소비자 전자제품 가격 전가·CPI (2026)",
+      "source_url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-26-gartner-says-surging-memory-costs-will-reduce-global-pc-and-smartphone-shipments-in-2026",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "pc",
+        "smartphone",
+        "pricing",
+        "demand-forecasting",
+        "scenario-analysis"
+      ]
+    },
+    "raw/articles/oem-memory-procurement-hedging-multisourcing-2026.md": {
+      "title": "OEM/EMS 메모리 조달·헤지·멀티소싱 전략 (2026)",
+      "source_url": "https://luminovo.com/resources/blog/when-ai-steals-your-memory-chips-how-ems-and-oem-companies-can-survive-the-2026-supply-crisis",
+      "type": "article",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "supply-chain",
+        "inventory",
+        "demand-forecasting",
+        "pricing"
       ]
     },
     "raw/articles/oem-module-makers-kingston-adata-crucial-channel-2025.md": {
@@ -12532,6 +13893,19 @@
         "bit-demand"
       ]
     },
+    "raw/datasets/ai-accelerator-bom-hbm-cost-share.md": {
+      "title": "AI 가속기 BOM·HBM 원가 비중 (2026)",
+      "source_url": "https://siliconanalysts.com/data/ai-chip-costs",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "ai-server",
+        "demand-forecasting",
+        "bit-demand",
+        "pricing"
+      ]
+    },
     "raw/datasets/ai-pc-penetration-forecast.md": {
       "title": "AI PC 침투율 전망 (2023-2028)",
       "source_url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-28-gartner-says-artificial-intelligence-pcs-will-represent-31-percent-of-worldwide-pc-market-by-the-end-of-2025",
@@ -12595,6 +13969,18 @@
         "pricing",
         "demand-forecasting",
         "scenario-analysis"
+      ]
+    },
+    "raw/datasets/ddr5-ddr4-adoption-share-by-year.md": {
+      "title": "DDR5/DDR4 채택률·가격 프리미엄 시계열 (2022-2026)",
+      "source_url": "https://www.tomshardware.com/news/ddr5-adoption-huge-by-2023",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "demand-forecasting",
+        "bit-demand",
+        "pricing"
       ]
     },
     "raw/datasets/dram-contract-price-qoq-2025-2026.md": {
@@ -12724,6 +14110,19 @@
         "demand-forecasting"
       ]
     },
+    "raw/datasets/enterprise-ssd-exabytes-capacity.md": {
+      "title": "Enterprise SSD 엑사바이트·용량 전망 (2024-2031)",
+      "source_url": "https://www.amraandelma.com/ssd-marketing-statistics/",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "nand",
+        "datacenter",
+        "bit-demand",
+        "demand-forecasting",
+        "capacity"
+      ]
+    },
     "raw/datasets/gpu-hbm-capacity.md": {
       "title": "NVIDIA GPU 세대별 per-GPU HBM 용량",
       "source_url": "https://wccftech.com/nvidia-blackwell-gpu-architecture-official-208-billion-transistors-5x-ai-performance-192-gb-hbm3e-memory/",
@@ -12770,6 +14169,33 @@
         "revenue"
       ]
     },
+    "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md": {
+      "title": "HBM 세대별 $/stack·$/GB (HBM3/3E/4)",
+      "source_url": "https://siliconanalysts.com/data/hbm-pricing",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "pricing",
+        "revenue",
+        "demand-forecasting",
+        "bit-demand"
+      ]
+    },
+    "raw/datasets/humanoid-robot-production-forecast.md": {
+      "title": "휴머노이드 로봇 생산 전망·메모리 콘텐츠 (2027-2035)",
+      "source_url": "https://omdia.tech.informa.com/pr/2024/jul/omdia-global-humanoid-robot-shipments-to-exceed-10000-units-by-2027-and-reach-38000-units-in-2030",
+      "type": "dataset",
+      "confidence": "low",
+      "tags": [
+        "dram",
+        "nand",
+        "automotive",
+        "bit-demand",
+        "demand-forecasting",
+        "consumer-electronics"
+      ]
+    },
     "raw/datasets/idc-global-datasphere-zettabytes.md": {
       "title": "IDC Global DataSphere (제타바이트, 2018-2029)",
       "source_url": "https://my.idc.com/getdoc.jsp?containerId=US53363625",
@@ -12781,6 +14207,20 @@
         "bit-demand",
         "datacenter",
         "capacity"
+      ]
+    },
+    "raw/datasets/institutional-memory-forecast-comparison-2026.md": {
+      "title": "기관별 2026 메모리 전망 비교 (forecast band)",
+      "source_url": "https://www.ampheo.com/blog/memory-chip-market-forecast-2026-dram-nand-hbm-and-nor-flash",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "demand-forecasting",
+        "scenario-analysis",
+        "revenue"
       ]
     },
     "raw/datasets/korea-semiconductor-exports-monthly.md": {
@@ -12795,6 +14235,20 @@
         "revenue",
         "demand-forecasting",
         "units"
+      ]
+    },
+    "raw/datasets/lpddr-gddr-supplier-share-2025.md": {
+      "title": "모바일 LPDDR / 그래픽 GDDR 공급사 점유 (2025)",
+      "source_url": "https://www.industryresearch.biz/market-reports/lpddr-dram-market-113109",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "hbm",
+        "smartphone",
+        "consumer-electronics",
+        "demand-forecasting",
+        "bit-demand"
       ]
     },
     "raw/datasets/memory-content-per-device.md": {
@@ -12907,6 +14361,18 @@
         "revenue"
       ]
     },
+    "raw/datasets/nand-supplier-market-share-2025.md": {
+      "title": "NAND 공급사 점유율·매출 (2025Q3)",
+      "source_url": "https://www.trendforce.com/presscenter/news/20251203-12813.html",
+      "type": "dataset",
+      "confidence": "high",
+      "tags": [
+        "nand",
+        "revenue",
+        "demand-forecasting",
+        "supply-chain"
+      ]
+    },
     "raw/datasets/pc-server-shipments.md": {
       "title": "PC 및 서버 출하량 (연도별)",
       "source_url": "https://www.gartner.com/en/newsroom/press-releases/2026-1-20-gartner-says-worldwide-pc-shipments-increased-9-point-3-percent-in-fourth-quarter-of-2025-and-9-point-1-percent-for-the-full-year",
@@ -12944,6 +14410,33 @@
         "capacity"
       ]
     },
+    "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md": {
+      "title": "SIA 글로벌 반도체 매출 월별 (2026, 고빈도)",
+      "source_url": "https://www.semiconductors.org/global-semiconductor-sales-increase-25-from-q4-2025-to-q1-2026/",
+      "type": "dataset",
+      "confidence": "high",
+      "tags": [
+        "dram",
+        "nand",
+        "demand-forecasting",
+        "revenue",
+        "units"
+      ]
+    },
+    "raw/datasets/smartphone-memory-content-spec-2026.md": {
+      "title": "스마트폰 메모리 콘텐츠·spec 다운그레이드 (2026)",
+      "source_url": "https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/",
+      "type": "dataset",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "smartphone",
+        "bit-demand",
+        "demand-forecasting",
+        "pricing"
+      ]
+    },
     "raw/datasets/smartphone-shipments.md": {
       "title": "전세계 스마트폰 출하량 (연도별)",
       "source_url": "https://my.idc.com/getdoc.jsp?containerId=prUS53072325",
@@ -12976,6 +14469,20 @@
         "revenue",
         "dram",
         "nand"
+      ]
+    },
+    "raw/earnings/ase-amkor-q1-2026-packaging-test.md": {
+      "title": "ASE / Amkor Q1 2026 패키징·테스트 실적 (OSAT)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/0001047127/000104712726000017/amkr3312026erex-991.htm",
+      "type": "earnings",
+      "confidence": "high",
+      "tags": [
+        "hbm",
+        "capacity",
+        "supply-chain",
+        "demand-forecasting",
+        "capex",
+        "revenue"
       ]
     },
     "raw/earnings/hbm4-three-supplier-competition-samsung-comeback-2026.md": {
@@ -13073,6 +14580,20 @@
         "demand-forecasting"
       ]
     },
+    "raw/earnings/nanya-winbond-1q26-specialty-dram.md": {
+      "title": "Nanya / Winbond Q1 2026 specialty DRAM 실적 (legacy 수혜)",
+      "source_url": "https://www.digitimes.com/news/a20260413PD229/nanya-technology-dram-profit-demand-2026.html",
+      "type": "earnings",
+      "confidence": "high",
+      "tags": [
+        "dram",
+        "pricing",
+        "demand-forecasting",
+        "revenue",
+        "capex",
+        "bit-demand"
+      ]
+    },
     "raw/earnings/nvidia-fq1-2027-datacenter.md": {
       "title": "NVIDIA Fiscal Q1 2027 — Data Center 매출 $75.2B (+92% YoY), FQ2 가이던스 ~$91B",
       "source_url": "https://www.cnbc.com/2026/05/20/nvidia-nvda-earnings-report-q1-2027.html",
@@ -13096,6 +14617,19 @@
         "bit-demand",
         "capacity",
         "ai-server"
+      ]
+    },
+    "raw/earnings/rambus-memory-ip-royalty-2026.md": {
+      "title": "Rambus 메모리 IP·로열티 실적 (2026)",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/0000917273/000119312526033624/rmbs-ex99_1.htm",
+      "type": "earnings",
+      "confidence": "medium",
+      "tags": [
+        "hbm",
+        "dram",
+        "demand-forecasting",
+        "revenue",
+        "supply-chain"
       ]
     },
     "raw/earnings/samsung-electronics-1q26-earnings.md": {
@@ -13841,6 +15375,19 @@
         "capacity"
       ]
     },
+    "raw/lectures/memory-contract-price-negotiation-quarterly-process.md": {
+      "title": "메모리 분기 계약가 협상 프로세스 (CSP-공급사)",
+      "source_url": "https://www.trendforce.com/presscenter/news/20260331-12995.html",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "pricing",
+        "demand-forecasting",
+        "supply-chain"
+      ]
+    },
     "raw/lectures/memory-cycle-leading-indicators-book-to-bill-pmi.md": {
       "title": "반도체 사이클 선행지표 (book-to-bill, PMI, billings, SOX)",
       "source_url": "https://pdmacro.com/the-sox-spx-yoy-a-semiconductor-cycle-leading-indicator/",
@@ -13883,6 +15430,21 @@
         "pricing",
         "smartphone",
         "pc"
+      ]
+    },
+    "raw/lectures/memory-inventory-writedown-lcm-accounting.md": {
+      "title": "메모리 재고 감액(LCM/NRV) 회계 — 다운턴 메커니즘",
+      "source_url": "https://siliconangle.com/2023/03/28/micron-posts-biggest-ever-loss-says-generative-ai-will-drive-new-demand-memory-chips/",
+      "type": "lecture",
+      "confidence": "high",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "pricing",
+        "demand-forecasting",
+        "scenario-analysis",
+        "inventory"
       ]
     },
     "raw/lectures/memory-lta-prepayment-accounting-financial-model.md": {
@@ -14130,6 +15692,19 @@
         "demand-forecasting"
       ]
     },
+    "raw/lectures/semiconductor-cycle-structural-vs-cyclical-framework.md": {
+      "title": "반도체 사이클: 구조적 vs 순환적 프레임워크",
+      "source_url": "https://www.nomadsemi.com/p/state-of-the-semiconductor-cycle",
+      "type": "lecture",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "scenario-analysis",
+        "memory",
+        "pricing",
+        "capex"
+      ]
+    },
     "raw/lectures/semiconductor-learning-curve-yield-economics.md": {
       "title": "Moore's Law and the Economics of Semiconductor Price Trends / Learning Curve",
       "source_url": "https://nap.nationalacademies.org/read/11134/chapter/12",
@@ -14195,6 +15770,18 @@
         "causal-model"
       ]
     },
+    "raw/papers/bullwhip-effect-empirical-semiconductor-amplification.md": {
+      "title": "Bullwhip effect 실증 측정·증폭 (반도체)",
+      "source_url": "https://arxiv.org/html/2604.13478",
+      "type": "paper",
+      "confidence": "high",
+      "tags": [
+        "demand-forecasting",
+        "supply-chain",
+        "scenario-analysis",
+        "inventory"
+      ]
+    },
     "raw/papers/chip-architecture-supply-demand-uncertainty-2023.md": {
       "title": "Understanding Interactions Between Chip Architecture and Uncertainties in Semiconductor Supply and Demand",
       "source_url": "https://arxiv.org/abs/2305.11059",
@@ -14229,6 +15816,19 @@
         "pricing",
         "causal-model",
         "regression"
+      ]
+    },
+    "raw/papers/deep-rl-inventory-demand-forecast-model-selection.md": {
+      "title": "Deep RL for demand forecast model selection (반도체 distributor)",
+      "source_url": "https://www.tandfonline.com/doi/full/10.1080/00207543.2020.1733125",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "machine-learning",
+        "time-series",
+        "supply-chain",
+        "scenario-analysis"
       ]
     },
     "raw/papers/demand-forecasting-financial-estimation-semiconductor-supply-chain-2019.md": {
@@ -14391,6 +15991,18 @@
         "bit-demand"
       ]
     },
+    "raw/papers/hierarchical-forecast-reconciliation-mint.md": {
+      "title": "Hierarchical forecast reconciliation (MinT, top-down/bottom-up)",
+      "source_url": "https://robjhyndman.com/papers/mint.pdf",
+      "type": "paper",
+      "confidence": "high",
+      "tags": [
+        "demand-forecasting",
+        "time-series",
+        "scenario-analysis",
+        "structural-demand-model"
+      ]
+    },
     "raw/papers/how-fast-are-semiconductor-prices-falling-2018.md": {
       "title": "How Fast are Semiconductor Prices Falling?",
       "source_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/roiw.12308",
@@ -14471,6 +16083,18 @@
         "causal-model"
       ]
     },
+    "raw/papers/monte-carlo-simulation-demand-forecasting-uncertainty.md": {
+      "title": "Monte Carlo simulation — 수요예측 불확실성·확률적 최적화",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S2949863526000191",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "scenario-analysis",
+        "probabilistic-forecasting",
+        "supply-chain"
+      ]
+    },
     "raw/papers/newsvendor-base-stock-inventory-uncertain-demand.md": {
       "title": "Inventory management under highly uncertain demand (newsvendor/base-stock)",
       "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S016763770600054X",
@@ -14482,6 +16106,19 @@
         "scenario-analysis",
         "probabilistic-forecasting",
         "inventory"
+      ]
+    },
+    "raw/papers/nowcasting-google-trends-bayesian-structural-time-series.md": {
+      "title": "Nowcasting with Google Trends (Bayesian Structural Time Series)",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0169207022000620",
+      "type": "paper",
+      "confidence": "medium",
+      "tags": [
+        "demand-forecasting",
+        "time-series",
+        "machine-learning",
+        "probabilistic-forecasting",
+        "scenario-analysis"
       ]
     },
     "raw/papers/predicting-the-present-with-google-trends-2012.md": {
@@ -14604,6 +16241,32 @@
         "causal-model"
       ]
     },
+    "raw/papers/temporal-fusion-transformer-multihorizon-forecasting.md": {
+      "title": "Temporal Fusion Transformer (TFT) — interpretable multi-horizon forecasting",
+      "source_url": "https://arxiv.org/abs/1912.09363",
+      "type": "paper",
+      "confidence": "high",
+      "tags": [
+        "demand-forecasting",
+        "time-series",
+        "machine-learning",
+        "probabilistic-forecasting",
+        "scenario-analysis"
+      ]
+    },
+    "raw/papers/time-series-foundation-models-zero-shot-forecasting.md": {
+      "title": "시계열 Foundation Models (TimeGPT/Chronos/Moirai) — zero-shot 예측",
+      "source_url": "https://otexts.com/fpppy/15-foundation-models.html",
+      "type": "paper",
+      "confidence": "high",
+      "tags": [
+        "demand-forecasting",
+        "time-series",
+        "machine-learning",
+        "probabilistic-forecasting",
+        "scenario-analysis"
+      ]
+    },
     "raw/papers/transformer-probabilistic-demand-forecasting-online-learning-2024.md": {
       "title": "Transformer-based probabilistic demand forecasting with adaptive online learning (2024)",
       "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0378779624011416",
@@ -14672,6 +16335,21 @@
         "capex",
         "supply-chain",
         "demand-forecasting"
+      ]
+    },
+    "raw/reports/china-15th-five-year-plan-memory-self-sufficiency.md": {
+      "title": "중국 15차 5개년 계획·메모리 자급 (2026-2030)",
+      "source_url": "https://triviumchina.com/research/chinas-15th-five-year-plan-puts-ai-and-semiconductors-at-the-center-of-tech-self-reliance/",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "supply-chain",
+        "demand-forecasting",
+        "capacity",
+        "scenario-analysis"
       ]
     },
     "raw/reports/china-cloud-custom-ai-chip-memory-demand-2026.md": {
@@ -14767,6 +16445,20 @@
         "demand-forecasting"
       ]
     },
+    "raw/reports/cxmt-ddr5-lpddr5x-yield-progress-2026.md": {
+      "title": "CXMT DDR5/LPDDR5X 수율·생산 진척 (2026 최신)",
+      "source_url": "https://www.tomshardware.com/pc-components/dram/chinas-banned-memory-maker-cxmt-unveils-surprising-new-chipmaking-capabilities-despite-crushing-us-export-restrictions-ddr5-8000-and-lpddr5x-10667-displayed",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "supply-chain",
+        "capacity",
+        "demand-forecasting",
+        "pricing",
+        "bit-demand"
+      ]
+    },
     "raw/reports/digitimes-taiwan-server-odm-memory-supply-2026.md": {
       "title": "DigiTimes — 대만 서버 ODM·메모리 수급 (2026, 1차 매체)",
       "source_url": "https://www.digitimes.com/news/a20260429PD217/demand-ai-server-2027-2026-capacity.html",
@@ -14780,6 +16472,19 @@
         "supply-chain",
         "demand-forecasting",
         "pricing"
+      ]
+    },
+    "raw/reports/dram-demand-by-region-datacenter-share-2026.md": {
+      "title": "DRAM 지역별·데이터센터 소비 비중 (2026)",
+      "source_url": "https://tech-insider.org/memory-chip-shortage-2026-ai-consumer-electronics/",
+      "type": "report",
+      "confidence": "low",
+      "tags": [
+        "dram",
+        "demand-forecasting",
+        "bit-demand",
+        "datacenter",
+        "supply-chain"
       ]
     },
     "raw/reports/equip-advantest-hbm-test-lead-times-2026.md": {
@@ -14924,6 +16629,19 @@
         "demand-forecasting"
       ]
     },
+    "raw/reports/esg-fab-carbon-pfc-scope123-quantitative.md": {
+      "title": "메모리 fab 탄소·PFC 배출 (Scope 1/2/3 정량)",
+      "source_url": "https://www.mdpi.com/2071-1050/16/1/218",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "supply-chain",
+        "capacity",
+        "demand-forecasting",
+        "dram",
+        "nand"
+      ]
+    },
     "raw/reports/fab-samsung-pyeongtaek-p4-1c-dram-2026.md": {
       "title": "Samsung Reportedly Plans 200K 1c DRAM Wafers/Month by 2026, About One-Third of Its Total Output",
       "source_url": "https://www.trendforce.com/news/2025/11/19/news-samsung-reportedly-plans-200k-1c-dram-wafersmonth-by-2026-about-one-third-of-its-total-output/",
@@ -14994,6 +16712,19 @@
         "scenario-analysis",
         "revenue",
         "ai-server"
+      ]
+    },
+    "raw/reports/hbm-longterm-tam-by-application-2030.md": {
+      "title": "HBM 장기 TAM·응용 분할 (2030-2035) — 출처 분산 주의",
+      "source_url": "https://www.precedenceresearch.com/high-bandwidth-memory-market",
+      "type": "report",
+      "confidence": "low",
+      "tags": [
+        "hbm",
+        "demand-forecasting",
+        "scenario-analysis",
+        "bit-demand",
+        "revenue"
       ]
     },
     "raw/reports/hbm-take-or-pay-capacity-reservation-2026.md": {
@@ -15067,6 +16798,19 @@
         "revenue",
         "demand-forecasting",
         "units"
+      ]
+    },
+    "raw/reports/korea-taiwan-power-grid-fab-constraint-2026.md": {
+      "title": "한국/대만 전력 그리드·fab 제약 (2026)",
+      "source_url": "https://www.digitimes.com/news/a20251017PD233/development-samsung-sk-hynix-transmission-government.html",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "capacity",
+        "supply-chain",
+        "demand-forecasting",
+        "scenario-analysis"
       ]
     },
     "raw/reports/macro-ai-capex-bubble-downside-risk-2026.md": {
@@ -15827,6 +17571,31 @@
         "capex"
       ]
     },
+    "raw/reports/semiconductor-antitrust-regulation-environment-2026.md": {
+      "title": "반도체 규제/독점 환경 (FTC/EU/한국, 2026)",
+      "source_url": "https://www.tomshardware.com/tech-industry/big-tech/us-ftc-reportedly-launches-antitrust-probe-into-arm-following-its-launch-of-its-own-agi-cpu-regulators-investigate-if-chip-designer-is-restricting-architecture-access-to-rivals",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "supply-chain",
+        "demand-forecasting",
+        "scenario-analysis",
+        "pricing"
+      ]
+    },
+    "raw/reports/semiconductor-talent-shortage-memory-rd-2026.md": {
+      "title": "반도체 인력 부족·메모리 R&D 인력 (2026-2030)",
+      "source_url": "https://www.semi.org/en/blogs/the-semiconductor-talent-crisis-why-growing-demand-cant-find-leaders",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "supply-chain",
+        "capacity",
+        "demand-forecasting",
+        "scenario-analysis"
+      ]
+    },
     "raw/reports/sia-q1-2026-global-semiconductor-sales.md": {
       "title": "SIA — Q1 2026 Global Semi Sales $298.5B (+25% QoQ), March $99.5B Record",
       "source_url": "https://www.semiconductors.org/global-semiconductor-sales-increase-25-from-q4-2025-to-q1-2026/",
@@ -15868,6 +17637,21 @@
         "pricing",
         "capex",
         "ai-server"
+      ]
+    },
+    "raw/reports/trendforce-2h26-hbm4-mainstream-outlook.md": {
+      "title": "TrendForce 2H26 전망·HBM4 mainstream (가격/공급 갱신)",
+      "source_url": "https://www.trendforce.com/research/download/RP260326SK",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "pricing",
+        "demand-forecasting",
+        "capacity",
+        "bit-demand"
       ]
     },
     "raw/reports/trendforce-2q26-memory-contract-price-forecast.md": {
@@ -15971,6 +17755,18 @@
         "capacity"
       ]
     },
+    "raw/reports/trendforce-spot-price-june-2026-ddr4-ddr5.md": {
+      "title": "DRAM spot price (2026-06, DDR4/DDR5 최신)",
+      "source_url": "https://www.trendforce.com/news/2026/06/03/insights-memory-spot-price-update-ddr4-and-ddr5-extend-gains-though-higher-quotes-temper-procurement-demand/",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "pricing",
+        "demand-forecasting",
+        "inventory"
+      ]
+    },
     "raw/reports/trendforce-spot-price-may-2026-ddr5-ddr4.md": {
       "title": "DRAM spot price 추이 (2026-05, DDR5/DDR4)",
       "source_url": "https://www.trendforce.com/news/2026/05/27/insights-memory-spot-price-update-ddr5-spot-price-gains-narrow-amid-sluggish-trading-ddr4-rebounds/",
@@ -15981,6 +17777,20 @@
         "pricing",
         "demand-forecasting",
         "inventory"
+      ]
+    },
+    "raw/reports/wsts-2027-semiconductor-memory-forecast.md": {
+      "title": "WSTS 2027 반도체·메모리 전망 ($1.9T, 메모리 $1.06T)",
+      "source_url": "https://telecomlead.com/semiconductor/wsts-raises-semiconductor-forecast-market-to-reach-1-51-trillion-in-2026-grow-to-1-9-trillion-in-2027-126102",
+      "type": "report",
+      "confidence": "medium",
+      "tags": [
+        "dram",
+        "nand",
+        "hbm",
+        "demand-forecasting",
+        "revenue",
+        "scenario-analysis"
       ]
     },
     "raw/reports/wsts-spring-2026-semiconductor-memory-forecast.md": {

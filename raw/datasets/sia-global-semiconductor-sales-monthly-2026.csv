@@ -1,0 +1,7 @@
+period,sales_usd_b,mom_pct,yoy_pct,note,confidence
+2025-FY,791.7,,25.6,"annual 2025",high
+2026-02,89.2,,,"derived (Mar +11.5% MoM from Feb)",low
+2026-03,99.5,11.5,79.2,"record month",high
+2026-04,110.5,11.0,93.9,"record month",high
+2026Q1,298.5,,25.0,"+25% QoQ vs Q4'25",high
+2026-FY,1500,,,"projected >$1.5T annual",medium
