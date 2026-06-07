@@ -189,3 +189,10 @@
 - Added `forecast-control-impact-summary` cards below the chart so the current control-adjusted peak values are visible next to the auditable base/envelope rows.
 - Updated `tests/advancedForecastUi.test.ts` to require control-linked chart datasets and summary UI.
 - Verification: `npm test -- tests/advancedForecastUi.test.ts`, full `npm test`, and `npm run build` passed; citation audit remained 416/416 raw references cited with 0 missing references; browser route `http://localhost:5173/simulators/advanced-demand-forecast?verify=controls-linked-chart-2` showed slider updates changing the control summary, 0 chart/page horizontal overflow, Chart.js tooltip with the added control series, and no console errors.
+
+## [2026-06-07] update | Simulator foldable internal cards
+- Updated all five simulator components so major internal cards are native `<details>` foldable panels with `foldable-card` / `foldable-card-summary` controls while preserving the sticky primary result rail.
+- Basic simulator workbenches (`HbmDemandSimulator`, `NandSsdDemandSimulator`, `PcDramDemandSimulator`, `SmartphoneMemoryDemandSimulator`) now allow folding scenario presets, assumptions, and visual sensitivity sections.
+- `AdvancedDemandForecastSimulator` now allows folding the raw CSV signal panel, interactive ensemble controls, HBM/BOM stress controls, Chart.js forecast path, stress/envelope table, and exact driver table.
+- Updated `tests/simulatorWorkbenchUi.test.ts` to require foldable simulator internals across all simulator components.
+- Verification: narrow simulator workbench UI test, full `npm test`, and `npm run build` passed; browser checks on `/simulators/hbm-demand` and `/simulators/advanced-demand-forecast` confirmed fold toggles, result rail remains visible/non-foldable, 0 horizontal overflow, and no console errors.

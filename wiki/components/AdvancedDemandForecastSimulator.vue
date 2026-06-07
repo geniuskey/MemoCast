@@ -346,7 +346,8 @@ const forecastChartOptions = computed<ChartOptions<'line'>>(() => ({
           </article>
         </div>
 
-        <div class="source-signal-panel">
+        <details class="source-signal-panel foldable-card" open>
+          <summary class="foldable-card-summary">Raw CSV signal interface · 기관 forecast band + SIA 고빈도 nowcast 입력</summary>
           <div>
             <p class="eyebrow">Raw CSV signal interface</p>
             <h3>기관 forecast band + SIA 고빈도 nowcast 입력</h3>
@@ -430,10 +431,11 @@ const forecastChartOptions = computed<ChartOptions<'line'>>(() => ({
               <small>{{ row.signalLabel }} · idx {{ formatNumber(row.salesIndex, 1) }}</small>
             </div>
           </div>
-        </div>
+        </details>
 
         <div class="interactive-polish-grid">
-          <section class="interactive-control-panel" aria-label="Institution-weighted forecast ensemble">
+          <details class="interactive-control-panel foldable-card" open aria-label="Institution-weighted forecast ensemble">
+            <summary class="foldable-card-summary">Interactive ensemble tuning · 기관별 전망 가중치 조정</summary>
             <div class="control-panel-header">
               <p class="eyebrow">Interactive ensemble tuning</p>
               <h3>기관별 전망 가중치 조정</h3>
@@ -463,9 +465,10 @@ const forecastChartOptions = computed<ChartOptions<'line'>>(() => ({
                 <strong>{{ formatEb(institutionWeightedEnsemble.forecast.peakEffectiveDemandEb) }}</strong>
               </article>
             </div>
-          </section>
+          </details>
 
-          <section class="interactive-control-panel" aria-label="HBM BOM affordability stress controls">
+          <details class="interactive-control-panel foldable-card" open aria-label="HBM BOM affordability stress controls">
+            <summary class="foldable-card-summary">HBM/BOM stress controls · 가격 하락과 BOM 비중 민감도</summary>
             <div class="control-panel-header">
               <p class="eyebrow">HBM/BOM stress controls</p>
               <h3>가격 하락과 BOM 비중 민감도</h3>
@@ -505,10 +508,11 @@ const forecastChartOptions = computed<ChartOptions<'line'>>(() => ({
                 <strong>{{ formatEb(hbmBomStress.result.cumulativeUnmetDemandEb) }}</strong>
               </article>
             </div>
-          </section>
+          </details>
         </div>
 
-        <div class="forecast-chart forecast-multi-series-chart">
+        <details class="forecast-chart forecast-multi-series-chart foldable-card" open>
+          <summary class="foldable-card-summary">Multi-year forecast path</summary>
           <div class="forecast-chart-header">
             <div>
               <h3>Multi-year forecast path</h3>
@@ -535,10 +539,10 @@ const forecastChartOptions = computed<ChartOptions<'line'>>(() => ({
               <small>Use chart overlays to compare control-adjusted outcomes against the auditable base rows below.</small>
             </article>
           </div>
-        </div>
+        </details>
 
-        <details class="exact-table" open>
-          <summary>Stress scenarios, uncertainty envelope, and hierarchy reconciliation</summary>
+        <details class="exact-table foldable-card" open>
+          <summary class="foldable-card-summary">Stress scenarios, uncertainty envelope, and hierarchy reconciliation</summary>
           <table>
             <thead>
               <tr>
@@ -585,8 +589,8 @@ const forecastChartOptions = computed<ChartOptions<'line'>>(() => ({
           </table>
         </details>
 
-        <details class="exact-table" open>
-          <summary>Exact values and driver decomposition</summary>
+        <details class="exact-table foldable-card" open>
+          <summary class="foldable-card-summary">Exact values and driver decomposition</summary>
           <table>
             <thead>
               <tr>
@@ -1038,6 +1042,31 @@ const forecastChartOptions = computed<ChartOptions<'line'>>(() => ({
   margin: 5px 0;
   color: var(--vp-c-brand-1);
   font-size: 15px;
+}
+.foldable-card {
+  overflow: hidden;
+}
+.foldable-card-summary {
+  cursor: pointer;
+  color: var(--vp-c-brand-1);
+  font-weight: 900;
+  list-style: none;
+  margin: 0 0 12px;
+}
+.foldable-card-summary::-webkit-details-marker {
+  display: none;
+}
+.foldable-card-summary::after {
+  content: '접기';
+  float: right;
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+}
+.foldable-card:not([open]) .foldable-card-summary {
+  margin-bottom: 0;
+}
+.foldable-card:not([open]) .foldable-card-summary::after {
+  content: '펼치기';
 }
 .exact-table {
   overflow-x: auto;

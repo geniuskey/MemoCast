@@ -16,6 +16,11 @@ const simulatorComponents = [
   'wiki/components/SmartphoneMemoryDemandSimulator.vue'
 ]
 
+const allSimulatorComponents = [
+  ...simulatorComponents,
+  'wiki/components/AdvancedDemandForecastSimulator.vue'
+]
+
 describe('simulator workbench UX', () => {
   it('puts simulator components before long explanatory formula sections on simulator pages', () => {
     const pages = [
@@ -60,6 +65,17 @@ describe('simulator workbench UX', () => {
       expect(component).toContain('Apply scenario')
       expect(component).toContain('sensitivity-bars')
       expect(component).toContain('Exact values')
+    }
+  })
+
+  it('makes simulator internal cards foldable without hiding the primary result rail', () => {
+    for (const componentPath of allSimulatorComponents) {
+      const component = readRepoFile(componentPath)
+      expect(component).toContain('foldable-card')
+      expect(component).toContain('foldable-card-summary')
+      expect(component).toContain('open')
+      expect(component).not.toContain('class="result-rail foldable-card"')
+      expect(component).not.toContain("class='result-rail foldable-card'")
     }
   })
 
