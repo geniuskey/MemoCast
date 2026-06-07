@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T01:18:43.819Z",
+  "generatedAt": "2026-06-07T11:11:43.226Z",
   "summary": {
     "rawTotal": 416,
     "rawCited": 416,
@@ -10787,6 +10787,7 @@
       "wiki/concepts/ai-infrastructure-memory.md",
       "wiki/concepts/forecasting-method-library.md",
       "wiki/concepts/memory-supply-chain-equipment.md",
+      "wiki/markets/hbm.md",
       "wiki/methods/advanced-demand-forecast-engine.md",
       "wiki/simulators/advanced-demand-forecast.md",
       "wiki/simulators/hbm-demand.md",
@@ -11368,6 +11369,7 @@
       "wiki/simulators/smartphone-memory-demand.md"
     ],
     "raw/datasets/ai-accelerator-bom-hbm-cost-share.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
       "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
       "wiki/sources/raw-dataset-csv-ledger.md"
     ],
@@ -11481,6 +11483,7 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
       "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
       "wiki/sources/raw-dataset-csv-ledger.md"
     ],
@@ -11497,6 +11500,8 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/institutional-memory-forecast-comparison-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
       "wiki/sources/raw-dataset-csv-ledger.md"
     ],
@@ -11576,6 +11581,8 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md",
       "wiki/sources/raw-dataset-csv-ledger.md"
     ],
@@ -11886,6 +11893,8 @@
     ],
     "raw/lectures/memory-demand-forecasting-methodology-bottoms-up.md": [
       "wiki/concepts/channel-pricing-signal.md",
+      "wiki/concepts/forecasting-method-library.md",
+      "wiki/methods/advanced-demand-forecast-engine.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/lectures/memory-demand-seasonality-quarterly-pattern.md": [
@@ -12003,6 +12012,7 @@
     ],
     "raw/papers/dram-price-determinants-arimax-pmi-dsi.md": [
       "wiki/concepts/channel-pricing-signal.md",
+      "wiki/concepts/forecasting-method-library.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/papers/dram-spot-price-arima-elasticity-demand-2024.md": [
@@ -12036,6 +12046,8 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/papers/hierarchical-forecast-reconciliation-mint.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/papers/how-fast-are-semiconductor-prices-falling-2018.md": [
@@ -12063,13 +12075,16 @@
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/papers/monte-carlo-simulation-demand-forecasting-uncertainty.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md",
       "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/papers/newsvendor-base-stock-inventory-uncertain-demand.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/papers/nowcasting-google-trends-bayesian-structural-time-series.md": [
-      "wiki/methods/advanced-demand-forecast-engine.md"
+      "wiki/methods/advanced-demand-forecast-engine.md",
+      "wiki/simulators/advanced-demand-forecast.md"
     ],
     "raw/papers/predicting-the-present-with-google-trends-2012.md": [
       "wiki/sources/raw-integration-ledger.md"
@@ -12162,6 +12177,7 @@
     ],
     "raw/reports/equip-advantest-hbm-test-lead-times-2026.md": [
       "wiki/concepts/ai-infrastructure-memory.md",
+      "wiki/concepts/memory-supply-chain-equipment.md",
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/reports/equip-applied-materials-q1-2026-dram-china.md": [
@@ -12468,12 +12484,14 @@
       "wiki/simulators/nand-ssd-demand.md"
     ],
     "raw/reports/trendforce-spot-price-june-2026-ddr4-ddr5.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
       "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/reports/trendforce-spot-price-may-2026-ddr5-ddr4.md": [
       "wiki/sources/raw-integration-ledger.md"
     ],
     "raw/reports/wsts-2027-semiconductor-memory-forecast.md": [
+      "wiki/methods/advanced-demand-forecast-engine.md",
       "wiki/sources/advanced-forecast-raw-intake-2026-06-07.md"
     ],
     "raw/reports/wsts-spring-2026-semiconductor-memory-forecast.md": [

@@ -1,7 +1,7 @@
 ---
 title: AI Infrastructure Memory Demand
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-07
 type: concept
 tags: [ai-infrastructure, hbm, gpu, power, demand-forecasting]
 sources: [raw/articles/aisilicon-datacenter-buildout-gigawatts-2026-2028.md, raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md, raw/articles/aisilicon-nvidia-amd-hbm-capacity-roadmap-2026.md, raw/articles/aisilicon-onprem-edge-inference-memory-2026.md, raw/articles/aisilicon-tpu-ironwood-trainium3-hbm-specs-2026.md, raw/articles/channel-shi-datacenter-buyer-allocation-leadtimes-2026.md, raw/articles/domain-crypto-gpu-mining-legacy-gddr.md, raw/articles/domain-hpc-supercomputer-hbm-memory-capacity.md, raw/articles/domain-networking-switch-hbm-broadcom-tomahawk.md, raw/articles/domain-networking-switch-router-ddr-memory-2026.md, raw/articles/domain-sovereign-ai-national-datacenter-memory-2026.md, raw/articles/esg-memory-fab-energy-water-carbon-re100.md, raw/articles/gddr7-graphics-memory-demand-crowding-out-2026.md, raw/articles/history-dram-memory-cycles-2016-2026.md, raw/articles/history-memory-fab-disruptions-supply-shocks.md, raw/articles/korea-legacy-dram-ddr4-crowding-out-2026.md, raw/articles/model-agentic-ai-memory-demand-2026.md, raw/articles/model-ai-coding-enterprise-software-inference-demand-2026.md, raw/articles/model-ai-inference-memory-bound-token-economics.md, raw/articles/model-context-length-kv-cache-memory-demand.md, raw/articles/model-deepseek-v3-671b-moe-technical-report.md, raw/articles/model-epoch-ai-compute-growth-trends.md, raw/articles/model-generative-video-multimodal-memory-demand.md, raw/articles/model-introl-ai-memory-supercycle-hbm-2026.md, raw/articles/nvidia-gpu-hbm-capacity-roadmap-2026.md, raw/articles/oem-dell-hpe-ai-server-backlog-memory-bom-2026.md, raw/articles/oem-hyperscaler-custom-silicon-memory-buyers-2026.md, raw/articles/oem-memory-price-cloud-instance-passthrough-2026.md, raw/articles/oem-server-odm-gb200-nvl72-hbm-shipments-2025.md, raw/articles/power-ai-query-energy-inference-memory-2026.md, raw/articles/power-datacenter-vacancy-leasing-market-2026.md, raw/articles/power-deloitte-ai-datacenter-123gw-2035.md, raw/articles/power-gb200-nvl72-rack-120kw-liquid-cooling.md, raw/articles/power-goldman-datacenter-power-demand-165pct-2030.md, raw/articles/power-hbm3e-energy-per-bit-power-efficiency.md, raw/articles/power-hbm4-hbm5-per-stack-watts-roadmap.md, raw/articles/power-iea-datacenter-electricity-945twh-2030.md, raw/articles/power-liquid-cooling-adoption-hbm-thermal-limits.md, raw/articles/power-nuclear-smr-ppa-ai-datacenter-deals-2025.md, raw/articles/power-perf-per-watt-blackwell-vs-hopper.md, raw/articles/power-schmidt-congress-ai-power-29gw-2027.md, raw/articles/power-socamm-lpddr5x-low-power-ai-server-memory.md, raw/articles/power-us-grid-interconnection-queue-bottleneck.md, raw/articles/power-vs-memory-limited-datacenter-debate.md, raw/articles/server-ddr5-rdimm-channels-capacity-2026.md, raw/articles/storage-ai-training-data-synthetic-data-nand-demand.md, raw/articles/trendforce-ai-20pct-dram-wafer-2026.md, raw/articles/trendforce-ai-server-memory-contract-price-2q26.md, raw/articles/trendforce-ai-server-shipments-28pct-2026.md, raw/articles/trendforce-hbm-market-forecast-2026.md, raw/articles/trendforce-nearline-hdd-shortage-qlc-ssd-2026.md, raw/datasets/ai-rack-gpu-hbm-coupling-parameters.md, raw/datasets/ai-server-shipments-forecast.md, raw/datasets/dram-nand-bit-growth-cagr-longrun.md, raw/datasets/dram-wafer-capacity-allocation-2026.md]
@@ -23,6 +23,27 @@ AI infrastructure 자료는 HBM bit demand를 GPU 수량만으로 환산하면 �
 - **GPU count × HBM GB/GPU × realization rate**가 HBM 수요의 기본 구조다. xAI/Stargate 같은 대형 cluster 자료는 GPU count 상단을 제공하지만, 전력·cooling·CoWoS·HBM 공급이 realization rate를 제한한다.
 - Custom accelerator(TPU/Trainium/Ascend)도 HBM을 쓰기 때문에 NVIDIA GPU만 보면 AI memory demand를 과소평가할 수 있다.
 - On-prem/edge inference는 cloud training과 다른 수요층이다. 대용량 HBM/LPDDR 서버가 latency·data sovereignty·utilization 조건에서 독립 demand bucket을 만든다.
+
+## 정리: raw cluster가 말하는 AI memory thesis
+
+이 페이지는 더 이상 “AI 관련 source 목록”이 아니라, [[hbm]], [[supply-demand-gap]], [[memory-supply-chain-equipment]], [[advanced-demand-forecast-engine]]에 들어갈 **수요 thesis**를 제공한다. 핵심은 AI infrastructure 수요가 한 개의 숫자로 환산되지 않고, `announced compute → purchasable accelerators → power/package-ready racks → installed memory bits → billable inference/training workload`의 단계별 gate를 통과한다는 점이다. ^[raw/articles/aisilicon-largest-training-clusters-gpu-count-2026.md] ^[raw/articles/power-us-grid-interconnection-queue-bottleneck.md]
+
+| Thesis | Strongest raw evidence | Forecast implication | What not to do |
+| --- | --- | --- | --- |
+| HBM content uplift is a first-order driver | B200 192GB, GB300/Rubin-class 288GB, Rubin Ultra/HBM4 roadmap anchors | 같은 GPU unit라도 세대 mix가 바뀌면 EB demand가 50%+ 흔들린다 | GPU shipment CAGR만으로 HBM EB를 추정하지 않는다 |
+| Unit demand is power/package gated | 120kW NVL72 rack, 75.8→134.4GW US DC demand, 74~92% pre-leased capacity | announced GPU count에는 `realization factor`를 먼저 곱한다 | xAI/Stargate headline GPU 수를 전량 설치 수요로 보지 않는다 |
+| Non-NVIDIA accelerators matter | TPU Ironwood 192GB, Trainium/custom silicon, hyperscaler ASIC capex | NVIDIA-only 모델에 custom accelerator bucket을 둔다 | HBM buyer를 GPU vendor 한 곳으로 축소하지 않는다 |
+| Inference shifts the memory bottleneck | memory-bound decode, long-context KV cache, agentic AI token expansion | training cluster 외에 persistent inference memory pool을 별도 추적한다 | 학습 FLOPS growth를 전체 AI memory demand로 대체하지 않는다 |
+| Supply and demand interact through allocation | HBM wafer multiple, CoWoS/test bottleneck, LTA allocation | 수요 모델과 [[memory-supply-chain-equipment]]의 realization gate를 결합한다 | `capex up = bit supply up`으로 단순화하지 않는다 |
+
+### Evidence maturity ladder
+
+| Evidence level | Examples on this page | How it should enter MemoCast | Confidence treatment |
+| --- | --- | --- | --- |
+| Direct numeric content | HBM GB/GPU, rack TB, HBM growth rates | simulator preset / TypeScript default 후보 | high if product spec, medium if roadmap |
+| Unit shipment or cluster scale | AI server shipment, 450k~555k GPU clusters | top-down sanity check, not default demand | medium/low until realization gate applied |
+| Infrastructure gating | power GW, cooling density, package/test capacity | `realization factor` and downside stress | medium; use min-gate logic |
+| Workload intensity | token growth, KV cache, video/multimodal memory | future content/mix uplift hypothesis | medium/low; scenario only |
 
 ## 예측 변수화: AI infrastructure → HBM demand
 

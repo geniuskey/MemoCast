@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T01:18:41.783Z",
+  "generatedAt": "2026-06-07T11:11:41.924Z",
   "nodes": [
     {
       "id": "advanced-forecast-raw-intake-2026-06-07",
@@ -962,7 +962,27 @@
     },
     {
       "from": "advanced-demand-forecast-engine",
+      "to": "advanced-demand-forecast",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast-engine",
+      "to": "ai-infrastructure-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast-engine",
+      "to": "channel-pricing-signal",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast-engine",
       "to": "forecasting-method-library",
+      "kind": "wikilink"
+    },
+    {
+      "from": "advanced-demand-forecast-engine",
+      "to": "memory-supply-chain-equipment",
       "kind": "wikilink"
     },
     {
@@ -1007,12 +1027,27 @@
     },
     {
       "from": "ai-infrastructure-memory",
+      "to": "advanced-demand-forecast-engine",
+      "kind": "wikilink"
+    },
+    {
+      "from": "ai-infrastructure-memory",
       "to": "citation-matrix",
       "kind": "wikilink"
     },
     {
       "from": "ai-infrastructure-memory",
       "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "ai-infrastructure-memory",
+      "to": "hbm",
+      "kind": "wikilink"
+    },
+    {
+      "from": "ai-infrastructure-memory",
+      "to": "memory-supply-chain-equipment",
       "kind": "wikilink"
     },
     {
@@ -1067,12 +1102,32 @@
     },
     {
       "from": "channel-pricing-signal",
+      "to": "advanced-demand-forecast-engine",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
       "to": "citation-matrix",
       "kind": "wikilink"
     },
     {
       "from": "channel-pricing-signal",
       "to": "forecasting-evidence-map",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
+      "to": "long-tail-domain-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
+      "to": "memory-supply-chain-equipment",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
+      "to": "pc-dram",
       "kind": "wikilink"
     },
     {
@@ -1087,7 +1142,22 @@
     },
     {
       "from": "channel-pricing-signal",
+      "to": "smartphone-memory",
+      "kind": "wikilink"
+    },
+    {
+      "from": "channel-pricing-signal",
       "to": "supply-demand-gap",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "advanced-demand-forecast",
+      "kind": "wikilink"
+    },
+    {
+      "from": "citation-matrix",
+      "to": "advanced-forecast-raw-intake-2026-06-07",
       "kind": "wikilink"
     },
     {
@@ -1452,12 +1522,22 @@
     },
     {
       "from": "hbm",
+      "to": "channel-pricing-signal",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
       "to": "dram",
       "kind": "wikilink"
     },
     {
       "from": "hbm",
       "to": "hbm-demand",
+      "kind": "wikilink"
+    },
+    {
+      "from": "hbm",
+      "to": "memory-supply-chain-equipment",
       "kind": "wikilink"
     },
     {
@@ -1583,6 +1663,11 @@
     {
       "from": "memory-demand",
       "to": "structural-demand-model",
+      "kind": "wikilink"
+    },
+    {
+      "from": "memory-supply-chain-equipment",
+      "to": "channel-pricing-signal",
       "kind": "wikilink"
     },
     {

@@ -4,26 +4,70 @@
   --vp-c-brand-3: #60a5fa;
   --vp-layout-max-width: 1720px;
   --mc-sidebar-min-width: 272px;
+  --mc-doc-gutter: clamp(20px, 3vw, 48px);
+  --mc-wide-layout-offset: max(0px, calc((100vw - var(--vp-layout-max-width)) / 2));
+  --mc-sidebar-reserved-width: calc(var(--mc-sidebar-min-width) + var(--mc-wide-layout-offset));
   --vp-sidebar-width: var(--mc-sidebar-min-width);
 }
 
 @media (min-width: 960px) {
   .VPSidebar {
+    width: var(--mc-sidebar-reserved-width) !important;
     min-width: var(--mc-sidebar-min-width);
   }
 
   .VPContent.has-sidebar {
-    padding-left: var(--mc-sidebar-min-width);
+    width: auto;
+    min-width: 0;
+    padding-left: var(--mc-sidebar-reserved-width);
+  }
+
+  .VPDoc.has-sidebar,
+  .VPDoc.has-sidebar .container,
+  .VPDoc.has-sidebar .content,
+  .VPDoc.has-sidebar .content-container,
+  .VPDoc.has-sidebar .main {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1560px) {
+  .VPContent.has-sidebar {
+    max-width: calc(100vw - var(--mc-sidebar-min-width));
+    padding-left: calc(var(--mc-sidebar-min-width) + var(--mc-doc-gutter)) !important;
+    padding-right: var(--mc-doc-gutter) !important;
+  }
+
+  .VPDoc.has-sidebar .container {
+    width: 100%;
+    max-width: calc(100vw - var(--mc-sidebar-min-width) - (var(--mc-doc-gutter) * 2)) !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .VPDoc.has-sidebar .content,
+  .VPDoc.has-sidebar .content-container,
+  .VPDoc.has-sidebar .main {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .VPDoc.has-sidebar .aside {
+    display: none;
   }
 }
 
 .VPDoc .container {
-  max-width: 1480px !important;
+  width: 100%;
+  max-width: min(1480px, 100%) !important;
 }
 
 .VPDoc .content-container,
 .VPDoc .content {
-  max-width: 1180px !important;
+  width: 100%;
+  max-width: min(1180px, 100%) !important;
+  min-width: 0;
 }
 
 .VPDoc:has(.period-chart-shell) .container,

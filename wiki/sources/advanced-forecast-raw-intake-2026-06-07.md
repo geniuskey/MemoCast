@@ -26,10 +26,20 @@ confidence: medium
 | Advanced methodology | `raw/papers/hierarchical-forecast-reconciliation-mint.md`, `raw/papers/monte-carlo-simulation-demand-forecasting-uncertainty.md`, `raw/papers/temporal-fusion-transformer-multihorizon-forecasting.md`, `raw/papers/time-series-foundation-models-zero-shot-forecasting.md` | 계층 forecast reconciliation, uncertainty simulation, TFT, foundation model을 고차원 forecast roadmap으로 승격 |
 | Physical constraints | `raw/reports/korea-taiwan-power-grid-fab-constraint-2026.md` | 전력망·fab capacity 병목을 supply-realization gate로 반영 |
 
+## 승격 완료
+
+- `advancedDemandForecast.ts`에 stress scenario table, uncertainty envelope, hierarchical forecast reconciliation, nowcast adjustment API를 추가했다.
+- `AdvancedDemandForecastSimulator.vue`에서 nowcast-adjusted base, institution forecast band, envelope range, hierarchy total KPI, raw CSV signal table, stress/envelope table을 노출한다.
+- `advanced-demand-forecast-engine`와 `advanced-demand-forecast` 문서에 raw anchor별 역할을 연결했다.
+- `wiki/data/advanced-forecast-source-signals.json`을 생성해 `institutional-memory-forecast-comparison-2026.csv`, `sia-global-semiconductor-sales-monthly-2026.csv`, `hbm-price-per-gb-per-stack-by-generation.csv`, `ai-accelerator-bom-hbm-cost-share.csv`를 immutable raw에서 브라우저용 typed signal layer로 승격했다.
+- `buildCsvDerivedAdvancedForecastPresets`로 institution low/mid/high band와 SIA momentum을 보수/기준/상방 preset candidate로 자동 생성하고, `buildSiaNowcastTimeSeries`로 SIA sales row를 index=100 time-series chart model로 변환했다.
+- `buildInstitutionWeightedEnsemble`로 WSTS/TrendForce/IDC/Gartner revenue row를 사용자 가중치 slider에 연결하고, weighted revenue를 HBM demand multiplier와 confidence score로 변환했다.
+- `calculateHbmBomStress`로 HBM price decline, target BOM share, demand elasticity를 affordability demand shock/supply relief stress scenario로 연결했다.
+
 ## 후속 승격 방향
 
 - `advanced-demand-forecast-engine`에는 이미 S-curve, price-inventory-cycle, nowcasting, supply-realization 계층을 반영했다.
-- 위 raw들은 다음 패스에서 model ensemble, Monte Carlo uncertainty band, hierarchical reconciliation, and high-frequency nowcasting 모듈로 추가 승격한다.
+- 1차 승격과 CSV signal UI 연결, CSV-derived preset strip, SIA indexed time-series chart, institution별 ensemble weight control layer, HBM price/BOM stress slider까지 이번 패스에서 연결했다.
 - 현재 목적은 100% raw traceability 유지와 source-backed extension queue 형성이다.
 
 ## 관련 문서
@@ -39,3 +49,4 @@ confidence: medium
 - [[forecasting-method-library]]
 - [[raw-integration-ledger]]
 - [[citation-matrix]]
+

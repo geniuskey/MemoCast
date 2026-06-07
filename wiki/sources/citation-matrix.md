@@ -1,7 +1,7 @@
 ---
 title: Citation Matrix
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-07
 type: source-map
 tags: [raw, citation, evidence-map, demand-forecasting]
 sources: [raw/INDEX.md]
@@ -35,6 +35,7 @@ confidence: medium
 | [[forecasting-method-library]] | 331 files | Papers/lectures/model methods for structural forecasting |
 | [[raw-integration-ledger]] | 344 files | File-by-file unread-source ledger and target candidates |
 | [[raw-dataset-csv-ledger]] | 46 CSV files | Paired CSV dataset raw paths that complement markdown source-note citation audit |
+| [[advanced-forecast-raw-intake-2026-06-07]] | 23 files | Advanced forecast extension queue: ensemble, uncertainty, reconciliation, nowcast, supply-realization signals |
 
 ## Simulator presets
 
@@ -42,6 +43,7 @@ confidence: medium
 | --- | --- | --- |
 | [[hbm-demand]] | TrendForce HBM +70% growth, GPU HBM capacity dataset, CoWoS allocation | Accelerator shipments are still scenario inputs. |
 | [[nand-ssd-demand]] | Enterprise SSD +41%, 122/245/256TB QLC anchors, HDD shortage | Total SSD shipments and segment mix require market-source validation. |
+| [[advanced-demand-forecast]] | Stress scenarios, envelope band, hierarchy total, source-calibrated nowcast base, institution forecast band, raw CSV-derived preset strip, SIA indexed time-series, raw CSV signal interface | These are assumption diagnostics, not deterministic forecasts. |
 | [[pc-dram-demand]] | Copilot+ 16GB minimum, IDC PC shipment downside | AI PC penetration remains a scenario assumption. |
 | [[smartphone-memory-demand]] | Galaxy S25 12GB, Apple AI 8GB, mobile storage +4.8% | Segment mix and shipment volume remain scenario assumptions. |
 

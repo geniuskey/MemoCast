@@ -1,0 +1,302 @@
+{
+  "generatedFromRaw": [
+    "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+    "raw/datasets/sia-global-semiconductor-sales-monthly-2026.csv",
+    "raw/datasets/hbm-price-per-gb-per-stack-by-generation.csv",
+    "raw/datasets/ai-accelerator-bom-hbm-cost-share.csv"
+  ],
+  "institutionalForecasts": [
+    {
+      "institution": "wsts",
+      "metric": "memory_revenue_2026",
+      "value": "294.82",
+      "numericValue": 294.82,
+      "unit": "usd_b",
+      "note": "+39.4% (memory category, conservative)",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+      "sourceNote": "raw/datasets/institutional-memory-forecast-comparison-2026.md"
+    },
+    {
+      "institution": "trendforce",
+      "metric": "memory_total_2026",
+      "value": "551.6",
+      "numericValue": 551.6,
+      "unit": "usd_b",
+      "note": "global memory market",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+      "sourceNote": "raw/datasets/institutional-memory-forecast-comparison-2026.md"
+    },
+    {
+      "institution": "trendforce",
+      "metric": "dram_revenue_2026",
+      "value": "404.3",
+      "numericValue": 404.3,
+      "unit": "usd_b",
+      "note": "+144% YoY",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+      "sourceNote": "raw/datasets/institutional-memory-forecast-comparison-2026.md"
+    },
+    {
+      "institution": "idc",
+      "metric": "dram_revenue_2026",
+      "value": "418.6",
+      "numericValue": 418.6,
+      "unit": "usd_b",
+      "note": "+177% YoY (DRAM alone)",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+      "sourceNote": "raw/datasets/institutional-memory-forecast-comparison-2026.md"
+    },
+    {
+      "institution": "gartner",
+      "metric": "dram_price_2026",
+      "value": "130",
+      "numericValue": 130.0,
+      "unit": "pct_yoy",
+      "note": "DRAM price +130%",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+      "sourceNote": "raw/datasets/institutional-memory-forecast-comparison-2026.md"
+    },
+    {
+      "institution": "gartner",
+      "metric": "memory_revenue_2026",
+      "value": "633.3",
+      "numericValue": 633.3,
+      "unit": "usd_b",
+      "note": "memory ~3x (memflation)",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+      "sourceNote": "raw/datasets/institutional-memory-forecast-comparison-2026.md"
+    },
+    {
+      "institution": "omdia",
+      "metric": "dram_2026",
+      "value": "2x",
+      "numericValue": null,
+      "unit": "multiple",
+      "note": "DRAM ~2x, NAND ~4x vs 2025",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+      "sourceNote": "raw/datasets/institutional-memory-forecast-comparison-2026.md"
+    },
+    {
+      "institution": "omdia",
+      "metric": "semi_growth_2026",
+      "value": "62.7",
+      "numericValue": 62.7,
+      "unit": "pct",
+      "note": "semiconductor total +62.7%",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/institutional-memory-forecast-comparison-2026.csv",
+      "sourceNote": "raw/datasets/institutional-memory-forecast-comparison-2026.md"
+    }
+  ],
+  "nowcastMonthlySales": [
+    {
+      "period": "2025-FY",
+      "salesUsdB": 791.7,
+      "momPct": null,
+      "yoyPct": 25.6,
+      "note": "annual 2025",
+      "confidence": "high",
+      "rawPath": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.csv",
+      "sourceNote": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md"
+    },
+    {
+      "period": "2026-02",
+      "salesUsdB": 89.2,
+      "momPct": null,
+      "yoyPct": null,
+      "note": "derived (Mar +11.5% MoM from Feb)",
+      "confidence": "low",
+      "rawPath": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.csv",
+      "sourceNote": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md"
+    },
+    {
+      "period": "2026-03",
+      "salesUsdB": 99.5,
+      "momPct": 11.5,
+      "yoyPct": 79.2,
+      "note": "record month",
+      "confidence": "high",
+      "rawPath": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.csv",
+      "sourceNote": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md"
+    },
+    {
+      "period": "2026-04",
+      "salesUsdB": 110.5,
+      "momPct": 11.0,
+      "yoyPct": 93.9,
+      "note": "record month",
+      "confidence": "high",
+      "rawPath": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.csv",
+      "sourceNote": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md"
+    },
+    {
+      "period": "2026Q1",
+      "salesUsdB": 298.5,
+      "momPct": null,
+      "yoyPct": 25.0,
+      "note": "+25% QoQ vs Q4'25",
+      "confidence": "high",
+      "rawPath": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.csv",
+      "sourceNote": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md"
+    },
+    {
+      "period": "2026-FY",
+      "salesUsdB": 1500.0,
+      "momPct": null,
+      "yoyPct": null,
+      "note": "projected >$1.5T annual",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.csv",
+      "sourceNote": "raw/datasets/sia-global-semiconductor-sales-monthly-2026.md"
+    }
+  ],
+  "hbmPriceLadder": [
+    {
+      "generation": "hbm3",
+      "capacityGbPerStack": 24.0,
+      "pricePerStackUsd": 200.0,
+      "pricePerGbUsd": "8-10",
+      "note": "$8-10/GB",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.csv",
+      "sourceNote": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md"
+    },
+    {
+      "generation": "hbm3e",
+      "capacityGbPerStack": 36.0,
+      "pricePerStackUsd": 300.0,
+      "pricePerGbUsd": "8-10",
+      "note": "contract ~$13-17/GB early 2026; peaked $17-20 H1'25",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.csv",
+      "sourceNote": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md"
+    },
+    {
+      "generation": "hbm4",
+      "capacityGbPerStack": 48.0,
+      "pricePerStackUsd": 500.0,
+      "pricePerGbUsd": "14",
+      "note": "~$14/GB initial; +20% premium vs HBM3E at launch",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.csv",
+      "sourceNote": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md"
+    },
+    {
+      "generation": "hbm_cost_share",
+      "capacityGbPerStack": null,
+      "pricePerStackUsd": null,
+      "pricePerGbUsd": "",
+      "note": "HBM 30-40% of AI accelerator manufacturing cost (was <20% 2 gens ago)",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.csv",
+      "sourceNote": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md"
+    },
+    {
+      "generation": "hbm_share_2026",
+      "capacityGbPerStack": null,
+      "pricePerStackUsd": null,
+      "pricePerGbUsd": "pct",
+      "note": "market share",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.csv",
+      "sourceNote": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md"
+    },
+    {
+      "generation": "hbm_share_2026",
+      "capacityGbPerStack": null,
+      "pricePerStackUsd": null,
+      "pricePerGbUsd": "pct",
+      "note": "",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.csv",
+      "sourceNote": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md"
+    },
+    {
+      "generation": "hbm_share_2026",
+      "capacityGbPerStack": null,
+      "pricePerStackUsd": null,
+      "pricePerGbUsd": "pct",
+      "note": "",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.csv",
+      "sourceNote": "raw/datasets/hbm-price-per-gb-per-stack-by-generation.md"
+    }
+  ],
+  "acceleratorBomHbmCostShare": [
+    {
+      "accelerator": "h100",
+      "totalMfgCostUsd": "3320",
+      "hbmCostUsd": "",
+      "hbmSharePct": "35-47",
+      "hbmGb": "80",
+      "hbmPricePerGbUsd": "",
+      "note": "HBM 35-47% of mfg cost (range across chips)",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/ai-accelerator-bom-hbm-cost-share.csv",
+      "sourceNote": "raw/datasets/ai-accelerator-bom-hbm-cost-share.md"
+    },
+    {
+      "accelerator": "b200",
+      "totalMfgCostUsd": "6400",
+      "hbmCostUsd": "3200",
+      "hbmSharePct": "50",
+      "hbmGb": "192",
+      "hbmPricePerGbUsd": "15",
+      "note": "HBM ~half; $14-17/GB centered $15",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/ai-accelerator-bom-hbm-cost-share.csv",
+      "sourceNote": "raw/datasets/ai-accelerator-bom-hbm-cost-share.md"
+    },
+    {
+      "accelerator": "gb200",
+      "totalMfgCostUsd": "13500",
+      "hbmCostUsd": "4800",
+      "hbmSharePct": "",
+      "hbmGb": "",
+      "hbmPricePerGbUsd": "",
+      "note": "HBM $4,800 > entire H100 mfg cost",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/ai-accelerator-bom-hbm-cost-share.csv",
+      "sourceNote": "raw/datasets/ai-accelerator-bom-hbm-cost-share.md"
+    },
+    {
+      "accelerator": "hbm_packaging_combined",
+      "totalMfgCostUsd": "",
+      "hbmCostUsd": "",
+      "hbmSharePct": "60-70",
+      "hbmGb": "",
+      "hbmPricePerGbUsd": "",
+      "note": "HBM + advanced packaging = 60-70% of BOM",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/ai-accelerator-bom-hbm-cost-share.csv",
+      "sourceNote": "raw/datasets/ai-accelerator-bom-hbm-cost-share.md"
+    },
+    {
+      "accelerator": "cowos_packaging",
+      "totalMfgCostUsd": "1000-2000",
+      "hbmCostUsd": "",
+      "hbmSharePct": "",
+      "hbmGb": "",
+      "hbmPricePerGbUsd": "",
+      "note": "CoWoS-S/L per unit (multi-die B200/GB200)",
+      "confidence": "medium",
+      "rawPath": "raw/datasets/ai-accelerator-bom-hbm-cost-share.csv",
+      "sourceNote": "raw/datasets/ai-accelerator-bom-hbm-cost-share.md"
+    }
+  ],
+  "summary": {
+    "institutionalUsdBMin": 294.82,
+    "institutionalUsdBMax": 633.3,
+    "institutionalUsdBMid": 464.06,
+    "latestHighConfidenceSiaYoyPct": 25.0,
+    "averageHighFrequencyMomPct": 11.25,
+    "signalCount": 26
+  }
+}

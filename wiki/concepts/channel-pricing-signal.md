@@ -24,6 +24,29 @@ Channel 자료는 최종 수요와 공급 부족이 가격·allocation·lead tim
 - DDR4 EOL/last-time-buy와 DDR5 전환은 legacy 수요와 AI server 우선 allocation 사이의 crowding-out을 보여준다.
 - 이 자료들은 EB 수요 산식보다 [[supply-demand-gap]]의 가격/재고 regime 판단 변수로 쓰는 것이 안전하다.
 
+## 정리: channel signal을 forecast에 쓰는 법
+
+Channel price 자료의 가치는 “수요가 많다”를 반복하는 데 있지 않다. 가격·재고·리드타임·할당·gray market이 서로 같은 방향으로 움직일 때, 관측 주문량이 실제 최종 수요보다 커지는 bullwhip 구간인지, 아니면 최종 수요가 가격에도 버티는 structural shortage 구간인지 구분하게 해준다. ^[raw/articles/channel-sourceability-qoq-price-allocation-2026.md] ^[raw/datasets/dram-supplier-inventory-weeks-history.md]
+
+| Signal pattern | Interpretation | Forecast action | Linked page/model |
+| --- | --- | --- | --- |
+| Spot price spike only | channel panic 또는 thin liquidity 가능성 | default demand는 유지하고 confidence를 낮춘다 | [[supply-demand-gap]] |
+| Spot + contract + inventory weeks collapse | shortage가 supplier/OEM contract까지 전이 | realized demand haircut과 price pass-through를 동시에 적용 | `shortageSeverity.ts` |
+| Lead time 40~52주 + allocation/LTA | 공급자가 customer priority를 정하는 구간 | 서버/HBM 우선, PC/mobile/legacy downside를 분리 | [[memory-supply-chain-equipment]] |
+| DDR4/EOL + refurbished premium | legacy installed base가 신규 공급에서 밀려난 crowding-out | unit 수요보다 replacement delay와 spec downgrade 추적 | [[pc-dram]], [[long-tail-domain-demand]] |
+| PC/smartphone OEM price hike | 메모리 가격이 최종 제품 가격으로 전가 | shipment downside elasticity를 붙인다 | [[smartphone-memory]], [[pc-dram]] |
+| Cloud/server BOM pass-through lag | 메모리 원가 상승이 3~6개월 후 서비스 가격으로 전이 | short-term revenue forecast와 demand elasticity를 분리 | [[advanced-demand-forecast-engine]] |
+
+### Turning-point checklist
+
+정상화 판단은 단일 가격 하락으로 하지 않는다. 아래 조건 중 최소 3개가 동시에 나타나야 shortage regime을 낮춘다.
+
+1. supplier inventory가 8~10주 이상으로 회복된다.
+2. spot-contract spread가 좁아지고 spot 급등이 2개월 이상 둔화된다.
+3. lead time이 20주 아래로 내려오며 allocation/LTA 언급이 줄어든다.
+4. DDR4/legacy와 DDR5/server 가격이 함께 안정화된다. 한쪽만 안정되면 mix shift일 수 있다.
+5. PC/smartphone OEM의 spec downgrade 또는 가격 인상 뉴스가 감소한다.
+
 ## Shortage severity 지표 승격
 
 Channel raw는 제품별 EB 수요량을 직접 산출하기보다, **수요가 공급을 얼마나 초과해 가격·재고·리드타임·할당으로 전이됐는지**를 재는 regime 변수로 승격한다. 구현 파일은 `wiki/lib/shortageSeverity.ts`, source-backed preset은 `wiki/data/shortage-severity-presets.json`이다.

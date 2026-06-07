@@ -106,3 +106,67 @@
 
 - Re-measured raw coverage: 374 markdown raw files are cited; 36 CSV datasets have markdown companions; only internal `raw/README.md` and `raw/INDEX.md` lack external URLs.
 - Added Source URL columns to the five raw integration cluster pages and [[raw-integration-ledger]], keeping raw path traceability while making the web source link directly clickable.
+
+## [2026-06-07] update | Advanced forecast ensemble and nowcast layer
+
+- Promoted the advanced forecast raw intake queue into `wiki/lib/advancedDemandForecast.ts` with stress scenario, uncertainty envelope, hierarchical reconciliation, and nowcast adjustment APIs.
+- Updated `wiki/components/AdvancedDemandForecastSimulator.vue` to show nowcast-adjusted base demand, envelope range, hierarchy total, stress scenario table, and reconciliation rows.
+- Expanded `tests/advancedDemandForecast.test.ts` with coverage for the new forecast extension APIs.
+- Updated `wiki/methods/advanced-demand-forecast-engine.md`, `wiki/simulators/advanced-demand-forecast.md`, `wiki/sources/advanced-forecast-raw-intake-2026-06-07.md`, `wiki/sources/citation-matrix.md`, `wiki/SCHEMA.md`, `wiki/index.md`, and VitePress sidebar navigation.
+## [2026-06-07] update | Raw CSV signal interface connected to advanced forecast simulator
+- Derived `wiki/data/advanced-forecast-source-signals.json` from immutable raw CSV datasets under `raw/datasets/` without modifying raw files.
+- Updated `wiki/lib/advancedDemandForecast.ts` with source-calibrated nowcast context, institution forecast band, and high-frequency SIA signal helpers.
+- Updated `wiki/components/AdvancedDemandForecastSimulator.vue` to show source paths, institution forecast band, and SIA high-frequency nowcast tables as separate responsive blocks.
+- Updated `wiki/simulators/advanced-demand-forecast.md`, `wiki/methods/advanced-demand-forecast-engine.md`, `wiki/sources/advanced-forecast-raw-intake-2026-06-07.md`, and `wiki/sources/citation-matrix.md` for traceability.
+- Verified `npm test`, `npm run build`, citation audit 416/416 raw references, and browser preview at `/simulators/advanced-demand-forecast` with no console errors or horizontal overflow.
+
+
+
+## [2026-06-07] update | Advanced forecast CSV-derived presets and SIA chart
+- Added `buildCsvDerivedAdvancedForecastPresets` to convert institution low/mid/high bands plus SIA momentum into conservative/base/upside preset candidates.
+- Added `buildSiaNowcastTimeSeries` to render SIA sales rows as an indexed time-series chart model.
+- Updated `AdvancedDemandForecastSimulator.vue` with a CSV-derived preset strip, SIA indexed time-series chart, explicit preset selection handler, and responsive layout CSS.
+- Updated `advanced-demand-forecast`, `advanced-demand-forecast-engine`, `advanced-forecast-raw-intake-2026-06-07`, `citation-matrix`, and tests to preserve raw CSV traceability.
+- Verification: `npm test && npm run build` passed; citation audit reported 416/416 cited, 0 uncited, 0 missing references.
+
+## [2026-06-07] update | Advanced forecast polish controls
+- Added institution-weighted ensemble tuning to convert WSTS/TrendForce/IDC/Gartner raw CSV revenue rows into weighted revenue, demand multiplier, confidence score, and peak effective demand.
+- Added HBM/BOM affordability stress controls for HBM price decline, target BOM share, demand elasticity, and supply-relief pass-through.
+- Updated `advancedDemandForecast.ts`, `AdvancedDemandForecastSimulator.vue`, simulator/method/source/citation docs, and tests for the final polish layer.
+- Fixed `advanced-forecast-raw-intake-2026-06-07.md` line-number artifact while preserving source traceability.
+- Verification: `npm test && npm run build` passed; citation audit reported 416/416 cited, 0 uncited, 0 missing references; preview browser showed 7 interactive sliders, no console errors, and 0 horizontal overflow.
+
+## [2026-06-07] update | Responsive VitePress main width guard
+- Updated `wiki/.vitepress/theme/custom.css` so medium desktop widths use a variable main content width instead of fixed document widths that can sit underneath the sidebar.
+- Added a 960-1560px guard for `.VPContent.has-sidebar` and `.VPDoc.has-sidebar` that reserves sidebar width plus a fluid gutter, clamps document containers to the available viewport, and hides the right aside in this constrained range.
+- Updated `tests/layoutCss.test.ts` to lock the sidebar-safe flexible-width CSS contract.
+- Verification: `npm test -- tests/layoutCss.test.ts`, `npm run build`, and full `npm test` passed; preview screenshots at 1400px, 1480px, and 1560px showed the main view separated from the sidebar with no clipping.
+
+## [2026-06-07] update | Existing wiki page synthesis upgrade
+- Upgraded existing pages only; no new wiki pages were created.
+- Added synthesis/decision sections to `wiki/concepts/ai-infrastructure-memory.md`, `wiki/concepts/channel-pricing-signal.md`, `wiki/concepts/memory-supply-chain-equipment.md`, and `wiki/concepts/forecasting-method-library.md`.
+- Converted raw-heavy source clusters into forecast theses, signal interpretation tables, capacity-to-bit conversion rules, and model governance rules with provenance markers.
+- Verification: `npm test && npm run build` passed; citation audit reported 416/416 cited, 0 uncited, 0 missing references.
+
+## [2026-06-07] update | Existing market and method page quality pass
+- Upgraded existing pages only; no new wiki pages were created.
+- Added a forecast thesis, decision axes, and anti-patterns to `wiki/markets/hbm.md` so HBM demand is framed as unit × content × generation mix × realization gate.
+- Added tiering and base-vs-scenario decision rules to `wiki/concepts/long-tail-domain-demand.md` for automotive, networking/HPC, surveillance/IoT, robotics/XR, and specialty domains.
+- Added an executive model summary, evidence-to-layer map, reader workflow, and model quality gates to `wiki/methods/advanced-demand-forecast-engine.md`.
+- Verification: `npm test && npm run build` passed; citation audit reported 416/416 cited, 0 uncited, 0 missing references.
+
+## [2026-06-07] update | Wide desktop sidebar width guard
+- Fixed the VitePress sidebar becoming visually narrow above ~1800px by reserving the wide-layout left offset in `--mc-sidebar-reserved-width` instead of keeping `.VPSidebar` at a fixed 272px while VitePress adds large left padding.
+- Updated `.VPContent.has-sidebar` to reserve the same computed sidebar width so main content does not overlap the expanded sidebar gutter on very wide screens.
+- Updated `tests/layoutCss.test.ts` to lock the wide sidebar offset/reserved-width CSS contract.
+- Verification: `npm test -- tests/layoutCss.test.ts` and `npm run build` passed; preview screenshots at 1900px and 2200px showed a readable sidebar and no visible overlap/clipping.
+
+## [2026-06-07] update | Advanced Forecast Cockpit fullscreen control
+- Updated `wiki/components/AdvancedDemandForecastSimulator.vue` to add an Advanced Forecast Cockpit fullscreen toggle wired through the shared `useFullscreenElement` composable, with native Fullscreen API support and CSS fallback mode.
+- Updated `tests/advancedForecastUi.test.ts` to assert the fullscreen import, root ref/class binding, toggle button class, click handler, and Korean enter/exit button labels.
+- Verification: `npm test && npm run build` passed; citation audit remained 416/416 raw references cited with 0 missing references; browser route `http://localhost:5173/simulators/advanced-demand-forecast?verify=fullscreen` showed fixed fullscreen fallback covering the viewport with no page/root horizontal overflow and no console errors.
+
+## [2026-06-07] update | Advanced Forecast fullscreen header flow fix
+- Updated `wiki/components/AdvancedDemandForecastSimulator.vue` so the fullscreen cockpit hero/header stays in normal document flow instead of becoming a sticky overlay that can cover cockpit content.
+- Updated `tests/advancedForecastUi.test.ts` with a regression contract that rejects sticky/fixed fullscreen hero styling.
+- Verification: `npm test -- tests/advancedForecastUi.test.ts`, full `npm test`, and `npm run build` passed; citation audit remained 416/416 raw references cited with 0 missing references; browser route `http://localhost:5173/simulators/advanced-demand-forecast?verify=fullscreen-flow` showed the hero as `position: static`, followed by `Scenario layer` with a 20px gap and no horizontal overflow or console errors.

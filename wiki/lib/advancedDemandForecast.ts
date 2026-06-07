@@ -1,4 +1,5 @@
 import advancedForecastPresetData from '../data/advanced-forecast-presets.json'
+import advancedForecastSourceSignalsData from '../data/advanced-forecast-source-signals.json'
 
 export type AdvancedForecastFamily = 'DRAM' | 'NAND' | 'HBM' | 'DRAM+NAND'
 export type AdvancedForecastConfidence = 'low' | 'medium' | 'high'
@@ -90,6 +91,165 @@ export interface AdvancedForecastPreset {
   confidence: AdvancedForecastConfidence
 }
 
+
+export interface ForecastStressScenarioInput {
+  id: string
+  label: string
+  demandShockPercent: number
+  supplyShockPercent: number
+  priceShockPercent: number
+}
+
+export interface ForecastStressScenarioResult {
+  id: string
+  label: string
+  demandShockPercent: number
+  supplyShockPercent: number
+  priceShockPercent: number
+  peakEffectiveDemandEb: number
+  cumulativeEffectiveDemandEb: number
+  cumulativeUnmetDemandEb: number
+  dominantConstraint: ForecastConstraint
+}
+
+export interface ForecastEnvelopeRow {
+  year: number
+  lowEffectiveDemandEb: number
+  baseEffectiveDemandEb: number
+  highEffectiveDemandEb: number
+  lowUnmetDemandEb: number
+  highUnmetDemandEb: number
+}
+
+export interface HierarchicalForecastRow {
+  year: number
+  totalEffectiveDemandEb: number
+  totalUnmetDemandEb: number
+  byFamily: Record<AdvancedForecastFamily, number>
+}
+
+export interface NowcastSignalInput {
+  name: string
+  weight: number
+  zScore: number
+  direction: 'positive' | 'negative'
+}
+
+export interface NowcastAdjustmentResult {
+  adjustmentFactor: number
+  adjustedBaseDemandEb: number
+  signals: NowcastSignalInput[]
+}
+
+export interface SourceSignalRef {
+  rawPath: string
+  sourceNote: string
+  confidence: AdvancedForecastConfidence
+}
+
+export interface InstitutionalForecastSignal extends SourceSignalRef {
+  institution: string
+  metric: string
+  value: string
+  numericValue: number | null
+  unit: string
+  note: string
+}
+
+export interface MonthlyNowcastSignal extends SourceSignalRef {
+  period: string
+  salesUsdB: number | null
+  momPct: number | null
+  yoyPct: number | null
+  note: string
+}
+
+export interface HbmPriceSignal extends SourceSignalRef {
+  generation: string
+  capacityGbPerStack: number | null
+  pricePerStackUsd: number | null
+  pricePerGbUsd: string
+  note: string
+}
+
+export interface AcceleratorBomSignal extends SourceSignalRef {
+  accelerator: string
+  totalMfgCostUsd: string
+  hbmCostUsd: string
+  hbmSharePct: string
+  hbmGb: string
+  hbmPricePerGbUsd: string
+  note: string
+}
+
+export interface AdvancedForecastSourceSignals {
+  generatedFromRaw: string[]
+  institutionalForecasts: InstitutionalForecastSignal[]
+  nowcastMonthlySales: MonthlyNowcastSignal[]
+  hbmPriceLadder: HbmPriceSignal[]
+  acceleratorBomHbmCostShare: AcceleratorBomSignal[]
+  summary: {
+    institutionalUsdBMin: number
+    institutionalUsdBMax: number
+    institutionalUsdBMid: number
+    latestHighConfidenceSiaYoyPct: number
+    averageHighFrequencyMomPct: number
+    signalCount: number
+  }
+}
+
+export interface SourceCalibratedForecastContext {
+  revenueBandUsdB: { low: number; mid: number; high: number }
+  nowcastSignals: NowcastSignalInput[]
+  hbmCostPressureSignals: HbmPriceSignal[]
+  sourceRefs: string[]
+}
+
+export interface SiaNowcastTimeSeriesRow extends SourceSignalRef {
+  period: string
+  salesUsdB: number
+  momPct: number | null
+  yoyPct: number | null
+  salesIndex: number
+  barWidthPercent: number
+  signalLabel: string
+}
+
+export interface InstitutionWeightInput {
+  institution: string
+  weight: number
+}
+
+export interface InstitutionEnsembleResult {
+  weights: InstitutionWeightInput[]
+  weightedRevenueUsdB: number
+  revenueBandPosition: number
+  demandMultiplier: number
+  confidenceScore: number
+  sourceRefs: string[]
+  preset: AdvancedForecastPreset
+  forecast: AdvancedDemandForecastResult
+}
+
+export interface HbmBomStressControlInput {
+  hbmPriceDeclinePercent: number
+  targetBomSharePercent: number
+  demandElasticity: number
+  supplyReliefPassThrough: number
+}
+
+export interface HbmBomStressResult {
+  control: HbmBomStressControlInput
+  referenceBomSharePercent: number
+  affordabilityDemandShockPercent: number
+  supplyReliefShockPercent: number
+  adjustedHbmCostUsd: number
+  adjustedBomSharePercent: number
+  stressScenario: ForecastStressScenarioInput
+  result: ForecastStressScenarioResult
+  sourceRefs: string[]
+}
+
 interface RawAdvancedForecastPreset {
   id: string
   label: string
@@ -98,6 +258,7 @@ interface RawAdvancedForecastPreset {
 }
 
 const presets = advancedForecastPresetData as RawAdvancedForecastPreset[]
+const sourceSignals = advancedForecastSourceSignalsData as AdvancedForecastSourceSignals
 
 const round = (value: number, digits = 4): number => {
   const factor = 10 ** digits
@@ -234,6 +395,356 @@ export function getAdvancedForecastPreset(id: string): AdvancedForecastPreset {
     input: cloneInput(preset.input),
     sourceRefs: [...preset.input.evidence.sourceRefs],
     confidence: preset.input.evidence.confidence
+  }
+}
+
+
+function inputWithStress(input: AdvancedDemandForecastInput, stress: ForecastStressScenarioInput): AdvancedDemandForecastInput {
+  const stressed = cloneInput(input)
+  stressed.id = `${input.id}__${stress.id}`
+  stressed.label = `${input.label} — ${stress.label}`
+  stressed.baseDemandEb = round(nonNegative(input.baseDemandEb) * (1 + finiteOrZero(stress.demandShockPercent) / 100), 6)
+  stressed.supply.startingAvailableEb = round(nonNegative(input.supply.startingAvailableEb) * (1 + finiteOrZero(stress.supplyShockPercent) / 100), 6)
+  stressed.cycle.priceChangePercent = finiteOrZero(input.cycle.priceChangePercent) + finiteOrZero(stress.priceShockPercent)
+  stressed.evidence.signalCoverageScore = clamp(input.evidence.signalCoverageScore - Math.abs(stress.demandShockPercent) * 0.15 - Math.abs(stress.supplyShockPercent) * 0.15, 0, 100)
+  return stressed
+}
+
+export const defaultStressScenarios: ForecastStressScenarioInput[] = [
+  { id: 'downside-demand-price-shock', label: 'Downside demand + price shock', demandShockPercent: -12, supplyShockPercent: -5, priceShockPercent: 30 },
+  { id: 'base-reference', label: 'Base reference', demandShockPercent: 0, supplyShockPercent: 0, priceShockPercent: 0 },
+  { id: 'upside-adoption', label: 'Upside adoption pull-forward', demandShockPercent: 16, supplyShockPercent: 0, priceShockPercent: 8 },
+  { id: 'supply-squeeze', label: 'Supply squeeze / allocation cap', demandShockPercent: 6, supplyShockPercent: -18, priceShockPercent: 22 }
+]
+
+export function buildStressScenarioTable(rawInput: AdvancedDemandForecastInput, scenarios = defaultStressScenarios): ForecastStressScenarioResult[] {
+  return scenarios.map((scenario) => {
+    const forecast = buildAdvancedDemandForecast(inputWithStress(rawInput, scenario))
+    return {
+      id: scenario.id,
+      label: scenario.label,
+      demandShockPercent: scenario.demandShockPercent,
+      supplyShockPercent: scenario.supplyShockPercent,
+      priceShockPercent: scenario.priceShockPercent,
+      peakEffectiveDemandEb: forecast.peakEffectiveDemandEb,
+      cumulativeEffectiveDemandEb: forecast.cumulativeEffectiveDemandEb,
+      cumulativeUnmetDemandEb: forecast.cumulativeUnmetDemandEb,
+      dominantConstraint: forecast.dominantConstraint
+    }
+  })
+}
+
+export function buildForecastEnvelope(rawInput: AdvancedDemandForecastInput, scenarios = defaultStressScenarios): ForecastEnvelopeRow[] {
+  const forecasts = scenarios.map((scenario) => buildAdvancedDemandForecast(inputWithStress(rawInput, scenario)))
+  const base = buildAdvancedDemandForecast(rawInput)
+
+  return base.rows.map((baseRow, rowIndex) => {
+    const effectiveValues = forecasts.map((forecast) => forecast.rows[rowIndex]?.effectiveDemandEb ?? baseRow.effectiveDemandEb)
+    const unmetValues = forecasts.map((forecast) => forecast.rows[rowIndex]?.unmetDemandEb ?? baseRow.unmetDemandEb)
+    return {
+      year: baseRow.year,
+      lowEffectiveDemandEb: round(Math.min(...effectiveValues), 4),
+      baseEffectiveDemandEb: baseRow.effectiveDemandEb,
+      highEffectiveDemandEb: round(Math.max(...effectiveValues), 4),
+      lowUnmetDemandEb: round(Math.min(...unmetValues), 4),
+      highUnmetDemandEb: round(Math.max(...unmetValues), 4)
+    }
+  })
+}
+
+export function buildHierarchicalForecastRows(presetIds = presets.map((preset) => preset.id)): HierarchicalForecastRow[] {
+  const forecasts = presetIds.map((id) => buildAdvancedDemandForecast(getAdvancedForecastPreset(id).input))
+  const allYears = Array.from(new Set(forecasts.flatMap((forecast) => forecast.rows.map((row) => row.year)))).sort((a, b) => a - b)
+
+  return allYears.map((year) => {
+    const byFamily: Record<AdvancedForecastFamily, number> = { DRAM: 0, NAND: 0, HBM: 0, 'DRAM+NAND': 0 }
+    let totalEffectiveDemandEb = 0
+    let totalUnmetDemandEb = 0
+
+    forecasts.forEach((forecast) => {
+      const row = forecast.rows.find((item) => item.year === year)
+      if (!row) return
+      totalEffectiveDemandEb += row.effectiveDemandEb
+      totalUnmetDemandEb += row.unmetDemandEb
+      byFamily[forecast.input.family] = round(byFamily[forecast.input.family] + row.effectiveDemandEb, 4)
+    })
+
+    return {
+      year,
+      totalEffectiveDemandEb: round(totalEffectiveDemandEb, 4),
+      totalUnmetDemandEb: round(totalUnmetDemandEb, 4),
+      byFamily
+    }
+  })
+}
+
+export function calculateNowcastAdjustment(rawInput: AdvancedDemandForecastInput, signals: NowcastSignalInput[]): NowcastAdjustmentResult {
+  const totalWeight = signals.reduce((sum, signal) => sum + Math.max(0, finiteOrZero(signal.weight)), 0)
+  const weightedSignal = totalWeight === 0
+    ? 0
+    : signals.reduce((sum, signal) => {
+      const direction = signal.direction === 'negative' ? -1 : 1
+      return sum + direction * finiteOrZero(signal.zScore) * Math.max(0, finiteOrZero(signal.weight))
+    }, 0) / totalWeight
+  const adjustmentFactor = round(clamp(1 + weightedSignal * 0.06, 0.75, 1.35), 4)
+
+  return {
+    adjustmentFactor,
+    adjustedBaseDemandEb: round(nonNegative(rawInput.baseDemandEb) * adjustmentFactor, 6),
+    signals: signals.map((signal) => ({ ...signal }))
+  }
+}
+
+export function getAdvancedForecastSourceSignals(): AdvancedForecastSourceSignals {
+  return {
+    ...sourceSignals,
+    generatedFromRaw: [...sourceSignals.generatedFromRaw],
+    institutionalForecasts: sourceSignals.institutionalForecasts.map((signal) => ({ ...signal })),
+    nowcastMonthlySales: sourceSignals.nowcastMonthlySales.map((signal) => ({ ...signal })),
+    hbmPriceLadder: sourceSignals.hbmPriceLadder.map((signal) => ({ ...signal })),
+    acceleratorBomHbmCostShare: sourceSignals.acceleratorBomHbmCostShare.map((signal) => ({ ...signal })),
+    summary: { ...sourceSignals.summary }
+  }
+}
+
+export function buildSourceCalibratedForecastContext(): SourceCalibratedForecastContext {
+  const highFrequencyRows = sourceSignals.nowcastMonthlySales.filter((signal) => signal.confidence !== 'low')
+  const yoyRows = highFrequencyRows.filter((signal) => signal.yoyPct !== null)
+  const latestYoy = yoyRows.at(-1)?.yoyPct ?? sourceSignals.summary.latestHighConfidenceSiaYoyPct
+  const momRows = highFrequencyRows.filter((signal) => signal.momPct !== null)
+  const latestMom = momRows.at(-1)?.momPct ?? sourceSignals.summary.averageHighFrequencyMomPct
+  const highRevenueSignal = clamp((sourceSignals.summary.institutionalUsdBMid - sourceSignals.summary.institutionalUsdBMin) / Math.max(1, sourceSignals.summary.institutionalUsdBMin), 0, 2)
+
+  return {
+    revenueBandUsdB: {
+      low: sourceSignals.summary.institutionalUsdBMin,
+      mid: sourceSignals.summary.institutionalUsdBMid,
+      high: sourceSignals.summary.institutionalUsdBMax
+    },
+    nowcastSignals: [
+      { name: 'SIA high-frequency sales YoY', weight: 0.45, zScore: round(latestYoy / 50, 3), direction: 'positive' },
+      { name: 'SIA monthly sales momentum', weight: 0.25, zScore: round(latestMom / 10, 3), direction: 'positive' },
+      { name: 'Institutional 2026 revenue band width', weight: 0.3, zScore: round(highRevenueSignal, 3), direction: 'positive' }
+    ],
+    hbmCostPressureSignals: sourceSignals.hbmPriceLadder.filter((signal) => signal.generation.startsWith('hbm')),
+    sourceRefs: Array.from(new Set(sourceSignals.generatedFromRaw))
+  }
+}
+
+export function calculateSourceCalibratedNowcast(rawInput: AdvancedDemandForecastInput): NowcastAdjustmentResult {
+  return calculateNowcastAdjustment(rawInput, buildSourceCalibratedForecastContext().nowcastSignals)
+}
+
+function sourceNotesForGeneratedRaw(): string[] {
+  return Array.from(new Set(sourceSignals.generatedFromRaw.map((rawPath) => rawPath.replace(/\.csv$/, '.md'))))
+}
+
+export function buildSiaNowcastTimeSeries(): SiaNowcastTimeSeriesRow[] {
+  const rows = sourceSignals.nowcastMonthlySales.filter((signal) => signal.salesUsdB !== null)
+  const baseline = rows[0]?.salesUsdB ?? 1
+  const maxSales = Math.max(1, ...rows.map((signal) => signal.salesUsdB ?? 0))
+
+  return rows.map((signal) => {
+    const salesUsdB = signal.salesUsdB ?? 0
+    const strongestPct = signal.yoyPct ?? signal.momPct
+    return {
+      ...signal,
+      salesUsdB,
+      salesIndex: round(salesUsdB / Math.max(0.0001, baseline) * 100, 1),
+      barWidthPercent: round(salesUsdB / maxSales * 100, 1),
+      signalLabel: strongestPct === null ? signal.note : `${formatNumber(strongestPct, 1)}% ${signal.yoyPct === null ? 'MoM' : 'YoY'}`
+    }
+  })
+}
+
+function buildCsvDerivedPresetFromRevenuePoint(
+  hbmReference: AdvancedDemandForecastInput,
+  sourceRefs: string[],
+  options: {
+    id: string
+    label: string
+    description: string
+    revenuePoint: number
+    revenueRatio: number
+    demandMultiplier: number
+    supplyMultiplier: number
+    confidence?: AdvancedForecastConfidence
+  }
+): AdvancedForecastPreset {
+  const revenue = buildSourceCalibratedForecastContext().revenueBandUsdB
+  const siaRows = buildSiaNowcastTimeSeries()
+  const latestHighConfidence = sourceSignals.nowcastMonthlySales.filter((row) => row.confidence === 'high' && row.yoyPct !== null).at(-1)
+  const momentumBoost = clamp((latestHighConfidence?.yoyPct ?? sourceSignals.summary.latestHighConfidenceSiaYoyPct) / 100, 0.2, 1.2)
+  const unitGrowthCagrPercent = round(clamp(hbmReference.unitGrowthCagrPercent * options.revenueRatio + momentumBoost * 4, 8, 52), 1)
+  const contentGrowthCagrPercent = round(clamp(hbmReference.contentGrowthCagrPercent * (0.85 + options.revenueRatio * 0.18), 8, 28), 1)
+  const baseDemandEb = round(hbmReference.baseDemandEb * options.demandMultiplier * Math.sqrt(Math.max(0.2, options.revenueRatio)), 4)
+  const input: AdvancedDemandForecastInput = {
+    ...cloneInput(hbmReference),
+    id: options.id,
+    label: options.label,
+    domain: 'CSV-derived Memory Forecast Band',
+    family: 'HBM',
+    baseDemandEb,
+    unitGrowthCagrPercent,
+    contentGrowthCagrPercent,
+    adoption: {
+      ...hbmReference.adoption,
+      startPercent: round(clamp(34 + options.revenueRatio * 6, 20, 55), 1),
+      saturationPercent: round(clamp(78 + options.revenueRatio * 8, 65, 94), 1)
+    },
+    cycle: {
+      ...hbmReference.cycle,
+      priceChangePercent: round(clamp((options.revenuePoint - revenue.low) / Math.max(1, revenue.low) * 65, 15, 110), 1),
+      orderAmplificationScore: round(clamp(45 + momentumBoost * 20 + options.revenueRatio * 8, 30, 88), 1)
+    },
+    supply: {
+      ...hbmReference.supply,
+      startingAvailableEb: round(hbmReference.supply.startingAvailableEb * options.supplyMultiplier, 4),
+      allocationFactor: round(clamp(hbmReference.supply.allocationFactor * options.supplyMultiplier, 0.55, 0.98), 3)
+    },
+    evidence: {
+      sourceRefs,
+      signalCoverageScore: round(clamp(78 + siaRows.filter((row) => row.confidence === 'high').length * 2, 70, 92), 1),
+      confidence: options.confidence ?? 'medium'
+    }
+  }
+
+  return {
+    id: options.id,
+    label: options.label,
+    description: options.description,
+    input,
+    sourceRefs: [...sourceRefs],
+    confidence: input.evidence.confidence
+  }
+}
+
+export function buildCsvDerivedAdvancedForecastPresets(): AdvancedForecastPreset[] {
+  const hbmReference = getAdvancedForecastPreset('hbm-ai-infrastructure-constraint-reference').input
+  const revenue = buildSourceCalibratedForecastContext().revenueBandUsdB
+  const sourceRefs = sourceNotesForGeneratedRaw()
+
+  const variants = [
+    {
+      id: 'csv-derived-conservative-memory-revenue-band',
+      label: 'CSV-derived conservative memory revenue band',
+      description: 'Conservative raw CSV-derived preset using the low institution revenue band and SIA momentum as bounded growth context.',
+      revenuePoint: revenue.low,
+      revenueRatio: revenue.low / Math.max(1, revenue.mid),
+      demandMultiplier: 0.82,
+      supplyMultiplier: 0.9
+    },
+    {
+      id: 'csv-derived-base-memory-revenue-band',
+      label: 'CSV-derived base memory revenue band',
+      description: 'Base raw CSV-derived preset using the mid institution revenue band and latest SIA high-frequency sales signal.',
+      revenuePoint: revenue.mid,
+      revenueRatio: 1,
+      demandMultiplier: 1,
+      supplyMultiplier: 1
+    },
+    {
+      id: 'csv-derived-upside-memory-revenue-band',
+      label: 'CSV-derived upside memory revenue band',
+      description: 'Upside raw CSV-derived preset using the high institution revenue band, SIA acceleration, and HBM cost-pressure context.',
+      revenuePoint: revenue.high,
+      revenueRatio: revenue.high / Math.max(1, revenue.mid),
+      demandMultiplier: 1.18,
+      supplyMultiplier: 0.78
+    }
+  ]
+
+  return variants.map((variant) => buildCsvDerivedPresetFromRevenuePoint(hbmReference, sourceRefs, variant))
+}
+
+function parseRangeCenter(value: string): number | null {
+  const numbers = value.match(/-?\d+(?:\.\d+)?/g)?.map(Number).filter(Number.isFinite) ?? []
+  if (numbers.length === 0) return null
+  return round(numbers.reduce((sum, item) => sum + item, 0) / numbers.length, 4)
+}
+
+export function buildInstitutionWeightedEnsemble(rawWeights: InstitutionWeightInput[] = []): InstitutionEnsembleResult {
+  const revenueRows = sourceSignals.institutionalForecasts.filter((signal) => signal.unit === 'usd_b' && signal.numericValue !== null)
+  const rawWeightByInstitution = new Map(rawWeights.map((item) => [item.institution, Math.max(0, finiteOrZero(item.weight))]))
+  const weightedRows = revenueRows.map((row) => ({
+    row,
+    weight: rawWeightByInstitution.get(row.institution) ?? 1
+  }))
+  const totalWeight = weightedRows.reduce((sum, item) => sum + item.weight, 0) || revenueRows.length || 1
+  const normalized = weightedRows.map((item) => ({
+    institution: item.row.institution,
+    weight: round(item.weight / totalWeight, 4)
+  }))
+  const weightedRevenueUsdB = round(weightedRows.reduce((sum, item) => sum + (item.row.numericValue ?? 0) * item.weight, 0) / totalWeight, 2)
+  const revenue = buildSourceCalibratedForecastContext().revenueBandUsdB
+  const revenueBandPosition = round(clamp((weightedRevenueUsdB - revenue.low) / Math.max(1, revenue.high - revenue.low), 0, 1), 4)
+  const demandMultiplier = round(clamp(0.82 + revenueBandPosition * 0.48, 0.72, 1.42), 4)
+  const sourceRefs = sourceNotesForGeneratedRaw()
+  const hbmReference = getAdvancedForecastPreset('hbm-ai-infrastructure-constraint-reference').input
+  const preset = buildCsvDerivedPresetFromRevenuePoint(hbmReference, sourceRefs, {
+    id: 'institution-weighted-ensemble-memory-band',
+    label: 'Institution-weighted ensemble memory band',
+    description: 'User-adjustable institution-weighted ensemble that converts raw CSV revenue views into an HBM demand path.',
+    revenuePoint: weightedRevenueUsdB,
+    revenueRatio: weightedRevenueUsdB / Math.max(1, revenue.mid),
+    demandMultiplier,
+    supplyMultiplier: round(clamp(1.05 - revenueBandPosition * 0.3, 0.72, 1.05), 4),
+    confidence: 'medium'
+  })
+  const forecast = buildAdvancedDemandForecast(preset.input)
+
+  return {
+    weights: normalized,
+    weightedRevenueUsdB,
+    revenueBandPosition,
+    demandMultiplier,
+    confidenceScore: forecast.confidenceScore,
+    sourceRefs,
+    preset,
+    forecast
+  }
+}
+
+export function calculateHbmBomStress(rawInput: AdvancedDemandForecastInput, rawControl: Partial<HbmBomStressControlInput> = {}): HbmBomStressResult {
+  const control: HbmBomStressControlInput = {
+    hbmPriceDeclinePercent: clamp(rawControl.hbmPriceDeclinePercent ?? 0, -40, 80),
+    targetBomSharePercent: clamp(rawControl.targetBomSharePercent ?? 50, 20, 75),
+    demandElasticity: clamp(rawControl.demandElasticity ?? 0.18, 0, 0.8),
+    supplyReliefPassThrough: clamp(rawControl.supplyReliefPassThrough ?? 0.35, 0, 1)
+  }
+  const bomRows = sourceSignals.acceleratorBomHbmCostShare
+  const b200 = bomRows.find((row) => row.accelerator === 'b200') ?? bomRows.find((row) => row.hbmCostUsd)
+  const referenceBomSharePercent = parseRangeCenter(b200?.hbmSharePct ?? '') ?? 50
+  const referenceHbmCostUsd = parseRangeCenter(b200?.hbmCostUsd ?? '') ?? 3200
+  const priceDecline = control.hbmPriceDeclinePercent / 100
+  const adjustedHbmCostUsd = round(referenceHbmCostUsd * (1 - priceDecline), 2)
+  const adjustedBomSharePercent = round(clamp(referenceBomSharePercent * (1 - priceDecline), 5, 90), 2)
+  const bomShareReliefPct = Math.max(0, referenceBomSharePercent - control.targetBomSharePercent)
+  const affordabilityDemandShockPercent = round(clamp(control.hbmPriceDeclinePercent * control.demandElasticity + bomShareReliefPct * 0.08, -15, 28), 2)
+  const supplyReliefShockPercent = round(clamp(control.hbmPriceDeclinePercent * control.supplyReliefPassThrough * 0.25, -12, 18), 2)
+  const stressScenario: ForecastStressScenarioInput = {
+    id: 'interactive-hbm-bom-affordability',
+    label: 'Interactive HBM/BOM affordability stress',
+    demandShockPercent: affordabilityDemandShockPercent,
+    supplyShockPercent: supplyReliefShockPercent,
+    priceShockPercent: round(-control.hbmPriceDeclinePercent, 2)
+  }
+  const result = buildStressScenarioTable(rawInput, [stressScenario])[0]
+  const sourceRefs = Array.from(new Set([
+    ...sourceNotesForGeneratedRaw(),
+    ...bomRows.map((row) => row.sourceNote)
+  ]))
+
+  return {
+    control,
+    referenceBomSharePercent,
+    affordabilityDemandShockPercent,
+    supplyReliefShockPercent,
+    adjustedHbmCostUsd,
+    adjustedBomSharePercent,
+    stressScenario,
+    result,
+    sourceRefs
   }
 }
 

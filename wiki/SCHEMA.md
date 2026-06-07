@@ -100,6 +100,12 @@ confidence: low | medium | high
 - probabilistic-forecasting
 - regression
 - machine-learning
+- advanced-forecasting
+- structural-model
+- inventory-cycle
+- supply-realization
+- citation-audit
+- evidence-map
 
 ### Metrics and Units
 - bit-demand
@@ -119,6 +125,11 @@ confidence: low | medium | high
 - comparison
 - methodology
 - source-review
+- source-map
+- raw
+- citation
+- integration-ledger
+- raw-intake
 
 새 tag가 필요하면 먼저 이 taxonomy에 추가한 뒤 문서에 사용합니다.
 
